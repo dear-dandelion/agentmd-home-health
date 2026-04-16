@@ -1,0 +1,119 @@
+{
+  "name": "blood_pressure",
+  "display_name": "血压风险评估",
+  "description": "根据收缩压和舒张压进行居家血压风险初筛。",
+  "source_module": "app.calculators.basic",
+  "function_name": "calculate_bp_risk",
+  "intent_keywords": ["血压", "高血压", "收缩压", "舒张压"],
+  "required_params": ["systolic_bp", "diastolic_bp"],
+  "optional_params": ["age", "gender", "weight_kg"],
+  "parameters": [
+    {
+      "name": "systolic_bp",
+      "label": "收缩压",
+      "type": "float",
+      "required": true,
+      "unit": "mmHg",
+      "min": 50,
+      "max": 300,
+      "description": "收缩压，单位 mmHg。"
+    },
+    {
+      "name": "diastolic_bp",
+      "label": "舒张压",
+      "type": "float",
+      "required": true,
+      "unit": "mmHg",
+      "min": 30,
+      "max": 200,
+      "description": "舒张压，单位 mmHg。"
+    },
+    {
+      "name": "age",
+      "label": "年龄",
+      "type": "int",
+      "required": false,
+      "min": 0,
+      "max": 120,
+      "description": "用于结果解释增强，不参与计算。"
+    },
+    {
+      "name": "gender",
+      "label": "性别",
+      "type": "str",
+      "required": false,
+      "description": "用于结果解释增强，不参与计算。"
+    }
+  ],
+  "reference": "成人家庭静息血压参考：收缩压 <120 mmHg 且舒张压 <80 mmHg 为正常，>=140/90 mmHg 需进一步医学评估。",
+  "applicable_scenario": "居家血压监测和高血压风险初筛",
+  "supports_chinese": true,
+  "clinical_specificity": 0.95,
+  "priority": {
+    "home_suitability": 0.96,
+    "clinical_importance": 0.95,
+    "implementation_simplicity": 0.9,
+    "chinese_support": 1.0
+  },
+  "documentation": {
+    "parameter_notes": "血压结果仅用于家庭初筛，不能替代门诊多次测量及临床诊断。",
+    "usage_examples": [
+      {
+        "input": { "systolic_bp": 128, "diastolic_bp": 84 },
+        "description": "家庭静息血压偏高示例。"
+      }
+    ],
+    "reference_literature": [
+      "中国高血压防治指南"
+    ],
+    "update_record": [
+      "2026-04-16：初始入库，完成单元测试、规则复核和边界值验证。"
+    ]
+  },
+  "validation": {
+    "unit_cases": [
+      {
+        "name": "normal_case",
+        "input": { "systolic_bp": 118, "diastolic_bp": 76 },
+        "expected": { "risk_level": "正常", "score": "118/76 mmHg", "summary_contains": "118/76 mmHg" }
+      },
+      {
+        "name": "elevated_case_by_systolic",
+        "input": { "systolic_bp": 128, "diastolic_bp": 76 },
+        "expected": { "risk_level": "偏高", "score": "128/76 mmHg", "summary_contains": "128/76 mmHg" }
+      },
+      {
+        "name": "elevated_case_by_diastolic",
+        "input": { "systolic_bp": 118, "diastolic_bp": 84 },
+        "expected": { "risk_level": "偏高", "score": "118/84 mmHg", "summary_contains": "118/84 mmHg" }
+      },
+      {
+        "name": "high_risk_case",
+        "input": { "systolic_bp": 145, "diastolic_bp": 92 },
+        "expected": { "risk_level": "高风险", "score": "145/92 mmHg", "summary_contains": "145/92 mmHg" }
+      }
+    ],
+    "boundary_checks": [
+      {
+        "name": "normal_upper_bound",
+        "input": { "systolic_bp": 119, "diastolic_bp": 79 },
+        "expected_risk_level": "正常"
+      },
+      {
+        "name": "elevated_lower_bound",
+        "input": { "systolic_bp": 120, "diastolic_bp": 79 },
+        "expected_risk_level": "偏高"
+      },
+      {
+        "name": "elevated_upper_bound",
+        "input": { "systolic_bp": 139, "diastolic_bp": 89 },
+        "expected_risk_level": "偏高"
+      },
+      {
+        "name": "high_risk_lower_bound",
+        "input": { "systolic_bp": 140, "diastolic_bp": 90 },
+        "expected_risk_level": "高风险"
+      }
+    ]
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "name": "fasting_glucose",
+  "display_name": "空腹血糖评估",
+  "description": "根据空腹血糖数值进行居家糖代谢风险初筛。",
+  "source_module": "app.calculators.basic",
+  "function_name": "calculate_fasting_glucose",
+  "intent_keywords": ["血糖", "空腹血糖", "糖尿病", "葡萄糖"],
+  "required_params": ["fasting_glucose"],
+  "optional_params": ["age", "gender", "weight_kg"],
+  "parameters": [
+    {
+      "name": "fasting_glucose",
+      "label": "空腹血糖",
+      "type": "float",
+      "required": true,
+      "unit": "mmol/L",
+      "min": 1,
+      "max": 50,
+      "description": "空腹血糖，单位 mmol/L。"
+    },
+    {
+      "name": "age",
+      "label": "年龄",
+      "type": "int",
+      "required": false,
+      "min": 0,
+      "max": 120,
+      "description": "用于结果解释增强，不参与计算。"
+    },
+    {
+      "name": "gender",
+      "label": "性别",
+      "type": "str",
+      "required": false,
+      "description": "用于结果解释增强，不参与计算。"
+    }
+  ],
+  "reference": "空腹血糖常用参考范围约为 3.9-6.0 mmol/L，>=7.0 mmol/L 需进一步医学评估。",
+  "applicable_scenario": "居家血糖监测与糖代谢风险初筛",
+  "supports_chinese": true,
+  "clinical_specificity": 0.93,
+  "priority": {
+    "home_suitability": 0.88,
+    "clinical_importance": 0.9,
+    "implementation_simplicity": 0.92,
+    "chinese_support": 0.98
+  },
+  "documentation": {
+    "parameter_notes": "需在空腹状态下测量；结果仅用于居家风险提示。",
+    "usage_examples": [
+      {
+        "input": { "fasting_glucose": 5.4 },
+        "description": "家庭空腹血糖常规评估。"
+      }
+    ],
+    "reference_literature": [
+      "中国 2 型糖尿病防治指南"
+    ],
+    "update_record": [
+      "2026-04-16：初始入库，完成单元测试、规则复核和边界值验证。"
+    ]
+  },
+  "validation": {
+    "unit_cases": [
+      {
+        "name": "low_case",
+        "input": { "fasting_glucose": 3.8 },
+        "expected": { "risk_level": "偏低", "score": 3.8, "summary_contains": "3.8 mmol/L" }
+      },
+      {
+        "name": "normal_case",
+        "input": { "fasting_glucose": 5.4 },
+        "expected": { "risk_level": "正常", "score": 5.4, "summary_contains": "5.4 mmol/L" }
+      },
+      {
+        "name": "elevated_case",
+        "input": { "fasting_glucose": 6.5 },
+        "expected": { "risk_level": "偏高", "score": 6.5, "summary_contains": "6.5 mmol/L" }
+      },
+      {
+        "name": "high_risk_case",
+        "input": { "fasting_glucose": 7.2 },
+        "expected": { "risk_level": "高风险", "score": 7.2, "summary_contains": "7.2 mmol/L" }
+      }
+    ],
+    "boundary_checks": [
+      {
+        "name": "low_upper_bound",
+        "input": { "fasting_glucose": 3.8 },
+        "expected_risk_level": "偏低"
+      },
+      {
+        "name": "normal_lower_bound",
+        "input": { "fasting_glucose": 3.9 },
+        "expected_risk_level": "正常"
+      },
+      {
+        "name": "normal_upper_bound",
+        "input": { "fasting_glucose": 6.0 },
+        "expected_risk_level": "正常"
+      },
+      {
+        "name": "elevated_lower_bound",
+        "input": { "fasting_glucose": 6.1 },
+        "expected_risk_level": "偏高"
+      },
+      {
+        "name": "high_risk_lower_bound",
+        "input": { "fasting_glucose": 7.0 },
+        "expected_risk_level": "高风险"
+      }
+    ]
+  }
+}

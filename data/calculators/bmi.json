@@ -1,0 +1,119 @@
+{
+  "name": "bmi",
+  "display_name": "BMI 体重指数",
+  "description": "根据身高和体重评估成人体重状态，适用于居家基础健康管理。",
+  "source_module": "app.calculators.basic",
+  "function_name": "calculate_bmi",
+  "intent_keywords": ["bmi", "体重指数", "身高体重", "肥胖", "超重"],
+  "required_params": ["height_cm", "weight_kg"],
+  "optional_params": ["gender", "age"],
+  "parameters": [
+    {
+      "name": "height_cm",
+      "label": "身高",
+      "type": "float",
+      "required": true,
+      "unit": "cm",
+      "min": 50,
+      "max": 250,
+      "description": "用户身高，单位厘米。"
+    },
+    {
+      "name": "weight_kg",
+      "label": "体重",
+      "type": "float",
+      "required": true,
+      "unit": "kg",
+      "min": 2,
+      "max": 500,
+      "description": "用户体重，单位千克。"
+    },
+    {
+      "name": "gender",
+      "label": "性别",
+      "type": "str",
+      "required": false,
+      "description": "用于结果解释增强，不参与计算。"
+    },
+    {
+      "name": "age",
+      "label": "年龄",
+      "type": "int",
+      "required": false,
+      "min": 0,
+      "max": 120,
+      "description": "用于结果解释增强，不参与计算。"
+    }
+  ],
+  "reference": "中国成人 BMI 分类参考：18.5-23.9 为正常，24.0-27.9 为超重，>=28 为肥胖。",
+  "applicable_scenario": "居家体重管理与营养风险初筛",
+  "supports_chinese": true,
+  "clinical_specificity": 0.7,
+  "priority": {
+    "home_suitability": 0.98,
+    "clinical_importance": 0.8,
+    "implementation_simplicity": 0.95,
+    "chinese_support": 1.0
+  },
+  "documentation": {
+    "parameter_notes": "BMI 适用于家庭场景下的成人体重初筛，不替代临床诊断。",
+    "usage_examples": [
+      {
+        "input": { "height_cm": 170, "weight_kg": 65 },
+        "description": "成人常规 BMI 评估。"
+      }
+    ],
+    "reference_literature": [
+      "中国成人 BMI 分类参考标准"
+    ],
+    "update_record": [
+      "2026-04-16：初始入库，完成单元测试、规则复核和边界值验证。"
+    ]
+  },
+  "validation": {
+    "unit_cases": [
+      {
+        "name": "underweight_case",
+        "input": { "height_cm": 170, "weight_kg": 50 },
+        "expected": { "risk_level": "偏低", "score": 17.3, "summary_contains": "BMI 为 17.3" }
+      },
+      {
+        "name": "normal_case",
+        "input": { "height_cm": 170, "weight_kg": 65 },
+        "expected": { "risk_level": "正常", "score": 22.5, "summary_contains": "BMI 为 22.5" }
+      },
+      {
+        "name": "overweight_case",
+        "input": { "height_cm": 170, "weight_kg": 72 },
+        "expected": { "risk_level": "超重", "score": 24.9, "summary_contains": "BMI 为 24.9" }
+      },
+      {
+        "name": "obesity_case",
+        "input": { "height_cm": 170, "weight_kg": 85 },
+        "expected": { "risk_level": "肥胖", "score": 29.4, "summary_contains": "BMI 为 29.4" }
+      }
+    ],
+    "boundary_checks": [
+      {
+        "name": "normal_upper_bound",
+        "input": { "height_cm": 170, "weight_kg": 69.2 },
+        "expected_risk_level": "正常"
+      },
+      {
+        "name": "overweight_lower_bound",
+        "input": { "height_cm": 170, "weight_kg": 69.4 },
+        "expected_risk_level": "超重"
+      },
+      {
+        "name": "overweight_upper_bound",
+        "input": { "height_cm": 170, "weight_kg": 80.6 },
+        "expected_risk_level": "超重"
+      },
+      {
+        "name": "obesity_lower_bound",
+        "input": { "height_cm": 170, "weight_kg": 81.0 },
+        "expected_risk_level": "肥胖"
+      }
+    ]
+  }
+}

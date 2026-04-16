@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>悦康守护 - 居家健康智能对话系统</title>
+  <link rel="stylesheet" href="/style.css" />
+  <script defer src="https://modao.cc/agent-py/static/source/js/iconify-icon.min.1.0.7.js"></script>
+</head>
+<body>
+  <div class="setup-overlay" id="setup-overlay">
+    <div class="setup-card">
+      <div class="setup-icon">
+        <iconify-icon icon="solar:heart-pulse-bold-duotone"></iconify-icon>
+      </div>
+      <div>
+        <h2>欢迎来到悦康守护</h2>
+        <p>为了给您提供精准的健康建议，请先创建或选择您的健康档案。</p>
+      </div>
+      <div class="setup-actions">
+        <button class="primary-button primary-button--full" id="open-create-modal-overlay" type="button">+ 创建新档案</button>
+        <div class="select-wrap">
+          <select id="overlay-user-select" class="soft-input">
+            <option value="">选择已有档案...</option>
+          </select>
+          <iconify-icon class="select-arrow" icon="solar:alt-arrow-down-linear"></iconify-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="app-frame">
+    <aside class="sidebar glass-card">
+      <div class="sidebar-top">
+        <div class="brand-row">
+          <div class="brand-icon">
+            <iconify-icon icon="solar:health-bold"></iconify-icon>
+          </div>
+          <span class="brand-name">悦康守护</span>
+          <button class="icon-action" id="open-create-modal" type="button" title="新建档案">
+            <iconify-icon icon="solar:user-plus-bold-duotone"></iconify-icon>
+          </button>
+        </div>
+
+        <div class="user-picker-wrap" id="user-picker-wrap">
+          <label class="sidebar-label">当前管理档案</label>
+          <button class="user-picker-trigger" id="user-picker-trigger" type="button">
+            <div class="user-avatar" id="current-avatar">未</div>
+            <div class="user-picker-copy">
+              <h3 id="current-user-name">未选择</h3>
+              <p id="current-user-tag">请选择或新建档案</p>
+            </div>
+            <iconify-icon class="picker-arrow" icon="solar:alt-arrow-down-linear"></iconify-icon>
+          </button>
+          <div class="user-dropdown hidden" id="user-dropdown"></div>
+        </div>
+      </div>
+
+      <div class="sidebar-scroll custom-scrollbar">
+        <section class="panel-card">
+          <div class="panel-head">
+            <div class="panel-title">
+              <iconify-icon icon="solar:clipboard-list-bold-duotone"></iconify-icon>
+              <span>档案摘要</span>
+            </div>
+            <button class="ghost-icon-button" id="toggle-summary" type="button">
+              <iconify-icon id="summary-toggle-icon" icon="solar:alt-arrow-up-linear"></iconify-icon>
+            </button>
+          </div>
+          <div class="summary-body" id="summary-body">
+            <div class="summary-grid" id="summary-metrics"></div>
+            <div class="summary-strip">
+              <div class="summary-strip-left">
+                <iconify-icon icon="solar:smoking-bold-duotone"></iconify-icon>
+                <span>吸烟史</span>
+              </div>
+              <strong id="summary-smoking">无</strong>
+            </div>
+            <div class="summary-actions">
+              <button class="secondary-button" id="open-edit-modal" type="button">
+                <iconify-icon icon="solar:pen-new-square-linear"></iconify-icon>
+                <span>编辑档案</span>
+              </button>
+              <button class="secondary-button" id="show-history" type="button">
+                <iconify-icon icon="solar:history-linear"></iconify-icon>
+                <span>历史评估</span>
+              </button>
+            </div>
+            <button class="detail-button" id="show-details" type="button">
+              <iconify-icon icon="solar:document-list-bold-duotone"></iconify-icon>
+              <span>档案详情</span>
+            </button>
+          </div>
+        </section>
+
+        <section class="panel-card panel-card--warm">
+          <div class="panel-head">
+            <div class="panel-title panel-title--warm">
+              <iconify-icon icon="solar:stars-bold-duotone"></iconify-icon>
+              <span>今日健康提醒</span>
+            </div>
+          </div>
+          <ul class="tips-list">
+            <li>优先记录血压、体重和空腹血糖，系统更容易给出稳定评估。</li>
+            <li>如果对话中出现追问，请直接补充参数，系统会继续完成评估。</li>
+            <li>保存结果后，可以在历史评估和档案详情里追踪变化。</li>
+          </ul>
+        </section>
+
+        <section class="panel-card">
+          <span class="sidebar-label">紧急联络人</span>
+          <div class="contact-card">
+            <div class="contact-icon">
+              <iconify-icon icon="solar:phone-bold-duotone"></iconify-icon>
+            </div>
+            <div class="contact-copy">
+              <h4>家属（张小强）</h4>
+              <p>138 **** 8888</p>
+            </div>
+            <button class="text-link" type="button">呼叫</button>
+          </div>
+        </section>
+      </div>
+
+      <div class="sidebar-footer">
+        <span id="sidebar-time"></span>
+        <span>悦康守护 v2.4</span>
+      </div>
+    </aside>
+
+    <main class="chat-main">
+      <header class="chat-header">
+        <div class="chat-status">
+          <span class="status-dot"></span>
+          <span>智能健康助手 在线</span>
+        </div>
+        <div class="chat-header-meta">
+          <button class="header-icon-button" type="button">
+            <iconify-icon icon="solar:settings-linear"></iconify-icon>
+          </button>
+          <button class="header-icon-button" type="button">
+            <iconify-icon icon="solar:bell-linear"></iconify-icon>
+          </button>
+          <div class="header-divider"></div>
+          <span class="header-date" id="today-text"></span>
+        </div>
+      </header>
+
+      <div class="chat-body custom-scrollbar" id="chat-stream"></div>
+
+      <div class="chat-composer">
+        <div class="quick-actions custom-scrollbar">
+          <button class="quick-chip" data-prompt="帮我分析今日血压，我的血压是138/86。">今日血压分析</button>
+          <button class="quick-chip" data-prompt="请根据我当前情况给我一些饮食建议。">饮食建议</button>
+          <button class="quick-chip" data-prompt="请帮我回顾最近的评估结果。">最近评估报告</button>
+          <button class="quick-chip" data-prompt="请给我一份适合居家的运动建议。">运动建议</button>
+        </div>
+
+        <div class="composer-box">
+          <button class="composer-side-button" type="button">
+            <iconify-icon icon="solar:gallery-linear"></iconify-icon>
+          </button>
+          <textarea id="message-input" class="composer-input custom-scrollbar" rows="1" placeholder="输入您的问题，如：最近感觉心跳有点快怎么办？"></textarea>
+          <button id="send-button" class="send-button" type="button">
+            <iconify-icon icon="solar:plain-2-bold"></iconify-icon>
+          </button>
+        </div>
+
+        <div class="composer-bottom">
+          <div class="composer-status" id="action-status"></div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div class="modal hidden" id="create-modal">
+    <div class="modal-card modal-card--medium">
+      <div class="modal-head">
+        <h3>新建健康档案</h3>
+        <button class="modal-close close-modal" data-modal="create-modal" type="button">
+          <iconify-icon icon="solar:close-circle-linear"></iconify-icon>
+        </button>
+      </div>
+      <form id="create-form" class="modal-form">
+        <div class="form-grid">
+          <label>
+            <span>姓名 <em>*</em></span>
+            <input class="soft-input" name="name" type="text" required />
+          </label>
+          <label>
+            <span>出生日期 <em>*</em></span>
+            <input class="soft-input" name="birth_date" type="date" required />
+          </label>
+          <label>
+            <span>性别 <em>*</em></span>
+            <select class="soft-input" name="gender" required>
+              <option value="">请选择</option>
+              <option value="男">男</option>
+              <option value="女">女</option>
+            </select>
+          </label>
+          <label>
+            <span>历史吸烟</span>
+            <select class="soft-input" name="smoking_history">
+              <option value="">未填写</option>
+              <option value="从不吸烟">从不吸烟</option>
+              <option value="当前吸烟">当前吸烟</option>
+              <option value="已戒烟">已戒烟</option>
+            </select>
+          </label>
+          <label>
+            <span>身高 (cm)</span>
+            <input class="soft-input" name="height_cm" type="number" min="50" max="250" step="0.1" />
+          </label>
+          <label>
+            <span>体重 (kg)</span>
+            <input class="soft-input" name="weight_kg" type="number" min="30" max="200" step="0.1" />
+          </label>
+        </div>
+        <div class="form-message" id="create-form-message"></div>
+        <div class="modal-actions">
+          <button class="secondary-button secondary-button--block close-modal" data-modal="create-modal" type="button">取消</button>
+          <button class="primary-button primary-button--block" type="submit">完成创建</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal hidden" id="edit-modal">
+    <div class="modal-card modal-card--large">
+      <div class="modal-head modal-head--warm">
+        <div class="modal-title-group">
+          <iconify-icon icon="solar:user-id-bold-duotone"></iconify-icon>
+          <h3>编辑健康档案</h3>
+        </div>
+        <button class="modal-close close-modal" data-modal="edit-modal" type="button">
+          <iconify-icon icon="solar:close-circle-linear"></iconify-icon>
+        </button>
+      </div>
+      <form id="edit-form" class="modal-form modal-form--scroll custom-scrollbar">
+        <div class="form-grid">
+          <label>
+            <span>姓名</span>
+            <input class="soft-input" name="name" type="text" required />
+          </label>
+          <label>
+            <span>出生日期</span>
+            <input class="soft-input" name="birth_date" type="date" required />
+          </label>
+          <label>
+            <span>性别</span>
+            <select class="soft-input" name="gender" required>
+              <option value="男">男</option>
+              <option value="女">女</option>
+            </select>
+          </label>
+          <label>
+            <span>吸烟史</span>
+            <select class="soft-input" name="smoking_history">
+              <option value="">未填写</option>
+              <option value="从不吸烟">从不吸烟</option>
+              <option value="当前吸烟">当前吸烟</option>
+              <option value="已戒烟">已戒烟</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="tier-card">
+          <button class="tier-head" data-tier-target="vitals-tier" type="button">
+            <span>核心生命体征</span>
+            <iconify-icon icon="solar:alt-arrow-down-linear"></iconify-icon>
+          </button>
+          <div class="tier-body" id="vitals-tier">
+            <p class="tier-intro">体温、心率、血压、体重、睡眠质量等指标适合每日自查，是最核心的居家健康基线。</p>
+            <div class="indicator-grid indicator-grid--triple">
+              <label class="indicator-card">
+                <span class="indicator-name">体温</span>
+                <div class="indicator-input">
+                  <input class="soft-input soft-input--compact" name="temperature_c" type="number" min="30" max="45" step="0.1" />
+                  <small>℃</small>
+                </div>
+                <div class="indicator-meta">
+                  <span>正常范围: 36.1-37.2</span>
+                  <span>医学意义: 感染与代谢状态</span>
+                  <span>自查方法: 腋下/耳温枪</span>
+                </div>
+              </label>
+              <label class="indicator-card">
+                <span class="indicator-name">心率</span>
+                <div class="indicator-input">
+                  <input class="soft-input soft-input--compact" name="heart_rate_bpm" type="number" min="20" max="220" step="1" />
+                  <small>次/分</small>
+                </div>
+                <div class="indicator-meta">
+                  <span>正常范围: 60-100</span>
+                  <span>医学意义: 心脏负荷</span>
+                  <span>自查方法: 触摸脉搏/穿戴设备</span>
+                </div>
+              </label>
+              <label class="indicator-card">
+                <span class="indicator-name">呼吸频率</span>
+                <div class="indicator-input">
+                  <input class="soft-input soft-input--compact" name="respiratory_rate_bpm" type="number" min="5" max="60" step="1" />
+                  <small>次/分</small>
+                </div>
+                <div class="indicator-meta">
+                  <span>正常范围: 12-20</span>
+                  <span>医学意义: 呼吸系统功能</span>
+                  <span>自查方法: 静息观察胸廓</span>
+                </div>
+              </label>
+              <label class="indicator-card">
+                <span class="indicator-name">身高</span>
+                <div class="indicator-input">
+                  <input class="soft-input soft-input--compact" name="height_cm" type="number" min="50" max="250" step="0.1" />
+                  <small>cm</small>
+                </div>
+                <div class="indicator-meta">
+                  <span>正常范围: 50-250</span>
+                  <span>医学意义: BMI 基线</span>
+                  <span>自查方法: 靠墙测量</span>
+                </div>
+              </label>
+              <label class="indicator-card">
+                <span class="indicator-name">体重</span>
+                <div class="indicator-input">
+                  <input class="soft-input soft-input--compact" name="weight_kg" type="number" min="30" max="200" step="0.1" />
+                  <small>kg</small>
+                </div>
+                <div class="indicator-meta">
+                  <span>正常范围: BMI 18.5-24</span>
+                  <span>医学意义: 营养与体脂</span>
+                  <span>自查方法: 体重秤晨起测量</span>
+                </div>
+              </label>
+              <label class="indicator-card">
+                <span class="indicator-name">收缩压</span>
+                <div class="indicator-input">
+                  <input class="soft-input soft-input--compact" name="systolic_bp" type="number" min="50" max="300" step="1" />
+                  <small>mmHg</small>
+                </div>
+                <div class="indicator-meta">
+                  <span>正常范围: &lt;120</span>
+                  <span>医学意义: 动脉压力</span>
+                  <span>自查方法: 静坐后电子血压计</span>
+                </div>
+              </label>
+              <label class="indicator-card">
+                <span class="indicator-name">舒张压</span>
+                <div class="indicator-input">
+                  <input class="soft-input soft-input--compact" name="diastolic_bp" type="number" min="30" max="200" step="1" />
+                  <small>mmHg</small>
+                </div>
+                <div class="indicator-meta">
+                  <span>正常范围: &lt;80</span>
+                  <span>医学意义: 外周阻力</span>
+                  <span>自查方法: 静坐后电子血压计</span>
+                </div>
+              </label>
+              <label class="indicator-card indicator-card--wide">
+                <span class="indicator-name">睡眠质量</span>
+                <div class="indicator-input indicator-input--full">
+                  <input class="soft-input soft-input--compact" name="sleep_quality" type="text" placeholder="如：入睡正常，夜间醒1次，睡眠7小时" />
+                </div>
+                <div class="indicator-meta">
+                  <span>正常范围: 7-8小时</span>
+                  <span>医学意义: 恢复能力与精神状态</span>
+                  <span>自查方法: 每日主观记录</span>
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="tier-card">
+          <button class="tier-head is-collapsed" data-tier-target="home-tier" type="button">
+            <span>重点居家检测指标</span>
+            <iconify-icon icon="solar:alt-arrow-right-linear"></iconify-icon>
+          </button>
+          <div class="tier-body hidden" id="home-tier">
+            <p class="tier-intro">适合每周或每月自查，关注慢性变化和生活功能状态。</p>
+            <div class="indicator-grid indicator-grid--double">
+              <label class="indicator-card">
+                <span class="indicator-name">尿便性状</span>
+                <div class="indicator-input indicator-input--full">
+                  <input class="soft-input soft-input--compact" name="urine_bowel_status" type="text" placeholder="如：颜色正常，无便秘" />
+                </div>
+                <div class="indicator-meta">
+                  <span>正常范围: 规律排泄</span>
+                  <span>医学意义: 消化/泌尿系统</span>
+                  <span>自查方法: 日常观察</span>
+                </div>
+              </label>
+              <label class="indicator-card">
+                <span class="indicator-name">食欲</span>
+                <div class="indicator-input indicator-input--full">
+                  <input class="soft-input soft-input--compact" name="appetite_status" type="text" placeholder="如：食欲稳定" />
+                </div>
+                <div class="indicator-meta">
+                  <span>正常范围: 三餐规律</span>
+                  <span>医学意义: 能量摄入</span>
+                  <span>自查方法: 主观记录</span>
+                </div>
+              </label>
+              <label class="indicator-card">
+                <span class="indicator-name">腰围</span>
+                <div class="indicator-input">
+                  <input class="soft-input soft-input--compact" name="waist_cm" type="number" min="30" max="200" step="0.1" />
+                  <small>cm</small>
+                </div>
+                <div class="indicator-meta">
+                  <span>正常范围: 男&lt;90 女&lt;85</span>
+                  <span>医学意义: 中心性肥胖</span>
+                  <span>自查方法: 软尺测量</span>
+                </div>
+              </label>
+              <label class="indicator-card">
+                <span class="indicator-name">平衡能力</span>
+                <div class="indicator-input indicator-input--full">
+                  <input class="soft-input soft-input--compact" name="balance_ability" type="text" placeholder="如：步态稳定，无跌倒" />
+                </div>
+                <div class="indicator-meta">
+                  <span>正常范围: 行走平稳</span>
+                  <span>医学意义: 跌倒风险</span>
+                  <span>自查方法: 单脚站立/起立测试</span>
+                </div>
+              </label>
+              <label class="indicator-card">
+                <span class="indicator-name">情绪与认知</span>
+                <div class="indicator-input indicator-input--full">
+                  <input class="soft-input soft-input--compact" name="mood_cognition" type="text" placeholder="如：情绪平稳，反应正常" />
+                </div>
+                <div class="indicator-meta">
+                  <span>正常范围: 清醒稳定</span>
+                  <span>医学意义: 心理/认知状态</span>
+                  <span>自查方法: 本人及家属观察</span>
+                </div>
+              </label>
+              <label class="indicator-card">
+                <span class="indicator-name">皮肤/巩膜颜色</span>
+                <div class="indicator-input indicator-input--full">
+                  <input class="soft-input soft-input--compact" name="skin_sclera_status" type="text" placeholder="如：肤色正常，无黄染" />
+                </div>
+                <div class="indicator-meta">
+                  <span>正常范围: 无明显异常</span>
+                  <span>医学意义: 肝胆/循环状态</span>
+                  <span>自查方法: 镜前观察</span>
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="tier-card">
+          <button class="tier-head is-collapsed" data-tier-target="biochem-tier" type="button">
+            <span>基础生化指标</span>
+            <iconify-icon icon="solar:alt-arrow-right-linear"></iconify-icon>
+          </button>
+          <div class="tier-body hidden" id="biochem-tier">
+            <p class="tier-intro">通常需要到院检测，建议记录最近一次检查结果或结论摘要。</p>
+            <div class="indicator-grid indicator-grid--double">
+              <label class="indicator-card">
+                <span class="indicator-name">空腹血糖</span>
+                <div class="indicator-input">
+                  <input class="soft-input soft-input--compact" name="fasting_glucose" type="number" min="1" max="50" step="0.1" />
+                  <small>mmol/L</small>
+                </div>
+                <div class="indicator-meta">
+                  <span>正常范围: 3.9-6.1</span>
+                  <span>医学意义: 糖代谢</span>
+                  <span>自查方法: 实验室检测</span>
+                </div>
+              </label>
+              <label class="indicator-card">
+                <span class="indicator-name">血脂四项</span>
+                <div class="indicator-input indicator-input--full">
+                  <textarea class="soft-input soft-input--compact textarea-compact" name="blood_lipids" rows="3" placeholder="如：TC 5.1，TG 1.4，LDL 2.9"></textarea>
+                </div>
+                <div class="indicator-meta">
+                  <span>正常范围: LDL 越低越好</span>
+                  <span>医学意义: 动脉硬化风险</span>
+                  <span>自查方法: 空腹抽血</span>
+                </div>
+              </label>
+              <label class="indicator-card">
+                <span class="indicator-name">血常规</span>
+                <div class="indicator-input indicator-input--full">
+                  <textarea class="soft-input soft-input--compact textarea-compact" name="blood_routine" rows="3" placeholder="如：Hb 正常，WBC 正常"></textarea>
+                </div>
+                <div class="indicator-meta">
+                  <span>正常范围: 参考化验单</span>
+                  <span>医学意义: 感染/贫血</span>
+                  <span>自查方法: 静脉采血</span>
+                </div>
+              </label>
+              <label class="indicator-card">
+                <span class="indicator-name">肝功能</span>
+                <div class="indicator-input indicator-input--full">
+                  <textarea class="soft-input soft-input--compact textarea-compact" name="liver_function" rows="3" placeholder="如：ALT、AST 正常"></textarea>
+                </div>
+                <div class="indicator-meta">
+                  <span>正常范围: 参考化验单</span>
+                  <span>医学意义: 肝细胞损伤</span>
+                  <span>自查方法: 生化检测</span>
+                </div>
+              </label>
+              <label class="indicator-card">
+                <span class="indicator-name">肾功能</span>
+                <div class="indicator-input indicator-input--full">
+                  <textarea class="soft-input soft-input--compact textarea-compact" name="kidney_function" rows="3" placeholder="如：Cr、尿素氮正常"></textarea>
+                </div>
+                <div class="indicator-meta">
+                  <span>正常范围: 参考化验单</span>
+                  <span>医学意义: 排泄功能</span>
+                  <span>自查方法: 生化检测</span>
+                </div>
+              </label>
+              <label class="indicator-card">
+                <span class="indicator-name">视力/下肢水肿</span>
+                <div class="indicator-input indicator-input--full">
+                  <textarea class="soft-input soft-input--compact textarea-compact" name="vision_leg_edema" rows="3" placeholder="如：视力稳定，无明显水肿"></textarea>
+                </div>
+                <div class="indicator-meta">
+                  <span>正常范围: 无明显异常</span>
+                  <span>医学意义: 微血管/循环状态</span>
+                  <span>自查方法: 门诊检查+观察</span>
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="tier-card">
+          <button class="tier-head is-collapsed" data-tier-target="screening-tier" type="button">
+            <span>影像与专项筛查</span>
+            <iconify-icon icon="solar:alt-arrow-right-linear"></iconify-icon>
+          </button>
+          <div class="tier-body hidden" id="screening-tier">
+            <p class="tier-intro">适合年度体检时填写，保存最近一次专项检查或影像结论。</p>
+            <div class="indicator-grid indicator-grid--double">
+              <label class="indicator-card">
+                <span class="indicator-name">腹部超声</span>
+                <div class="indicator-input indicator-input--full">
+                  <textarea class="soft-input soft-input--compact textarea-compact" name="abdominal_ultrasound" rows="3" placeholder="如：肝胆胰脾未见明显异常"></textarea>
+                </div>
+                <div class="indicator-meta">
+                  <span>正常范围: 结合影像报告</span>
+                  <span>医学意义: 腹部器官筛查</span>
+                  <span>自查方法: 年度体检</span>
+                </div>
+              </label>
+              <label class="indicator-card">
+                <span class="indicator-name">心电图</span>
+                <div class="indicator-input indicator-input--full">
+                  <textarea class="soft-input soft-input--compact textarea-compact" name="ecg_report" rows="3" placeholder="如：窦性心律，未见明显异常"></textarea>
+                </div>
+                <div class="indicator-meta">
+                  <span>正常范围: 结合报告</span>
+                  <span>医学意义: 心律/缺血筛查</span>
+                  <span>自查方法: 静息心电图</span>
+                </div>
+              </label>
+              <label class="indicator-card">
+                <span class="indicator-name">骨密度</span>
+                <div class="indicator-input indicator-input--full">
+                  <textarea class="soft-input soft-input--compact textarea-compact" name="bone_density" rows="3" placeholder="如：提示骨量减少"></textarea>
+                </div>
+                <div class="indicator-meta">
+                  <span>正常范围: T值参考</span>
+                  <span>医学意义: 骨折风险</span>
+                  <span>自查方法: 双能X线检测</span>
+                </div>
+              </label>
+              <label class="indicator-card">
+                <span class="indicator-name">认知评估/专项筛查</span>
+                <div class="indicator-input indicator-input--full">
+                  <textarea class="soft-input soft-input--compact textarea-compact" name="cognitive_special_screening" rows="3" placeholder="如：MMSE 28分，认知正常"></textarea>
+                </div>
+                <div class="indicator-meta">
+                  <span>正常范围: 量表参考</span>
+                  <span>医学意义: 认知状态</span>
+                  <span>自查方法: 量表检测</span>
+                </div>
+              </label>
+              <label class="indicator-card indicator-card--wide">
+                <span class="indicator-name">其他影像与专项体检结论</span>
+                <div class="indicator-input indicator-input--full">
+                  <textarea class="soft-input soft-input--compact textarea-compact" name="imaging_special_notes" rows="3" placeholder="如：胸部CT、糖化血红蛋白、HP等近期结论"></textarea>
+                </div>
+                <div class="indicator-meta">
+                  <span>正常范围: 按最近结果记录</span>
+                  <span>医学意义: 综合体检追踪</span>
+                  <span>自查方法: 年度复查</span>
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="tier-card">
+          <button class="tier-head is-collapsed" data-tier-target="specialist-tier" type="button">
+            <span>深度专科检查</span>
+            <iconify-icon icon="solar:alt-arrow-right-linear"></iconify-icon>
+          </button>
+          <div class="tier-body hidden" id="specialist-tier">
+            <p class="tier-intro">根据医生建议按需追加，适合长期慢病管理或专科随访记录。</p>
+            <div class="indicator-grid indicator-grid--double">
+              <label class="indicator-card">
+                <span class="indicator-name">甲状腺功能</span>
+                <div class="indicator-input indicator-input--full">
+                  <textarea class="soft-input soft-input--compact textarea-compact" name="thyroid_function" rows="3" placeholder="如：TSH 正常"></textarea>
+                </div>
+                <div class="indicator-meta">
+                  <span>正常范围: 参考报告单</span>
+                  <span>医学意义: 代谢与内分泌</span>
+                  <span>自查方法: 专科抽血</span>
+                </div>
+              </label>
+              <label class="indicator-card">
+                <span class="indicator-name">肿瘤标志物</span>
+                <div class="indicator-input indicator-input--full">
+                  <textarea class="soft-input soft-input--compact textarea-compact" name="tumor_markers" rows="3" placeholder="如：AFP、CEA 未见异常"></textarea>
+                </div>
+                <div class="indicator-meta">
+                  <span>正常范围: 结合临床解读</span>
+                  <span>医学意义: 专项排查</span>
+                  <span>自查方法: 专科检测</span>
+                </div>
+              </label>
+              <label class="indicator-card">
+                <span class="indicator-name">颈动脉超声</span>
+                <div class="indicator-input indicator-input--full">
+                  <textarea class="soft-input soft-input--compact textarea-compact" name="carotid_ultrasound" rows="3" placeholder="如：轻度斑块形成"></textarea>
+                </div>
+                <div class="indicator-meta">
+                  <span>正常范围: 结合影像报告</span>
+                  <span>医学意义: 动脉粥样硬化</span>
+                  <span>自查方法: 血管超声</span>
+                </div>
+              </label>
+              <label class="indicator-card">
+                <span class="indicator-name">超声心动图 / ABI</span>
+                <div class="indicator-input indicator-input--full">
+                  <textarea class="soft-input soft-input--compact textarea-compact" name="echo_abi" rows="3" placeholder="如：心功能正常，ABI 1.0"></textarea>
+                </div>
+                <div class="indicator-meta">
+                  <span>正常范围: 结合专科报告</span>
+                  <span>医学意义: 心功能/外周血管</span>
+                  <span>自查方法: 心血管专科</span>
+                </div>
+              </label>
+              <label class="indicator-card indicator-card--wide">
+                <span class="indicator-name">专科补充说明</span>
+                <div class="indicator-input indicator-input--full">
+                  <textarea class="soft-input soft-input--compact textarea-compact" name="specialist_notes" rows="3" placeholder="如：医生建议三个月后复查"></textarea>
+                </div>
+                <div class="indicator-meta">
+                  <span>正常范围: 按需补充</span>
+                  <span>医学意义: 跟踪治疗计划</span>
+                  <span>自查方法: 就诊后记录</span>
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-message" id="edit-form-message"></div>
+        <div class="modal-actions">
+          <button class="secondary-button secondary-button--block close-modal" data-modal="edit-modal" type="button">取消</button>
+          <button class="primary-button primary-button--block primary-button--warm" type="submit">保存更改</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal hidden" id="history-modal">
+    <div class="modal-card modal-card--history">
+      <div class="modal-head">
+        <h3>历史健康评估</h3>
+        <button class="modal-close close-modal" data-modal="history-modal" type="button">
+          <iconify-icon icon="solar:close-circle-linear"></iconify-icon>
+        </button>
+      </div>
+      <div class="modal-scroll custom-scrollbar" id="history-container"></div>
+      <div class="modal-foot">
+        <button class="secondary-button secondary-button--foot close-modal" data-modal="history-modal" type="button">关闭</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal hidden" id="details-modal">
+    <div class="modal-card modal-card--details">
+      <div class="modal-head">
+        <div>
+          <h3>档案详细记录</h3>
+          <p>按更新时间排列，仅展示已填写的指标</p>
+        </div>
+        <button class="modal-close close-modal" data-modal="details-modal" type="button">
+          <iconify-icon icon="solar:close-circle-bold"></iconify-icon>
+        </button>
+      </div>
+      <div class="modal-scroll custom-scrollbar" id="details-container"></div>
+    </div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>

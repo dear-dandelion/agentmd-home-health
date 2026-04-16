@@ -1,0 +1,29 @@
+[
+  {
+    "name": "bmi",
+    "display_name": "BMI 体重指数",
+    "intent_keywords": ["bmi", "体重指数", "身高体重", "肥胖", "超重"],
+    "required_params": ["height_cm", "weight_kg"],
+    "optional_params": ["gender", "age"],
+    "description": "根据身高和体重评估成人体重状态，适用于居家基础健康管理。",
+    "priority_level": "high"
+  },
+  {
+    "name": "blood_pressure",
+    "display_name": "血压风险评估",
+    "intent_keywords": ["血压", "高血压", "收缩压", "舒张压"],
+    "required_params": ["systolic_bp", "diastolic_bp"],
+    "optional_params": ["age", "gender", "weight_kg"],
+    "description": "根据收缩压和舒张压进行居家血压风险初筛。",
+    "priority_level": "high"
+  },
+  {
+    "name": "fasting_glucose",
+    "display_name": "空腹血糖评估",
+    "intent_keywords": ["血糖", "空腹血糖", "糖尿病", "葡萄糖"],
+    "required_params": ["fasting_glucose"],
+    "optional_params": ["age", "gender", "weight_kg"],
+    "description": "根据空腹血糖数值进行居家糖代谢风险初筛。",
+    "priority_level": "high"
+  }
+]

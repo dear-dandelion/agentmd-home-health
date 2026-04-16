@@ -1,0 +1,12 @@
+{
+  "conversation_timeout_minutes": 30,
+  "app_title": "居家健康智能对话系统",
+  "llm_provider": "deepseek",
+  "intent_labels": [
+    "health_consultation",
+    "quantitative_assessment",
+    "profile_query",
+    "profile_update",
+    "smalltalk"
+  ]
+}

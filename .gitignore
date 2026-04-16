@@ -1,0 +1,7 @@
+.env
+__pycache__/
+*.pyc
+app/storage/*.db
+*.log
+*.out
+*.err

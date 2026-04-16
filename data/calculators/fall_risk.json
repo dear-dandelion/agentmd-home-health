@@ -1,0 +1,99 @@
+{
+  "name": "fall_risk",
+  "display_name": "跌倒风险初筛",
+  "description": "结合年龄和平衡能力，对居家跌倒风险进行初步分层。",
+  "source_module": "app.calculators.basic",
+  "function_name": "calculate_fall_risk",
+  "intent_keywords": ["跌倒", "平衡", "步态", "站立不稳"],
+  "required_params": ["age", "balance_ability"],
+  "optional_params": ["gender"],
+  "parameters": [
+    {
+      "name": "age",
+      "label": "年龄",
+      "type": "int",
+      "required": true,
+      "min": 0,
+      "max": 120,
+      "description": "年龄，用于跌倒风险分层。"
+    },
+    {
+      "name": "balance_ability",
+      "label": "平衡能力",
+      "type": "str",
+      "required": true,
+      "description": "平衡能力描述，可为良好、一般、较差，或含相近语义的文本。"
+    }
+  ],
+  "reference": "老年人居家跌倒风险常结合年龄、平衡能力与步态稳定性进行分层，本结果仅用于初步提示。",
+  "applicable_scenario": "居家老年跌倒风险初筛",
+  "supports_chinese": true,
+  "clinical_specificity": 0.9,
+  "priority": {
+    "home_suitability": 0.96,
+    "clinical_importance": 0.93,
+    "implementation_simplicity": 0.82,
+    "chinese_support": 1.0
+  },
+  "documentation": {
+    "parameter_notes": "跌倒风险受多因素影响，此处仅结合年龄和平衡能力做基础提示，不能替代专业评估。",
+    "usage_examples": [
+      {
+        "input": { "age": 78, "balance_ability": "步态不稳" },
+        "description": "老年人跌倒风险偏高示例。"
+      }
+    ],
+    "reference_literature": [
+      "老年人跌倒预防与风险管理常用原则"
+    ],
+    "update_record": [
+      "2026-04-16：新增跌倒风险初筛，完成单元测试与边界值验证。"
+    ]
+  },
+  "validation": {
+    "unit_cases": [
+      {
+        "name": "low_risk_case",
+        "input": { "age": 60, "balance_ability": "步态稳定" },
+        "expected": { "risk_level": "低风险", "score": 0, "summary_contains": "评分为 0" }
+      },
+      {
+        "name": "medium_risk_case",
+        "input": { "age": 68, "balance_ability": "一般" },
+        "expected": { "risk_level": "中风险", "score": 2, "summary_contains": "评分为 2" }
+      },
+      {
+        "name": "high_risk_case",
+        "input": { "age": 78, "balance_ability": "步态不稳" },
+        "expected": { "risk_level": "高风险", "score": 4, "summary_contains": "评分为 4" }
+      },
+      {
+        "name": "high_risk_by_age_and_balance_case",
+        "input": { "age": 82, "balance_ability": "需搀扶" },
+        "expected": { "risk_level": "高风险", "score": 4, "summary_contains": "评分为 4" }
+      }
+    ],
+    "boundary_checks": [
+      {
+        "name": "younger_low_risk_bound",
+        "input": { "age": 64, "balance_ability": "良好" },
+        "expected_risk_level": "低风险"
+      },
+      {
+        "name": "medium_risk_lower_bound",
+        "input": { "age": 65, "balance_ability": "一般" },
+        "expected_risk_level": "中风险"
+      },
+      {
+        "name": "older_medium_risk_bound",
+        "input": { "age": 74, "balance_ability": "一般" },
+        "expected_risk_level": "中风险"
+      },
+      {
+        "name": "high_risk_lower_bound",
+        "input": { "age": 75, "balance_ability": "较差" },
+        "expected_risk_level": "高风险"
+      }
+    ]
+  }
+}

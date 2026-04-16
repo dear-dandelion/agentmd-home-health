@@ -1,0 +1,109 @@
+{
+  "name": "waist_circumference",
+  "display_name": "腰围中心性肥胖评估",
+  "description": "根据腰围和性别进行中心性肥胖风险初筛，适用于居家代谢健康管理。",
+  "source_module": "app.calculators.basic",
+  "function_name": "calculate_waist_circumference",
+  "intent_keywords": ["腰围", "中心性肥胖", "腹型肥胖", "腹部肥胖"],
+  "required_params": ["waist_cm", "gender"],
+  "optional_params": ["age", "weight_kg"],
+  "parameters": [
+    {
+      "name": "waist_cm",
+      "label": "腰围",
+      "type": "float",
+      "required": true,
+      "unit": "cm",
+      "min": 30,
+      "max": 200,
+      "description": "腰围，单位厘米。"
+    },
+    {
+      "name": "gender",
+      "label": "性别",
+      "type": "str",
+      "required": true,
+      "description": "用于区分男女不同腰围阈值。"
+    },
+    {
+      "name": "age",
+      "label": "年龄",
+      "type": "int",
+      "required": false,
+      "min": 0,
+      "max": 120,
+      "description": "用于解释增强，不参与计算。"
+    }
+  ],
+  "reference": "中国成人中心性肥胖常用参考：男性腰围 <90 cm、女性腰围 <85 cm；更高水平提示风险进一步增加。",
+  "applicable_scenario": "居家腹型肥胖和代谢风险初筛",
+  "supports_chinese": true,
+  "clinical_specificity": 0.9,
+  "priority": {
+    "home_suitability": 0.95,
+    "clinical_importance": 0.9,
+    "implementation_simplicity": 0.94,
+    "chinese_support": 1.0
+  },
+  "documentation": {
+    "parameter_notes": "腰围建议在自然站立、呼气末于肚脐水平测量，用于中心性肥胖初筛。",
+    "usage_examples": [
+      {
+        "input": { "waist_cm": 92, "gender": "男" },
+        "description": "成年男性腰围偏高示例。"
+      }
+    ],
+    "reference_literature": [
+      "中国成人超重和肥胖症预防控制指南"
+    ],
+    "update_record": [
+      "2026-04-16：新增腰围中心性肥胖评估，完成单元测试与边界值验证。"
+    ]
+  },
+  "validation": {
+    "unit_cases": [
+      {
+        "name": "male_normal_case",
+        "input": { "waist_cm": 84, "gender": "男" },
+        "expected": { "risk_level": "正常", "score": 84, "summary_contains": "腰围为 84" }
+      },
+      {
+        "name": "male_elevated_case",
+        "input": { "waist_cm": 92, "gender": "男" },
+        "expected": { "risk_level": "偏高", "score": 92, "summary_contains": "腰围为 92" }
+      },
+      {
+        "name": "female_elevated_case",
+        "input": { "waist_cm": 88, "gender": "女" },
+        "expected": { "risk_level": "偏高", "score": 88, "summary_contains": "腰围为 88" }
+      },
+      {
+        "name": "female_high_risk_case",
+        "input": { "waist_cm": 98, "gender": "女" },
+        "expected": { "risk_level": "高风险", "score": 98, "summary_contains": "腰围为 98" }
+      }
+    ],
+    "boundary_checks": [
+      {
+        "name": "male_normal_upper_bound",
+        "input": { "waist_cm": 89.9, "gender": "男" },
+        "expected_risk_level": "正常"
+      },
+      {
+        "name": "male_elevated_lower_bound",
+        "input": { "waist_cm": 90, "gender": "男" },
+        "expected_risk_level": "偏高"
+      },
+      {
+        "name": "female_elevated_upper_bound",
+        "input": { "waist_cm": 94.9, "gender": "女" },
+        "expected_risk_level": "偏高"
+      },
+      {
+        "name": "female_high_risk_lower_bound",
+        "input": { "waist_cm": 95, "gender": "女" },
+        "expected_risk_level": "高风险"
+      }
+    ]
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "name": "resting_heart_rate",
+  "display_name": "静息心率评估",
+  "description": "根据静息心率数值进行居家心率异常风险初筛。",
+  "source_module": "app.calculators.basic",
+  "function_name": "calculate_resting_heart_rate",
+  "intent_keywords": ["心率", "脉搏", "心跳", "静息心率"],
+  "required_params": ["heart_rate_bpm"],
+  "optional_params": ["age", "gender"],
+  "parameters": [
+    {
+      "name": "heart_rate_bpm",
+      "label": "心率",
+      "type": "float",
+      "required": true,
+      "unit": "次/分",
+      "min": 20,
+      "max": 220,
+      "description": "静息心率，单位次/分。"
+    },
+    {
+      "name": "age",
+      "label": "年龄",
+      "type": "int",
+      "required": false,
+      "min": 0,
+      "max": 120,
+      "description": "用于解释增强，不参与计算。"
+    }
+  ],
+  "reference": "成人静息心率常见参考范围约为 60-100 次/分；持续明显过快或过慢需结合症状进一步评估。",
+  "applicable_scenario": "居家心率监测与异常初筛",
+  "supports_chinese": true,
+  "clinical_specificity": 0.88,
+  "priority": {
+    "home_suitability": 0.95,
+    "clinical_importance": 0.86,
+    "implementation_simplicity": 0.95,
+    "chinese_support": 1.0
+  },
+  "documentation": {
+    "parameter_notes": "建议在静息状态下测量心率，用于家庭场景下的基础风险提示。",
+    "usage_examples": [
+      {
+        "input": { "heart_rate_bpm": 72 },
+        "description": "静息心率常规评估。"
+      }
+    ],
+    "reference_literature": [
+      "成人静息心率监测常用参考"
+    ],
+    "update_record": [
+      "2026-04-16：新增静息心率评估，完成单元测试与边界值验证。"
+    ]
+  },
+  "validation": {
+    "unit_cases": [
+      {
+        "name": "low_case",
+        "input": { "heart_rate_bpm": 52 },
+        "expected": { "risk_level": "偏低", "score": 52, "summary_contains": "52 次/分" }
+      },
+      {
+        "name": "normal_case",
+        "input": { "heart_rate_bpm": 72 },
+        "expected": { "risk_level": "正常", "score": 72, "summary_contains": "72 次/分" }
+      },
+      {
+        "name": "elevated_case",
+        "input": { "heart_rate_bpm": 108 },
+        "expected": { "risk_level": "偏高", "score": 108, "summary_contains": "108 次/分" }
+      },
+      {
+        "name": "high_risk_case",
+        "input": { "heart_rate_bpm": 132 },
+        "expected": { "risk_level": "高风险", "score": 132, "summary_contains": "132 次/分" }
+      }
+    ],
+    "boundary_checks": [
+      {
+        "name": "low_upper_bound",
+        "input": { "heart_rate_bpm": 59 },
+        "expected_risk_level": "偏低"
+      },
+      {
+        "name": "normal_lower_bound",
+        "input": { "heart_rate_bpm": 60 },
+        "expected_risk_level": "正常"
+      },
+      {
+        "name": "normal_upper_bound",
+        "input": { "heart_rate_bpm": 100 },
+        "expected_risk_level": "正常"
+      },
+      {
+        "name": "high_risk_lower_bound",
+        "input": { "heart_rate_bpm": 121 },
+        "expected_risk_level": "高风险"
+      }
+    ]
+  }
+}
