@@ -1,0 +1,218 @@
+{
+  "name": "news2",
+  "display_name": "NEWS2 早期预警评分",
+  "description": "依据生命体征综合计算 NEWS2 评分。",
+  "source_module": "app.calculators.extended",
+  "function_name": "calculate_news2",
+  "intent_keywords": [
+    "news2",
+    "news",
+    "预警评分",
+    "生命体征"
+  ],
+  "required_params": [
+    "respiratory_rate_bpm",
+    "oxygen_saturation",
+    "temperature_c",
+    "systolic_bp",
+    "heart_rate_bpm",
+    "consciousness"
+  ],
+  "optional_params": [
+    "supplemental_oxygen"
+  ],
+  "parameters": [
+    {
+      "name": "respiratory_rate_bpm",
+      "label": "呼吸频率",
+      "type": "float",
+      "required": true,
+      "min": 5,
+      "max": 80,
+      "unit": "次/分",
+      "description": "呼吸频率"
+    },
+    {
+      "name": "oxygen_saturation",
+      "label": "血氧饱和度",
+      "type": "float",
+      "required": true,
+      "min": 50,
+      "max": 100,
+      "unit": "%",
+      "description": "脉搏血氧饱和度"
+    },
+    {
+      "name": "temperature_c",
+      "label": "体温",
+      "type": "float",
+      "required": true,
+      "min": 30,
+      "max": 45,
+      "unit": "℃",
+      "description": "体温"
+    },
+    {
+      "name": "systolic_bp",
+      "label": "收缩压",
+      "type": "float",
+      "required": true,
+      "min": 50,
+      "max": 300,
+      "unit": "mmHg",
+      "description": "收缩压"
+    },
+    {
+      "name": "heart_rate_bpm",
+      "label": "心率",
+      "type": "float",
+      "required": true,
+      "min": 20,
+      "max": 220,
+      "unit": "次/分",
+      "description": "心率"
+    },
+    {
+      "name": "consciousness",
+      "label": "意识状态",
+      "type": "str",
+      "required": true,
+      "description": "A/V/P/U 或文字描述"
+    }
+  ],
+  "reference": "NEWS2 常用评分分层标准。",
+  "applicable_scenario": "居家病情恶化风险预警",
+  "supports_chinese": true,
+  "clinical_specificity": 0.99,
+  "priority": {
+    "home_suitability": 0.9,
+    "clinical_importance": 0.9,
+    "implementation_simplicity": 0.85,
+    "chinese_support": 1.0
+  },
+  "documentation": {
+    "parameter_notes": "NEWS2 早期预警评分 支持输入总分，部分量表也支持按条目分值求和。",
+    "usage_examples": [
+      {
+        "input": {
+          "respiratory_rate_bpm": 24,
+          "oxygen_saturation": 92,
+          "temperature_c": 38.2,
+          "systolic_bp": 96,
+          "heart_rate_bpm": 118,
+          "consciousness": "A"
+        },
+        "description": "NEWS2 早期预警评分 示例"
+      }
+    ],
+    "reference_literature": [
+      "NEWS2 早期预警评分 常用公开评分分层标准"
+    ],
+    "update_record": [
+      "2026-04-28：接入第一批扩展计算器运行时实现。"
+    ]
+  },
+  "validation": {
+    "unit_cases": [
+      {
+        "name": "stable_case",
+        "input": {
+          "respiratory_rate_bpm": 16,
+          "oxygen_saturation": 97,
+          "temperature_c": 36.8,
+          "systolic_bp": 120,
+          "heart_rate_bpm": 80,
+          "consciousness": "A"
+        },
+        "expected": {
+          "risk_level": "低风险",
+          "score": 0
+        }
+      },
+      {
+        "name": "moderate_case",
+        "input": {
+          "respiratory_rate_bpm": 22,
+          "oxygen_saturation": 95,
+          "temperature_c": 37.8,
+          "systolic_bp": 108,
+          "heart_rate_bpm": 105,
+          "consciousness": "A"
+        },
+        "expected": {
+          "risk_level": "中高风险",
+          "score": 5
+        }
+      },
+      {
+        "name": "high_case",
+        "input": {
+          "respiratory_rate_bpm": 24,
+          "oxygen_saturation": 93,
+          "temperature_c": 38.4,
+          "systolic_bp": 96,
+          "heart_rate_bpm": 118,
+          "consciousness": "A"
+        },
+        "expected": {
+          "risk_level": "高风险",
+          "score": 9
+        }
+      },
+      {
+        "name": "critical_case",
+        "input": {
+          "respiratory_rate_bpm": 25,
+          "oxygen_saturation": 91,
+          "supplemental_oxygen": true,
+          "temperature_c": 38.5,
+          "systolic_bp": 90,
+          "heart_rate_bpm": 132,
+          "consciousness": "V"
+        },
+        "expected": {
+          "risk_level": "高风险",
+          "score": 18
+        }
+      }
+    ],
+    "boundary_checks": [
+      {
+        "name": "normal_case",
+        "input": {
+          "respiratory_rate_bpm": 16,
+          "oxygen_saturation": 97,
+          "temperature_c": 36.8,
+          "systolic_bp": 120,
+          "heart_rate_bpm": 80,
+          "consciousness": "A"
+        },
+        "expected_risk_level": "低风险"
+      },
+      {
+        "name": "escalation_case",
+        "input": {
+          "respiratory_rate_bpm": 22,
+          "oxygen_saturation": 95,
+          "temperature_c": 37.8,
+          "systolic_bp": 108,
+          "heart_rate_bpm": 105,
+          "consciousness": "A"
+        },
+        "expected_risk_level": "中高风险"
+      },
+      {
+        "name": "high_case",
+        "input": {
+          "respiratory_rate_bpm": 24,
+          "oxygen_saturation": 93,
+          "temperature_c": 38.4,
+          "systolic_bp": 96,
+          "heart_rate_bpm": 118,
+          "consciousness": "A"
+        },
+        "expected_risk_level": "高风险"
+      }
+    ]
+  }
+}

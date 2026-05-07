@@ -1,0 +1,269 @@
+{
+  "name": "findrisc",
+  "display_name": "FINDRISC 糖尿病风险评分",
+  "description": "用于未来糖尿病风险筛查。",
+  "source_module": "app.calculators.extended",
+  "function_name": "calculate_findrisc",
+  "intent_keywords": [
+    "findrisc",
+    "糖尿病风险",
+    "findrisc评分"
+  ],
+  "required_params": [
+    "age",
+    "bmi",
+    "waist_cm",
+    "gender",
+    "physically_active_daily",
+    "daily_fruits_vegetables",
+    "antihypertensive_medication",
+    "history_high_blood_glucose",
+    "family_history_diabetes"
+  ],
+  "optional_params": [],
+  "parameters": [
+    {
+      "name": "age",
+      "label": "年龄",
+      "type": "float",
+      "required": true,
+      "description": "受评估者年龄",
+      "min": 0,
+      "max": 120
+    },
+    {
+      "name": "bmi",
+      "label": "BMI",
+      "type": "float",
+      "required": true,
+      "description": "体重指数",
+      "min": 10,
+      "max": 80
+    },
+    {
+      "name": "waist_cm",
+      "label": "腰围",
+      "type": "float",
+      "required": true,
+      "description": "腰围",
+      "min": 30,
+      "max": 200,
+      "unit": "cm"
+    },
+    {
+      "name": "gender",
+      "label": "性别",
+      "type": "str",
+      "required": true,
+      "description": "男或女"
+    },
+    {
+      "name": "physically_active_daily",
+      "label": "日常体力活动",
+      "type": "bool",
+      "required": true,
+      "description": "是否每天进行至少 30 分钟体力活动"
+    },
+    {
+      "name": "daily_fruits_vegetables",
+      "label": "每日蔬果",
+      "type": "bool",
+      "required": true,
+      "description": "是否每天摄入蔬菜水果"
+    },
+    {
+      "name": "antihypertensive_medication",
+      "label": "降压药",
+      "type": "bool",
+      "required": true,
+      "description": "是否正在使用降压药"
+    },
+    {
+      "name": "history_high_blood_glucose",
+      "label": "高血糖史",
+      "type": "bool",
+      "required": true,
+      "description": "是否存在高血糖病史"
+    },
+    {
+      "name": "family_history_diabetes",
+      "label": "糖尿病家族史",
+      "type": "str",
+      "required": true,
+      "description": "none、second_degree 或 first_degree"
+    }
+  ],
+  "reference": "FINDRISC 常用评分标准。",
+  "applicable_scenario": "糖尿病风险筛查",
+  "supports_chinese": true,
+  "clinical_specificity": 0.96,
+  "priority": {
+    "home_suitability": 0.9,
+    "clinical_importance": 0.9,
+    "implementation_simplicity": 0.85,
+    "chinese_support": 1.0
+  },
+  "documentation": {
+    "parameter_notes": "FINDRISC 糖尿病风险评分 支持输入总分，部分量表也支持按条目分值求和。",
+    "usage_examples": [
+      {
+        "input": {
+          "age": 58,
+          "bmi": 29,
+          "waist_cm": 96,
+          "gender": "男",
+          "physically_active_daily": false,
+          "daily_fruits_vegetables": false,
+          "antihypertensive_medication": true,
+          "history_high_blood_glucose": false,
+          "family_history_diabetes": "first_degree"
+        },
+        "description": "FINDRISC 糖尿病风险评分 示例"
+      }
+    ],
+    "reference_literature": [
+      "FINDRISC 糖尿病风险评分 常用公开评分分层标准"
+    ],
+    "update_record": [
+      "2026-04-28：接入第一批扩展计算器运行时实现。"
+    ]
+  },
+  "validation": {
+    "unit_cases": [
+      {
+        "name": "low_case",
+        "input": {
+          "age": 45,
+          "bmi": 24,
+          "waist_cm": 90,
+          "gender": "male",
+          "physically_active_daily": true,
+          "daily_fruits_vegetables": true,
+          "antihypertensive_medication": false,
+          "history_high_blood_glucose": false,
+          "family_history_diabetes": "none"
+        },
+        "expected": {
+          "risk_level": "低风险",
+          "score": 2
+        }
+      },
+      {
+        "name": "mild_case",
+        "input": {
+          "age": 45,
+          "bmi": 24,
+          "waist_cm": 90,
+          "gender": "male",
+          "physically_active_daily": true,
+          "daily_fruits_vegetables": true,
+          "antihypertensive_medication": false,
+          "history_high_blood_glucose": false,
+          "family_history_diabetes": "first_degree"
+        },
+        "expected": {
+          "risk_level": "轻中度风险",
+          "score": 7
+        }
+      },
+      {
+        "name": "medium_case",
+        "input": {
+          "age": 45,
+          "bmi": 24,
+          "waist_cm": 90,
+          "gender": "male",
+          "physically_active_daily": true,
+          "daily_fruits_vegetables": true,
+          "antihypertensive_medication": false,
+          "history_high_blood_glucose": true,
+          "family_history_diabetes": "first_degree"
+        },
+        "expected": {
+          "risk_level": "中风险",
+          "score": 12
+        }
+      },
+      {
+        "name": "high_case",
+        "input": {
+          "age": 45,
+          "bmi": 24,
+          "waist_cm": 90,
+          "gender": "male",
+          "physically_active_daily": true,
+          "daily_fruits_vegetables": false,
+          "antihypertensive_medication": true,
+          "history_high_blood_glucose": true,
+          "family_history_diabetes": "first_degree"
+        },
+        "expected": {
+          "risk_level": "高风险",
+          "score": 15
+        }
+      }
+    ],
+    "boundary_checks": [
+      {
+        "name": "score_two",
+        "input": {
+          "age": 45,
+          "bmi": 24,
+          "waist_cm": 90,
+          "gender": "male",
+          "physically_active_daily": true,
+          "daily_fruits_vegetables": true,
+          "antihypertensive_medication": false,
+          "history_high_blood_glucose": false,
+          "family_history_diabetes": "none"
+        },
+        "expected_risk_level": "低风险"
+      },
+      {
+        "name": "score_seven",
+        "input": {
+          "age": 45,
+          "bmi": 24,
+          "waist_cm": 90,
+          "gender": "male",
+          "physically_active_daily": true,
+          "daily_fruits_vegetables": true,
+          "antihypertensive_medication": false,
+          "history_high_blood_glucose": false,
+          "family_history_diabetes": "first_degree"
+        },
+        "expected_risk_level": "轻中度风险"
+      },
+      {
+        "name": "score_twelve",
+        "input": {
+          "age": 45,
+          "bmi": 24,
+          "waist_cm": 90,
+          "gender": "male",
+          "physically_active_daily": true,
+          "daily_fruits_vegetables": true,
+          "antihypertensive_medication": false,
+          "history_high_blood_glucose": true,
+          "family_history_diabetes": "first_degree"
+        },
+        "expected_risk_level": "中风险"
+      },
+      {
+        "name": "score_fifteen",
+        "input": {
+          "age": 45,
+          "bmi": 24,
+          "waist_cm": 90,
+          "gender": "male",
+          "physically_active_daily": true,
+          "daily_fruits_vegetables": false,
+          "antihypertensive_medication": true,
+          "history_high_blood_glucose": true,
+          "family_history_diabetes": "first_degree"
+        },
+        "expected_risk_level": "高风险"
+      }
+    ]
+  }
+}

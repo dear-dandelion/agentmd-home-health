@@ -1,5 +1,6 @@
 import unittest
 
+from app.calculators.basic import STANDARD_RESULT_FIELDS
 from app.calculators.quality import CalculatorQualityValidator, ValidationLayer
 from app.calculators.registry import CalculatorRegistry
 from app.calculators.repository import CalculatorRepository
@@ -20,16 +21,23 @@ class CalculatorQualityTests(unittest.TestCase):
         self.registry = CalculatorRegistry(self.repository)
         self.validator = CalculatorQualityValidator(logic_verifier=StubLogicVerifier())
 
-    def test_all_seed_calculators_pass_quality_validation(self) -> None:
+    def test_all_runtime_calculators_pass_quality_validation(self) -> None:
         for manifest in self.repository.list_manifests():
             report = self.validator.validate(manifest, self.registry.get(manifest.name))
             self.assertTrue(report.approved, msg=f"{manifest.name}: {report}")
 
-    def test_bmi_output_has_standard_fields(self) -> None:
-        result = self.registry.get("bmi")({"height_cm": 170, "weight_kg": 65})
-        self.assertEqual(result["risk_level"], "正常")
-        for key in ("score", "risk_level", "summary", "interpretation", "reference", "details"):
-            self.assertIn(key, result)
+    def test_all_documented_example_outputs_have_standard_fields(self) -> None:
+        for manifest in self.repository.list_manifests():
+            example_input = dict(manifest.documentation["usage_examples"][0]["input"])
+            result = self.registry.get(manifest.name)(example_input)
+            for key in STANDARD_RESULT_FIELDS:
+                self.assertIn(key, result, msg=f"{manifest.name} missing {key}")
+            self.assertIn("advice", result, msg=f"{manifest.name} missing advice")
+            self.assertIn("guideline", result, msg=f"{manifest.name} missing guideline")
+            self.assertEqual(result["advice"], result["interpretation"], msg=f"{manifest.name} advice alias mismatch")
+            self.assertEqual(result["guideline"], result["reference"], msg=f"{manifest.name} guideline alias mismatch")
+            self.assertIsInstance(result["details"], dict, msg=f"{manifest.name} details should be dict")
+            self.assertEqual(result["details"].get("calculator"), manifest.name, msg=f"{manifest.name} details.calculator mismatch")
 
     def test_blood_pressure_boundary_logic(self) -> None:
         calculator = self.registry.get("blood_pressure")

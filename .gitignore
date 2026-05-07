@@ -1,6 +1,13 @@
 .env
 __pycache__/
 *.pyc
+*.pyo
+*.pid
+.pytest_cache/
+.coverage
+htmlcov/
+app/**/__pycache__/
+tests/**/__pycache__/
 app/storage/*.db
 *.log
 *.out

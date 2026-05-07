@@ -1,0 +1,191 @@
+{
+  "version": "2026-04-28",
+  "description": "居家健康问询消融实验样本集：比较完整系统与去除医疗计算器库时的回答准确率。",
+  "cases": [
+    {
+      "id": "bmi_obesity",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "height_cm": 170,
+        "weight_kg": 85
+      },
+      "message": "帮我评估BMI",
+      "expected_tool": "bmi",
+      "expected_risk_level": "肥胖",
+      "expected_summary_contains": "BMI 为 29.4"
+    },
+    {
+      "id": "blood_pressure_high",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "systolic_bp": 148,
+        "diastolic_bp": 96
+      },
+      "message": "帮我评估血压风险",
+      "expected_tool": "blood_pressure",
+      "expected_risk_level": "高风险",
+      "expected_summary_contains": "血压为 148/96 mmHg"
+    },
+    {
+      "id": "fasting_glucose_high",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "女",
+      "seed_params": {
+        "fasting_glucose": 7.3
+      },
+      "message": "帮我评估空腹血糖",
+      "expected_tool": "fasting_glucose",
+      "expected_risk_level": "高风险",
+      "expected_summary_contains": "空腹血糖为 7.3 mmol/L"
+    },
+    {
+      "id": "waist_circumference_high",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "waist_cm": 96
+      },
+      "message": "帮我评估腰围风险",
+      "expected_tool": "waist_circumference",
+      "expected_risk_level": "偏高",
+      "expected_summary_contains": "腰围为 96.0 cm"
+    },
+    {
+      "id": "resting_heart_rate_high",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "heart_rate_bpm": 108
+      },
+      "message": "帮我评估静息心率",
+      "expected_tool": "resting_heart_rate",
+      "expected_risk_level": "偏高",
+      "expected_summary_contains": "静息心率为 108 次/分"
+    },
+    {
+      "id": "body_temperature_fever",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "女",
+      "seed_params": {
+        "temperature_c": 38.6
+      },
+      "message": "帮我评估体温",
+      "expected_tool": "body_temperature",
+      "expected_risk_level": "高风险",
+      "expected_summary_contains": "体温为 38.6 ℃"
+    },
+    {
+      "id": "fall_risk_high",
+      "scenario_type": "calculator",
+      "birth_date": "1946-01-01",
+      "gender": "男",
+      "seed_params": {
+        "balance_ability": "较差"
+      },
+      "message": "帮我评估跌倒风险",
+      "expected_tool": "fall_risk",
+      "expected_risk_level": "高风险",
+      "expected_summary_contains": "跌倒风险评分为 4 分"
+    },
+    {
+      "id": "phq9_moderately_severe",
+      "scenario_type": "calculator",
+      "birth_date": "1990-01-01",
+      "gender": "女",
+      "seed_params": {
+        "total_score": 15
+      },
+      "message": "帮我评估PHQ-9抑郁情况",
+      "expected_tool": "phq9",
+      "expected_risk_level": "中重度抑郁风险",
+      "expected_summary_contains": "PHQ-9 总分为 15 分"
+    },
+    {
+      "id": "gad7_moderate",
+      "scenario_type": "calculator",
+      "birth_date": "1990-01-01",
+      "gender": "女",
+      "seed_params": {
+        "total_score": 13
+      },
+      "message": "帮我评估GAD-7焦虑情况",
+      "expected_tool": "gad7",
+      "expected_risk_level": "中度焦虑风险",
+      "expected_summary_contains": "GAD-7 总分为 13 分"
+    },
+    {
+      "id": "barthel_severe_dependency",
+      "scenario_type": "calculator",
+      "birth_date": "1940-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 45
+      },
+      "message": "帮我评估Barthel指数",
+      "expected_tool": "barthel_index",
+      "expected_risk_level": "重度依赖",
+      "expected_summary_contains": "Barthel 指数为 45 分"
+    },
+    {
+      "id": "sleep_consultation",
+      "scenario_type": "consultation",
+      "birth_date": "1980-01-01",
+      "gender": "女",
+      "seed_params": {
+        "sleep_quality": "夜间醒2次，睡眠6小时"
+      },
+      "message": "最近总是睡不好，半夜容易醒",
+      "expected_reply_keywords": [
+        "睡眠情况",
+        "最近 7 天"
+      ]
+    },
+    {
+      "id": "diet_consultation",
+      "scenario_type": "consultation",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "fasting_glucose": 6.4,
+        "weight_kg": 78
+      },
+      "message": "想问问控糖时饮食怎么调整",
+      "expected_reply_keywords": [
+        "饮食管理",
+        "更具体的饮食建议"
+      ]
+    },
+    {
+      "id": "exercise_consultation",
+      "scenario_type": "consultation",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {},
+      "message": "想要居家运动锻炼，帮我给些建议",
+      "expected_reply_keywords": [
+        "运动建议",
+        "居家运动建议"
+      ]
+    },
+    {
+      "id": "mood_consultation",
+      "scenario_type": "consultation",
+      "birth_date": "1980-01-01",
+      "gender": "女",
+      "seed_params": {},
+      "message": "这段时间有点焦虑和心情低落",
+      "expected_reply_keywords": [
+        "情绪或心理状态",
+        "先帮你梳理"
+      ]
+    }
+  ]
+}

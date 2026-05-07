@@ -1,0 +1,515 @@
+{
+  "version": "2026-04-28",
+  "design": {
+    "target_total": 50,
+    "current_runtime_total": 7,
+    "screening_pipeline": {
+      "boolean_filter": {
+        "keywords": ["评分", "量表", "风险", "计算器", "预测模型"],
+        "year_window": "近十年"
+      },
+      "llm_review_standards": [
+        "明确定义评分规则",
+        "有明确输入参数",
+        "有风险分级输出",
+        "适用于居家场景",
+        "有中文支持"
+      ]
+    },
+    "priority_formula": "P = 0.4 * S_home + 0.3 * C_clinical + 0.2 * I_simple + 0.1 * L_chinese",
+    "validation_layers": [
+      "单元测试",
+      "LLM二次验证",
+      "边界值验证"
+    ]
+  },
+  "categories": [
+    {
+      "name": "心血管",
+      "target_count": 13,
+      "representative_calculators": ["CHA2DS2-VASc", "HAS-BLED", "ASCVD", "TIMI", "GRACE"]
+    },
+    {
+      "name": "代谢",
+      "target_count": 7,
+      "representative_calculators": ["FINDRISC", "CDRS", "代谢综合征评分"]
+    },
+    {
+      "name": "老年",
+      "target_count": 10,
+      "representative_calculators": ["Morse跌倒", "Braden压疮", "MNA", "GDS-15"]
+    },
+    {
+      "name": "精神",
+      "target_count": 2,
+      "representative_calculators": ["PHQ-9", "GAD-7"]
+    },
+    {
+      "name": "呼吸",
+      "target_count": 2,
+      "representative_calculators": ["MMRC", "CAT"]
+    },
+    {
+      "name": "神经",
+      "target_count": 2,
+      "representative_calculators": ["NIHSS", "Glasgow"]
+    },
+    {
+      "name": "综合",
+      "target_count": 14,
+      "representative_calculators": ["NEWS", "qSOFA", "Barthel指数"]
+    }
+  ],
+  "calculators": [
+    {
+      "name": "blood_pressure",
+      "display_name": "血压风险评估",
+      "category": "心血管",
+      "priority_level": "high",
+      "implementation_status": "implemented",
+      "literature_sources": ["权威指南", "PubMed", "SinoMed"],
+      "notes": "家庭血压监测场景下的基础筛查工具。"
+    },
+    {
+      "name": "resting_heart_rate",
+      "display_name": "静息心率评估",
+      "category": "心血管",
+      "priority_level": "high",
+      "implementation_status": "implemented",
+      "literature_sources": ["权威指南", "PubMed"],
+      "notes": "用于居家静息心率异常初筛。"
+    },
+    {
+      "name": "cha2ds2_vasc",
+      "display_name": "CHA2DS2-VASc卒中风险评分",
+      "category": "心血管",
+      "priority_level": "high",
+      "implementation_status": "planned",
+      "literature_sources": ["权威指南", "PubMed", "SinoMed"],
+      "notes": "房颤相关卒中风险评估。"
+    },
+    {
+      "name": "has_bled",
+      "display_name": "HAS-BLED出血风险评分",
+      "category": "心血管",
+      "priority_level": "high",
+      "implementation_status": "planned",
+      "literature_sources": ["权威指南", "PubMed", "SinoMed"],
+      "notes": "抗凝治疗前后风险管理。"
+    },
+    {
+      "name": "ascvd_10y",
+      "display_name": "ASCVD十年心血管风险",
+      "category": "心血管",
+      "priority_level": "high",
+      "implementation_status": "planned",
+      "literature_sources": ["权威指南", "PubMed"],
+      "notes": "适合慢病随访中的风险沟通。"
+    },
+    {
+      "name": "timi",
+      "display_name": "TIMI风险评分",
+      "category": "心血管",
+      "priority_level": "medium",
+      "implementation_status": "planned",
+      "literature_sources": ["PubMed", "权威指南"],
+      "notes": "用于急性冠脉综合征风险分层。"
+    },
+    {
+      "name": "grace",
+      "display_name": "GRACE风险评分",
+      "category": "心血管",
+      "priority_level": "medium",
+      "implementation_status": "planned",
+      "literature_sources": ["PubMed", "权威指南"],
+      "notes": "用于急性冠脉综合征预后评估。"
+    },
+    {
+      "name": "chads2",
+      "display_name": "CHADS2卒中风险评分",
+      "category": "心血管",
+      "priority_level": "medium",
+      "implementation_status": "planned",
+      "literature_sources": ["PubMed"],
+      "notes": "作为房颤卒中风险的补充量表。"
+    },
+    {
+      "name": "heart_score",
+      "display_name": "HEART胸痛风险评分",
+      "category": "心血管",
+      "priority_level": "medium",
+      "implementation_status": "planned",
+      "literature_sources": ["PubMed", "权威指南"],
+      "notes": "用于胸痛风险分层，不直接替代急诊判断。"
+    },
+    {
+      "name": "wells_dvt",
+      "display_name": "Wells DVT评分",
+      "category": "心血管",
+      "priority_level": "medium",
+      "implementation_status": "planned",
+      "literature_sources": ["PubMed"],
+      "notes": "静脉血栓风险提示。"
+    },
+    {
+      "name": "wells_pe",
+      "display_name": "Wells PE评分",
+      "category": "心血管",
+      "priority_level": "medium",
+      "implementation_status": "planned",
+      "literature_sources": ["PubMed"],
+      "notes": "肺栓塞风险提示。"
+    },
+    {
+      "name": "qrisk3",
+      "display_name": "QRISK3心血管风险评分",
+      "category": "心血管",
+      "priority_level": "medium",
+      "implementation_status": "planned",
+      "literature_sources": ["PubMed"],
+      "notes": "适用于长期慢病管理。"
+    },
+    {
+      "name": "h2fpef",
+      "display_name": "H2FPEF评分",
+      "category": "心血管",
+      "priority_level": "medium",
+      "implementation_status": "planned",
+      "literature_sources": ["PubMed"],
+      "notes": "用于HFpEF可能性评估。"
+    },
+    {
+      "name": "bmi",
+      "display_name": "BMI体重指数",
+      "category": "代谢",
+      "priority_level": "high",
+      "implementation_status": "implemented",
+      "literature_sources": ["权威指南", "PubMed"],
+      "notes": "居家体重管理的基础指标。"
+    },
+    {
+      "name": "fasting_glucose",
+      "display_name": "空腹血糖评估",
+      "category": "代谢",
+      "priority_level": "high",
+      "implementation_status": "implemented",
+      "literature_sources": ["权威指南", "PubMed"],
+      "notes": "家庭血糖监测场景下的基础筛查工具。"
+    },
+    {
+      "name": "waist_circumference",
+      "display_name": "腰围评估",
+      "category": "代谢",
+      "priority_level": "high",
+      "implementation_status": "implemented",
+      "literature_sources": ["权威指南", "PubMed"],
+      "notes": "中心性肥胖风险初筛。"
+    },
+    {
+      "name": "findrisc",
+      "display_name": "FINDRISC糖尿病风险评分",
+      "category": "代谢",
+      "priority_level": "high",
+      "implementation_status": "planned",
+      "literature_sources": ["PubMed", "SinoMed"],
+      "notes": "适合糖尿病前期家庭管理。"
+    },
+    {
+      "name": "cdrs",
+      "display_name": "CDRS糖尿病风险评分",
+      "category": "代谢",
+      "priority_level": "medium",
+      "implementation_status": "planned",
+      "literature_sources": ["PubMed", "SinoMed"],
+      "notes": "用于本土化糖尿病风险评估。"
+    },
+    {
+      "name": "metabolic_syndrome",
+      "display_name": "代谢综合征评分",
+      "category": "代谢",
+      "priority_level": "high",
+      "implementation_status": "planned",
+      "literature_sources": ["权威指南", "PubMed"],
+      "notes": "结合腰围、血压、血糖和血脂进行综合评估。"
+    },
+    {
+      "name": "nafld_fibrosis",
+      "display_name": "NAFLD纤维化评分",
+      "category": "代谢",
+      "priority_level": "medium",
+      "implementation_status": "planned",
+      "literature_sources": ["PubMed"],
+      "notes": "适合结合化验结果的肝脏代谢风险提示。"
+    },
+    {
+      "name": "fall_risk",
+      "display_name": "跌倒风险初筛",
+      "category": "老年",
+      "priority_level": "high",
+      "implementation_status": "implemented",
+      "literature_sources": ["权威指南", "PubMed", "SinoMed"],
+      "notes": "居家老年安全管理的核心工具。"
+    },
+    {
+      "name": "morse_fall_scale",
+      "display_name": "Morse跌倒量表",
+      "category": "老年",
+      "priority_level": "high",
+      "implementation_status": "planned",
+      "literature_sources": ["PubMed", "SinoMed"],
+      "notes": "住院与社区跌倒风险筛查常用量表。"
+    },
+    {
+      "name": "braden_scale",
+      "display_name": "Braden压疮风险评分",
+      "category": "老年",
+      "priority_level": "high",
+      "implementation_status": "planned",
+      "literature_sources": ["PubMed", "SinoMed"],
+      "notes": "卧床和照护场景中较常见。"
+    },
+    {
+      "name": "mna_sf",
+      "display_name": "MNA-SF营养评估",
+      "category": "老年",
+      "priority_level": "high",
+      "implementation_status": "planned",
+      "literature_sources": ["PubMed", "SinoMed"],
+      "notes": "老年营养不良风险筛查。"
+    },
+    {
+      "name": "gds15",
+      "display_name": "GDS-15老年抑郁量表",
+      "category": "老年",
+      "priority_level": "medium",
+      "implementation_status": "planned",
+      "literature_sources": ["PubMed", "SinoMed"],
+      "notes": "老年情绪筛查常用工具。"
+    },
+    {
+      "name": "tug_test",
+      "display_name": "TUG起立行走测试",
+      "category": "老年",
+      "priority_level": "medium",
+      "implementation_status": "planned",
+      "literature_sources": ["PubMed"],
+      "notes": "平衡与功能移动性评估。"
+    },
+    {
+      "name": "ad8",
+      "display_name": "AD8认知筛查",
+      "category": "老年",
+      "priority_level": "medium",
+      "implementation_status": "planned",
+      "literature_sources": ["PubMed", "SinoMed"],
+      "notes": "适合家属辅助回答的认知筛查。"
+    },
+    {
+      "name": "mini_cog",
+      "display_name": "Mini-Cog认知筛查",
+      "category": "老年",
+      "priority_level": "medium",
+      "implementation_status": "planned",
+      "literature_sources": ["PubMed", "SinoMed"],
+      "notes": "快速认知评估工具。"
+    },
+    {
+      "name": "fried_frailty",
+      "display_name": "Fried衰弱表型评分",
+      "category": "老年",
+      "priority_level": "medium",
+      "implementation_status": "planned",
+      "literature_sources": ["PubMed"],
+      "notes": "衰弱筛查与风险沟通。"
+    },
+    {
+      "name": "lawton_iadl",
+      "display_name": "Lawton IADL量表",
+      "category": "老年",
+      "priority_level": "medium",
+      "implementation_status": "planned",
+      "literature_sources": ["PubMed"],
+      "notes": "复杂日常生活能力评估。"
+    },
+    {
+      "name": "phq9",
+      "display_name": "PHQ-9抑郁筛查",
+      "category": "精神",
+      "priority_level": "high",
+      "implementation_status": "planned",
+      "literature_sources": ["权威指南", "PubMed", "SinoMed"],
+      "notes": "情绪量化评估代表工具。"
+    },
+    {
+      "name": "gad7",
+      "display_name": "GAD-7焦虑筛查",
+      "category": "精神",
+      "priority_level": "high",
+      "implementation_status": "planned",
+      "literature_sources": ["权威指南", "PubMed", "SinoMed"],
+      "notes": "焦虑症状快速筛查。"
+    },
+    {
+      "name": "mmrc",
+      "display_name": "MMRC呼吸困难分级",
+      "category": "呼吸",
+      "priority_level": "high",
+      "implementation_status": "planned",
+      "literature_sources": ["权威指南", "PubMed"],
+      "notes": "慢阻肺与呼吸功能家庭随访常用工具。"
+    },
+    {
+      "name": "cat",
+      "display_name": "CAT慢阻肺评估测试",
+      "category": "呼吸",
+      "priority_level": "high",
+      "implementation_status": "planned",
+      "literature_sources": ["权威指南", "PubMed"],
+      "notes": "症状负担评估。"
+    },
+    {
+      "name": "nihss",
+      "display_name": "NIHSS神经功能缺损评分",
+      "category": "神经",
+      "priority_level": "medium",
+      "implementation_status": "planned",
+      "literature_sources": ["权威指南", "PubMed"],
+      "notes": "用于卒中相关神经功能评估。"
+    },
+    {
+      "name": "glasgow_coma_scale",
+      "display_name": "Glasgow昏迷评分",
+      "category": "神经",
+      "priority_level": "medium",
+      "implementation_status": "planned",
+      "literature_sources": ["权威指南", "PubMed"],
+      "notes": "意识状态评估。"
+    },
+    {
+      "name": "body_temperature",
+      "display_name": "体温评估",
+      "category": "综合",
+      "priority_level": "high",
+      "implementation_status": "implemented",
+      "literature_sources": ["权威指南", "PubMed"],
+      "notes": "居家感染监测和发热筛查基础工具。"
+    },
+    {
+      "name": "news2",
+      "display_name": "NEWS2早期预警评分",
+      "category": "综合",
+      "priority_level": "high",
+      "implementation_status": "planned",
+      "literature_sources": ["权威指南", "PubMed"],
+      "notes": "综合生命体征异常的早期预警。"
+    },
+    {
+      "name": "qsofa",
+      "display_name": "qSOFA评分",
+      "category": "综合",
+      "priority_level": "high",
+      "implementation_status": "planned",
+      "literature_sources": ["权威指南", "PubMed"],
+      "notes": "感染相关高风险提示。"
+    },
+    {
+      "name": "barthel_index",
+      "display_name": "Barthel指数",
+      "category": "综合",
+      "priority_level": "high",
+      "implementation_status": "planned",
+      "literature_sources": ["权威指南", "PubMed", "SinoMed"],
+      "notes": "日常生活活动能力评估。"
+    },
+    {
+      "name": "pain_nrs",
+      "display_name": "疼痛NRS评分",
+      "category": "综合",
+      "priority_level": "high",
+      "implementation_status": "planned",
+      "literature_sources": ["权威指南", "PubMed"],
+      "notes": "居家疼痛管理基础量表。"
+    },
+    {
+      "name": "must",
+      "display_name": "MUST营养不良筛查",
+      "category": "综合",
+      "priority_level": "medium",
+      "implementation_status": "planned",
+      "literature_sources": ["PubMed"],
+      "notes": "适用于营养风险管理。"
+    },
+    {
+      "name": "caprini_vte",
+      "display_name": "Caprini血栓风险评分",
+      "category": "综合",
+      "priority_level": "medium",
+      "implementation_status": "planned",
+      "literature_sources": ["PubMed"],
+      "notes": "围手术期和卧床场景中的血栓风险提示。"
+    },
+    {
+      "name": "mews",
+      "display_name": "MEWS早期预警评分",
+      "category": "综合",
+      "priority_level": "medium",
+      "implementation_status": "planned",
+      "literature_sources": ["PubMed"],
+      "notes": "简化版生命体征风险分层。"
+    },
+    {
+      "name": "charlson_cci",
+      "display_name": "Charlson合并症指数",
+      "category": "综合",
+      "priority_level": "medium",
+      "implementation_status": "planned",
+      "literature_sources": ["PubMed"],
+      "notes": "用于慢病负担沟通和分层。"
+    },
+    {
+      "name": "rockwood_cfs",
+      "display_name": "Rockwood临床衰弱量表",
+      "category": "综合",
+      "priority_level": "medium",
+      "implementation_status": "planned",
+      "literature_sources": ["PubMed", "SinoMed"],
+      "notes": "综合衰弱程度分层。"
+    },
+    {
+      "name": "sarc_f",
+      "display_name": "SARC-F肌少症筛查",
+      "category": "综合",
+      "priority_level": "medium",
+      "implementation_status": "planned",
+      "literature_sources": ["PubMed", "SinoMed"],
+      "notes": "适合老年居家功能下降评估。"
+    },
+    {
+      "name": "norton_scale",
+      "display_name": "Norton压疮风险评分",
+      "category": "综合",
+      "priority_level": "medium",
+      "implementation_status": "planned",
+      "literature_sources": ["PubMed"],
+      "notes": "压疮风险的补充量表。"
+    },
+    {
+      "name": "waterlow_score",
+      "display_name": "Waterlow压疮风险评分",
+      "category": "综合",
+      "priority_level": "medium",
+      "implementation_status": "planned",
+      "literature_sources": ["PubMed"],
+      "notes": "用于照护场景的皮肤风险管理。"
+    },
+    {
+      "name": "karnofsky_ps",
+      "display_name": "Karnofsky体能状态评分",
+      "category": "综合",
+      "priority_level": "medium",
+      "implementation_status": "planned",
+      "literature_sources": ["PubMed"],
+      "notes": "功能状态评估与长期照护沟通。"
+    }
+  ]
+}

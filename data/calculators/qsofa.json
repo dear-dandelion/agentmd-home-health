@@ -1,0 +1,169 @@
+{
+  "name": "qsofa",
+  "display_name": "qSOFA 评分",
+  "description": "根据呼吸频率、收缩压和意识状态快速评估感染相关高风险。",
+  "source_module": "app.calculators.extended",
+  "function_name": "calculate_qsofa",
+  "intent_keywords": [
+    "qsofa",
+    "感染",
+    "脓毒症",
+    "qsofa评分"
+  ],
+  "required_params": [
+    "respiratory_rate_bpm",
+    "systolic_bp",
+    "altered_mental_status"
+  ],
+  "optional_params": [
+    "gcs_score"
+  ],
+  "parameters": [
+    {
+      "name": "respiratory_rate_bpm",
+      "label": "呼吸频率",
+      "type": "float",
+      "required": true,
+      "min": 5,
+      "max": 80,
+      "unit": "次/分",
+      "description": "呼吸频率"
+    },
+    {
+      "name": "systolic_bp",
+      "label": "收缩压",
+      "type": "float",
+      "required": true,
+      "min": 50,
+      "max": 300,
+      "unit": "mmHg",
+      "description": "收缩压"
+    },
+    {
+      "name": "altered_mental_status",
+      "label": "意识改变",
+      "type": "str",
+      "required": true,
+      "description": "是否存在意识状态改变"
+    }
+  ],
+  "reference": "qSOFA 常用分层标准。",
+  "applicable_scenario": "感染高风险快速筛查",
+  "supports_chinese": true,
+  "clinical_specificity": 0.98,
+  "priority": {
+    "home_suitability": 0.9,
+    "clinical_importance": 0.9,
+    "implementation_simplicity": 0.85,
+    "chinese_support": 1.0
+  },
+  "documentation": {
+    "parameter_notes": "qSOFA 评分 支持输入总分，部分量表也支持按条目分值求和。",
+    "usage_examples": [
+      {
+        "input": {
+          "respiratory_rate_bpm": 24,
+          "systolic_bp": 95,
+          "altered_mental_status": "是"
+        },
+        "description": "qSOFA 评分 示例"
+      }
+    ],
+    "reference_literature": [
+      "qSOFA 评分 常用公开评分分层标准"
+    ],
+    "update_record": [
+      "2026-04-28：接入第一批扩展计算器运行时实现。"
+    ]
+  },
+  "validation": {
+    "unit_cases": [
+      {
+        "name": "baseline_low",
+        "input": {
+          "respiratory_rate_bpm": 18,
+          "systolic_bp": 120,
+          "altered_mental_status": false
+        },
+        "expected": {
+          "risk_level": "低风险",
+          "score": 0
+        }
+      },
+      {
+        "name": "tachypnea_only",
+        "input": {
+          "respiratory_rate_bpm": 24,
+          "systolic_bp": 120,
+          "altered_mental_status": false
+        },
+        "expected": {
+          "risk_level": "中风险",
+          "score": 1
+        }
+      },
+      {
+        "name": "tachypnea_and_hypotension",
+        "input": {
+          "respiratory_rate_bpm": 24,
+          "systolic_bp": 95,
+          "altered_mental_status": false
+        },
+        "expected": {
+          "risk_level": "高风险",
+          "score": 2
+        }
+      },
+      {
+        "name": "all_three_positive",
+        "input": {
+          "respiratory_rate_bpm": 24,
+          "systolic_bp": 95,
+          "altered_mental_status": true
+        },
+        "expected": {
+          "risk_level": "高风险",
+          "score": 3
+        }
+      }
+    ],
+    "boundary_checks": [
+      {
+        "name": "resp_boundary_below",
+        "input": {
+          "respiratory_rate_bpm": 21,
+          "systolic_bp": 101,
+          "altered_mental_status": false
+        },
+        "expected_risk_level": "低风险"
+      },
+      {
+        "name": "resp_boundary_at",
+        "input": {
+          "respiratory_rate_bpm": 22,
+          "systolic_bp": 101,
+          "altered_mental_status": false
+        },
+        "expected_risk_level": "中风险"
+      },
+      {
+        "name": "bp_boundary_at",
+        "input": {
+          "respiratory_rate_bpm": 22,
+          "systolic_bp": 100,
+          "altered_mental_status": false
+        },
+        "expected_risk_level": "高风险"
+      },
+      {
+        "name": "mental_status_boundary",
+        "input": {
+          "respiratory_rate_bpm": 21,
+          "systolic_bp": 101,
+          "altered_mental_status": true
+        },
+        "expected_risk_level": "中风险"
+      }
+    ]
+  }
+}

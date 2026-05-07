@@ -1,0 +1,227 @@
+{
+  "name": "metabolic_syndrome",
+  "display_name": "代谢综合征评分",
+  "description": "依据中心性肥胖、血压、血糖和血脂异常进行综合评估。",
+  "source_module": "app.calculators.extended",
+  "function_name": "calculate_metabolic_syndrome",
+  "intent_keywords": [
+    "代谢综合征",
+    "metabolic syndrome",
+    "血脂血糖血压"
+  ],
+  "required_params": [
+    "waist_cm",
+    "gender",
+    "systolic_bp",
+    "diastolic_bp",
+    "fasting_glucose",
+    "triglycerides_mmol_l",
+    "hdl_mmol_l"
+  ],
+  "optional_params": [],
+  "parameters": [
+    {
+      "name": "waist_cm",
+      "label": "腰围",
+      "type": "float",
+      "required": true,
+      "min": 30,
+      "max": 200,
+      "description": "腰围"
+    },
+    {
+      "name": "gender",
+      "label": "性别",
+      "type": "str",
+      "required": true,
+      "description": "男或女"
+    },
+    {
+      "name": "systolic_bp",
+      "label": "收缩压",
+      "type": "float",
+      "required": true,
+      "min": 50,
+      "max": 300,
+      "description": "收缩压"
+    },
+    {
+      "name": "diastolic_bp",
+      "label": "舒张压",
+      "type": "float",
+      "required": true,
+      "min": 30,
+      "max": 200,
+      "description": "舒张压"
+    },
+    {
+      "name": "fasting_glucose",
+      "label": "空腹血糖",
+      "type": "float",
+      "required": true,
+      "min": 1,
+      "max": 50,
+      "description": "空腹血糖"
+    },
+    {
+      "name": "triglycerides_mmol_l",
+      "label": "甘油三酯",
+      "type": "float",
+      "required": true,
+      "min": 0.1,
+      "max": 50,
+      "description": "甘油三酯"
+    },
+    {
+      "name": "hdl_mmol_l",
+      "label": "HDL",
+      "type": "float",
+      "required": true,
+      "min": 0.1,
+      "max": 10,
+      "description": "高密度脂蛋白胆固醇"
+    }
+  ],
+  "reference": "代谢综合征常用筛查标准。",
+  "applicable_scenario": "代谢风险综合筛查",
+  "supports_chinese": true,
+  "clinical_specificity": 0.95,
+  "priority": {
+    "home_suitability": 0.9,
+    "clinical_importance": 0.9,
+    "implementation_simplicity": 0.85,
+    "chinese_support": 1.0
+  },
+  "documentation": {
+    "parameter_notes": "代谢综合征评分 支持输入总分，部分量表也支持按条目分值求和。",
+    "usage_examples": [
+      {
+        "input": {
+          "waist_cm": 96,
+          "gender": "男",
+          "systolic_bp": 138,
+          "diastolic_bp": 88,
+          "fasting_glucose": 6.0,
+          "triglycerides_mmol_l": 2.1,
+          "hdl_mmol_l": 0.9
+        },
+        "description": "代谢综合征评分 示例"
+      }
+    ],
+    "reference_literature": [
+      "代谢综合征评分 常用公开评分分层标准"
+    ],
+    "update_record": [
+      "2026-04-28：接入第一批扩展计算器运行时实现。"
+    ]
+  },
+  "validation": {
+    "unit_cases": [
+      {
+        "name": "all_normal",
+        "input": {
+          "waist_cm": 80,
+          "gender": "female",
+          "systolic_bp": 118,
+          "diastolic_bp": 76,
+          "fasting_glucose": 5.0,
+          "triglycerides_mmol_l": 1.0,
+          "hdl_mmol_l": 1.5
+        },
+        "expected": {
+          "risk_level": "未达到代谢综合征标准",
+          "score": 0
+        }
+      },
+      {
+        "name": "central_obesity_only",
+        "input": {
+          "waist_cm": 86,
+          "gender": "female",
+          "systolic_bp": 118,
+          "diastolic_bp": 76,
+          "fasting_glucose": 5.0,
+          "triglycerides_mmol_l": 1.0,
+          "hdl_mmol_l": 1.5
+        },
+        "expected": {
+          "risk_level": "未达到代谢综合征标准",
+          "score": 1
+        }
+      },
+      {
+        "name": "meets_criteria",
+        "input": {
+          "waist_cm": 86,
+          "gender": "female",
+          "systolic_bp": 135,
+          "diastolic_bp": 86,
+          "fasting_glucose": 5.8,
+          "triglycerides_mmol_l": 1.8,
+          "hdl_mmol_l": 1.0
+        },
+        "expected": {
+          "risk_level": "符合代谢综合征",
+          "score": 5
+        }
+      },
+      {
+        "name": "severe_case",
+        "input": {
+          "waist_cm": 98,
+          "gender": "male",
+          "systolic_bp": 142,
+          "diastolic_bp": 92,
+          "fasting_glucose": 7.2,
+          "triglycerides_mmol_l": 2.6,
+          "hdl_mmol_l": 0.8
+        },
+        "expected": {
+          "risk_level": "符合代谢综合征",
+          "score": 5
+        }
+      }
+    ],
+    "boundary_checks": [
+      {
+        "name": "central_obesity_boundary",
+        "input": {
+          "waist_cm": 85,
+          "gender": "female",
+          "systolic_bp": 118,
+          "diastolic_bp": 76,
+          "fasting_glucose": 5.0,
+          "triglycerides_mmol_l": 1.0,
+          "hdl_mmol_l": 1.5
+        },
+        "expected_risk_level": "未达到代谢综合征标准"
+      },
+      {
+        "name": "central_obesity_cross",
+        "input": {
+          "waist_cm": 86,
+          "gender": "female",
+          "systolic_bp": 118,
+          "diastolic_bp": 76,
+          "fasting_glucose": 5.0,
+          "triglycerides_mmol_l": 1.0,
+          "hdl_mmol_l": 1.5
+        },
+        "expected_risk_level": "未达到代谢综合征标准"
+      },
+      {
+        "name": "diagnostic_case",
+        "input": {
+          "waist_cm": 86,
+          "gender": "female",
+          "systolic_bp": 135,
+          "diastolic_bp": 86,
+          "fasting_glucose": 5.8,
+          "triglycerides_mmol_l": 1.8,
+          "hdl_mmol_l": 1.0
+        },
+        "expected_risk_level": "符合代谢综合征"
+      }
+    ]
+  }
+}

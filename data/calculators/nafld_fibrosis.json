@@ -1,0 +1,232 @@
+{
+  "name": "nafld_fibrosis",
+  "display_name": "NAFLD 纤维化评分",
+  "description": "依据年龄、BMI 和实验室指标评估 NAFLD 进展性纤维化风险。",
+  "source_module": "app.calculators.extended",
+  "function_name": "calculate_nafld_fibrosis",
+  "intent_keywords": [
+    "nafld fibrosis",
+    "nafld_fibrosis",
+    "脂肪肝纤维化",
+    "nfs"
+  ],
+  "required_params": [
+    "age",
+    "bmi",
+    "ast_u_l",
+    "alt_u_l",
+    "platelet_10e9_l",
+    "albumin_g_dl",
+    "impaired_fasting_glucose_or_diabetes"
+  ],
+  "optional_params": [],
+  "parameters": [
+    {
+      "name": "age",
+      "label": "年龄",
+      "type": "float",
+      "required": true,
+      "description": "受评估者年龄",
+      "min": 0,
+      "max": 120
+    },
+    {
+      "name": "bmi",
+      "label": "BMI",
+      "type": "float",
+      "required": true,
+      "description": "体重指数",
+      "min": 10,
+      "max": 80
+    },
+    {
+      "name": "ast_u_l",
+      "label": "AST",
+      "type": "float",
+      "required": true,
+      "description": "谷草转氨酶",
+      "min": 1,
+      "max": 1000,
+      "unit": "U/L"
+    },
+    {
+      "name": "alt_u_l",
+      "label": "ALT",
+      "type": "float",
+      "required": true,
+      "description": "谷丙转氨酶",
+      "min": 1,
+      "max": 1000,
+      "unit": "U/L"
+    },
+    {
+      "name": "platelet_10e9_l",
+      "label": "血小板",
+      "type": "float",
+      "required": true,
+      "description": "血小板计数",
+      "min": 1,
+      "max": 1000,
+      "unit": "10^9/L"
+    },
+    {
+      "name": "albumin_g_dl",
+      "label": "白蛋白",
+      "type": "float",
+      "required": true,
+      "description": "白蛋白",
+      "min": 0.1,
+      "max": 10,
+      "unit": "g/dL"
+    },
+    {
+      "name": "impaired_fasting_glucose_or_diabetes",
+      "label": "糖调节异常/糖尿病",
+      "type": "bool",
+      "required": true,
+      "description": "是否存在糖调节异常或糖尿病"
+    }
+  ],
+  "reference": "NAFLD fibrosis score 原始公式阈值。",
+  "applicable_scenario": "脂肪肝纤维化风险评估",
+  "supports_chinese": true,
+  "clinical_specificity": 0.96,
+  "priority": {
+    "home_suitability": 0.9,
+    "clinical_importance": 0.9,
+    "implementation_simplicity": 0.85,
+    "chinese_support": 1.0
+  },
+  "documentation": {
+    "parameter_notes": "NAFLD 纤维化评分 支持输入总分，部分量表也支持按条目分值求和。",
+    "usage_examples": [
+      {
+        "input": {
+          "age": 58,
+          "bmi": 31.2,
+          "ast_u_l": 42,
+          "alt_u_l": 35,
+          "platelet_10e9_l": 180,
+          "albumin_g_dl": 4.0,
+          "impaired_fasting_glucose_or_diabetes": true
+        },
+        "description": "NAFLD 纤维化评分 示例"
+      }
+    ],
+    "reference_literature": [
+      "NAFLD 纤维化评分 常用公开评分分层标准"
+    ],
+    "update_record": [
+      "2026-04-28：接入第一批扩展计算器运行时实现。"
+    ]
+  },
+  "validation": {
+    "unit_cases": [
+      {
+        "name": "low_case",
+        "input": {
+          "age": 35,
+          "bmi": 22,
+          "ast_u_l": 20,
+          "alt_u_l": 30,
+          "platelet_10e9_l": 300,
+          "albumin_g_dl": 4.5,
+          "impaired_fasting_glucose_or_diabetes": false
+        },
+        "expected": {
+          "risk_level": "低风险",
+          "score": -4.522
+        }
+      },
+      {
+        "name": "uncertain_case",
+        "input": {
+          "age": 55,
+          "bmi": 29,
+          "ast_u_l": 30,
+          "alt_u_l": 35,
+          "platelet_10e9_l": 200,
+          "albumin_g_dl": 4.1,
+          "impaired_fasting_glucose_or_diabetes": false
+        },
+        "expected": {
+          "risk_level": "不确定风险",
+          "score": -1.371
+        }
+      },
+      {
+        "name": "high_case",
+        "input": {
+          "age": 58,
+          "bmi": 31.2,
+          "ast_u_l": 42,
+          "alt_u_l": 35,
+          "platelet_10e9_l": 180,
+          "albumin_g_dl": 4.0,
+          "impaired_fasting_glucose_or_diabetes": true
+        },
+        "expected": {
+          "risk_level": "高风险",
+          "score": 0.742
+        }
+      },
+      {
+        "name": "very_high_case",
+        "input": {
+          "age": 70,
+          "bmi": 34,
+          "ast_u_l": 80,
+          "alt_u_l": 45,
+          "platelet_10e9_l": 110,
+          "albumin_g_dl": 3.2,
+          "impaired_fasting_glucose_or_diabetes": true
+        },
+        "expected": {
+          "risk_level": "高风险",
+          "score": 3.459
+        }
+      }
+    ],
+    "boundary_checks": [
+      {
+        "name": "low_case",
+        "input": {
+          "age": 35,
+          "bmi": 22,
+          "ast_u_l": 20,
+          "alt_u_l": 30,
+          "platelet_10e9_l": 300,
+          "albumin_g_dl": 4.5,
+          "impaired_fasting_glucose_or_diabetes": false
+        },
+        "expected_risk_level": "低风险"
+      },
+      {
+        "name": "uncertain_case",
+        "input": {
+          "age": 55,
+          "bmi": 29,
+          "ast_u_l": 30,
+          "alt_u_l": 35,
+          "platelet_10e9_l": 200,
+          "albumin_g_dl": 4.1,
+          "impaired_fasting_glucose_or_diabetes": false
+        },
+        "expected_risk_level": "不确定风险"
+      },
+      {
+        "name": "high_case",
+        "input": {
+          "age": 58,
+          "bmi": 31.2,
+          "ast_u_l": 42,
+          "alt_u_l": 35,
+          "platelet_10e9_l": 180,
+          "albumin_g_dl": 4.0,
+          "impaired_fasting_glucose_or_diabetes": true
+        },
+        "expected_risk_level": "高风险"
+      }
+    ]
+  }
+}

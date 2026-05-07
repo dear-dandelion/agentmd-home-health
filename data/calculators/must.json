@@ -1,0 +1,136 @@
+{
+  "name": "must",
+  "display_name": "MUST 营养不良筛查",
+  "description": "用于营养不良风险筛查。",
+  "source_module": "app.calculators.extended",
+  "function_name": "calculate_must",
+  "intent_keywords": [
+    "must",
+    "营养不良",
+    "营养筛查"
+  ],
+  "required_params": [
+    "total_score"
+  ],
+  "optional_params": [
+    "bmi",
+    "weight_loss_percent",
+    "acute_disease_effect"
+  ],
+  "parameters": [
+    {
+      "name": "total_score",
+      "label": "总分",
+      "type": "float",
+      "required": true,
+      "min": 0,
+      "max": 10,
+      "description": "MUST 总分"
+    }
+  ],
+  "reference": "MUST 常用评分标准。",
+  "applicable_scenario": "营养风险筛查",
+  "supports_chinese": true,
+  "clinical_specificity": 0.94,
+  "priority": {
+    "home_suitability": 0.9,
+    "clinical_importance": 0.9,
+    "implementation_simplicity": 0.85,
+    "chinese_support": 1.0
+  },
+  "documentation": {
+    "parameter_notes": "MUST 营养不良筛查 支持输入总分，部分量表也支持按条目分值求和。",
+    "usage_examples": [
+      {
+        "input": {
+          "total_score": 2
+        },
+        "description": "MUST 营养不良筛查 示例"
+      }
+    ],
+    "reference_literature": [
+      "MUST 营养不良筛查 常用公开评分分层标准"
+    ],
+    "update_record": [
+      "2026-04-28：接入第一批扩展计算器运行时实现。"
+    ]
+  },
+  "validation": {
+    "unit_cases": [
+      {
+        "name": "score_zero",
+        "input": {
+          "total_score": 0
+        },
+        "expected": {
+          "risk_level": "低营养风险",
+          "score": 0
+        }
+      },
+      {
+        "name": "score_one",
+        "input": {
+          "total_score": 1
+        },
+        "expected": {
+          "risk_level": "中营养风险",
+          "score": 1
+        }
+      },
+      {
+        "name": "score_two",
+        "input": {
+          "total_score": 2
+        },
+        "expected": {
+          "risk_level": "高营养风险",
+          "score": 2
+        }
+      },
+      {
+        "name": "derived_case",
+        "input": {
+          "bmi": 17.8,
+          "weight_loss_percent": 12,
+          "acute_disease_effect": true
+        },
+        "expected": {
+          "risk_level": "高营养风险",
+          "score": 6
+        }
+      }
+    ],
+    "boundary_checks": [
+      {
+        "name": "score_zero",
+        "input": {
+          "total_score": 0
+        },
+        "expected_risk_level": "低营养风险"
+      },
+      {
+        "name": "score_one",
+        "input": {
+          "total_score": 1
+        },
+        "expected_risk_level": "中营养风险"
+      },
+      {
+        "name": "score_two",
+        "input": {
+          "total_score": 2
+        },
+        "expected_risk_level": "高营养风险"
+      },
+      {
+        "name": "derived_case",
+        "input": {
+          "bmi": 17.8,
+          "weight_loss_percent": 12,
+          "acute_disease_effect": true
+        },
+        "expected_risk_level": "高营养风险"
+      }
+    ]
+  }
+}

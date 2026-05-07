@@ -1,0 +1,122 @@
+{
+  "name": "mmrc",
+  "display_name": "mMRC 呼吸困难分级",
+  "description": "根据 mMRC 分级评估呼吸困难程度。",
+  "source_module": "app.calculators.extended",
+  "function_name": "calculate_mmrc",
+  "intent_keywords": [
+    "mmrc",
+    "呼吸困难",
+    "气短",
+    "慢阻肺"
+  ],
+  "required_params": [
+    "grade"
+  ],
+  "optional_params": [],
+  "parameters": [
+    {
+      "name": "grade",
+      "label": "分级",
+      "type": "float",
+      "required": true,
+      "min": 0,
+      "max": 4,
+      "description": "mMRC 分级"
+    }
+  ],
+  "reference": "mMRC 分级标准。",
+  "applicable_scenario": "呼吸困难症状评估",
+  "supports_chinese": true,
+  "clinical_specificity": 0.93,
+  "priority": {
+    "home_suitability": 0.9,
+    "clinical_importance": 0.9,
+    "implementation_simplicity": 0.85,
+    "chinese_support": 1.0
+  },
+  "documentation": {
+    "parameter_notes": "mMRC 呼吸困难分级 支持输入总分，部分量表也支持按条目分值求和。",
+    "usage_examples": [
+      {
+        "input": {
+          "grade": 2
+        },
+        "description": "mMRC 呼吸困难分级 示例"
+      }
+    ],
+    "reference_literature": [
+      "mMRC 呼吸困难分级 常用公开评分分层标准"
+    ],
+    "update_record": [
+      "2026-04-28：接入第一批扩展计算器运行时实现。"
+    ]
+  },
+  "validation": {
+    "unit_cases": [
+      {
+        "name": "grade_case_1",
+        "input": {
+          "grade": 0
+        },
+        "expected": {
+          "risk_level": "低症状负担",
+          "score": 0
+        }
+      },
+      {
+        "name": "grade_case_2",
+        "input": {
+          "grade": 2
+        },
+        "expected": {
+          "risk_level": "中等症状负担",
+          "score": 2
+        }
+      },
+      {
+        "name": "grade_case_3",
+        "input": {
+          "grade": 3
+        },
+        "expected": {
+          "risk_level": "高症状负担",
+          "score": 3
+        }
+      },
+      {
+        "name": "grade_case_4",
+        "input": {
+          "grade": 4
+        },
+        "expected": {
+          "risk_level": "高症状负担",
+          "score": 4
+        }
+      }
+    ],
+    "boundary_checks": [
+      {
+        "name": "grade_boundary_1",
+        "input": {
+          "grade": 1
+        },
+        "expected_risk_level": "低症状负担"
+      },
+      {
+        "name": "grade_boundary_2",
+        "input": {
+          "grade": 2
+        },
+        "expected_risk_level": "中等症状负担"
+      },
+      {
+        "name": "grade_boundary_3",
+        "input": {
+          "grade": 3
+        },
+        "expected_risk_level": "高症状负担"
+      }
+    ]
+  }
+}

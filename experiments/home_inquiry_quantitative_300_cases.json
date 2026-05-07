@@ -1,0 +1,4990 @@
+{
+  "description": "Curated 300-case quantitative home-health inquiry benchmark selected from the 513-case set.",
+  "selection_rule": {
+    "per_calculator_cases": 6,
+    "selected_prompt_positions": [
+      1,
+      2,
+      3,
+      5,
+      7,
+      10
+    ]
+  },
+  "cases": [
+    {
+      "id": "ad8_case_1",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 3
+      },
+      "message": "请帮我计算 ad8 评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "ad8",
+      "expected_calculation_result": "3",
+      "expected_risk_level": "认知异常风险",
+      "expected_numeric_reference": "AD8 总分 0-8 分，2 分及以上常提示认知异常风险。"
+    },
+    {
+      "id": "ad8_case_2",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 3
+      },
+      "message": "请直接评估 ad8，并给出结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "ad8",
+      "expected_calculation_result": "3",
+      "expected_risk_level": "认知异常风险",
+      "expected_numeric_reference": "AD8 总分 0-8 分，2 分及以上常提示认知异常风险。"
+    },
+    {
+      "id": "ad8_case_3",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 3
+      },
+      "message": "我需要 ad8 的评估结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "ad8",
+      "expected_calculation_result": "3",
+      "expected_risk_level": "认知异常风险",
+      "expected_numeric_reference": "AD8 总分 0-8 分，2 分及以上常提示认知异常风险。"
+    },
+    {
+      "id": "ad8_case_5",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 3
+      },
+      "message": "请用 ad8 做一次量化评估。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "ad8",
+      "expected_calculation_result": "3",
+      "expected_risk_level": "认知异常风险",
+      "expected_numeric_reference": "AD8 总分 0-8 分，2 分及以上常提示认知异常风险。"
+    },
+    {
+      "id": "ad8_case_7",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 3
+      },
+      "message": "请按 ad8 直接完成评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "ad8",
+      "expected_calculation_result": "3",
+      "expected_risk_level": "认知异常风险",
+      "expected_numeric_reference": "AD8 总分 0-8 分，2 分及以上常提示认知异常风险。"
+    },
+    {
+      "id": "ad8_case_10",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 3
+      },
+      "message": "ad8 评分请直接给结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "ad8",
+      "expected_calculation_result": "3",
+      "expected_risk_level": "认知异常风险",
+      "expected_numeric_reference": "AD8 总分 0-8 分，2 分及以上常提示认知异常风险。"
+    },
+    {
+      "id": "ascvd_10y_case_1",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "risk_percent": 12.4
+      },
+      "message": "请帮我计算 ascvd 评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "ascvd_10y",
+      "expected_calculation_result": "12.4",
+      "expected_risk_level": "中等风险",
+      "expected_numeric_reference": "ASCVD 十年风险常用分层：<5% 低风险，5%-7.4% 边缘升高，7.5%-19.9% 中等风险，>=20% 高风险。"
+    },
+    {
+      "id": "ascvd_10y_case_2",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "risk_percent": 12.4
+      },
+      "message": "请直接评估 ascvd，并给出结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "ascvd_10y",
+      "expected_calculation_result": "12.4",
+      "expected_risk_level": "中等风险",
+      "expected_numeric_reference": "ASCVD 十年风险常用分层：<5% 低风险，5%-7.4% 边缘升高，7.5%-19.9% 中等风险，>=20% 高风险。"
+    },
+    {
+      "id": "ascvd_10y_case_3",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "risk_percent": 12.4
+      },
+      "message": "我需要 ascvd 的评估结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "ascvd_10y",
+      "expected_calculation_result": "12.4",
+      "expected_risk_level": "中等风险",
+      "expected_numeric_reference": "ASCVD 十年风险常用分层：<5% 低风险，5%-7.4% 边缘升高，7.5%-19.9% 中等风险，>=20% 高风险。"
+    },
+    {
+      "id": "ascvd_10y_case_5",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "risk_percent": 12.4
+      },
+      "message": "请用 ascvd 做一次量化评估。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "ascvd_10y",
+      "expected_calculation_result": "12.4",
+      "expected_risk_level": "中等风险",
+      "expected_numeric_reference": "ASCVD 十年风险常用分层：<5% 低风险，5%-7.4% 边缘升高，7.5%-19.9% 中等风险，>=20% 高风险。"
+    },
+    {
+      "id": "ascvd_10y_case_7",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "risk_percent": 12.4
+      },
+      "message": "请按 ascvd 直接完成评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "ascvd_10y",
+      "expected_calculation_result": "12.4",
+      "expected_risk_level": "中等风险",
+      "expected_numeric_reference": "ASCVD 十年风险常用分层：<5% 低风险，5%-7.4% 边缘升高，7.5%-19.9% 中等风险，>=20% 高风险。"
+    },
+    {
+      "id": "ascvd_10y_case_10",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "risk_percent": 12.4
+      },
+      "message": "ascvd 评分请直接给结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "ascvd_10y",
+      "expected_calculation_result": "12.4",
+      "expected_risk_level": "中等风险",
+      "expected_numeric_reference": "ASCVD 十年风险常用分层：<5% 低风险，5%-7.4% 边缘升高，7.5%-19.9% 中等风险，>=20% 高风险。"
+    },
+    {
+      "id": "barthel_index_case_1",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 65
+      },
+      "message": "请帮我计算 barthel 评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "barthel_index",
+      "expected_calculation_result": "65",
+      "expected_risk_level": "中度依赖",
+      "expected_numeric_reference": "Barthel 指数常用分层：100 独立，91-99 轻度依赖，61-90 中度依赖，21-60 重度依赖，0-20 完全依赖。"
+    },
+    {
+      "id": "barthel_index_case_2",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 65
+      },
+      "message": "请直接评估 barthel，并给出结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "barthel_index",
+      "expected_calculation_result": "65",
+      "expected_risk_level": "中度依赖",
+      "expected_numeric_reference": "Barthel 指数常用分层：100 独立，91-99 轻度依赖，61-90 中度依赖，21-60 重度依赖，0-20 完全依赖。"
+    },
+    {
+      "id": "barthel_index_case_3",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 65
+      },
+      "message": "我需要 barthel 的评估结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "barthel_index",
+      "expected_calculation_result": "65",
+      "expected_risk_level": "中度依赖",
+      "expected_numeric_reference": "Barthel 指数常用分层：100 独立，91-99 轻度依赖，61-90 中度依赖，21-60 重度依赖，0-20 完全依赖。"
+    },
+    {
+      "id": "barthel_index_case_5",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 65
+      },
+      "message": "请用 barthel 做一次量化评估。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "barthel_index",
+      "expected_calculation_result": "65",
+      "expected_risk_level": "中度依赖",
+      "expected_numeric_reference": "Barthel 指数常用分层：100 独立，91-99 轻度依赖，61-90 中度依赖，21-60 重度依赖，0-20 完全依赖。"
+    },
+    {
+      "id": "barthel_index_case_7",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 65
+      },
+      "message": "请按 barthel 直接完成评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "barthel_index",
+      "expected_calculation_result": "65",
+      "expected_risk_level": "中度依赖",
+      "expected_numeric_reference": "Barthel 指数常用分层：100 独立，91-99 轻度依赖，61-90 中度依赖，21-60 重度依赖，0-20 完全依赖。"
+    },
+    {
+      "id": "barthel_index_case_10",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 65
+      },
+      "message": "barthel 评分请直接给结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "barthel_index",
+      "expected_calculation_result": "65",
+      "expected_risk_level": "中度依赖",
+      "expected_numeric_reference": "Barthel 指数常用分层：100 独立，91-99 轻度依赖，61-90 中度依赖，21-60 重度依赖，0-20 完全依赖。"
+    },
+    {
+      "id": "blood_pressure_case_1",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "systolic_bp": 128,
+        "diastolic_bp": 84
+      },
+      "message": "请帮我计算 血压 评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "blood_pressure",
+      "expected_calculation_result": "128/84 mmHg",
+      "expected_risk_level": "偏高",
+      "expected_numeric_reference": "成人家庭静息血压参考：收缩压 <120 mmHg 且舒张压 <80 mmHg 为正常，>=140/90 mmHg 需进一步医学评估。"
+    },
+    {
+      "id": "blood_pressure_case_2",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "systolic_bp": 128,
+        "diastolic_bp": 84
+      },
+      "message": "请直接评估 血压，并给出结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "blood_pressure",
+      "expected_calculation_result": "128/84 mmHg",
+      "expected_risk_level": "偏高",
+      "expected_numeric_reference": "成人家庭静息血压参考：收缩压 <120 mmHg 且舒张压 <80 mmHg 为正常，>=140/90 mmHg 需进一步医学评估。"
+    },
+    {
+      "id": "blood_pressure_case_3",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "systolic_bp": 128,
+        "diastolic_bp": 84
+      },
+      "message": "我需要 血压 的评估结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "blood_pressure",
+      "expected_calculation_result": "128/84 mmHg",
+      "expected_risk_level": "偏高",
+      "expected_numeric_reference": "成人家庭静息血压参考：收缩压 <120 mmHg 且舒张压 <80 mmHg 为正常，>=140/90 mmHg 需进一步医学评估。"
+    },
+    {
+      "id": "blood_pressure_case_5",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "systolic_bp": 128,
+        "diastolic_bp": 84
+      },
+      "message": "请用 血压 做一次量化评估。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "blood_pressure",
+      "expected_calculation_result": "128/84 mmHg",
+      "expected_risk_level": "偏高",
+      "expected_numeric_reference": "成人家庭静息血压参考：收缩压 <120 mmHg 且舒张压 <80 mmHg 为正常，>=140/90 mmHg 需进一步医学评估。"
+    },
+    {
+      "id": "blood_pressure_case_7",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "systolic_bp": 128,
+        "diastolic_bp": 84
+      },
+      "message": "请按 血压 直接完成评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "blood_pressure",
+      "expected_calculation_result": "128/84 mmHg",
+      "expected_risk_level": "偏高",
+      "expected_numeric_reference": "成人家庭静息血压参考：收缩压 <120 mmHg 且舒张压 <80 mmHg 为正常，>=140/90 mmHg 需进一步医学评估。"
+    },
+    {
+      "id": "blood_pressure_case_10",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "systolic_bp": 128,
+        "diastolic_bp": 84
+      },
+      "message": "血压 评分请直接给结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "blood_pressure",
+      "expected_calculation_result": "128/84 mmHg",
+      "expected_risk_level": "偏高",
+      "expected_numeric_reference": "成人家庭静息血压参考：收缩压 <120 mmHg 且舒张压 <80 mmHg 为正常，>=140/90 mmHg 需进一步医学评估。"
+    },
+    {
+      "id": "bmi_case_1",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "height_cm": 170,
+        "weight_kg": 65
+      },
+      "message": "请帮我计算 bmi 评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "bmi",
+      "expected_calculation_result": "22.5",
+      "expected_risk_level": "正常",
+      "expected_numeric_reference": "中国成人 BMI 分类参考：18.5-23.9 为正常，24.0-27.9 为超重，>=28 为肥胖。"
+    },
+    {
+      "id": "bmi_case_2",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "height_cm": 170,
+        "weight_kg": 65
+      },
+      "message": "请直接评估 bmi，并给出结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "bmi",
+      "expected_calculation_result": "22.5",
+      "expected_risk_level": "正常",
+      "expected_numeric_reference": "中国成人 BMI 分类参考：18.5-23.9 为正常，24.0-27.9 为超重，>=28 为肥胖。"
+    },
+    {
+      "id": "bmi_case_3",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "height_cm": 170,
+        "weight_kg": 65
+      },
+      "message": "我需要 bmi 的评估结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "bmi",
+      "expected_calculation_result": "22.5",
+      "expected_risk_level": "正常",
+      "expected_numeric_reference": "中国成人 BMI 分类参考：18.5-23.9 为正常，24.0-27.9 为超重，>=28 为肥胖。"
+    },
+    {
+      "id": "bmi_case_5",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "height_cm": 170,
+        "weight_kg": 65
+      },
+      "message": "请用 bmi 做一次量化评估。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "bmi",
+      "expected_calculation_result": "22.5",
+      "expected_risk_level": "正常",
+      "expected_numeric_reference": "中国成人 BMI 分类参考：18.5-23.9 为正常，24.0-27.9 为超重，>=28 为肥胖。"
+    },
+    {
+      "id": "bmi_case_7",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "height_cm": 170,
+        "weight_kg": 65
+      },
+      "message": "请按 bmi 直接完成评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "bmi",
+      "expected_calculation_result": "22.5",
+      "expected_risk_level": "正常",
+      "expected_numeric_reference": "中国成人 BMI 分类参考：18.5-23.9 为正常，24.0-27.9 为超重，>=28 为肥胖。"
+    },
+    {
+      "id": "bmi_case_10",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "height_cm": 170,
+        "weight_kg": 65
+      },
+      "message": "bmi 评分请直接给结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "bmi",
+      "expected_calculation_result": "22.5",
+      "expected_risk_level": "正常",
+      "expected_numeric_reference": "中国成人 BMI 分类参考：18.5-23.9 为正常，24.0-27.9 为超重，>=28 为肥胖。"
+    },
+    {
+      "id": "body_temperature_case_1",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "temperature_c": 37.8
+      },
+      "message": "请帮我计算 体温 评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "body_temperature",
+      "expected_calculation_result": "37.8",
+      "expected_risk_level": "偏高",
+      "expected_numeric_reference": "成人体温常见参考范围约为 36.1-37.2 ℃；>=37.3 ℃ 提示发热风险，明显偏低也需警惕。"
+    },
+    {
+      "id": "body_temperature_case_2",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "temperature_c": 37.8
+      },
+      "message": "请直接评估 体温，并给出结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "body_temperature",
+      "expected_calculation_result": "37.8",
+      "expected_risk_level": "偏高",
+      "expected_numeric_reference": "成人体温常见参考范围约为 36.1-37.2 ℃；>=37.3 ℃ 提示发热风险，明显偏低也需警惕。"
+    },
+    {
+      "id": "body_temperature_case_3",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "temperature_c": 37.8
+      },
+      "message": "我需要 体温 的评估结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "body_temperature",
+      "expected_calculation_result": "37.8",
+      "expected_risk_level": "偏高",
+      "expected_numeric_reference": "成人体温常见参考范围约为 36.1-37.2 ℃；>=37.3 ℃ 提示发热风险，明显偏低也需警惕。"
+    },
+    {
+      "id": "body_temperature_case_5",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "temperature_c": 37.8
+      },
+      "message": "请用 体温 做一次量化评估。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "body_temperature",
+      "expected_calculation_result": "37.8",
+      "expected_risk_level": "偏高",
+      "expected_numeric_reference": "成人体温常见参考范围约为 36.1-37.2 ℃；>=37.3 ℃ 提示发热风险，明显偏低也需警惕。"
+    },
+    {
+      "id": "body_temperature_case_7",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "temperature_c": 37.8
+      },
+      "message": "请按 体温 直接完成评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "body_temperature",
+      "expected_calculation_result": "37.8",
+      "expected_risk_level": "偏高",
+      "expected_numeric_reference": "成人体温常见参考范围约为 36.1-37.2 ℃；>=37.3 ℃ 提示发热风险，明显偏低也需警惕。"
+    },
+    {
+      "id": "body_temperature_case_10",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "temperature_c": 37.8
+      },
+      "message": "体温 评分请直接给结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "body_temperature",
+      "expected_calculation_result": "37.8",
+      "expected_risk_level": "偏高",
+      "expected_numeric_reference": "成人体温常见参考范围约为 36.1-37.2 ℃；>=37.3 ℃ 提示发热风险，明显偏低也需警惕。"
+    },
+    {
+      "id": "braden_scale_case_1",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 12
+      },
+      "message": "请帮我计算 braden 评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "braden_scale",
+      "expected_calculation_result": "12",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "Braden Scale 常用分层：<=9 极高风险，10-12 高风险，13-14 中风险，15-18 轻度风险，>18 低风险。"
+    },
+    {
+      "id": "braden_scale_case_2",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 12
+      },
+      "message": "请直接评估 braden，并给出结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "braden_scale",
+      "expected_calculation_result": "12",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "Braden Scale 常用分层：<=9 极高风险，10-12 高风险，13-14 中风险，15-18 轻度风险，>18 低风险。"
+    },
+    {
+      "id": "braden_scale_case_3",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 12
+      },
+      "message": "我需要 braden 的评估结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "braden_scale",
+      "expected_calculation_result": "12",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "Braden Scale 常用分层：<=9 极高风险，10-12 高风险，13-14 中风险，15-18 轻度风险，>18 低风险。"
+    },
+    {
+      "id": "braden_scale_case_5",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 12
+      },
+      "message": "请用 braden 做一次量化评估。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "braden_scale",
+      "expected_calculation_result": "12",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "Braden Scale 常用分层：<=9 极高风险，10-12 高风险，13-14 中风险，15-18 轻度风险，>18 低风险。"
+    },
+    {
+      "id": "braden_scale_case_7",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 12
+      },
+      "message": "请按 braden 直接完成评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "braden_scale",
+      "expected_calculation_result": "12",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "Braden Scale 常用分层：<=9 极高风险，10-12 高风险，13-14 中风险，15-18 轻度风险，>18 低风险。"
+    },
+    {
+      "id": "braden_scale_case_10",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 12
+      },
+      "message": "braden 评分请直接给结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "braden_scale",
+      "expected_calculation_result": "12",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "Braden Scale 常用分层：<=9 极高风险，10-12 高风险，13-14 中风险，15-18 轻度风险，>18 低风险。"
+    },
+    {
+      "id": "caprini_vte_case_1",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 6
+      },
+      "message": "请帮我计算 caprini 评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "caprini_vte",
+      "expected_calculation_result": "6",
+      "expected_risk_level": "极高风险",
+      "expected_numeric_reference": "Caprini 评分分数越高提示静脉血栓栓塞风险越高，常以 5 分及以上视为高危。"
+    },
+    {
+      "id": "caprini_vte_case_2",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 6
+      },
+      "message": "请直接评估 caprini，并给出结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "caprini_vte",
+      "expected_calculation_result": "6",
+      "expected_risk_level": "极高风险",
+      "expected_numeric_reference": "Caprini 评分分数越高提示静脉血栓栓塞风险越高，常以 5 分及以上视为高危。"
+    },
+    {
+      "id": "caprini_vte_case_3",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 6
+      },
+      "message": "我需要 caprini 的评估结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "caprini_vte",
+      "expected_calculation_result": "6",
+      "expected_risk_level": "极高风险",
+      "expected_numeric_reference": "Caprini 评分分数越高提示静脉血栓栓塞风险越高，常以 5 分及以上视为高危。"
+    },
+    {
+      "id": "caprini_vte_case_5",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 6
+      },
+      "message": "请用 caprini 做一次量化评估。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "caprini_vte",
+      "expected_calculation_result": "6",
+      "expected_risk_level": "极高风险",
+      "expected_numeric_reference": "Caprini 评分分数越高提示静脉血栓栓塞风险越高，常以 5 分及以上视为高危。"
+    },
+    {
+      "id": "caprini_vte_case_7",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 6
+      },
+      "message": "请按 caprini 直接完成评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "caprini_vte",
+      "expected_calculation_result": "6",
+      "expected_risk_level": "极高风险",
+      "expected_numeric_reference": "Caprini 评分分数越高提示静脉血栓栓塞风险越高，常以 5 分及以上视为高危。"
+    },
+    {
+      "id": "caprini_vte_case_10",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 6
+      },
+      "message": "caprini 评分请直接给结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "caprini_vte",
+      "expected_calculation_result": "6",
+      "expected_risk_level": "极高风险",
+      "expected_numeric_reference": "Caprini 评分分数越高提示静脉血栓栓塞风险越高，常以 5 分及以上视为高危。"
+    },
+    {
+      "id": "cat_case_1",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 18
+      },
+      "message": "请帮我计算 cat 评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "cat",
+      "expected_calculation_result": "18",
+      "expected_risk_level": "中等症状负担",
+      "expected_numeric_reference": "CAT 总分范围 0-40 分，通常 10 分以上提示症状负担增高。"
+    },
+    {
+      "id": "cat_case_2",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 18
+      },
+      "message": "请直接评估 cat，并给出结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "cat",
+      "expected_calculation_result": "18",
+      "expected_risk_level": "中等症状负担",
+      "expected_numeric_reference": "CAT 总分范围 0-40 分，通常 10 分以上提示症状负担增高。"
+    },
+    {
+      "id": "cat_case_3",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 18
+      },
+      "message": "我需要 cat 的评估结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "cat",
+      "expected_calculation_result": "18",
+      "expected_risk_level": "中等症状负担",
+      "expected_numeric_reference": "CAT 总分范围 0-40 分，通常 10 分以上提示症状负担增高。"
+    },
+    {
+      "id": "cat_case_5",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 18
+      },
+      "message": "请用 cat 做一次量化评估。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "cat",
+      "expected_calculation_result": "18",
+      "expected_risk_level": "中等症状负担",
+      "expected_numeric_reference": "CAT 总分范围 0-40 分，通常 10 分以上提示症状负担增高。"
+    },
+    {
+      "id": "cat_case_7",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 18
+      },
+      "message": "请按 cat 直接完成评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "cat",
+      "expected_calculation_result": "18",
+      "expected_risk_level": "中等症状负担",
+      "expected_numeric_reference": "CAT 总分范围 0-40 分，通常 10 分以上提示症状负担增高。"
+    },
+    {
+      "id": "cat_case_10",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 18
+      },
+      "message": "cat 评分请直接给结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "cat",
+      "expected_calculation_result": "18",
+      "expected_risk_level": "中等症状负担",
+      "expected_numeric_reference": "CAT 总分范围 0-40 分，通常 10 分以上提示症状负担增高。"
+    },
+    {
+      "id": "cdrs_case_1",
+      "scenario_type": "calculator",
+      "birth_date": "1968-01-01",
+      "gender": "男",
+      "seed_params": {
+        "age": 58,
+        "bmi": 28,
+        "waist_cm": 92,
+        "systolic_bp": 142,
+        "gender": "男",
+        "family_history_diabetes": true
+      },
+      "message": "请帮我计算 cdrs 评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "cdrs",
+      "expected_calculation_result": "41",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "中国糖尿病风险评分表常以总分 >=25 分作为高危筛查阈值。"
+    },
+    {
+      "id": "cdrs_case_2",
+      "scenario_type": "calculator",
+      "birth_date": "1968-01-01",
+      "gender": "男",
+      "seed_params": {
+        "age": 58,
+        "bmi": 28,
+        "waist_cm": 92,
+        "systolic_bp": 142,
+        "gender": "男",
+        "family_history_diabetes": true
+      },
+      "message": "请直接评估 cdrs，并给出结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "cdrs",
+      "expected_calculation_result": "41",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "中国糖尿病风险评分表常以总分 >=25 分作为高危筛查阈值。"
+    },
+    {
+      "id": "cdrs_case_3",
+      "scenario_type": "calculator",
+      "birth_date": "1968-01-01",
+      "gender": "男",
+      "seed_params": {
+        "age": 58,
+        "bmi": 28,
+        "waist_cm": 92,
+        "systolic_bp": 142,
+        "gender": "男",
+        "family_history_diabetes": true
+      },
+      "message": "我需要 cdrs 的评估结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "cdrs",
+      "expected_calculation_result": "41",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "中国糖尿病风险评分表常以总分 >=25 分作为高危筛查阈值。"
+    },
+    {
+      "id": "cdrs_case_5",
+      "scenario_type": "calculator",
+      "birth_date": "1968-01-01",
+      "gender": "男",
+      "seed_params": {
+        "age": 58,
+        "bmi": 28,
+        "waist_cm": 92,
+        "systolic_bp": 142,
+        "gender": "男",
+        "family_history_diabetes": true
+      },
+      "message": "请用 cdrs 做一次量化评估。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "cdrs",
+      "expected_calculation_result": "41",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "中国糖尿病风险评分表常以总分 >=25 分作为高危筛查阈值。"
+    },
+    {
+      "id": "cdrs_case_7",
+      "scenario_type": "calculator",
+      "birth_date": "1968-01-01",
+      "gender": "男",
+      "seed_params": {
+        "age": 58,
+        "bmi": 28,
+        "waist_cm": 92,
+        "systolic_bp": 142,
+        "gender": "男",
+        "family_history_diabetes": true
+      },
+      "message": "请按 cdrs 直接完成评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "cdrs",
+      "expected_calculation_result": "41",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "中国糖尿病风险评分表常以总分 >=25 分作为高危筛查阈值。"
+    },
+    {
+      "id": "cdrs_case_10",
+      "scenario_type": "calculator",
+      "birth_date": "1968-01-01",
+      "gender": "男",
+      "seed_params": {
+        "age": 58,
+        "bmi": 28,
+        "waist_cm": 92,
+        "systolic_bp": 142,
+        "gender": "男",
+        "family_history_diabetes": true
+      },
+      "message": "cdrs 评分请直接给结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "cdrs",
+      "expected_calculation_result": "41",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "中国糖尿病风险评分表常以总分 >=25 分作为高危筛查阈值。"
+    },
+    {
+      "id": "cha2ds2_vasc_case_1",
+      "scenario_type": "calculator",
+      "birth_date": "1950-01-01",
+      "gender": "女",
+      "seed_params": {
+        "age": 76,
+        "gender": "女",
+        "hypertension": true,
+        "diabetes": true,
+        "prior_stroke_tia_thromboembolism": false,
+        "vascular_disease": false,
+        "congestive_heart_failure": false
+      },
+      "message": "请帮我计算 cha2ds2-vasc 评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "cha2ds2_vasc",
+      "expected_calculation_result": "5",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "CHA2DS2-VASc 由心衰、高血压、年龄、糖尿病、卒中/TIA、血管疾病和性别组成。"
+    },
+    {
+      "id": "cha2ds2_vasc_case_2",
+      "scenario_type": "calculator",
+      "birth_date": "1950-01-01",
+      "gender": "女",
+      "seed_params": {
+        "age": 76,
+        "gender": "女",
+        "hypertension": true,
+        "diabetes": true,
+        "prior_stroke_tia_thromboembolism": false,
+        "vascular_disease": false,
+        "congestive_heart_failure": false
+      },
+      "message": "请直接评估 cha2ds2-vasc，并给出结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "cha2ds2_vasc",
+      "expected_calculation_result": "5",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "CHA2DS2-VASc 由心衰、高血压、年龄、糖尿病、卒中/TIA、血管疾病和性别组成。"
+    },
+    {
+      "id": "cha2ds2_vasc_case_3",
+      "scenario_type": "calculator",
+      "birth_date": "1950-01-01",
+      "gender": "女",
+      "seed_params": {
+        "age": 76,
+        "gender": "女",
+        "hypertension": true,
+        "diabetes": true,
+        "prior_stroke_tia_thromboembolism": false,
+        "vascular_disease": false,
+        "congestive_heart_failure": false
+      },
+      "message": "我需要 cha2ds2-vasc 的评估结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "cha2ds2_vasc",
+      "expected_calculation_result": "5",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "CHA2DS2-VASc 由心衰、高血压、年龄、糖尿病、卒中/TIA、血管疾病和性别组成。"
+    },
+    {
+      "id": "cha2ds2_vasc_case_5",
+      "scenario_type": "calculator",
+      "birth_date": "1950-01-01",
+      "gender": "女",
+      "seed_params": {
+        "age": 76,
+        "gender": "女",
+        "hypertension": true,
+        "diabetes": true,
+        "prior_stroke_tia_thromboembolism": false,
+        "vascular_disease": false,
+        "congestive_heart_failure": false
+      },
+      "message": "请用 cha2ds2-vasc 做一次量化评估。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "cha2ds2_vasc",
+      "expected_calculation_result": "5",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "CHA2DS2-VASc 由心衰、高血压、年龄、糖尿病、卒中/TIA、血管疾病和性别组成。"
+    },
+    {
+      "id": "cha2ds2_vasc_case_7",
+      "scenario_type": "calculator",
+      "birth_date": "1950-01-01",
+      "gender": "女",
+      "seed_params": {
+        "age": 76,
+        "gender": "女",
+        "hypertension": true,
+        "diabetes": true,
+        "prior_stroke_tia_thromboembolism": false,
+        "vascular_disease": false,
+        "congestive_heart_failure": false
+      },
+      "message": "请按 cha2ds2-vasc 直接完成评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "cha2ds2_vasc",
+      "expected_calculation_result": "5",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "CHA2DS2-VASc 由心衰、高血压、年龄、糖尿病、卒中/TIA、血管疾病和性别组成。"
+    },
+    {
+      "id": "cha2ds2_vasc_case_10",
+      "scenario_type": "calculator",
+      "birth_date": "1950-01-01",
+      "gender": "女",
+      "seed_params": {
+        "age": 76,
+        "gender": "女",
+        "hypertension": true,
+        "diabetes": true,
+        "prior_stroke_tia_thromboembolism": false,
+        "vascular_disease": false,
+        "congestive_heart_failure": false
+      },
+      "message": "cha2ds2-vasc 评分请直接给结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "cha2ds2_vasc",
+      "expected_calculation_result": "5",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "CHA2DS2-VASc 由心衰、高血压、年龄、糖尿病、卒中/TIA、血管疾病和性别组成。"
+    },
+    {
+      "id": "chads2_case_1",
+      "scenario_type": "calculator",
+      "birth_date": "1948-01-01",
+      "gender": "男",
+      "seed_params": {
+        "age": 78,
+        "congestive_heart_failure": false,
+        "hypertension": true,
+        "diabetes": true,
+        "prior_stroke_tia": false
+      },
+      "message": "请帮我计算 chads2 评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "chads2",
+      "expected_calculation_result": "3",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "CHADS2 由心衰、高血压、年龄 >=75 岁、糖尿病和卒中/TIA 史组成，其中卒中/TIA 计 2 分。"
+    },
+    {
+      "id": "chads2_case_2",
+      "scenario_type": "calculator",
+      "birth_date": "1948-01-01",
+      "gender": "男",
+      "seed_params": {
+        "age": 78,
+        "congestive_heart_failure": false,
+        "hypertension": true,
+        "diabetes": true,
+        "prior_stroke_tia": false
+      },
+      "message": "请直接评估 chads2，并给出结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "chads2",
+      "expected_calculation_result": "3",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "CHADS2 由心衰、高血压、年龄 >=75 岁、糖尿病和卒中/TIA 史组成，其中卒中/TIA 计 2 分。"
+    },
+    {
+      "id": "chads2_case_3",
+      "scenario_type": "calculator",
+      "birth_date": "1948-01-01",
+      "gender": "男",
+      "seed_params": {
+        "age": 78,
+        "congestive_heart_failure": false,
+        "hypertension": true,
+        "diabetes": true,
+        "prior_stroke_tia": false
+      },
+      "message": "我需要 chads2 的评估结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "chads2",
+      "expected_calculation_result": "3",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "CHADS2 由心衰、高血压、年龄 >=75 岁、糖尿病和卒中/TIA 史组成，其中卒中/TIA 计 2 分。"
+    },
+    {
+      "id": "chads2_case_5",
+      "scenario_type": "calculator",
+      "birth_date": "1948-01-01",
+      "gender": "男",
+      "seed_params": {
+        "age": 78,
+        "congestive_heart_failure": false,
+        "hypertension": true,
+        "diabetes": true,
+        "prior_stroke_tia": false
+      },
+      "message": "请用 chads2 做一次量化评估。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "chads2",
+      "expected_calculation_result": "3",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "CHADS2 由心衰、高血压、年龄 >=75 岁、糖尿病和卒中/TIA 史组成，其中卒中/TIA 计 2 分。"
+    },
+    {
+      "id": "chads2_case_7",
+      "scenario_type": "calculator",
+      "birth_date": "1948-01-01",
+      "gender": "男",
+      "seed_params": {
+        "age": 78,
+        "congestive_heart_failure": false,
+        "hypertension": true,
+        "diabetes": true,
+        "prior_stroke_tia": false
+      },
+      "message": "请按 chads2 直接完成评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "chads2",
+      "expected_calculation_result": "3",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "CHADS2 由心衰、高血压、年龄 >=75 岁、糖尿病和卒中/TIA 史组成，其中卒中/TIA 计 2 分。"
+    },
+    {
+      "id": "chads2_case_10",
+      "scenario_type": "calculator",
+      "birth_date": "1948-01-01",
+      "gender": "男",
+      "seed_params": {
+        "age": 78,
+        "congestive_heart_failure": false,
+        "hypertension": true,
+        "diabetes": true,
+        "prior_stroke_tia": false
+      },
+      "message": "chads2 评分请直接给结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "chads2",
+      "expected_calculation_result": "3",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "CHADS2 由心衰、高血压、年龄 >=75 岁、糖尿病和卒中/TIA 史组成，其中卒中/TIA 计 2 分。"
+    },
+    {
+      "id": "charlson_cci_case_1",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 5
+      },
+      "message": "请帮我计算 charlson 评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "charlson_cci",
+      "expected_calculation_result": "5",
+      "expected_risk_level": "高合并症负担",
+      "expected_numeric_reference": "Charlson Comorbidity Index 分数越高提示合并症负担越重。"
+    },
+    {
+      "id": "charlson_cci_case_2",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 5
+      },
+      "message": "请直接评估 charlson，并给出结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "charlson_cci",
+      "expected_calculation_result": "5",
+      "expected_risk_level": "高合并症负担",
+      "expected_numeric_reference": "Charlson Comorbidity Index 分数越高提示合并症负担越重。"
+    },
+    {
+      "id": "charlson_cci_case_3",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 5
+      },
+      "message": "我需要 charlson 的评估结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "charlson_cci",
+      "expected_calculation_result": "5",
+      "expected_risk_level": "高合并症负担",
+      "expected_numeric_reference": "Charlson Comorbidity Index 分数越高提示合并症负担越重。"
+    },
+    {
+      "id": "charlson_cci_case_5",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 5
+      },
+      "message": "请用 charlson 做一次量化评估。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "charlson_cci",
+      "expected_calculation_result": "5",
+      "expected_risk_level": "高合并症负担",
+      "expected_numeric_reference": "Charlson Comorbidity Index 分数越高提示合并症负担越重。"
+    },
+    {
+      "id": "charlson_cci_case_7",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 5
+      },
+      "message": "请按 charlson 直接完成评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "charlson_cci",
+      "expected_calculation_result": "5",
+      "expected_risk_level": "高合并症负担",
+      "expected_numeric_reference": "Charlson Comorbidity Index 分数越高提示合并症负担越重。"
+    },
+    {
+      "id": "charlson_cci_case_10",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 5
+      },
+      "message": "charlson 评分请直接给结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "charlson_cci",
+      "expected_calculation_result": "5",
+      "expected_risk_level": "高合并症负担",
+      "expected_numeric_reference": "Charlson Comorbidity Index 分数越高提示合并症负担越重。"
+    },
+    {
+      "id": "fall_risk_case_1",
+      "scenario_type": "calculator",
+      "birth_date": "1948-01-01",
+      "gender": "男",
+      "seed_params": {
+        "age": 78,
+        "balance_ability": "步态不稳"
+      },
+      "message": "请帮我计算 跌倒 评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "fall_risk",
+      "expected_calculation_result": "4",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "老年人居家跌倒风险常结合年龄、平衡能力与步态稳定性进行分层，本结果仅用于初步提示。"
+    },
+    {
+      "id": "fall_risk_case_2",
+      "scenario_type": "calculator",
+      "birth_date": "1948-01-01",
+      "gender": "男",
+      "seed_params": {
+        "age": 78,
+        "balance_ability": "步态不稳"
+      },
+      "message": "请直接评估 跌倒，并给出结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "fall_risk",
+      "expected_calculation_result": "4",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "老年人居家跌倒风险常结合年龄、平衡能力与步态稳定性进行分层，本结果仅用于初步提示。"
+    },
+    {
+      "id": "fall_risk_case_3",
+      "scenario_type": "calculator",
+      "birth_date": "1948-01-01",
+      "gender": "男",
+      "seed_params": {
+        "age": 78,
+        "balance_ability": "步态不稳"
+      },
+      "message": "我需要 跌倒 的评估结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "fall_risk",
+      "expected_calculation_result": "4",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "老年人居家跌倒风险常结合年龄、平衡能力与步态稳定性进行分层，本结果仅用于初步提示。"
+    },
+    {
+      "id": "fall_risk_case_5",
+      "scenario_type": "calculator",
+      "birth_date": "1948-01-01",
+      "gender": "男",
+      "seed_params": {
+        "age": 78,
+        "balance_ability": "步态不稳"
+      },
+      "message": "请用 跌倒 做一次量化评估。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "fall_risk",
+      "expected_calculation_result": "4",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "老年人居家跌倒风险常结合年龄、平衡能力与步态稳定性进行分层，本结果仅用于初步提示。"
+    },
+    {
+      "id": "fall_risk_case_7",
+      "scenario_type": "calculator",
+      "birth_date": "1948-01-01",
+      "gender": "男",
+      "seed_params": {
+        "age": 78,
+        "balance_ability": "步态不稳"
+      },
+      "message": "请按 跌倒 直接完成评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "fall_risk",
+      "expected_calculation_result": "4",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "老年人居家跌倒风险常结合年龄、平衡能力与步态稳定性进行分层，本结果仅用于初步提示。"
+    },
+    {
+      "id": "fall_risk_case_10",
+      "scenario_type": "calculator",
+      "birth_date": "1948-01-01",
+      "gender": "男",
+      "seed_params": {
+        "age": 78,
+        "balance_ability": "步态不稳"
+      },
+      "message": "跌倒 评分请直接给结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "fall_risk",
+      "expected_calculation_result": "4",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "老年人居家跌倒风险常结合年龄、平衡能力与步态稳定性进行分层，本结果仅用于初步提示。"
+    },
+    {
+      "id": "fasting_glucose_case_1",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "fasting_glucose": 5.4
+      },
+      "message": "请帮我计算 血糖 评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "fasting_glucose",
+      "expected_calculation_result": "5.4",
+      "expected_risk_level": "正常",
+      "expected_numeric_reference": "空腹血糖常用参考范围约为 3.9-6.0 mmol/L，>=7.0 mmol/L 需进一步医学评估。"
+    },
+    {
+      "id": "fasting_glucose_case_2",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "fasting_glucose": 5.4
+      },
+      "message": "请直接评估 血糖，并给出结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "fasting_glucose",
+      "expected_calculation_result": "5.4",
+      "expected_risk_level": "正常",
+      "expected_numeric_reference": "空腹血糖常用参考范围约为 3.9-6.0 mmol/L，>=7.0 mmol/L 需进一步医学评估。"
+    },
+    {
+      "id": "fasting_glucose_case_3",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "fasting_glucose": 5.4
+      },
+      "message": "我需要 血糖 的评估结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "fasting_glucose",
+      "expected_calculation_result": "5.4",
+      "expected_risk_level": "正常",
+      "expected_numeric_reference": "空腹血糖常用参考范围约为 3.9-6.0 mmol/L，>=7.0 mmol/L 需进一步医学评估。"
+    },
+    {
+      "id": "fasting_glucose_case_5",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "fasting_glucose": 5.4
+      },
+      "message": "请用 血糖 做一次量化评估。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "fasting_glucose",
+      "expected_calculation_result": "5.4",
+      "expected_risk_level": "正常",
+      "expected_numeric_reference": "空腹血糖常用参考范围约为 3.9-6.0 mmol/L，>=7.0 mmol/L 需进一步医学评估。"
+    },
+    {
+      "id": "fasting_glucose_case_7",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "fasting_glucose": 5.4
+      },
+      "message": "请按 血糖 直接完成评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "fasting_glucose",
+      "expected_calculation_result": "5.4",
+      "expected_risk_level": "正常",
+      "expected_numeric_reference": "空腹血糖常用参考范围约为 3.9-6.0 mmol/L，>=7.0 mmol/L 需进一步医学评估。"
+    },
+    {
+      "id": "fasting_glucose_case_10",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "fasting_glucose": 5.4
+      },
+      "message": "血糖 评分请直接给结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "fasting_glucose",
+      "expected_calculation_result": "5.4",
+      "expected_risk_level": "正常",
+      "expected_numeric_reference": "空腹血糖常用参考范围约为 3.9-6.0 mmol/L，>=7.0 mmol/L 需进一步医学评估。"
+    },
+    {
+      "id": "findrisc_case_1",
+      "scenario_type": "calculator",
+      "birth_date": "1968-01-01",
+      "gender": "男",
+      "seed_params": {
+        "age": 58,
+        "bmi": 29,
+        "waist_cm": 96,
+        "gender": "男",
+        "physically_active_daily": false,
+        "daily_fruits_vegetables": false,
+        "antihypertensive_medication": true,
+        "history_high_blood_glucose": false,
+        "family_history_diabetes": "first_degree"
+      },
+      "message": "请帮我计算 findrisc 评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "findrisc",
+      "expected_calculation_result": "17",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "FINDRISC 由年龄、BMI、腰围、体力活动、饮食、降压药、高血糖史和家族史组成。"
+    },
+    {
+      "id": "findrisc_case_2",
+      "scenario_type": "calculator",
+      "birth_date": "1968-01-01",
+      "gender": "男",
+      "seed_params": {
+        "age": 58,
+        "bmi": 29,
+        "waist_cm": 96,
+        "gender": "男",
+        "physically_active_daily": false,
+        "daily_fruits_vegetables": false,
+        "antihypertensive_medication": true,
+        "history_high_blood_glucose": false,
+        "family_history_diabetes": "first_degree"
+      },
+      "message": "请直接评估 findrisc，并给出结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "findrisc",
+      "expected_calculation_result": "17",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "FINDRISC 由年龄、BMI、腰围、体力活动、饮食、降压药、高血糖史和家族史组成。"
+    },
+    {
+      "id": "findrisc_case_3",
+      "scenario_type": "calculator",
+      "birth_date": "1968-01-01",
+      "gender": "男",
+      "seed_params": {
+        "age": 58,
+        "bmi": 29,
+        "waist_cm": 96,
+        "gender": "男",
+        "physically_active_daily": false,
+        "daily_fruits_vegetables": false,
+        "antihypertensive_medication": true,
+        "history_high_blood_glucose": false,
+        "family_history_diabetes": "first_degree"
+      },
+      "message": "我需要 findrisc 的评估结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "findrisc",
+      "expected_calculation_result": "17",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "FINDRISC 由年龄、BMI、腰围、体力活动、饮食、降压药、高血糖史和家族史组成。"
+    },
+    {
+      "id": "findrisc_case_5",
+      "scenario_type": "calculator",
+      "birth_date": "1968-01-01",
+      "gender": "男",
+      "seed_params": {
+        "age": 58,
+        "bmi": 29,
+        "waist_cm": 96,
+        "gender": "男",
+        "physically_active_daily": false,
+        "daily_fruits_vegetables": false,
+        "antihypertensive_medication": true,
+        "history_high_blood_glucose": false,
+        "family_history_diabetes": "first_degree"
+      },
+      "message": "请用 findrisc 做一次量化评估。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "findrisc",
+      "expected_calculation_result": "17",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "FINDRISC 由年龄、BMI、腰围、体力活动、饮食、降压药、高血糖史和家族史组成。"
+    },
+    {
+      "id": "findrisc_case_7",
+      "scenario_type": "calculator",
+      "birth_date": "1968-01-01",
+      "gender": "男",
+      "seed_params": {
+        "age": 58,
+        "bmi": 29,
+        "waist_cm": 96,
+        "gender": "男",
+        "physically_active_daily": false,
+        "daily_fruits_vegetables": false,
+        "antihypertensive_medication": true,
+        "history_high_blood_glucose": false,
+        "family_history_diabetes": "first_degree"
+      },
+      "message": "请按 findrisc 直接完成评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "findrisc",
+      "expected_calculation_result": "17",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "FINDRISC 由年龄、BMI、腰围、体力活动、饮食、降压药、高血糖史和家族史组成。"
+    },
+    {
+      "id": "findrisc_case_10",
+      "scenario_type": "calculator",
+      "birth_date": "1968-01-01",
+      "gender": "男",
+      "seed_params": {
+        "age": 58,
+        "bmi": 29,
+        "waist_cm": 96,
+        "gender": "男",
+        "physically_active_daily": false,
+        "daily_fruits_vegetables": false,
+        "antihypertensive_medication": true,
+        "history_high_blood_glucose": false,
+        "family_history_diabetes": "first_degree"
+      },
+      "message": "findrisc 评分请直接给结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "findrisc",
+      "expected_calculation_result": "17",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "FINDRISC 由年龄、BMI、腰围、体力活动、饮食、降压药、高血糖史和家族史组成。"
+    },
+    {
+      "id": "fried_frailty_case_1",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 3
+      },
+      "message": "请帮我计算 fried frailty 评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "fried_frailty",
+      "expected_calculation_result": "3",
+      "expected_risk_level": "衰弱",
+      "expected_numeric_reference": "Fried 衰弱表型包含体重下降、乏力、活动减少、步速慢和握力弱，0 分非衰弱，1-2 分衰弱前期，3-5 分衰弱。"
+    },
+    {
+      "id": "fried_frailty_case_2",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 3
+      },
+      "message": "请直接评估 fried frailty，并给出结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "fried_frailty",
+      "expected_calculation_result": "3",
+      "expected_risk_level": "衰弱",
+      "expected_numeric_reference": "Fried 衰弱表型包含体重下降、乏力、活动减少、步速慢和握力弱，0 分非衰弱，1-2 分衰弱前期，3-5 分衰弱。"
+    },
+    {
+      "id": "fried_frailty_case_3",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 3
+      },
+      "message": "我需要 fried frailty 的评估结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "fried_frailty",
+      "expected_calculation_result": "3",
+      "expected_risk_level": "衰弱",
+      "expected_numeric_reference": "Fried 衰弱表型包含体重下降、乏力、活动减少、步速慢和握力弱，0 分非衰弱，1-2 分衰弱前期，3-5 分衰弱。"
+    },
+    {
+      "id": "fried_frailty_case_5",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 3
+      },
+      "message": "请用 fried frailty 做一次量化评估。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "fried_frailty",
+      "expected_calculation_result": "3",
+      "expected_risk_level": "衰弱",
+      "expected_numeric_reference": "Fried 衰弱表型包含体重下降、乏力、活动减少、步速慢和握力弱，0 分非衰弱，1-2 分衰弱前期，3-5 分衰弱。"
+    },
+    {
+      "id": "fried_frailty_case_7",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 3
+      },
+      "message": "请按 fried frailty 直接完成评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "fried_frailty",
+      "expected_calculation_result": "3",
+      "expected_risk_level": "衰弱",
+      "expected_numeric_reference": "Fried 衰弱表型包含体重下降、乏力、活动减少、步速慢和握力弱，0 分非衰弱，1-2 分衰弱前期，3-5 分衰弱。"
+    },
+    {
+      "id": "fried_frailty_case_10",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 3
+      },
+      "message": "fried frailty 评分请直接给结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "fried_frailty",
+      "expected_calculation_result": "3",
+      "expected_risk_level": "衰弱",
+      "expected_numeric_reference": "Fried 衰弱表型包含体重下降、乏力、活动减少、步速慢和握力弱，0 分非衰弱，1-2 分衰弱前期，3-5 分衰弱。"
+    },
+    {
+      "id": "gad7_case_1",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 10
+      },
+      "message": "请帮我计算 gad7 评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "gad7",
+      "expected_calculation_result": "10",
+      "expected_risk_level": "中度焦虑风险",
+      "expected_numeric_reference": "GAD-7 常用分层：0-4 无或极轻，5-9 轻度，10-14 中度，15-21 重度。"
+    },
+    {
+      "id": "gad7_case_2",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 10
+      },
+      "message": "请直接评估 gad7，并给出结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "gad7",
+      "expected_calculation_result": "10",
+      "expected_risk_level": "中度焦虑风险",
+      "expected_numeric_reference": "GAD-7 常用分层：0-4 无或极轻，5-9 轻度，10-14 中度，15-21 重度。"
+    },
+    {
+      "id": "gad7_case_3",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 10
+      },
+      "message": "我需要 gad7 的评估结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "gad7",
+      "expected_calculation_result": "10",
+      "expected_risk_level": "中度焦虑风险",
+      "expected_numeric_reference": "GAD-7 常用分层：0-4 无或极轻，5-9 轻度，10-14 中度，15-21 重度。"
+    },
+    {
+      "id": "gad7_case_5",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 10
+      },
+      "message": "请用 gad7 做一次量化评估。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "gad7",
+      "expected_calculation_result": "10",
+      "expected_risk_level": "中度焦虑风险",
+      "expected_numeric_reference": "GAD-7 常用分层：0-4 无或极轻，5-9 轻度，10-14 中度，15-21 重度。"
+    },
+    {
+      "id": "gad7_case_7",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 10
+      },
+      "message": "请按 gad7 直接完成评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "gad7",
+      "expected_calculation_result": "10",
+      "expected_risk_level": "中度焦虑风险",
+      "expected_numeric_reference": "GAD-7 常用分层：0-4 无或极轻，5-9 轻度，10-14 中度，15-21 重度。"
+    },
+    {
+      "id": "gad7_case_10",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 10
+      },
+      "message": "gad7 评分请直接给结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "gad7",
+      "expected_calculation_result": "10",
+      "expected_risk_level": "中度焦虑风险",
+      "expected_numeric_reference": "GAD-7 常用分层：0-4 无或极轻，5-9 轻度，10-14 中度，15-21 重度。"
+    },
+    {
+      "id": "gds15_case_1",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 10
+      },
+      "message": "请帮我计算 gds15 评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "gds15",
+      "expected_calculation_result": "10",
+      "expected_risk_level": "中度抑郁风险",
+      "expected_numeric_reference": "GDS-15 常用分层：0-4 正常，5-8 轻度，9-11 中度，12-15 重度抑郁风险。"
+    },
+    {
+      "id": "gds15_case_2",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 10
+      },
+      "message": "请直接评估 gds15，并给出结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "gds15",
+      "expected_calculation_result": "10",
+      "expected_risk_level": "中度抑郁风险",
+      "expected_numeric_reference": "GDS-15 常用分层：0-4 正常，5-8 轻度，9-11 中度，12-15 重度抑郁风险。"
+    },
+    {
+      "id": "gds15_case_3",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 10
+      },
+      "message": "我需要 gds15 的评估结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "gds15",
+      "expected_calculation_result": "10",
+      "expected_risk_level": "中度抑郁风险",
+      "expected_numeric_reference": "GDS-15 常用分层：0-4 正常，5-8 轻度，9-11 中度，12-15 重度抑郁风险。"
+    },
+    {
+      "id": "gds15_case_5",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 10
+      },
+      "message": "请用 gds15 做一次量化评估。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "gds15",
+      "expected_calculation_result": "10",
+      "expected_risk_level": "中度抑郁风险",
+      "expected_numeric_reference": "GDS-15 常用分层：0-4 正常，5-8 轻度，9-11 中度，12-15 重度抑郁风险。"
+    },
+    {
+      "id": "gds15_case_7",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 10
+      },
+      "message": "请按 gds15 直接完成评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "gds15",
+      "expected_calculation_result": "10",
+      "expected_risk_level": "中度抑郁风险",
+      "expected_numeric_reference": "GDS-15 常用分层：0-4 正常，5-8 轻度，9-11 中度，12-15 重度抑郁风险。"
+    },
+    {
+      "id": "gds15_case_10",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 10
+      },
+      "message": "gds15 评分请直接给结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "gds15",
+      "expected_calculation_result": "10",
+      "expected_risk_level": "中度抑郁风险",
+      "expected_numeric_reference": "GDS-15 常用分层：0-4 正常，5-8 轻度，9-11 中度，12-15 重度抑郁风险。"
+    },
+    {
+      "id": "glasgow_coma_scale_case_1",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "gcs_score": 7
+      },
+      "message": "请帮我计算 glasgow 评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "glasgow_coma_scale",
+      "expected_calculation_result": "7",
+      "expected_risk_level": "重度意识障碍",
+      "expected_numeric_reference": "Glasgow Coma Scale 常用分层：13-15 轻度，9-12 中度，3-8 重度意识障碍。"
+    },
+    {
+      "id": "glasgow_coma_scale_case_2",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "gcs_score": 7
+      },
+      "message": "请直接评估 glasgow，并给出结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "glasgow_coma_scale",
+      "expected_calculation_result": "7",
+      "expected_risk_level": "重度意识障碍",
+      "expected_numeric_reference": "Glasgow Coma Scale 常用分层：13-15 轻度，9-12 中度，3-8 重度意识障碍。"
+    },
+    {
+      "id": "glasgow_coma_scale_case_3",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "gcs_score": 7
+      },
+      "message": "我需要 glasgow 的评估结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "glasgow_coma_scale",
+      "expected_calculation_result": "7",
+      "expected_risk_level": "重度意识障碍",
+      "expected_numeric_reference": "Glasgow Coma Scale 常用分层：13-15 轻度，9-12 中度，3-8 重度意识障碍。"
+    },
+    {
+      "id": "glasgow_coma_scale_case_5",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "gcs_score": 7
+      },
+      "message": "请用 glasgow 做一次量化评估。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "glasgow_coma_scale",
+      "expected_calculation_result": "7",
+      "expected_risk_level": "重度意识障碍",
+      "expected_numeric_reference": "Glasgow Coma Scale 常用分层：13-15 轻度，9-12 中度，3-8 重度意识障碍。"
+    },
+    {
+      "id": "glasgow_coma_scale_case_7",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "gcs_score": 7
+      },
+      "message": "请按 glasgow 直接完成评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "glasgow_coma_scale",
+      "expected_calculation_result": "7",
+      "expected_risk_level": "重度意识障碍",
+      "expected_numeric_reference": "Glasgow Coma Scale 常用分层：13-15 轻度，9-12 中度，3-8 重度意识障碍。"
+    },
+    {
+      "id": "glasgow_coma_scale_case_10",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "gcs_score": 7
+      },
+      "message": "glasgow 评分请直接给结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "glasgow_coma_scale",
+      "expected_calculation_result": "7",
+      "expected_risk_level": "重度意识障碍",
+      "expected_numeric_reference": "Glasgow Coma Scale 常用分层：13-15 轻度，9-12 中度，3-8 重度意识障碍。"
+    },
+    {
+      "id": "grace_case_1",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 150
+      },
+      "message": "请帮我计算 grace 评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "grace",
+      "expected_calculation_result": "150",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "GRACE 常以 <109、109-140、>140 作为低中高风险参考分层。"
+    },
+    {
+      "id": "grace_case_2",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 150
+      },
+      "message": "请直接评估 grace，并给出结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "grace",
+      "expected_calculation_result": "150",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "GRACE 常以 <109、109-140、>140 作为低中高风险参考分层。"
+    },
+    {
+      "id": "grace_case_3",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 150
+      },
+      "message": "我需要 grace 的评估结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "grace",
+      "expected_calculation_result": "150",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "GRACE 常以 <109、109-140、>140 作为低中高风险参考分层。"
+    },
+    {
+      "id": "grace_case_5",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 150
+      },
+      "message": "请用 grace 做一次量化评估。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "grace",
+      "expected_calculation_result": "150",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "GRACE 常以 <109、109-140、>140 作为低中高风险参考分层。"
+    },
+    {
+      "id": "grace_case_7",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 150
+      },
+      "message": "请按 grace 直接完成评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "grace",
+      "expected_calculation_result": "150",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "GRACE 常以 <109、109-140、>140 作为低中高风险参考分层。"
+    },
+    {
+      "id": "grace_case_10",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 150
+      },
+      "message": "grace 评分请直接给结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "grace",
+      "expected_calculation_result": "150",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "GRACE 常以 <109、109-140、>140 作为低中高风险参考分层。"
+    },
+    {
+      "id": "h2fpef_case_1",
+      "scenario_type": "calculator",
+      "birth_date": "1958-01-01",
+      "gender": "男",
+      "seed_params": {
+        "bmi": 32.1,
+        "antihypertensive_count": 2,
+        "atrial_fibrillation": true,
+        "pulmonary_artery_systolic_pressure": 42,
+        "age": 68,
+        "e_over_e_prime": 12
+      },
+      "message": "请帮我计算 h2fpef 评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "h2fpef",
+      "expected_calculation_result": "9",
+      "expected_risk_level": "高概率",
+      "expected_numeric_reference": "H2FPEF 由肥胖、降压药数量、房颤、肺动脉压、年龄和 E/e' 组成，0-1 低概率，2-5 中间概率，6-9 高概率。"
+    },
+    {
+      "id": "h2fpef_case_2",
+      "scenario_type": "calculator",
+      "birth_date": "1958-01-01",
+      "gender": "男",
+      "seed_params": {
+        "bmi": 32.1,
+        "antihypertensive_count": 2,
+        "atrial_fibrillation": true,
+        "pulmonary_artery_systolic_pressure": 42,
+        "age": 68,
+        "e_over_e_prime": 12
+      },
+      "message": "请直接评估 h2fpef，并给出结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "h2fpef",
+      "expected_calculation_result": "9",
+      "expected_risk_level": "高概率",
+      "expected_numeric_reference": "H2FPEF 由肥胖、降压药数量、房颤、肺动脉压、年龄和 E/e' 组成，0-1 低概率，2-5 中间概率，6-9 高概率。"
+    },
+    {
+      "id": "h2fpef_case_3",
+      "scenario_type": "calculator",
+      "birth_date": "1958-01-01",
+      "gender": "男",
+      "seed_params": {
+        "bmi": 32.1,
+        "antihypertensive_count": 2,
+        "atrial_fibrillation": true,
+        "pulmonary_artery_systolic_pressure": 42,
+        "age": 68,
+        "e_over_e_prime": 12
+      },
+      "message": "我需要 h2fpef 的评估结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "h2fpef",
+      "expected_calculation_result": "9",
+      "expected_risk_level": "高概率",
+      "expected_numeric_reference": "H2FPEF 由肥胖、降压药数量、房颤、肺动脉压、年龄和 E/e' 组成，0-1 低概率，2-5 中间概率，6-9 高概率。"
+    },
+    {
+      "id": "h2fpef_case_5",
+      "scenario_type": "calculator",
+      "birth_date": "1958-01-01",
+      "gender": "男",
+      "seed_params": {
+        "bmi": 32.1,
+        "antihypertensive_count": 2,
+        "atrial_fibrillation": true,
+        "pulmonary_artery_systolic_pressure": 42,
+        "age": 68,
+        "e_over_e_prime": 12
+      },
+      "message": "请用 h2fpef 做一次量化评估。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "h2fpef",
+      "expected_calculation_result": "9",
+      "expected_risk_level": "高概率",
+      "expected_numeric_reference": "H2FPEF 由肥胖、降压药数量、房颤、肺动脉压、年龄和 E/e' 组成，0-1 低概率，2-5 中间概率，6-9 高概率。"
+    },
+    {
+      "id": "h2fpef_case_7",
+      "scenario_type": "calculator",
+      "birth_date": "1958-01-01",
+      "gender": "男",
+      "seed_params": {
+        "bmi": 32.1,
+        "antihypertensive_count": 2,
+        "atrial_fibrillation": true,
+        "pulmonary_artery_systolic_pressure": 42,
+        "age": 68,
+        "e_over_e_prime": 12
+      },
+      "message": "请按 h2fpef 直接完成评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "h2fpef",
+      "expected_calculation_result": "9",
+      "expected_risk_level": "高概率",
+      "expected_numeric_reference": "H2FPEF 由肥胖、降压药数量、房颤、肺动脉压、年龄和 E/e' 组成，0-1 低概率，2-5 中间概率，6-9 高概率。"
+    },
+    {
+      "id": "h2fpef_case_10",
+      "scenario_type": "calculator",
+      "birth_date": "1958-01-01",
+      "gender": "男",
+      "seed_params": {
+        "bmi": 32.1,
+        "antihypertensive_count": 2,
+        "atrial_fibrillation": true,
+        "pulmonary_artery_systolic_pressure": 42,
+        "age": 68,
+        "e_over_e_prime": 12
+      },
+      "message": "h2fpef 评分请直接给结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "h2fpef",
+      "expected_calculation_result": "9",
+      "expected_risk_level": "高概率",
+      "expected_numeric_reference": "H2FPEF 由肥胖、降压药数量、房颤、肺动脉压、年龄和 E/e' 组成，0-1 低概率，2-5 中间概率，6-9 高概率。"
+    },
+    {
+      "id": "has_bled_case_1",
+      "scenario_type": "calculator",
+      "birth_date": "1956-01-01",
+      "gender": "男",
+      "seed_params": {
+        "age": 70,
+        "uncontrolled_hypertension": true,
+        "abnormal_renal_function": false,
+        "abnormal_liver_function": false,
+        "prior_stroke": true,
+        "bleeding_history": false,
+        "labile_inr": false,
+        "drugs_predisposing_bleeding": true,
+        "alcohol_excess": false
+      },
+      "message": "请帮我计算 has-bled 评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "has_bled",
+      "expected_calculation_result": "4",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "HAS-BLED 由高血压、肾功能异常、肝功能异常、卒中、出血史、INR 不稳定、年龄 >65、药物和饮酒等组成。"
+    },
+    {
+      "id": "has_bled_case_2",
+      "scenario_type": "calculator",
+      "birth_date": "1956-01-01",
+      "gender": "男",
+      "seed_params": {
+        "age": 70,
+        "uncontrolled_hypertension": true,
+        "abnormal_renal_function": false,
+        "abnormal_liver_function": false,
+        "prior_stroke": true,
+        "bleeding_history": false,
+        "labile_inr": false,
+        "drugs_predisposing_bleeding": true,
+        "alcohol_excess": false
+      },
+      "message": "请直接评估 has-bled，并给出结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "has_bled",
+      "expected_calculation_result": "4",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "HAS-BLED 由高血压、肾功能异常、肝功能异常、卒中、出血史、INR 不稳定、年龄 >65、药物和饮酒等组成。"
+    },
+    {
+      "id": "has_bled_case_3",
+      "scenario_type": "calculator",
+      "birth_date": "1956-01-01",
+      "gender": "男",
+      "seed_params": {
+        "age": 70,
+        "uncontrolled_hypertension": true,
+        "abnormal_renal_function": false,
+        "abnormal_liver_function": false,
+        "prior_stroke": true,
+        "bleeding_history": false,
+        "labile_inr": false,
+        "drugs_predisposing_bleeding": true,
+        "alcohol_excess": false
+      },
+      "message": "我需要 has-bled 的评估结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "has_bled",
+      "expected_calculation_result": "4",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "HAS-BLED 由高血压、肾功能异常、肝功能异常、卒中、出血史、INR 不稳定、年龄 >65、药物和饮酒等组成。"
+    },
+    {
+      "id": "has_bled_case_5",
+      "scenario_type": "calculator",
+      "birth_date": "1956-01-01",
+      "gender": "男",
+      "seed_params": {
+        "age": 70,
+        "uncontrolled_hypertension": true,
+        "abnormal_renal_function": false,
+        "abnormal_liver_function": false,
+        "prior_stroke": true,
+        "bleeding_history": false,
+        "labile_inr": false,
+        "drugs_predisposing_bleeding": true,
+        "alcohol_excess": false
+      },
+      "message": "请用 has-bled 做一次量化评估。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "has_bled",
+      "expected_calculation_result": "4",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "HAS-BLED 由高血压、肾功能异常、肝功能异常、卒中、出血史、INR 不稳定、年龄 >65、药物和饮酒等组成。"
+    },
+    {
+      "id": "has_bled_case_7",
+      "scenario_type": "calculator",
+      "birth_date": "1956-01-01",
+      "gender": "男",
+      "seed_params": {
+        "age": 70,
+        "uncontrolled_hypertension": true,
+        "abnormal_renal_function": false,
+        "abnormal_liver_function": false,
+        "prior_stroke": true,
+        "bleeding_history": false,
+        "labile_inr": false,
+        "drugs_predisposing_bleeding": true,
+        "alcohol_excess": false
+      },
+      "message": "请按 has-bled 直接完成评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "has_bled",
+      "expected_calculation_result": "4",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "HAS-BLED 由高血压、肾功能异常、肝功能异常、卒中、出血史、INR 不稳定、年龄 >65、药物和饮酒等组成。"
+    },
+    {
+      "id": "has_bled_case_10",
+      "scenario_type": "calculator",
+      "birth_date": "1956-01-01",
+      "gender": "男",
+      "seed_params": {
+        "age": 70,
+        "uncontrolled_hypertension": true,
+        "abnormal_renal_function": false,
+        "abnormal_liver_function": false,
+        "prior_stroke": true,
+        "bleeding_history": false,
+        "labile_inr": false,
+        "drugs_predisposing_bleeding": true,
+        "alcohol_excess": false
+      },
+      "message": "has-bled 评分请直接给结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "has_bled",
+      "expected_calculation_result": "4",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "HAS-BLED 由高血压、肾功能异常、肝功能异常、卒中、出血史、INR 不稳定、年龄 >65、药物和饮酒等组成。"
+    },
+    {
+      "id": "heart_score_case_1",
+      "scenario_type": "calculator",
+      "birth_date": "1960-01-01",
+      "gender": "男",
+      "seed_params": {
+        "history_score": 2,
+        "ecg_score": 1,
+        "troponin_score": 1,
+        "age": 66,
+        "risk_factor_count": 3
+      },
+      "message": "请帮我计算 heart score 评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "heart_score",
+      "expected_calculation_result": "8",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "HEART 评分由病史、心电图、年龄、危险因素和肌钙蛋白五部分组成，每项 0-2 分。"
+    },
+    {
+      "id": "heart_score_case_2",
+      "scenario_type": "calculator",
+      "birth_date": "1960-01-01",
+      "gender": "男",
+      "seed_params": {
+        "history_score": 2,
+        "ecg_score": 1,
+        "troponin_score": 1,
+        "age": 66,
+        "risk_factor_count": 3
+      },
+      "message": "请直接评估 heart score，并给出结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "heart_score",
+      "expected_calculation_result": "8",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "HEART 评分由病史、心电图、年龄、危险因素和肌钙蛋白五部分组成，每项 0-2 分。"
+    },
+    {
+      "id": "heart_score_case_3",
+      "scenario_type": "calculator",
+      "birth_date": "1960-01-01",
+      "gender": "男",
+      "seed_params": {
+        "history_score": 2,
+        "ecg_score": 1,
+        "troponin_score": 1,
+        "age": 66,
+        "risk_factor_count": 3
+      },
+      "message": "我需要 heart score 的评估结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "heart_score",
+      "expected_calculation_result": "8",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "HEART 评分由病史、心电图、年龄、危险因素和肌钙蛋白五部分组成，每项 0-2 分。"
+    },
+    {
+      "id": "heart_score_case_5",
+      "scenario_type": "calculator",
+      "birth_date": "1960-01-01",
+      "gender": "男",
+      "seed_params": {
+        "history_score": 2,
+        "ecg_score": 1,
+        "troponin_score": 1,
+        "age": 66,
+        "risk_factor_count": 3
+      },
+      "message": "请用 heart score 做一次量化评估。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "heart_score",
+      "expected_calculation_result": "8",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "HEART 评分由病史、心电图、年龄、危险因素和肌钙蛋白五部分组成，每项 0-2 分。"
+    },
+    {
+      "id": "heart_score_case_7",
+      "scenario_type": "calculator",
+      "birth_date": "1960-01-01",
+      "gender": "男",
+      "seed_params": {
+        "history_score": 2,
+        "ecg_score": 1,
+        "troponin_score": 1,
+        "age": 66,
+        "risk_factor_count": 3
+      },
+      "message": "请按 heart score 直接完成评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "heart_score",
+      "expected_calculation_result": "8",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "HEART 评分由病史、心电图、年龄、危险因素和肌钙蛋白五部分组成，每项 0-2 分。"
+    },
+    {
+      "id": "heart_score_case_10",
+      "scenario_type": "calculator",
+      "birth_date": "1960-01-01",
+      "gender": "男",
+      "seed_params": {
+        "history_score": 2,
+        "ecg_score": 1,
+        "troponin_score": 1,
+        "age": 66,
+        "risk_factor_count": 3
+      },
+      "message": "heart score 评分请直接给结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "heart_score",
+      "expected_calculation_result": "8",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "HEART 评分由病史、心电图、年龄、危险因素和肌钙蛋白五部分组成，每项 0-2 分。"
+    },
+    {
+      "id": "karnofsky_ps_case_1",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 60
+      },
+      "message": "请帮我计算 karnofsky 评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "karnofsky_ps",
+      "expected_calculation_result": "60",
+      "expected_risk_level": "中度功能受限",
+      "expected_numeric_reference": "Karnofsky Performance Status 评分范围 0-100 分，分数越高表示功能状态越好。"
+    },
+    {
+      "id": "karnofsky_ps_case_2",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 60
+      },
+      "message": "请直接评估 karnofsky，并给出结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "karnofsky_ps",
+      "expected_calculation_result": "60",
+      "expected_risk_level": "中度功能受限",
+      "expected_numeric_reference": "Karnofsky Performance Status 评分范围 0-100 分，分数越高表示功能状态越好。"
+    },
+    {
+      "id": "karnofsky_ps_case_3",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 60
+      },
+      "message": "我需要 karnofsky 的评估结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "karnofsky_ps",
+      "expected_calculation_result": "60",
+      "expected_risk_level": "中度功能受限",
+      "expected_numeric_reference": "Karnofsky Performance Status 评分范围 0-100 分，分数越高表示功能状态越好。"
+    },
+    {
+      "id": "karnofsky_ps_case_5",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 60
+      },
+      "message": "请用 karnofsky 做一次量化评估。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "karnofsky_ps",
+      "expected_calculation_result": "60",
+      "expected_risk_level": "中度功能受限",
+      "expected_numeric_reference": "Karnofsky Performance Status 评分范围 0-100 分，分数越高表示功能状态越好。"
+    },
+    {
+      "id": "karnofsky_ps_case_7",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 60
+      },
+      "message": "请按 karnofsky 直接完成评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "karnofsky_ps",
+      "expected_calculation_result": "60",
+      "expected_risk_level": "中度功能受限",
+      "expected_numeric_reference": "Karnofsky Performance Status 评分范围 0-100 分，分数越高表示功能状态越好。"
+    },
+    {
+      "id": "karnofsky_ps_case_10",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 60
+      },
+      "message": "karnofsky 评分请直接给结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "karnofsky_ps",
+      "expected_calculation_result": "60",
+      "expected_risk_level": "中度功能受限",
+      "expected_numeric_reference": "Karnofsky Performance Status 评分范围 0-100 分，分数越高表示功能状态越好。"
+    },
+    {
+      "id": "lawton_iadl_case_1",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 4
+      },
+      "message": "请帮我计算 lawton iadl 评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "lawton_iadl",
+      "expected_calculation_result": "4",
+      "expected_risk_level": "中度依赖",
+      "expected_numeric_reference": "Lawton IADL 常用总分 0-8 分，分数越低提示工具性日常生活能力依赖越明显。"
+    },
+    {
+      "id": "lawton_iadl_case_2",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 4
+      },
+      "message": "请直接评估 lawton iadl，并给出结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "lawton_iadl",
+      "expected_calculation_result": "4",
+      "expected_risk_level": "中度依赖",
+      "expected_numeric_reference": "Lawton IADL 常用总分 0-8 分，分数越低提示工具性日常生活能力依赖越明显。"
+    },
+    {
+      "id": "lawton_iadl_case_3",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 4
+      },
+      "message": "我需要 lawton iadl 的评估结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "lawton_iadl",
+      "expected_calculation_result": "4",
+      "expected_risk_level": "中度依赖",
+      "expected_numeric_reference": "Lawton IADL 常用总分 0-8 分，分数越低提示工具性日常生活能力依赖越明显。"
+    },
+    {
+      "id": "lawton_iadl_case_5",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 4
+      },
+      "message": "请用 lawton iadl 做一次量化评估。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "lawton_iadl",
+      "expected_calculation_result": "4",
+      "expected_risk_level": "中度依赖",
+      "expected_numeric_reference": "Lawton IADL 常用总分 0-8 分，分数越低提示工具性日常生活能力依赖越明显。"
+    },
+    {
+      "id": "lawton_iadl_case_7",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 4
+      },
+      "message": "请按 lawton iadl 直接完成评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "lawton_iadl",
+      "expected_calculation_result": "4",
+      "expected_risk_level": "中度依赖",
+      "expected_numeric_reference": "Lawton IADL 常用总分 0-8 分，分数越低提示工具性日常生活能力依赖越明显。"
+    },
+    {
+      "id": "lawton_iadl_case_10",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 4
+      },
+      "message": "lawton iadl 评分请直接给结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "lawton_iadl",
+      "expected_calculation_result": "4",
+      "expected_risk_level": "中度依赖",
+      "expected_numeric_reference": "Lawton IADL 常用总分 0-8 分，分数越低提示工具性日常生活能力依赖越明显。"
+    },
+    {
+      "id": "metabolic_syndrome_case_1",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "waist_cm": 96,
+        "gender": "男",
+        "systolic_bp": 138,
+        "diastolic_bp": 88,
+        "fasting_glucose": 6.0,
+        "triglycerides_mmol_l": 2.1,
+        "hdl_mmol_l": 0.9
+      },
+      "message": "请帮我计算 metabolic syndrome 评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "metabolic_syndrome",
+      "expected_calculation_result": "5",
+      "expected_risk_level": "符合代谢综合征",
+      "expected_numeric_reference": "常用代谢综合征筛查依据中心性肥胖、血压、空腹血糖、甘油三酯和 HDL 五项指标，满足 3 项及以上提示异常。"
+    },
+    {
+      "id": "metabolic_syndrome_case_2",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "waist_cm": 96,
+        "gender": "男",
+        "systolic_bp": 138,
+        "diastolic_bp": 88,
+        "fasting_glucose": 6.0,
+        "triglycerides_mmol_l": 2.1,
+        "hdl_mmol_l": 0.9
+      },
+      "message": "请直接评估 metabolic syndrome，并给出结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "metabolic_syndrome",
+      "expected_calculation_result": "5",
+      "expected_risk_level": "符合代谢综合征",
+      "expected_numeric_reference": "常用代谢综合征筛查依据中心性肥胖、血压、空腹血糖、甘油三酯和 HDL 五项指标，满足 3 项及以上提示异常。"
+    },
+    {
+      "id": "metabolic_syndrome_case_3",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "waist_cm": 96,
+        "gender": "男",
+        "systolic_bp": 138,
+        "diastolic_bp": 88,
+        "fasting_glucose": 6.0,
+        "triglycerides_mmol_l": 2.1,
+        "hdl_mmol_l": 0.9
+      },
+      "message": "我需要 metabolic syndrome 的评估结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "metabolic_syndrome",
+      "expected_calculation_result": "5",
+      "expected_risk_level": "符合代谢综合征",
+      "expected_numeric_reference": "常用代谢综合征筛查依据中心性肥胖、血压、空腹血糖、甘油三酯和 HDL 五项指标，满足 3 项及以上提示异常。"
+    },
+    {
+      "id": "metabolic_syndrome_case_5",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "waist_cm": 96,
+        "gender": "男",
+        "systolic_bp": 138,
+        "diastolic_bp": 88,
+        "fasting_glucose": 6.0,
+        "triglycerides_mmol_l": 2.1,
+        "hdl_mmol_l": 0.9
+      },
+      "message": "请用 metabolic syndrome 做一次量化评估。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "metabolic_syndrome",
+      "expected_calculation_result": "5",
+      "expected_risk_level": "符合代谢综合征",
+      "expected_numeric_reference": "常用代谢综合征筛查依据中心性肥胖、血压、空腹血糖、甘油三酯和 HDL 五项指标，满足 3 项及以上提示异常。"
+    },
+    {
+      "id": "metabolic_syndrome_case_7",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "waist_cm": 96,
+        "gender": "男",
+        "systolic_bp": 138,
+        "diastolic_bp": 88,
+        "fasting_glucose": 6.0,
+        "triglycerides_mmol_l": 2.1,
+        "hdl_mmol_l": 0.9
+      },
+      "message": "请按 metabolic syndrome 直接完成评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "metabolic_syndrome",
+      "expected_calculation_result": "5",
+      "expected_risk_level": "符合代谢综合征",
+      "expected_numeric_reference": "常用代谢综合征筛查依据中心性肥胖、血压、空腹血糖、甘油三酯和 HDL 五项指标，满足 3 项及以上提示异常。"
+    },
+    {
+      "id": "metabolic_syndrome_case_10",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "waist_cm": 96,
+        "gender": "男",
+        "systolic_bp": 138,
+        "diastolic_bp": 88,
+        "fasting_glucose": 6.0,
+        "triglycerides_mmol_l": 2.1,
+        "hdl_mmol_l": 0.9
+      },
+      "message": "metabolic syndrome 评分请直接给结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "metabolic_syndrome",
+      "expected_calculation_result": "5",
+      "expected_risk_level": "符合代谢综合征",
+      "expected_numeric_reference": "常用代谢综合征筛查依据中心性肥胖、血压、空腹血糖、甘油三酯和 HDL 五项指标，满足 3 项及以上提示异常。"
+    },
+    {
+      "id": "mews_case_1",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 6
+      },
+      "message": "请帮我计算 mews 评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "mews",
+      "expected_calculation_result": "6",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "MEWS 常依据呼吸频率、体温、收缩压、心率和意识状态综合评分。"
+    },
+    {
+      "id": "mews_case_2",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 6
+      },
+      "message": "请直接评估 mews，并给出结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "mews",
+      "expected_calculation_result": "6",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "MEWS 常依据呼吸频率、体温、收缩压、心率和意识状态综合评分。"
+    },
+    {
+      "id": "mews_case_3",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 6
+      },
+      "message": "我需要 mews 的评估结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "mews",
+      "expected_calculation_result": "6",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "MEWS 常依据呼吸频率、体温、收缩压、心率和意识状态综合评分。"
+    },
+    {
+      "id": "mews_case_5",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 6
+      },
+      "message": "请用 mews 做一次量化评估。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "mews",
+      "expected_calculation_result": "6",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "MEWS 常依据呼吸频率、体温、收缩压、心率和意识状态综合评分。"
+    },
+    {
+      "id": "mews_case_7",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 6
+      },
+      "message": "请按 mews 直接完成评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "mews",
+      "expected_calculation_result": "6",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "MEWS 常依据呼吸频率、体温、收缩压、心率和意识状态综合评分。"
+    },
+    {
+      "id": "mews_case_10",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 6
+      },
+      "message": "mews 评分请直接给结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "mews",
+      "expected_calculation_result": "6",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "MEWS 常依据呼吸频率、体温、收缩压、心率和意识状态综合评分。"
+    },
+    {
+      "id": "mini_cog_case_1",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "recall_score": 1,
+        "clock_normal": false
+      },
+      "message": "请帮我计算 mini-cog 评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "mini_cog",
+      "expected_calculation_result": "1",
+      "expected_risk_level": "认知异常风险",
+      "expected_numeric_reference": "Mini-Cog 由三词回忆和画钟组成；0 个回忆词或 1-2 个回忆词且画钟异常常提示认知异常风险。"
+    },
+    {
+      "id": "mini_cog_case_2",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "recall_score": 1,
+        "clock_normal": false
+      },
+      "message": "请直接评估 mini-cog，并给出结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "mini_cog",
+      "expected_calculation_result": "1",
+      "expected_risk_level": "认知异常风险",
+      "expected_numeric_reference": "Mini-Cog 由三词回忆和画钟组成；0 个回忆词或 1-2 个回忆词且画钟异常常提示认知异常风险。"
+    },
+    {
+      "id": "mini_cog_case_3",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "recall_score": 1,
+        "clock_normal": false
+      },
+      "message": "我需要 mini-cog 的评估结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "mini_cog",
+      "expected_calculation_result": "1",
+      "expected_risk_level": "认知异常风险",
+      "expected_numeric_reference": "Mini-Cog 由三词回忆和画钟组成；0 个回忆词或 1-2 个回忆词且画钟异常常提示认知异常风险。"
+    },
+    {
+      "id": "mini_cog_case_5",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "recall_score": 1,
+        "clock_normal": false
+      },
+      "message": "请用 mini-cog 做一次量化评估。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "mini_cog",
+      "expected_calculation_result": "1",
+      "expected_risk_level": "认知异常风险",
+      "expected_numeric_reference": "Mini-Cog 由三词回忆和画钟组成；0 个回忆词或 1-2 个回忆词且画钟异常常提示认知异常风险。"
+    },
+    {
+      "id": "mini_cog_case_7",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "recall_score": 1,
+        "clock_normal": false
+      },
+      "message": "请按 mini-cog 直接完成评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "mini_cog",
+      "expected_calculation_result": "1",
+      "expected_risk_level": "认知异常风险",
+      "expected_numeric_reference": "Mini-Cog 由三词回忆和画钟组成；0 个回忆词或 1-2 个回忆词且画钟异常常提示认知异常风险。"
+    },
+    {
+      "id": "mini_cog_case_10",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "recall_score": 1,
+        "clock_normal": false
+      },
+      "message": "mini-cog 评分请直接给结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "mini_cog",
+      "expected_calculation_result": "1",
+      "expected_risk_level": "认知异常风险",
+      "expected_numeric_reference": "Mini-Cog 由三词回忆和画钟组成；0 个回忆词或 1-2 个回忆词且画钟异常常提示认知异常风险。"
+    },
+    {
+      "id": "mmrc_case_1",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "grade": 2
+      },
+      "message": "请帮我计算 mmrc 评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "mmrc",
+      "expected_calculation_result": "2",
+      "expected_risk_level": "中等症状负担",
+      "expected_numeric_reference": "mMRC 分级范围 0-4 级，分级越高提示呼吸困难越明显。"
+    },
+    {
+      "id": "mmrc_case_2",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "grade": 2
+      },
+      "message": "请直接评估 mmrc，并给出结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "mmrc",
+      "expected_calculation_result": "2",
+      "expected_risk_level": "中等症状负担",
+      "expected_numeric_reference": "mMRC 分级范围 0-4 级，分级越高提示呼吸困难越明显。"
+    },
+    {
+      "id": "mmrc_case_3",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "grade": 2
+      },
+      "message": "我需要 mmrc 的评估结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "mmrc",
+      "expected_calculation_result": "2",
+      "expected_risk_level": "中等症状负担",
+      "expected_numeric_reference": "mMRC 分级范围 0-4 级，分级越高提示呼吸困难越明显。"
+    },
+    {
+      "id": "mmrc_case_5",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "grade": 2
+      },
+      "message": "请用 mmrc 做一次量化评估。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "mmrc",
+      "expected_calculation_result": "2",
+      "expected_risk_level": "中等症状负担",
+      "expected_numeric_reference": "mMRC 分级范围 0-4 级，分级越高提示呼吸困难越明显。"
+    },
+    {
+      "id": "mmrc_case_7",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "grade": 2
+      },
+      "message": "请按 mmrc 直接完成评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "mmrc",
+      "expected_calculation_result": "2",
+      "expected_risk_level": "中等症状负担",
+      "expected_numeric_reference": "mMRC 分级范围 0-4 级，分级越高提示呼吸困难越明显。"
+    },
+    {
+      "id": "mmrc_case_10",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "grade": 2
+      },
+      "message": "mmrc 评分请直接给结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "mmrc",
+      "expected_calculation_result": "2",
+      "expected_risk_level": "中等症状负担",
+      "expected_numeric_reference": "mMRC 分级范围 0-4 级，分级越高提示呼吸困难越明显。"
+    },
+    {
+      "id": "mna_sf_case_1",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 9
+      },
+      "message": "请帮我计算 mna-sf 评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "mna_sf",
+      "expected_calculation_result": "9",
+      "expected_risk_level": "营养不良风险",
+      "expected_numeric_reference": "MNA-SF 常用分层：12-14 正常，8-11 营养不良风险，0-7 营养不良。"
+    },
+    {
+      "id": "mna_sf_case_2",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 9
+      },
+      "message": "请直接评估 mna-sf，并给出结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "mna_sf",
+      "expected_calculation_result": "9",
+      "expected_risk_level": "营养不良风险",
+      "expected_numeric_reference": "MNA-SF 常用分层：12-14 正常，8-11 营养不良风险，0-7 营养不良。"
+    },
+    {
+      "id": "mna_sf_case_3",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 9
+      },
+      "message": "我需要 mna-sf 的评估结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "mna_sf",
+      "expected_calculation_result": "9",
+      "expected_risk_level": "营养不良风险",
+      "expected_numeric_reference": "MNA-SF 常用分层：12-14 正常，8-11 营养不良风险，0-7 营养不良。"
+    },
+    {
+      "id": "mna_sf_case_5",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 9
+      },
+      "message": "请用 mna-sf 做一次量化评估。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "mna_sf",
+      "expected_calculation_result": "9",
+      "expected_risk_level": "营养不良风险",
+      "expected_numeric_reference": "MNA-SF 常用分层：12-14 正常，8-11 营养不良风险，0-7 营养不良。"
+    },
+    {
+      "id": "mna_sf_case_7",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 9
+      },
+      "message": "请按 mna-sf 直接完成评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "mna_sf",
+      "expected_calculation_result": "9",
+      "expected_risk_level": "营养不良风险",
+      "expected_numeric_reference": "MNA-SF 常用分层：12-14 正常，8-11 营养不良风险，0-7 营养不良。"
+    },
+    {
+      "id": "mna_sf_case_10",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 9
+      },
+      "message": "mna-sf 评分请直接给结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "mna_sf",
+      "expected_calculation_result": "9",
+      "expected_risk_level": "营养不良风险",
+      "expected_numeric_reference": "MNA-SF 常用分层：12-14 正常，8-11 营养不良风险，0-7 营养不良。"
+    },
+    {
+      "id": "morse_fall_scale_case_1",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 55
+      },
+      "message": "请帮我计算 morse 评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "morse_fall_scale",
+      "expected_calculation_result": "55",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "Morse Fall Scale 常用分层：0-24 低风险，25-44 中风险，45 分及以上高风险。"
+    },
+    {
+      "id": "morse_fall_scale_case_2",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 55
+      },
+      "message": "请直接评估 morse，并给出结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "morse_fall_scale",
+      "expected_calculation_result": "55",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "Morse Fall Scale 常用分层：0-24 低风险，25-44 中风险，45 分及以上高风险。"
+    },
+    {
+      "id": "morse_fall_scale_case_3",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 55
+      },
+      "message": "我需要 morse 的评估结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "morse_fall_scale",
+      "expected_calculation_result": "55",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "Morse Fall Scale 常用分层：0-24 低风险，25-44 中风险，45 分及以上高风险。"
+    },
+    {
+      "id": "morse_fall_scale_case_5",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 55
+      },
+      "message": "请用 morse 做一次量化评估。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "morse_fall_scale",
+      "expected_calculation_result": "55",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "Morse Fall Scale 常用分层：0-24 低风险，25-44 中风险，45 分及以上高风险。"
+    },
+    {
+      "id": "morse_fall_scale_case_7",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 55
+      },
+      "message": "请按 morse 直接完成评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "morse_fall_scale",
+      "expected_calculation_result": "55",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "Morse Fall Scale 常用分层：0-24 低风险，25-44 中风险，45 分及以上高风险。"
+    },
+    {
+      "id": "morse_fall_scale_case_10",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 55
+      },
+      "message": "morse 评分请直接给结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "morse_fall_scale",
+      "expected_calculation_result": "55",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "Morse Fall Scale 常用分层：0-24 低风险，25-44 中风险，45 分及以上高风险。"
+    },
+    {
+      "id": "must_case_1",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 2
+      },
+      "message": "请帮我计算 must 评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "must",
+      "expected_calculation_result": "2",
+      "expected_risk_level": "高营养风险",
+      "expected_numeric_reference": "MUST 由 BMI、近期体重下降和急性疾病效应组成，0 分低风险，1 分中风险，>=2 分高风险。"
+    },
+    {
+      "id": "must_case_2",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 2
+      },
+      "message": "请直接评估 must，并给出结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "must",
+      "expected_calculation_result": "2",
+      "expected_risk_level": "高营养风险",
+      "expected_numeric_reference": "MUST 由 BMI、近期体重下降和急性疾病效应组成，0 分低风险，1 分中风险，>=2 分高风险。"
+    },
+    {
+      "id": "must_case_3",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 2
+      },
+      "message": "我需要 must 的评估结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "must",
+      "expected_calculation_result": "2",
+      "expected_risk_level": "高营养风险",
+      "expected_numeric_reference": "MUST 由 BMI、近期体重下降和急性疾病效应组成，0 分低风险，1 分中风险，>=2 分高风险。"
+    },
+    {
+      "id": "must_case_5",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 2
+      },
+      "message": "请用 must 做一次量化评估。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "must",
+      "expected_calculation_result": "2",
+      "expected_risk_level": "高营养风险",
+      "expected_numeric_reference": "MUST 由 BMI、近期体重下降和急性疾病效应组成，0 分低风险，1 分中风险，>=2 分高风险。"
+    },
+    {
+      "id": "must_case_7",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 2
+      },
+      "message": "请按 must 直接完成评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "must",
+      "expected_calculation_result": "2",
+      "expected_risk_level": "高营养风险",
+      "expected_numeric_reference": "MUST 由 BMI、近期体重下降和急性疾病效应组成，0 分低风险，1 分中风险，>=2 分高风险。"
+    },
+    {
+      "id": "must_case_10",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 2
+      },
+      "message": "must 评分请直接给结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "must",
+      "expected_calculation_result": "2",
+      "expected_risk_level": "高营养风险",
+      "expected_numeric_reference": "MUST 由 BMI、近期体重下降和急性疾病效应组成，0 分低风险，1 分中风险，>=2 分高风险。"
+    },
+    {
+      "id": "nafld_fibrosis_case_1",
+      "scenario_type": "calculator",
+      "birth_date": "1968-01-01",
+      "gender": "男",
+      "seed_params": {
+        "age": 58,
+        "bmi": 31.2,
+        "ast_u_l": 42,
+        "alt_u_l": 35,
+        "platelet_10e9_l": 180,
+        "albumin_g_dl": 4.0,
+        "impaired_fasting_glucose_or_diabetes": true
+      },
+      "message": "请帮我计算 nafld fibrosis 评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "nafld_fibrosis",
+      "expected_calculation_result": "0.742",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "NAFLD fibrosis score 依据年龄、BMI、糖代谢异常、AST/ALT 比值、血小板和白蛋白计算。"
+    },
+    {
+      "id": "nafld_fibrosis_case_2",
+      "scenario_type": "calculator",
+      "birth_date": "1968-01-01",
+      "gender": "男",
+      "seed_params": {
+        "age": 58,
+        "bmi": 31.2,
+        "ast_u_l": 42,
+        "alt_u_l": 35,
+        "platelet_10e9_l": 180,
+        "albumin_g_dl": 4.0,
+        "impaired_fasting_glucose_or_diabetes": true
+      },
+      "message": "请直接评估 nafld fibrosis，并给出结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "nafld_fibrosis",
+      "expected_calculation_result": "0.742",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "NAFLD fibrosis score 依据年龄、BMI、糖代谢异常、AST/ALT 比值、血小板和白蛋白计算。"
+    },
+    {
+      "id": "nafld_fibrosis_case_3",
+      "scenario_type": "calculator",
+      "birth_date": "1968-01-01",
+      "gender": "男",
+      "seed_params": {
+        "age": 58,
+        "bmi": 31.2,
+        "ast_u_l": 42,
+        "alt_u_l": 35,
+        "platelet_10e9_l": 180,
+        "albumin_g_dl": 4.0,
+        "impaired_fasting_glucose_or_diabetes": true
+      },
+      "message": "我需要 nafld fibrosis 的评估结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "nafld_fibrosis",
+      "expected_calculation_result": "0.742",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "NAFLD fibrosis score 依据年龄、BMI、糖代谢异常、AST/ALT 比值、血小板和白蛋白计算。"
+    },
+    {
+      "id": "nafld_fibrosis_case_5",
+      "scenario_type": "calculator",
+      "birth_date": "1968-01-01",
+      "gender": "男",
+      "seed_params": {
+        "age": 58,
+        "bmi": 31.2,
+        "ast_u_l": 42,
+        "alt_u_l": 35,
+        "platelet_10e9_l": 180,
+        "albumin_g_dl": 4.0,
+        "impaired_fasting_glucose_or_diabetes": true
+      },
+      "message": "请用 nafld fibrosis 做一次量化评估。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "nafld_fibrosis",
+      "expected_calculation_result": "0.742",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "NAFLD fibrosis score 依据年龄、BMI、糖代谢异常、AST/ALT 比值、血小板和白蛋白计算。"
+    },
+    {
+      "id": "nafld_fibrosis_case_7",
+      "scenario_type": "calculator",
+      "birth_date": "1968-01-01",
+      "gender": "男",
+      "seed_params": {
+        "age": 58,
+        "bmi": 31.2,
+        "ast_u_l": 42,
+        "alt_u_l": 35,
+        "platelet_10e9_l": 180,
+        "albumin_g_dl": 4.0,
+        "impaired_fasting_glucose_or_diabetes": true
+      },
+      "message": "请按 nafld fibrosis 直接完成评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "nafld_fibrosis",
+      "expected_calculation_result": "0.742",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "NAFLD fibrosis score 依据年龄、BMI、糖代谢异常、AST/ALT 比值、血小板和白蛋白计算。"
+    },
+    {
+      "id": "nafld_fibrosis_case_10",
+      "scenario_type": "calculator",
+      "birth_date": "1968-01-01",
+      "gender": "男",
+      "seed_params": {
+        "age": 58,
+        "bmi": 31.2,
+        "ast_u_l": 42,
+        "alt_u_l": 35,
+        "platelet_10e9_l": 180,
+        "albumin_g_dl": 4.0,
+        "impaired_fasting_glucose_or_diabetes": true
+      },
+      "message": "nafld fibrosis 评分请直接给结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "nafld_fibrosis",
+      "expected_calculation_result": "0.742",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "NAFLD fibrosis score 依据年龄、BMI、糖代谢异常、AST/ALT 比值、血小板和白蛋白计算。"
+    },
+    {
+      "id": "news2_case_1",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "respiratory_rate_bpm": 24,
+        "oxygen_saturation": 92,
+        "temperature_c": 38.2,
+        "systolic_bp": 96,
+        "heart_rate_bpm": 118,
+        "consciousness": "A"
+      },
+      "message": "请帮我计算 news2 评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "news2",
+      "expected_calculation_result": "9",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "NEWS2 依据呼吸频率、血氧饱和度、是否吸氧、体温、收缩压、心率和意识状态综合评分。"
+    },
+    {
+      "id": "news2_case_2",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "respiratory_rate_bpm": 24,
+        "oxygen_saturation": 92,
+        "temperature_c": 38.2,
+        "systolic_bp": 96,
+        "heart_rate_bpm": 118,
+        "consciousness": "A"
+      },
+      "message": "请直接评估 news2，并给出结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "news2",
+      "expected_calculation_result": "9",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "NEWS2 依据呼吸频率、血氧饱和度、是否吸氧、体温、收缩压、心率和意识状态综合评分。"
+    },
+    {
+      "id": "news2_case_3",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "respiratory_rate_bpm": 24,
+        "oxygen_saturation": 92,
+        "temperature_c": 38.2,
+        "systolic_bp": 96,
+        "heart_rate_bpm": 118,
+        "consciousness": "A"
+      },
+      "message": "我需要 news2 的评估结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "news2",
+      "expected_calculation_result": "9",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "NEWS2 依据呼吸频率、血氧饱和度、是否吸氧、体温、收缩压、心率和意识状态综合评分。"
+    },
+    {
+      "id": "news2_case_5",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "respiratory_rate_bpm": 24,
+        "oxygen_saturation": 92,
+        "temperature_c": 38.2,
+        "systolic_bp": 96,
+        "heart_rate_bpm": 118,
+        "consciousness": "A"
+      },
+      "message": "请用 news2 做一次量化评估。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "news2",
+      "expected_calculation_result": "9",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "NEWS2 依据呼吸频率、血氧饱和度、是否吸氧、体温、收缩压、心率和意识状态综合评分。"
+    },
+    {
+      "id": "news2_case_7",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "respiratory_rate_bpm": 24,
+        "oxygen_saturation": 92,
+        "temperature_c": 38.2,
+        "systolic_bp": 96,
+        "heart_rate_bpm": 118,
+        "consciousness": "A"
+      },
+      "message": "请按 news2 直接完成评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "news2",
+      "expected_calculation_result": "9",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "NEWS2 依据呼吸频率、血氧饱和度、是否吸氧、体温、收缩压、心率和意识状态综合评分。"
+    },
+    {
+      "id": "news2_case_10",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "respiratory_rate_bpm": 24,
+        "oxygen_saturation": 92,
+        "temperature_c": 38.2,
+        "systolic_bp": 96,
+        "heart_rate_bpm": 118,
+        "consciousness": "A"
+      },
+      "message": "news2 评分请直接给结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "news2",
+      "expected_calculation_result": "9",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "NEWS2 依据呼吸频率、血氧饱和度、是否吸氧、体温、收缩压、心率和意识状态综合评分。"
+    },
+    {
+      "id": "nihss_case_1",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 18
+      },
+      "message": "请帮我计算 nihss 评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "nihss",
+      "expected_calculation_result": "18",
+      "expected_risk_level": "中重度神经功能缺损",
+      "expected_numeric_reference": "NIHSS 总分范围 0-42 分，分数越高提示神经功能缺损越重。"
+    },
+    {
+      "id": "nihss_case_2",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 18
+      },
+      "message": "请直接评估 nihss，并给出结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "nihss",
+      "expected_calculation_result": "18",
+      "expected_risk_level": "中重度神经功能缺损",
+      "expected_numeric_reference": "NIHSS 总分范围 0-42 分，分数越高提示神经功能缺损越重。"
+    },
+    {
+      "id": "nihss_case_3",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 18
+      },
+      "message": "我需要 nihss 的评估结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "nihss",
+      "expected_calculation_result": "18",
+      "expected_risk_level": "中重度神经功能缺损",
+      "expected_numeric_reference": "NIHSS 总分范围 0-42 分，分数越高提示神经功能缺损越重。"
+    },
+    {
+      "id": "nihss_case_5",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 18
+      },
+      "message": "请用 nihss 做一次量化评估。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "nihss",
+      "expected_calculation_result": "18",
+      "expected_risk_level": "中重度神经功能缺损",
+      "expected_numeric_reference": "NIHSS 总分范围 0-42 分，分数越高提示神经功能缺损越重。"
+    },
+    {
+      "id": "nihss_case_7",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 18
+      },
+      "message": "请按 nihss 直接完成评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "nihss",
+      "expected_calculation_result": "18",
+      "expected_risk_level": "中重度神经功能缺损",
+      "expected_numeric_reference": "NIHSS 总分范围 0-42 分，分数越高提示神经功能缺损越重。"
+    },
+    {
+      "id": "nihss_case_10",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 18
+      },
+      "message": "nihss 评分请直接给结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "nihss",
+      "expected_calculation_result": "18",
+      "expected_risk_level": "中重度神经功能缺损",
+      "expected_numeric_reference": "NIHSS 总分范围 0-42 分，分数越高提示神经功能缺损越重。"
+    },
+    {
+      "id": "norton_scale_case_1",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 12
+      },
+      "message": "请帮我计算 norton 评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "norton_scale",
+      "expected_calculation_result": "12",
+      "expected_risk_level": "高压疮风险",
+      "expected_numeric_reference": "Norton Scale 分数越低提示压疮风险越高，常以 <=14 分作为警示阈值。"
+    },
+    {
+      "id": "norton_scale_case_2",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 12
+      },
+      "message": "请直接评估 norton，并给出结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "norton_scale",
+      "expected_calculation_result": "12",
+      "expected_risk_level": "高压疮风险",
+      "expected_numeric_reference": "Norton Scale 分数越低提示压疮风险越高，常以 <=14 分作为警示阈值。"
+    },
+    {
+      "id": "norton_scale_case_3",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 12
+      },
+      "message": "我需要 norton 的评估结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "norton_scale",
+      "expected_calculation_result": "12",
+      "expected_risk_level": "高压疮风险",
+      "expected_numeric_reference": "Norton Scale 分数越低提示压疮风险越高，常以 <=14 分作为警示阈值。"
+    },
+    {
+      "id": "norton_scale_case_5",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 12
+      },
+      "message": "请用 norton 做一次量化评估。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "norton_scale",
+      "expected_calculation_result": "12",
+      "expected_risk_level": "高压疮风险",
+      "expected_numeric_reference": "Norton Scale 分数越低提示压疮风险越高，常以 <=14 分作为警示阈值。"
+    },
+    {
+      "id": "norton_scale_case_7",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 12
+      },
+      "message": "请按 norton 直接完成评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "norton_scale",
+      "expected_calculation_result": "12",
+      "expected_risk_level": "高压疮风险",
+      "expected_numeric_reference": "Norton Scale 分数越低提示压疮风险越高，常以 <=14 分作为警示阈值。"
+    },
+    {
+      "id": "norton_scale_case_10",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 12
+      },
+      "message": "norton 评分请直接给结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "norton_scale",
+      "expected_calculation_result": "12",
+      "expected_risk_level": "高压疮风险",
+      "expected_numeric_reference": "Norton Scale 分数越低提示压疮风险越高，常以 <=14 分作为警示阈值。"
+    },
+    {
+      "id": "pain_nrs_case_1",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 7
+      },
+      "message": "请帮我计算 nrs 评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "pain_nrs",
+      "expected_calculation_result": "7",
+      "expected_risk_level": "重度疼痛",
+      "expected_numeric_reference": "疼痛 NRS 常用分层：0 无痛，1-3 轻度，4-6 中度，7-10 重度。"
+    },
+    {
+      "id": "pain_nrs_case_2",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 7
+      },
+      "message": "请直接评估 nrs，并给出结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "pain_nrs",
+      "expected_calculation_result": "7",
+      "expected_risk_level": "重度疼痛",
+      "expected_numeric_reference": "疼痛 NRS 常用分层：0 无痛，1-3 轻度，4-6 中度，7-10 重度。"
+    },
+    {
+      "id": "pain_nrs_case_3",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 7
+      },
+      "message": "我需要 nrs 的评估结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "pain_nrs",
+      "expected_calculation_result": "7",
+      "expected_risk_level": "重度疼痛",
+      "expected_numeric_reference": "疼痛 NRS 常用分层：0 无痛，1-3 轻度，4-6 中度，7-10 重度。"
+    },
+    {
+      "id": "pain_nrs_case_5",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 7
+      },
+      "message": "请用 nrs 做一次量化评估。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "pain_nrs",
+      "expected_calculation_result": "7",
+      "expected_risk_level": "重度疼痛",
+      "expected_numeric_reference": "疼痛 NRS 常用分层：0 无痛，1-3 轻度，4-6 中度，7-10 重度。"
+    },
+    {
+      "id": "pain_nrs_case_7",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 7
+      },
+      "message": "请按 nrs 直接完成评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "pain_nrs",
+      "expected_calculation_result": "7",
+      "expected_risk_level": "重度疼痛",
+      "expected_numeric_reference": "疼痛 NRS 常用分层：0 无痛，1-3 轻度，4-6 中度，7-10 重度。"
+    },
+    {
+      "id": "pain_nrs_case_10",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 7
+      },
+      "message": "nrs 评分请直接给结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "pain_nrs",
+      "expected_calculation_result": "7",
+      "expected_risk_level": "重度疼痛",
+      "expected_numeric_reference": "疼痛 NRS 常用分层：0 无痛，1-3 轻度，4-6 中度，7-10 重度。"
+    },
+    {
+      "id": "phq9_case_1",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 12
+      },
+      "message": "请帮我计算 phq9 评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "phq9",
+      "expected_calculation_result": "12",
+      "expected_risk_level": "中度抑郁风险",
+      "expected_numeric_reference": "PHQ-9 常用分层：0-4 无或极轻，5-9 轻度，10-14 中度，15-19 中重度，20-27 重度。"
+    },
+    {
+      "id": "phq9_case_2",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 12
+      },
+      "message": "请直接评估 phq9，并给出结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "phq9",
+      "expected_calculation_result": "12",
+      "expected_risk_level": "中度抑郁风险",
+      "expected_numeric_reference": "PHQ-9 常用分层：0-4 无或极轻，5-9 轻度，10-14 中度，15-19 中重度，20-27 重度。"
+    },
+    {
+      "id": "phq9_case_3",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 12
+      },
+      "message": "我需要 phq9 的评估结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "phq9",
+      "expected_calculation_result": "12",
+      "expected_risk_level": "中度抑郁风险",
+      "expected_numeric_reference": "PHQ-9 常用分层：0-4 无或极轻，5-9 轻度，10-14 中度，15-19 中重度，20-27 重度。"
+    },
+    {
+      "id": "phq9_case_5",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 12
+      },
+      "message": "请用 phq9 做一次量化评估。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "phq9",
+      "expected_calculation_result": "12",
+      "expected_risk_level": "中度抑郁风险",
+      "expected_numeric_reference": "PHQ-9 常用分层：0-4 无或极轻，5-9 轻度，10-14 中度，15-19 中重度，20-27 重度。"
+    },
+    {
+      "id": "phq9_case_7",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 12
+      },
+      "message": "请按 phq9 直接完成评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "phq9",
+      "expected_calculation_result": "12",
+      "expected_risk_level": "中度抑郁风险",
+      "expected_numeric_reference": "PHQ-9 常用分层：0-4 无或极轻，5-9 轻度，10-14 中度，15-19 中重度，20-27 重度。"
+    },
+    {
+      "id": "phq9_case_10",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 12
+      },
+      "message": "phq9 评分请直接给结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "phq9",
+      "expected_calculation_result": "12",
+      "expected_risk_level": "中度抑郁风险",
+      "expected_numeric_reference": "PHQ-9 常用分层：0-4 无或极轻，5-9 轻度，10-14 中度，15-19 中重度，20-27 重度。"
+    },
+    {
+      "id": "qrisk3_case_1",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "risk_percent": 11.2
+      },
+      "message": "请帮我计算 qrisk3 评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "qrisk3",
+      "expected_calculation_result": "11.2",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "QRISK3 常以 >=10% 作为干预参考阈值；本实现用于解释已获得的风险百分比。"
+    },
+    {
+      "id": "qrisk3_case_2",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "risk_percent": 11.2
+      },
+      "message": "请直接评估 qrisk3，并给出结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "qrisk3",
+      "expected_calculation_result": "11.2",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "QRISK3 常以 >=10% 作为干预参考阈值；本实现用于解释已获得的风险百分比。"
+    },
+    {
+      "id": "qrisk3_case_3",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "risk_percent": 11.2
+      },
+      "message": "我需要 qrisk3 的评估结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "qrisk3",
+      "expected_calculation_result": "11.2",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "QRISK3 常以 >=10% 作为干预参考阈值；本实现用于解释已获得的风险百分比。"
+    },
+    {
+      "id": "qrisk3_case_5",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "risk_percent": 11.2
+      },
+      "message": "请用 qrisk3 做一次量化评估。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "qrisk3",
+      "expected_calculation_result": "11.2",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "QRISK3 常以 >=10% 作为干预参考阈值；本实现用于解释已获得的风险百分比。"
+    },
+    {
+      "id": "qrisk3_case_7",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "risk_percent": 11.2
+      },
+      "message": "请按 qrisk3 直接完成评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "qrisk3",
+      "expected_calculation_result": "11.2",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "QRISK3 常以 >=10% 作为干预参考阈值；本实现用于解释已获得的风险百分比。"
+    },
+    {
+      "id": "qrisk3_case_10",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "risk_percent": 11.2
+      },
+      "message": "qrisk3 评分请直接给结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "qrisk3",
+      "expected_calculation_result": "11.2",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "QRISK3 常以 >=10% 作为干预参考阈值；本实现用于解释已获得的风险百分比。"
+    },
+    {
+      "id": "qsofa_case_1",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "respiratory_rate_bpm": 24,
+        "systolic_bp": 95,
+        "altered_mental_status": "是"
+      },
+      "message": "请帮我计算 qsofa 评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "qsofa",
+      "expected_calculation_result": "3",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "qSOFA 由呼吸频率 >=22 次/分、收缩压 <=100 mmHg、意识状态改变三项组成，2 分及以上提示高风险。"
+    },
+    {
+      "id": "qsofa_case_2",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "respiratory_rate_bpm": 24,
+        "systolic_bp": 95,
+        "altered_mental_status": "是"
+      },
+      "message": "请直接评估 qsofa，并给出结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "qsofa",
+      "expected_calculation_result": "3",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "qSOFA 由呼吸频率 >=22 次/分、收缩压 <=100 mmHg、意识状态改变三项组成，2 分及以上提示高风险。"
+    },
+    {
+      "id": "qsofa_case_3",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "respiratory_rate_bpm": 24,
+        "systolic_bp": 95,
+        "altered_mental_status": "是"
+      },
+      "message": "我需要 qsofa 的评估结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "qsofa",
+      "expected_calculation_result": "3",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "qSOFA 由呼吸频率 >=22 次/分、收缩压 <=100 mmHg、意识状态改变三项组成，2 分及以上提示高风险。"
+    },
+    {
+      "id": "qsofa_case_5",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "respiratory_rate_bpm": 24,
+        "systolic_bp": 95,
+        "altered_mental_status": "是"
+      },
+      "message": "请用 qsofa 做一次量化评估。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "qsofa",
+      "expected_calculation_result": "3",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "qSOFA 由呼吸频率 >=22 次/分、收缩压 <=100 mmHg、意识状态改变三项组成，2 分及以上提示高风险。"
+    },
+    {
+      "id": "qsofa_case_7",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "respiratory_rate_bpm": 24,
+        "systolic_bp": 95,
+        "altered_mental_status": "是"
+      },
+      "message": "请按 qsofa 直接完成评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "qsofa",
+      "expected_calculation_result": "3",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "qSOFA 由呼吸频率 >=22 次/分、收缩压 <=100 mmHg、意识状态改变三项组成，2 分及以上提示高风险。"
+    },
+    {
+      "id": "qsofa_case_10",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "respiratory_rate_bpm": 24,
+        "systolic_bp": 95,
+        "altered_mental_status": "是"
+      },
+      "message": "qsofa 评分请直接给结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "qsofa",
+      "expected_calculation_result": "3",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "qSOFA 由呼吸频率 >=22 次/分、收缩压 <=100 mmHg、意识状态改变三项组成，2 分及以上提示高风险。"
+    },
+    {
+      "id": "resting_heart_rate_case_1",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "heart_rate_bpm": 72
+      },
+      "message": "请帮我计算 心率 评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "resting_heart_rate",
+      "expected_calculation_result": "72",
+      "expected_risk_level": "正常",
+      "expected_numeric_reference": "成人静息心率常见参考范围约为 60-100 次/分；持续明显过快或过慢需结合症状进一步评估。"
+    },
+    {
+      "id": "resting_heart_rate_case_2",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "heart_rate_bpm": 72
+      },
+      "message": "请直接评估 心率，并给出结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "resting_heart_rate",
+      "expected_calculation_result": "72",
+      "expected_risk_level": "正常",
+      "expected_numeric_reference": "成人静息心率常见参考范围约为 60-100 次/分；持续明显过快或过慢需结合症状进一步评估。"
+    },
+    {
+      "id": "resting_heart_rate_case_3",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "heart_rate_bpm": 72
+      },
+      "message": "我需要 心率 的评估结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "resting_heart_rate",
+      "expected_calculation_result": "72",
+      "expected_risk_level": "正常",
+      "expected_numeric_reference": "成人静息心率常见参考范围约为 60-100 次/分；持续明显过快或过慢需结合症状进一步评估。"
+    },
+    {
+      "id": "resting_heart_rate_case_5",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "heart_rate_bpm": 72
+      },
+      "message": "请用 心率 做一次量化评估。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "resting_heart_rate",
+      "expected_calculation_result": "72",
+      "expected_risk_level": "正常",
+      "expected_numeric_reference": "成人静息心率常见参考范围约为 60-100 次/分；持续明显过快或过慢需结合症状进一步评估。"
+    },
+    {
+      "id": "resting_heart_rate_case_7",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "heart_rate_bpm": 72
+      },
+      "message": "请按 心率 直接完成评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "resting_heart_rate",
+      "expected_calculation_result": "72",
+      "expected_risk_level": "正常",
+      "expected_numeric_reference": "成人静息心率常见参考范围约为 60-100 次/分；持续明显过快或过慢需结合症状进一步评估。"
+    },
+    {
+      "id": "resting_heart_rate_case_10",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "heart_rate_bpm": 72
+      },
+      "message": "心率 评分请直接给结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "resting_heart_rate",
+      "expected_calculation_result": "72",
+      "expected_risk_level": "正常",
+      "expected_numeric_reference": "成人静息心率常见参考范围约为 60-100 次/分；持续明显过快或过慢需结合症状进一步评估。"
+    },
+    {
+      "id": "rockwood_cfs_case_1",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "grade": 6
+      },
+      "message": "请帮我计算 rockwood 评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "rockwood_cfs",
+      "expected_calculation_result": "6",
+      "expected_risk_level": "衰弱",
+      "expected_numeric_reference": "Clinical Frailty Scale 为 1-9 级量表，分值越高提示衰弱程度越重。"
+    },
+    {
+      "id": "rockwood_cfs_case_2",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "grade": 6
+      },
+      "message": "请直接评估 rockwood，并给出结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "rockwood_cfs",
+      "expected_calculation_result": "6",
+      "expected_risk_level": "衰弱",
+      "expected_numeric_reference": "Clinical Frailty Scale 为 1-9 级量表，分值越高提示衰弱程度越重。"
+    },
+    {
+      "id": "rockwood_cfs_case_3",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "grade": 6
+      },
+      "message": "我需要 rockwood 的评估结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "rockwood_cfs",
+      "expected_calculation_result": "6",
+      "expected_risk_level": "衰弱",
+      "expected_numeric_reference": "Clinical Frailty Scale 为 1-9 级量表，分值越高提示衰弱程度越重。"
+    },
+    {
+      "id": "rockwood_cfs_case_5",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "grade": 6
+      },
+      "message": "请用 rockwood 做一次量化评估。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "rockwood_cfs",
+      "expected_calculation_result": "6",
+      "expected_risk_level": "衰弱",
+      "expected_numeric_reference": "Clinical Frailty Scale 为 1-9 级量表，分值越高提示衰弱程度越重。"
+    },
+    {
+      "id": "rockwood_cfs_case_7",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "grade": 6
+      },
+      "message": "请按 rockwood 直接完成评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "rockwood_cfs",
+      "expected_calculation_result": "6",
+      "expected_risk_level": "衰弱",
+      "expected_numeric_reference": "Clinical Frailty Scale 为 1-9 级量表，分值越高提示衰弱程度越重。"
+    },
+    {
+      "id": "rockwood_cfs_case_10",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "grade": 6
+      },
+      "message": "rockwood 评分请直接给结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "rockwood_cfs",
+      "expected_calculation_result": "6",
+      "expected_risk_level": "衰弱",
+      "expected_numeric_reference": "Clinical Frailty Scale 为 1-9 级量表，分值越高提示衰弱程度越重。"
+    },
+    {
+      "id": "sarc_f_case_1",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 5
+      },
+      "message": "请帮我计算 sarc-f 评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "sarc_f",
+      "expected_calculation_result": "5",
+      "expected_risk_level": "肌少症风险",
+      "expected_numeric_reference": "SARC-F 总分 0-10 分，4 分及以上常提示肌少症风险升高。"
+    },
+    {
+      "id": "sarc_f_case_2",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 5
+      },
+      "message": "请直接评估 sarc-f，并给出结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "sarc_f",
+      "expected_calculation_result": "5",
+      "expected_risk_level": "肌少症风险",
+      "expected_numeric_reference": "SARC-F 总分 0-10 分，4 分及以上常提示肌少症风险升高。"
+    },
+    {
+      "id": "sarc_f_case_3",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 5
+      },
+      "message": "我需要 sarc-f 的评估结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "sarc_f",
+      "expected_calculation_result": "5",
+      "expected_risk_level": "肌少症风险",
+      "expected_numeric_reference": "SARC-F 总分 0-10 分，4 分及以上常提示肌少症风险升高。"
+    },
+    {
+      "id": "sarc_f_case_5",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 5
+      },
+      "message": "请用 sarc-f 做一次量化评估。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "sarc_f",
+      "expected_calculation_result": "5",
+      "expected_risk_level": "肌少症风险",
+      "expected_numeric_reference": "SARC-F 总分 0-10 分，4 分及以上常提示肌少症风险升高。"
+    },
+    {
+      "id": "sarc_f_case_7",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 5
+      },
+      "message": "请按 sarc-f 直接完成评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "sarc_f",
+      "expected_calculation_result": "5",
+      "expected_risk_level": "肌少症风险",
+      "expected_numeric_reference": "SARC-F 总分 0-10 分，4 分及以上常提示肌少症风险升高。"
+    },
+    {
+      "id": "sarc_f_case_10",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 5
+      },
+      "message": "sarc-f 评分请直接给结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "sarc_f",
+      "expected_calculation_result": "5",
+      "expected_risk_level": "肌少症风险",
+      "expected_numeric_reference": "SARC-F 总分 0-10 分，4 分及以上常提示肌少症风险升高。"
+    },
+    {
+      "id": "timi_case_1",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 5
+      },
+      "message": "请帮我计算 timi 评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "timi",
+      "expected_calculation_result": "5",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "TIMI 分数越高提示急性冠脉综合征近期不良事件风险越高。"
+    },
+    {
+      "id": "timi_case_2",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 5
+      },
+      "message": "请直接评估 timi，并给出结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "timi",
+      "expected_calculation_result": "5",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "TIMI 分数越高提示急性冠脉综合征近期不良事件风险越高。"
+    },
+    {
+      "id": "timi_case_3",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 5
+      },
+      "message": "我需要 timi 的评估结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "timi",
+      "expected_calculation_result": "5",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "TIMI 分数越高提示急性冠脉综合征近期不良事件风险越高。"
+    },
+    {
+      "id": "timi_case_5",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 5
+      },
+      "message": "请用 timi 做一次量化评估。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "timi",
+      "expected_calculation_result": "5",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "TIMI 分数越高提示急性冠脉综合征近期不良事件风险越高。"
+    },
+    {
+      "id": "timi_case_7",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 5
+      },
+      "message": "请按 timi 直接完成评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "timi",
+      "expected_calculation_result": "5",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "TIMI 分数越高提示急性冠脉综合征近期不良事件风险越高。"
+    },
+    {
+      "id": "timi_case_10",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 5
+      },
+      "message": "timi 评分请直接给结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "timi",
+      "expected_calculation_result": "5",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "TIMI 分数越高提示急性冠脉综合征近期不良事件风险越高。"
+    },
+    {
+      "id": "tug_test_case_1",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "time_seconds": 14.2
+      },
+      "message": "请帮我计算 tug 评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "tug_test",
+      "expected_calculation_result": "14.2",
+      "expected_risk_level": "高跌倒风险",
+      "expected_numeric_reference": "TUG 常以 13.5 秒作为跌倒风险筛查参考阈值，时间越长提示功能移动性越差。"
+    },
+    {
+      "id": "tug_test_case_2",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "time_seconds": 14.2
+      },
+      "message": "请直接评估 tug，并给出结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "tug_test",
+      "expected_calculation_result": "14.2",
+      "expected_risk_level": "高跌倒风险",
+      "expected_numeric_reference": "TUG 常以 13.5 秒作为跌倒风险筛查参考阈值，时间越长提示功能移动性越差。"
+    },
+    {
+      "id": "tug_test_case_3",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "time_seconds": 14.2
+      },
+      "message": "我需要 tug 的评估结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "tug_test",
+      "expected_calculation_result": "14.2",
+      "expected_risk_level": "高跌倒风险",
+      "expected_numeric_reference": "TUG 常以 13.5 秒作为跌倒风险筛查参考阈值，时间越长提示功能移动性越差。"
+    },
+    {
+      "id": "tug_test_case_5",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "time_seconds": 14.2
+      },
+      "message": "请用 tug 做一次量化评估。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "tug_test",
+      "expected_calculation_result": "14.2",
+      "expected_risk_level": "高跌倒风险",
+      "expected_numeric_reference": "TUG 常以 13.5 秒作为跌倒风险筛查参考阈值，时间越长提示功能移动性越差。"
+    },
+    {
+      "id": "tug_test_case_7",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "time_seconds": 14.2
+      },
+      "message": "请按 tug 直接完成评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "tug_test",
+      "expected_calculation_result": "14.2",
+      "expected_risk_level": "高跌倒风险",
+      "expected_numeric_reference": "TUG 常以 13.5 秒作为跌倒风险筛查参考阈值，时间越长提示功能移动性越差。"
+    },
+    {
+      "id": "tug_test_case_10",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "time_seconds": 14.2
+      },
+      "message": "tug 评分请直接给结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "tug_test",
+      "expected_calculation_result": "14.2",
+      "expected_risk_level": "高跌倒风险",
+      "expected_numeric_reference": "TUG 常以 13.5 秒作为跌倒风险筛查参考阈值，时间越长提示功能移动性越差。"
+    },
+    {
+      "id": "waist_circumference_case_1",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "waist_cm": 92,
+        "gender": "男"
+      },
+      "message": "请帮我计算 腰围 评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "waist_circumference",
+      "expected_calculation_result": "92.0",
+      "expected_risk_level": "偏高",
+      "expected_numeric_reference": "中国成人中心性肥胖常用参考：男性腰围 <90 cm、女性腰围 <85 cm；更高水平提示风险进一步增加。"
+    },
+    {
+      "id": "waist_circumference_case_2",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "waist_cm": 92,
+        "gender": "男"
+      },
+      "message": "请直接评估 腰围，并给出结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "waist_circumference",
+      "expected_calculation_result": "92.0",
+      "expected_risk_level": "偏高",
+      "expected_numeric_reference": "中国成人中心性肥胖常用参考：男性腰围 <90 cm、女性腰围 <85 cm；更高水平提示风险进一步增加。"
+    },
+    {
+      "id": "waist_circumference_case_3",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "waist_cm": 92,
+        "gender": "男"
+      },
+      "message": "我需要 腰围 的评估结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "waist_circumference",
+      "expected_calculation_result": "92.0",
+      "expected_risk_level": "偏高",
+      "expected_numeric_reference": "中国成人中心性肥胖常用参考：男性腰围 <90 cm、女性腰围 <85 cm；更高水平提示风险进一步增加。"
+    },
+    {
+      "id": "waist_circumference_case_5",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "waist_cm": 92,
+        "gender": "男"
+      },
+      "message": "请用 腰围 做一次量化评估。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "waist_circumference",
+      "expected_calculation_result": "92.0",
+      "expected_risk_level": "偏高",
+      "expected_numeric_reference": "中国成人中心性肥胖常用参考：男性腰围 <90 cm、女性腰围 <85 cm；更高水平提示风险进一步增加。"
+    },
+    {
+      "id": "waist_circumference_case_7",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "waist_cm": 92,
+        "gender": "男"
+      },
+      "message": "请按 腰围 直接完成评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "waist_circumference",
+      "expected_calculation_result": "92.0",
+      "expected_risk_level": "偏高",
+      "expected_numeric_reference": "中国成人中心性肥胖常用参考：男性腰围 <90 cm、女性腰围 <85 cm；更高水平提示风险进一步增加。"
+    },
+    {
+      "id": "waist_circumference_case_10",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "waist_cm": 92,
+        "gender": "男"
+      },
+      "message": "腰围 评分请直接给结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "waist_circumference",
+      "expected_calculation_result": "92.0",
+      "expected_risk_level": "偏高",
+      "expected_numeric_reference": "中国成人中心性肥胖常用参考：男性腰围 <90 cm、女性腰围 <85 cm；更高水平提示风险进一步增加。"
+    },
+    {
+      "id": "waterlow_score_case_1",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 22
+      },
+      "message": "请帮我计算 waterlow 评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "waterlow_score",
+      "expected_calculation_result": "22",
+      "expected_risk_level": "极高压疮风险",
+      "expected_numeric_reference": "Waterlow 常用分层：10-14 有风险，15-19 高风险，20 分及以上极高风险。"
+    },
+    {
+      "id": "waterlow_score_case_2",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 22
+      },
+      "message": "请直接评估 waterlow，并给出结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "waterlow_score",
+      "expected_calculation_result": "22",
+      "expected_risk_level": "极高压疮风险",
+      "expected_numeric_reference": "Waterlow 常用分层：10-14 有风险，15-19 高风险，20 分及以上极高风险。"
+    },
+    {
+      "id": "waterlow_score_case_3",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 22
+      },
+      "message": "我需要 waterlow 的评估结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "waterlow_score",
+      "expected_calculation_result": "22",
+      "expected_risk_level": "极高压疮风险",
+      "expected_numeric_reference": "Waterlow 常用分层：10-14 有风险，15-19 高风险，20 分及以上极高风险。"
+    },
+    {
+      "id": "waterlow_score_case_5",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 22
+      },
+      "message": "请用 waterlow 做一次量化评估。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "waterlow_score",
+      "expected_calculation_result": "22",
+      "expected_risk_level": "极高压疮风险",
+      "expected_numeric_reference": "Waterlow 常用分层：10-14 有风险，15-19 高风险，20 分及以上极高风险。"
+    },
+    {
+      "id": "waterlow_score_case_7",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 22
+      },
+      "message": "请按 waterlow 直接完成评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "waterlow_score",
+      "expected_calculation_result": "22",
+      "expected_risk_level": "极高压疮风险",
+      "expected_numeric_reference": "Waterlow 常用分层：10-14 有风险，15-19 高风险，20 分及以上极高风险。"
+    },
+    {
+      "id": "waterlow_score_case_10",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "total_score": 22
+      },
+      "message": "waterlow 评分请直接给结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "waterlow_score",
+      "expected_calculation_result": "22",
+      "expected_risk_level": "极高压疮风险",
+      "expected_numeric_reference": "Waterlow 常用分层：10-14 有风险，15-19 高风险，20 分及以上极高风险。"
+    },
+    {
+      "id": "wells_dvt_case_1",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "active_cancer": false,
+        "paralysis_or_recent_cast": false,
+        "bedridden_or_recent_surgery": true,
+        "localized_tenderness": true,
+        "entire_leg_swollen": true,
+        "calf_swelling_gt_3cm": false,
+        "pitting_edema": true,
+        "collateral_superficial_veins": false,
+        "previous_dvt": false,
+        "alternative_diagnosis_more_likely": false
+      },
+      "message": "请帮我计算 wells dvt 评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "wells_dvt",
+      "expected_calculation_result": "4.0",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "Wells DVT 评分由肿瘤、制动、压痛、肿胀、既往 DVT 等临床特征组成。"
+    },
+    {
+      "id": "wells_dvt_case_2",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "active_cancer": false,
+        "paralysis_or_recent_cast": false,
+        "bedridden_or_recent_surgery": true,
+        "localized_tenderness": true,
+        "entire_leg_swollen": true,
+        "calf_swelling_gt_3cm": false,
+        "pitting_edema": true,
+        "collateral_superficial_veins": false,
+        "previous_dvt": false,
+        "alternative_diagnosis_more_likely": false
+      },
+      "message": "请直接评估 wells dvt，并给出结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "wells_dvt",
+      "expected_calculation_result": "4.0",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "Wells DVT 评分由肿瘤、制动、压痛、肿胀、既往 DVT 等临床特征组成。"
+    },
+    {
+      "id": "wells_dvt_case_3",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "active_cancer": false,
+        "paralysis_or_recent_cast": false,
+        "bedridden_or_recent_surgery": true,
+        "localized_tenderness": true,
+        "entire_leg_swollen": true,
+        "calf_swelling_gt_3cm": false,
+        "pitting_edema": true,
+        "collateral_superficial_veins": false,
+        "previous_dvt": false,
+        "alternative_diagnosis_more_likely": false
+      },
+      "message": "我需要 wells dvt 的评估结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "wells_dvt",
+      "expected_calculation_result": "4.0",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "Wells DVT 评分由肿瘤、制动、压痛、肿胀、既往 DVT 等临床特征组成。"
+    },
+    {
+      "id": "wells_dvt_case_5",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "active_cancer": false,
+        "paralysis_or_recent_cast": false,
+        "bedridden_or_recent_surgery": true,
+        "localized_tenderness": true,
+        "entire_leg_swollen": true,
+        "calf_swelling_gt_3cm": false,
+        "pitting_edema": true,
+        "collateral_superficial_veins": false,
+        "previous_dvt": false,
+        "alternative_diagnosis_more_likely": false
+      },
+      "message": "请用 wells dvt 做一次量化评估。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "wells_dvt",
+      "expected_calculation_result": "4.0",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "Wells DVT 评分由肿瘤、制动、压痛、肿胀、既往 DVT 等临床特征组成。"
+    },
+    {
+      "id": "wells_dvt_case_7",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "active_cancer": false,
+        "paralysis_or_recent_cast": false,
+        "bedridden_or_recent_surgery": true,
+        "localized_tenderness": true,
+        "entire_leg_swollen": true,
+        "calf_swelling_gt_3cm": false,
+        "pitting_edema": true,
+        "collateral_superficial_veins": false,
+        "previous_dvt": false,
+        "alternative_diagnosis_more_likely": false
+      },
+      "message": "请按 wells dvt 直接完成评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "wells_dvt",
+      "expected_calculation_result": "4.0",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "Wells DVT 评分由肿瘤、制动、压痛、肿胀、既往 DVT 等临床特征组成。"
+    },
+    {
+      "id": "wells_dvt_case_10",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "active_cancer": false,
+        "paralysis_or_recent_cast": false,
+        "bedridden_or_recent_surgery": true,
+        "localized_tenderness": true,
+        "entire_leg_swollen": true,
+        "calf_swelling_gt_3cm": false,
+        "pitting_edema": true,
+        "collateral_superficial_veins": false,
+        "previous_dvt": false,
+        "alternative_diagnosis_more_likely": false
+      },
+      "message": "wells dvt 评分请直接给结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "wells_dvt",
+      "expected_calculation_result": "4.0",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "Wells DVT 评分由肿瘤、制动、压痛、肿胀、既往 DVT 等临床特征组成。"
+    },
+    {
+      "id": "wells_pe_case_1",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "clinical_signs_dvt": true,
+        "pe_more_likely_than_alternative": true,
+        "heart_rate_bpm": 112,
+        "immobilization_or_recent_surgery": false,
+        "previous_dvt_pe": false,
+        "hemoptysis": false,
+        "malignancy": false
+      },
+      "message": "请帮我计算 wells pe 评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "wells_pe",
+      "expected_calculation_result": "7.5",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "Wells PE 评分由 DVT 体征、临床判断、心率、制动/手术史、既往 VTE、咯血和肿瘤等组成。"
+    },
+    {
+      "id": "wells_pe_case_2",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "clinical_signs_dvt": true,
+        "pe_more_likely_than_alternative": true,
+        "heart_rate_bpm": 112,
+        "immobilization_or_recent_surgery": false,
+        "previous_dvt_pe": false,
+        "hemoptysis": false,
+        "malignancy": false
+      },
+      "message": "请直接评估 wells pe，并给出结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "wells_pe",
+      "expected_calculation_result": "7.5",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "Wells PE 评分由 DVT 体征、临床判断、心率、制动/手术史、既往 VTE、咯血和肿瘤等组成。"
+    },
+    {
+      "id": "wells_pe_case_3",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "clinical_signs_dvt": true,
+        "pe_more_likely_than_alternative": true,
+        "heart_rate_bpm": 112,
+        "immobilization_or_recent_surgery": false,
+        "previous_dvt_pe": false,
+        "hemoptysis": false,
+        "malignancy": false
+      },
+      "message": "我需要 wells pe 的评估结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "wells_pe",
+      "expected_calculation_result": "7.5",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "Wells PE 评分由 DVT 体征、临床判断、心率、制动/手术史、既往 VTE、咯血和肿瘤等组成。"
+    },
+    {
+      "id": "wells_pe_case_5",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "clinical_signs_dvt": true,
+        "pe_more_likely_than_alternative": true,
+        "heart_rate_bpm": 112,
+        "immobilization_or_recent_surgery": false,
+        "previous_dvt_pe": false,
+        "hemoptysis": false,
+        "malignancy": false
+      },
+      "message": "请用 wells pe 做一次量化评估。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "wells_pe",
+      "expected_calculation_result": "7.5",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "Wells PE 评分由 DVT 体征、临床判断、心率、制动/手术史、既往 VTE、咯血和肿瘤等组成。"
+    },
+    {
+      "id": "wells_pe_case_7",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "clinical_signs_dvt": true,
+        "pe_more_likely_than_alternative": true,
+        "heart_rate_bpm": 112,
+        "immobilization_or_recent_surgery": false,
+        "previous_dvt_pe": false,
+        "hemoptysis": false,
+        "malignancy": false
+      },
+      "message": "请按 wells pe 直接完成评分。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "wells_pe",
+      "expected_calculation_result": "7.5",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "Wells PE 评分由 DVT 体征、临床判断、心率、制动/手术史、既往 VTE、咯血和肿瘤等组成。"
+    },
+    {
+      "id": "wells_pe_case_10",
+      "scenario_type": "calculator",
+      "birth_date": "1980-01-01",
+      "gender": "男",
+      "seed_params": {
+        "clinical_signs_dvt": true,
+        "pe_more_likely_than_alternative": true,
+        "heart_rate_bpm": 112,
+        "immobilization_or_recent_surgery": false,
+        "previous_dvt_pe": false,
+        "hemoptysis": false,
+        "malignancy": false
+      },
+      "message": "wells pe 评分请直接给结果。",
+      "source": "project_calculator_manifest",
+      "expected_tool": "wells_pe",
+      "expected_calculation_result": "7.5",
+      "expected_risk_level": "高风险",
+      "expected_numeric_reference": "Wells PE 评分由 DVT 体征、临床判断、心率、制动/手术史、既往 VTE、咯血和肿瘤等组成。"
+    }
+  ]
+}

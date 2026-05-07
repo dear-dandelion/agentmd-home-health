@@ -1,0 +1,156 @@
+{
+  "name": "nihss",
+  "display_name": "NIHSS 神经功能缺损评分",
+  "description": "用于卒中相关神经功能缺损程度分层。",
+  "source_module": "app.calculators.extended",
+  "function_name": "calculate_nihss",
+  "intent_keywords": [
+    "nihss",
+    "卒中评分",
+    "神经功能缺损"
+  ],
+  "required_params": [
+    "total_score"
+  ],
+  "optional_params": [],
+  "parameters": [
+    {
+      "name": "total_score",
+      "label": "总分",
+      "type": "float",
+      "required": true,
+      "min": 0,
+      "max": 42,
+      "description": "NIHSS 总分"
+    }
+  ],
+  "reference": "NIHSS 常用分层标准。",
+  "applicable_scenario": "神经功能评估",
+  "supports_chinese": true,
+  "clinical_specificity": 0.96,
+  "priority": {
+    "home_suitability": 0.9,
+    "clinical_importance": 0.9,
+    "implementation_simplicity": 0.85,
+    "chinese_support": 1.0
+  },
+  "documentation": {
+    "parameter_notes": "NIHSS 神经功能缺损评分 支持输入总分，部分量表也支持按条目分值求和。",
+    "usage_examples": [
+      {
+        "input": {
+          "total_score": 18
+        },
+        "description": "NIHSS 神经功能缺损评分 示例"
+      }
+    ],
+    "reference_literature": [
+      "NIHSS 神经功能缺损评分 常用公开评分分层标准"
+    ],
+    "update_record": [
+      "2026-04-28：接入第一批扩展计算器运行时实现。"
+    ]
+  },
+  "validation": {
+    "unit_cases": [
+      {
+        "name": "total_score_case_1",
+        "input": {
+          "total_score": 0
+        },
+        "expected": {
+          "risk_level": "无明显缺损",
+          "score": 0
+        }
+      },
+      {
+        "name": "total_score_case_2",
+        "input": {
+          "total_score": 2
+        },
+        "expected": {
+          "risk_level": "轻度神经功能缺损",
+          "score": 2
+        }
+      },
+      {
+        "name": "total_score_case_3",
+        "input": {
+          "total_score": 8
+        },
+        "expected": {
+          "risk_level": "中度神经功能缺损",
+          "score": 8
+        }
+      },
+      {
+        "name": "total_score_case_4",
+        "input": {
+          "total_score": 18
+        },
+        "expected": {
+          "risk_level": "中重度神经功能缺损",
+          "score": 18
+        }
+      }
+    ],
+    "boundary_checks": [
+      {
+        "name": "total_score_boundary_1",
+        "input": {
+          "total_score": 0
+        },
+        "expected_risk_level": "无明显缺损"
+      },
+      {
+        "name": "total_score_boundary_2",
+        "input": {
+          "total_score": 1
+        },
+        "expected_risk_level": "轻度神经功能缺损"
+      },
+      {
+        "name": "total_score_boundary_3",
+        "input": {
+          "total_score": 4
+        },
+        "expected_risk_level": "轻度神经功能缺损"
+      },
+      {
+        "name": "total_score_boundary_4",
+        "input": {
+          "total_score": 5
+        },
+        "expected_risk_level": "中度神经功能缺损"
+      },
+      {
+        "name": "total_score_boundary_5",
+        "input": {
+          "total_score": 15
+        },
+        "expected_risk_level": "中度神经功能缺损"
+      },
+      {
+        "name": "total_score_boundary_6",
+        "input": {
+          "total_score": 16
+        },
+        "expected_risk_level": "中重度神经功能缺损"
+      },
+      {
+        "name": "total_score_boundary_7",
+        "input": {
+          "total_score": 20
+        },
+        "expected_risk_level": "中重度神经功能缺损"
+      },
+      {
+        "name": "total_score_boundary_8",
+        "input": {
+          "total_score": 21
+        },
+        "expected_risk_level": "重度神经功能缺损"
+      }
+    ]
+  }
+}

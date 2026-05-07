@@ -1,0 +1,151 @@
+{
+  "name": "grace",
+  "display_name": "GRACE 风险评分",
+  "description": "用于解释 GRACE 总分或风险百分比。",
+  "source_module": "app.calculators.extended",
+  "function_name": "calculate_grace",
+  "intent_keywords": [
+    "grace",
+    "冠脉预后",
+    "grace评分"
+  ],
+  "required_params": [
+    "total_score"
+  ],
+  "optional_params": [
+    "risk_percent"
+  ],
+  "parameters": [
+    {
+      "name": "total_score",
+      "label": "总分",
+      "type": "float",
+      "required": true,
+      "min": 0,
+      "max": 400,
+      "description": "GRACE 总分"
+    }
+  ],
+  "reference": "GRACE 常用风险分层阈值。",
+  "applicable_scenario": "急性冠脉综合征预后评估",
+  "supports_chinese": true,
+  "clinical_specificity": 0.93,
+  "priority": {
+    "home_suitability": 0.9,
+    "clinical_importance": 0.9,
+    "implementation_simplicity": 0.85,
+    "chinese_support": 1.0
+  },
+  "documentation": {
+    "parameter_notes": "GRACE 风险评分 支持输入总分，部分量表也支持按条目分值求和。",
+    "usage_examples": [
+      {
+        "input": {
+          "total_score": 150
+        },
+        "description": "GRACE 风险评分 示例"
+      }
+    ],
+    "reference_literature": [
+      "GRACE 风险评分 常用公开评分分层标准"
+    ],
+    "update_record": [
+      "2026-04-28：接入第一批扩展计算器运行时实现。"
+    ]
+  },
+  "validation": {
+    "unit_cases": [
+      {
+        "name": "score_low",
+        "input": {
+          "total_score": 80
+        },
+        "expected": {
+          "risk_level": "低风险",
+          "score": 80
+        }
+      },
+      {
+        "name": "score_middle",
+        "input": {
+          "total_score": 109
+        },
+        "expected": {
+          "risk_level": "中风险",
+          "score": 109
+        }
+      },
+      {
+        "name": "score_high",
+        "input": {
+          "total_score": 150
+        },
+        "expected": {
+          "risk_level": "高风险",
+          "score": 150
+        }
+      },
+      {
+        "name": "percent_high",
+        "input": {
+          "risk_percent": 10.0
+        },
+        "expected": {
+          "risk_level": "高风险",
+          "score": 10.0
+        }
+      }
+    ],
+    "boundary_checks": [
+      {
+        "name": "score_108",
+        "input": {
+          "total_score": 108
+        },
+        "expected_risk_level": "低风险"
+      },
+      {
+        "name": "score_109",
+        "input": {
+          "total_score": 109
+        },
+        "expected_risk_level": "中风险"
+      },
+      {
+        "name": "score_140",
+        "input": {
+          "total_score": 140
+        },
+        "expected_risk_level": "中风险"
+      },
+      {
+        "name": "score_141",
+        "input": {
+          "total_score": 141
+        },
+        "expected_risk_level": "高风险"
+      },
+      {
+        "name": "percent_2_9",
+        "input": {
+          "risk_percent": 2.9
+        },
+        "expected_risk_level": "低风险"
+      },
+      {
+        "name": "percent_3_0",
+        "input": {
+          "risk_percent": 3.0
+        },
+        "expected_risk_level": "中风险"
+      },
+      {
+        "name": "percent_10_0",
+        "input": {
+          "risk_percent": 10.0
+        },
+        "expected_risk_level": "高风险"
+      }
+    ]
+  }
+}

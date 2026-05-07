@@ -1,0 +1,218 @@
+{
+  "name": "cha2ds2_vasc",
+  "display_name": "CHA2DS2-VASc 卒中风险评分",
+  "description": "用于房颤相关卒中风险评估。",
+  "source_module": "app.calculators.extended",
+  "function_name": "calculate_cha2ds2_vasc",
+  "intent_keywords": [
+    "cha2ds2-vasc",
+    "cha2ds2_vasc",
+    "房颤卒中",
+    "卒中风险评分"
+  ],
+  "required_params": [
+    "age",
+    "gender",
+    "congestive_heart_failure",
+    "hypertension",
+    "diabetes",
+    "prior_stroke_tia_thromboembolism",
+    "vascular_disease"
+  ],
+  "optional_params": [],
+  "parameters": [
+    {
+      "name": "age",
+      "label": "年龄",
+      "type": "float",
+      "required": true,
+      "description": "受评估者年龄",
+      "min": 0,
+      "max": 120
+    },
+    {
+      "name": "gender",
+      "label": "性别",
+      "type": "str",
+      "required": true,
+      "description": "男或女"
+    },
+    {
+      "name": "congestive_heart_failure",
+      "label": "充血性心衰",
+      "type": "bool",
+      "required": true,
+      "description": "是否存在充血性心力衰竭"
+    },
+    {
+      "name": "hypertension",
+      "label": "高血压",
+      "type": "bool",
+      "required": true,
+      "description": "是否存在高血压病史"
+    },
+    {
+      "name": "diabetes",
+      "label": "糖尿病",
+      "type": "bool",
+      "required": true,
+      "description": "是否存在糖尿病"
+    },
+    {
+      "name": "prior_stroke_tia_thromboembolism",
+      "label": "既往卒中/TIA/血栓栓塞",
+      "type": "bool",
+      "required": true,
+      "description": "是否存在既往卒中或TIA病史"
+    },
+    {
+      "name": "vascular_disease",
+      "label": "血管疾病",
+      "type": "bool",
+      "required": true,
+      "description": "是否存在外周血管病或冠心病等血管疾病"
+    }
+  ],
+  "reference": "CHA2DS2-VASc 常用评分标准。",
+  "applicable_scenario": "房颤卒中风险评估",
+  "supports_chinese": true,
+  "clinical_specificity": 0.98,
+  "priority": {
+    "home_suitability": 0.9,
+    "clinical_importance": 0.9,
+    "implementation_simplicity": 0.85,
+    "chinese_support": 1.0
+  },
+  "documentation": {
+    "parameter_notes": "CHA2DS2-VASc 卒中风险评分 支持输入总分，部分量表也支持按条目分值求和。",
+    "usage_examples": [
+      {
+        "input": {
+          "age": 76,
+          "gender": "女",
+          "hypertension": true,
+          "diabetes": true,
+          "prior_stroke_tia_thromboembolism": false,
+          "vascular_disease": false,
+          "congestive_heart_failure": false
+        },
+        "description": "CHA2DS2-VASc 卒中风险评分 示例"
+      }
+    ],
+    "reference_literature": [
+      "CHA2DS2-VASc 卒中风险评分 常用公开评分分层标准"
+    ],
+    "update_record": [
+      "2026-04-28：接入第一批扩展计算器运行时实现。"
+    ]
+  },
+  "validation": {
+    "unit_cases": [
+      {
+        "name": "male_zero",
+        "input": {
+          "age": 50,
+          "gender": "male",
+          "congestive_heart_failure": false,
+          "hypertension": false,
+          "diabetes": false,
+          "prior_stroke_tia_thromboembolism": false,
+          "vascular_disease": false
+        },
+        "expected": {
+          "risk_level": "低风险",
+          "score": 0
+        }
+      },
+      {
+        "name": "male_age_65",
+        "input": {
+          "age": 66,
+          "gender": "male",
+          "congestive_heart_failure": false,
+          "hypertension": false,
+          "diabetes": false,
+          "prior_stroke_tia_thromboembolism": false,
+          "vascular_disease": false
+        },
+        "expected": {
+          "risk_level": "中风险",
+          "score": 1
+        }
+      },
+      {
+        "name": "multiple_factors",
+        "input": {
+          "age": 76,
+          "gender": "male",
+          "congestive_heart_failure": true,
+          "hypertension": true,
+          "diabetes": false,
+          "prior_stroke_tia_thromboembolism": false,
+          "vascular_disease": false
+        },
+        "expected": {
+          "risk_level": "高风险",
+          "score": 4
+        }
+      },
+      {
+        "name": "female_very_high",
+        "input": {
+          "age": 78,
+          "gender": "female",
+          "congestive_heart_failure": true,
+          "hypertension": true,
+          "diabetes": true,
+          "prior_stroke_tia_thromboembolism": true,
+          "vascular_disease": true
+        },
+        "expected": {
+          "risk_level": "高风险",
+          "score": 9
+        }
+      }
+    ],
+    "boundary_checks": [
+      {
+        "name": "female_sex_only",
+        "input": {
+          "age": 40,
+          "gender": "female",
+          "congestive_heart_failure": false,
+          "hypertension": false,
+          "diabetes": false,
+          "prior_stroke_tia_thromboembolism": false,
+          "vascular_disease": false
+        },
+        "expected_risk_level": "低风险"
+      },
+      {
+        "name": "age_65_boundary",
+        "input": {
+          "age": 65,
+          "gender": "male",
+          "congestive_heart_failure": false,
+          "hypertension": false,
+          "diabetes": false,
+          "prior_stroke_tia_thromboembolism": false,
+          "vascular_disease": false
+        },
+        "expected_risk_level": "中风险"
+      },
+      {
+        "name": "age_75_boundary",
+        "input": {
+          "age": 75,
+          "gender": "male",
+          "congestive_heart_failure": false,
+          "hypertension": false,
+          "diabetes": false,
+          "prior_stroke_tia_thromboembolism": false,
+          "vascular_disease": false
+        },
+        "expected_risk_level": "高风险"
+      }
+    ]
+  }
+}

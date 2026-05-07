@@ -51,6 +51,7 @@ class LiteratureServiceTests(unittest.TestCase):
         summary = classifier.summarize(documents)
         counts = {item["category"]: item["matched_count"] for item in summary["categories"]}
 
+        self.assertEqual(summary["target_total"], 50)
         self.assertEqual(counts["心血管"], 1)
         self.assertEqual(counts["代谢"], 1)
         self.assertEqual(counts["老年"], 1)
@@ -114,7 +115,7 @@ class LiteratureServiceTests(unittest.TestCase):
                         "results": [
                             {
                                 "id": "CN-1",
-                                "title": "Morse跌倒风险量表在社区老年人中的应用",
+                                "title": "Morse跌倒量表在社区老年人中的应用",
                                 "abstract": "用于老年居家跌倒风险初筛。",
                                 "keywords": "Morse; 跌倒; 老年",
                                 "year": "2023",
@@ -128,7 +129,7 @@ class LiteratureServiceTests(unittest.TestCase):
         )
         provider = SinoMedProvider(session=session, api_url_template="https://example.org/search?q={query}&page={page}&size={page_size}")
 
-        documents = provider.search("跌倒 风险", max_results=5)
+        documents = provider.search("跌倒风险", max_results=5)
 
         self.assertEqual(len(documents), 1)
         self.assertEqual(documents[0].source, "sinomed")
@@ -152,6 +153,8 @@ class LiteratureServiceTests(unittest.TestCase):
         result = service.collect_statistics("calculator", sources=["pubmed", "sinomed"], max_results_each=10)
 
         self.assertEqual(result["retrieved_total"], 1)
+        self.assertEqual(result["matched_total"], 1)
+        self.assertEqual(result["target_total"], 50)
         self.assertEqual(len(result["provider_errors"]), 1)
         self.assertEqual(result["provider_errors"][0]["source"], "sinomed")
 

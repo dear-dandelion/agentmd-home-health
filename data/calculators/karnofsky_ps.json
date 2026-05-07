@@ -1,0 +1,129 @@
+{
+  "name": "karnofsky_ps",
+  "display_name": "Karnofsky 体能状态评分",
+  "description": "用于功能状态和照护依赖程度评估。",
+  "source_module": "app.calculators.extended",
+  "function_name": "calculate_karnofsky_ps",
+  "intent_keywords": [
+    "karnofsky",
+    "kps",
+    "体能状态",
+    "功能状态"
+  ],
+  "required_params": [
+    "total_score"
+  ],
+  "optional_params": [],
+  "parameters": [
+    {
+      "name": "total_score",
+      "label": "总分",
+      "type": "float",
+      "required": true,
+      "min": 0,
+      "max": 100,
+      "description": "Karnofsky 总分"
+    }
+  ],
+  "reference": "Karnofsky Performance Status 常用评分标准。",
+  "applicable_scenario": "功能状态评估",
+  "supports_chinese": true,
+  "clinical_specificity": 0.94,
+  "priority": {
+    "home_suitability": 0.9,
+    "clinical_importance": 0.9,
+    "implementation_simplicity": 0.85,
+    "chinese_support": 1.0
+  },
+  "documentation": {
+    "parameter_notes": "Karnofsky 体能状态评分 支持输入总分，部分量表也支持按条目分值求和。",
+    "usage_examples": [
+      {
+        "input": {
+          "total_score": 60
+        },
+        "description": "Karnofsky 体能状态评分 示例"
+      }
+    ],
+    "reference_literature": [
+      "Karnofsky 体能状态评分 常用公开评分分层标准"
+    ],
+    "update_record": [
+      "2026-04-28：接入第一批扩展计算器运行时实现。"
+    ]
+  },
+  "validation": {
+    "unit_cases": [
+      {
+        "name": "total_score_case_1",
+        "input": {
+          "total_score": 90
+        },
+        "expected": {
+          "risk_level": "功能状态较好",
+          "score": 90
+        }
+      },
+      {
+        "name": "total_score_case_2",
+        "input": {
+          "total_score": 70
+        },
+        "expected": {
+          "risk_level": "中度功能受限",
+          "score": 70
+        }
+      },
+      {
+        "name": "total_score_case_3",
+        "input": {
+          "total_score": 50
+        },
+        "expected": {
+          "risk_level": "中度功能受限",
+          "score": 50
+        }
+      },
+      {
+        "name": "total_score_case_4",
+        "input": {
+          "total_score": 20
+        },
+        "expected": {
+          "risk_level": "重度功能受限",
+          "score": 20
+        }
+      }
+    ],
+    "boundary_checks": [
+      {
+        "name": "total_score_boundary_1",
+        "input": {
+          "total_score": 49
+        },
+        "expected_risk_level": "重度功能受限"
+      },
+      {
+        "name": "total_score_boundary_2",
+        "input": {
+          "total_score": 50
+        },
+        "expected_risk_level": "中度功能受限"
+      },
+      {
+        "name": "total_score_boundary_3",
+        "input": {
+          "total_score": 79
+        },
+        "expected_risk_level": "中度功能受限"
+      },
+      {
+        "name": "total_score_boundary_4",
+        "input": {
+          "total_score": 80
+        },
+        "expected_risk_level": "功能状态较好"
+      }
+    ]
+  }
+}

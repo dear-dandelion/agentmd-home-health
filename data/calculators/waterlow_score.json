@@ -1,0 +1,142 @@
+{
+  "name": "waterlow_score",
+  "display_name": "Waterlow 压疮风险评分",
+  "description": "用于压疮风险分层。",
+  "source_module": "app.calculators.extended",
+  "function_name": "calculate_waterlow_score",
+  "intent_keywords": [
+    "waterlow",
+    "压疮风险",
+    "waterlow评分"
+  ],
+  "required_params": [
+    "total_score"
+  ],
+  "optional_params": [],
+  "parameters": [
+    {
+      "name": "total_score",
+      "label": "总分",
+      "type": "float",
+      "required": true,
+      "min": 0,
+      "max": 100,
+      "description": "Waterlow 总分"
+    }
+  ],
+  "reference": "Waterlow 常用评分标准。",
+  "applicable_scenario": "压疮风险筛查",
+  "supports_chinese": true,
+  "clinical_specificity": 0.93,
+  "priority": {
+    "home_suitability": 0.9,
+    "clinical_importance": 0.9,
+    "implementation_simplicity": 0.85,
+    "chinese_support": 1.0
+  },
+  "documentation": {
+    "parameter_notes": "Waterlow 压疮风险评分 支持输入总分，部分量表也支持按条目分值求和。",
+    "usage_examples": [
+      {
+        "input": {
+          "total_score": 22
+        },
+        "description": "Waterlow 压疮风险评分 示例"
+      }
+    ],
+    "reference_literature": [
+      "Waterlow 压疮风险评分 常用公开评分分层标准"
+    ],
+    "update_record": [
+      "2026-04-28：接入第一批扩展计算器运行时实现。"
+    ]
+  },
+  "validation": {
+    "unit_cases": [
+      {
+        "name": "total_score_case_1",
+        "input": {
+          "total_score": 8
+        },
+        "expected": {
+          "risk_level": "低风险",
+          "score": 8
+        }
+      },
+      {
+        "name": "total_score_case_2",
+        "input": {
+          "total_score": 12
+        },
+        "expected": {
+          "risk_level": "有压疮风险",
+          "score": 12
+        }
+      },
+      {
+        "name": "total_score_case_3",
+        "input": {
+          "total_score": 16
+        },
+        "expected": {
+          "risk_level": "高压疮风险",
+          "score": 16
+        }
+      },
+      {
+        "name": "total_score_case_4",
+        "input": {
+          "total_score": 22
+        },
+        "expected": {
+          "risk_level": "极高压疮风险",
+          "score": 22
+        }
+      }
+    ],
+    "boundary_checks": [
+      {
+        "name": "total_score_boundary_1",
+        "input": {
+          "total_score": 9
+        },
+        "expected_risk_level": "低风险"
+      },
+      {
+        "name": "total_score_boundary_2",
+        "input": {
+          "total_score": 10
+        },
+        "expected_risk_level": "有压疮风险"
+      },
+      {
+        "name": "total_score_boundary_3",
+        "input": {
+          "total_score": 14
+        },
+        "expected_risk_level": "有压疮风险"
+      },
+      {
+        "name": "total_score_boundary_4",
+        "input": {
+          "total_score": 15
+        },
+        "expected_risk_level": "高压疮风险"
+      },
+      {
+        "name": "total_score_boundary_5",
+        "input": {
+          "total_score": 19
+        },
+        "expected_risk_level": "高压疮风险"
+      },
+      {
+        "name": "total_score_boundary_6",
+        "input": {
+          "total_score": 20
+        },
+        "expected_risk_level": "极高压疮风险"
+      }
+    ]
+  }
+}

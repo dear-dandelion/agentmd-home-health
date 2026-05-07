@@ -1,0 +1,138 @@
+{
+  "name": "mini_cog",
+  "display_name": "Mini-Cog 认知筛查",
+  "description": "基于三词回忆和画钟试验进行认知风险筛查。",
+  "source_module": "app.calculators.extended",
+  "function_name": "calculate_mini_cog",
+  "intent_keywords": [
+    "mini-cog",
+    "mini_cog",
+    "画钟",
+    "认知筛查"
+  ],
+  "required_params": [
+    "recall_score",
+    "clock_normal"
+  ],
+  "optional_params": [],
+  "parameters": [
+    {
+      "name": "recall_score",
+      "label": "回忆得分",
+      "type": "float",
+      "required": true,
+      "min": 0,
+      "max": 3,
+      "description": "三词回忆得分"
+    },
+    {
+      "name": "clock_normal",
+      "label": "画钟是否正常",
+      "type": "str",
+      "required": true,
+      "description": "是或否"
+    }
+  ],
+  "reference": "Mini-Cog 官方评分规则。",
+  "applicable_scenario": "认知异常筛查",
+  "supports_chinese": true,
+  "clinical_specificity": 0.95,
+  "priority": {
+    "home_suitability": 0.9,
+    "clinical_importance": 0.9,
+    "implementation_simplicity": 0.85,
+    "chinese_support": 1.0
+  },
+  "documentation": {
+    "parameter_notes": "Mini-Cog 认知筛查 支持输入总分，部分量表也支持按条目分值求和。",
+    "usage_examples": [
+      {
+        "input": {
+          "recall_score": 1,
+          "clock_normal": false
+        },
+        "description": "Mini-Cog 认知筛查 示例"
+      }
+    ],
+    "reference_literature": [
+      "Mini-Cog 认知筛查 常用公开评分分层标准"
+    ],
+    "update_record": [
+      "2026-04-28：接入第一批扩展计算器运行时实现。"
+    ]
+  },
+  "validation": {
+    "unit_cases": [
+      {
+        "name": "recall3_clock_ok",
+        "input": {
+          "recall_score": 3,
+          "clock_normal": true
+        },
+        "expected": {
+          "risk_level": "低风险",
+          "score": 5
+        }
+      },
+      {
+        "name": "recall2_clock_ok",
+        "input": {
+          "recall_score": 2,
+          "clock_normal": true
+        },
+        "expected": {
+          "risk_level": "低风险",
+          "score": 4
+        }
+      },
+      {
+        "name": "recall2_clock_bad",
+        "input": {
+          "recall_score": 2,
+          "clock_normal": false
+        },
+        "expected": {
+          "risk_level": "认知异常风险",
+          "score": 2
+        }
+      },
+      {
+        "name": "recall0_clock_bad",
+        "input": {
+          "recall_score": 0,
+          "clock_normal": false
+        },
+        "expected": {
+          "risk_level": "认知异常风险",
+          "score": 0
+        }
+      }
+    ],
+    "boundary_checks": [
+      {
+        "name": "clock_changes_result",
+        "input": {
+          "recall_score": 2,
+          "clock_normal": true
+        },
+        "expected_risk_level": "低风险"
+      },
+      {
+        "name": "clock_abnormal",
+        "input": {
+          "recall_score": 2,
+          "clock_normal": false
+        },
+        "expected_risk_level": "认知异常风险"
+      },
+      {
+        "name": "zero_recall",
+        "input": {
+          "recall_score": 0,
+          "clock_normal": true
+        },
+        "expected_risk_level": "认知异常风险"
+      }
+    ]
+  }
+}

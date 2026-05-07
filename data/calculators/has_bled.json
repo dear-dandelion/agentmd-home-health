@@ -1,0 +1,252 @@
+{
+  "name": "has_bled",
+  "display_name": "HAS-BLED 出血风险评分",
+  "description": "用于抗凝相关出血风险评估。",
+  "source_module": "app.calculators.extended",
+  "function_name": "calculate_has_bled",
+  "intent_keywords": [
+    "has-bled",
+    "has_bled",
+    "出血风险",
+    "抗凝"
+  ],
+  "required_params": [
+    "age",
+    "uncontrolled_hypertension",
+    "abnormal_renal_function",
+    "abnormal_liver_function",
+    "prior_stroke",
+    "bleeding_history",
+    "labile_inr",
+    "drugs_predisposing_bleeding",
+    "alcohol_excess"
+  ],
+  "optional_params": [
+    "systolic_bp"
+  ],
+  "parameters": [
+    {
+      "name": "age",
+      "label": "年龄",
+      "type": "float",
+      "required": true,
+      "description": "受评估者年龄",
+      "min": 0,
+      "max": 120
+    },
+    {
+      "name": "uncontrolled_hypertension",
+      "label": "未控制高血压",
+      "type": "bool",
+      "required": true,
+      "description": "是否存在未控制的高血压"
+    },
+    {
+      "name": "abnormal_renal_function",
+      "label": "肾功能异常",
+      "type": "bool",
+      "required": true,
+      "description": "是否存在肾功能异常"
+    },
+    {
+      "name": "abnormal_liver_function",
+      "label": "肝功能异常",
+      "type": "bool",
+      "required": true,
+      "description": "是否存在肝功能异常"
+    },
+    {
+      "name": "prior_stroke",
+      "label": "既往卒中",
+      "type": "bool",
+      "required": true,
+      "description": "是否存在既往卒中病史"
+    },
+    {
+      "name": "bleeding_history",
+      "label": "出血史",
+      "type": "bool",
+      "required": true,
+      "description": "是否存在重要出血史"
+    },
+    {
+      "name": "labile_inr",
+      "label": "INR不稳定",
+      "type": "bool",
+      "required": true,
+      "description": "INR 是否不稳定"
+    },
+    {
+      "name": "drugs_predisposing_bleeding",
+      "label": "易出血药物",
+      "type": "bool",
+      "required": true,
+      "description": "是否联合使用增加出血风险的药物"
+    },
+    {
+      "name": "alcohol_excess",
+      "label": "过量饮酒",
+      "type": "bool",
+      "required": true,
+      "description": "是否存在过量饮酒"
+    }
+  ],
+  "reference": "HAS-BLED 常用评分标准。",
+  "applicable_scenario": "抗凝出血风险评估",
+  "supports_chinese": true,
+  "clinical_specificity": 0.98,
+  "priority": {
+    "home_suitability": 0.9,
+    "clinical_importance": 0.9,
+    "implementation_simplicity": 0.85,
+    "chinese_support": 1.0
+  },
+  "documentation": {
+    "parameter_notes": "HAS-BLED 出血风险评分 支持输入总分，部分量表也支持按条目分值求和。",
+    "usage_examples": [
+      {
+        "input": {
+          "age": 70,
+          "uncontrolled_hypertension": true,
+          "abnormal_renal_function": false,
+          "abnormal_liver_function": false,
+          "prior_stroke": true,
+          "bleeding_history": false,
+          "labile_inr": false,
+          "drugs_predisposing_bleeding": true,
+          "alcohol_excess": false
+        },
+        "description": "HAS-BLED 出血风险评分 示例"
+      }
+    ],
+    "reference_literature": [
+      "HAS-BLED 出血风险评分 常用公开评分分层标准"
+    ],
+    "update_record": [
+      "2026-04-28：接入第一批扩展计算器运行时实现。"
+    ]
+  },
+  "validation": {
+    "unit_cases": [
+      {
+        "name": "all_negative",
+        "input": {
+          "age": 50,
+          "uncontrolled_hypertension": false,
+          "abnormal_renal_function": false,
+          "abnormal_liver_function": false,
+          "prior_stroke": false,
+          "bleeding_history": false,
+          "labile_inr": false,
+          "drugs_predisposing_bleeding": false,
+          "alcohol_excess": false
+        },
+        "expected": {
+          "risk_level": "低风险",
+          "score": 0
+        }
+      },
+      {
+        "name": "moderate_case",
+        "input": {
+          "age": 70,
+          "uncontrolled_hypertension": true,
+          "abnormal_renal_function": false,
+          "abnormal_liver_function": false,
+          "prior_stroke": false,
+          "bleeding_history": false,
+          "labile_inr": false,
+          "drugs_predisposing_bleeding": false,
+          "alcohol_excess": false
+        },
+        "expected": {
+          "risk_level": "中风险",
+          "score": 2
+        }
+      },
+      {
+        "name": "high_case",
+        "input": {
+          "age": 72,
+          "uncontrolled_hypertension": true,
+          "abnormal_renal_function": true,
+          "abnormal_liver_function": false,
+          "prior_stroke": true,
+          "bleeding_history": false,
+          "labile_inr": false,
+          "drugs_predisposing_bleeding": false,
+          "alcohol_excess": false
+        },
+        "expected": {
+          "risk_level": "高风险",
+          "score": 4
+        }
+      },
+      {
+        "name": "maximal_case",
+        "input": {
+          "age": 80,
+          "uncontrolled_hypertension": true,
+          "abnormal_renal_function": true,
+          "abnormal_liver_function": true,
+          "prior_stroke": true,
+          "bleeding_history": true,
+          "labile_inr": true,
+          "drugs_predisposing_bleeding": true,
+          "alcohol_excess": true
+        },
+        "expected": {
+          "risk_level": "高风险",
+          "score": 9
+        }
+      }
+    ],
+    "boundary_checks": [
+      {
+        "name": "low_case",
+        "input": {
+          "age": 50,
+          "uncontrolled_hypertension": false,
+          "abnormal_renal_function": false,
+          "abnormal_liver_function": false,
+          "prior_stroke": false,
+          "bleeding_history": false,
+          "labile_inr": false,
+          "drugs_predisposing_bleeding": false,
+          "alcohol_excess": false
+        },
+        "expected_risk_level": "低风险"
+      },
+      {
+        "name": "medium_case",
+        "input": {
+          "age": 70,
+          "uncontrolled_hypertension": true,
+          "abnormal_renal_function": false,
+          "abnormal_liver_function": false,
+          "prior_stroke": false,
+          "bleeding_history": false,
+          "labile_inr": false,
+          "drugs_predisposing_bleeding": false,
+          "alcohol_excess": false
+        },
+        "expected_risk_level": "中风险"
+      },
+      {
+        "name": "high_case",
+        "input": {
+          "age": 72,
+          "uncontrolled_hypertension": true,
+          "abnormal_renal_function": true,
+          "abnormal_liver_function": false,
+          "prior_stroke": true,
+          "bleeding_history": false,
+          "labile_inr": false,
+          "drugs_predisposing_bleeding": false,
+          "alcohol_excess": false
+        },
+        "expected_risk_level": "高风险"
+      }
+    ]
+  }
+}

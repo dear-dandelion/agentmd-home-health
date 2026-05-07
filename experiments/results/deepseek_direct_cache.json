@@ -1,0 +1,1502 @@
+{
+  "7c462029ab44992b31ceb20971fd132a674de26a4db23175698f9c522844dd7a": {
+    "calculation_result": "3",
+    "risk_level": "高风险",
+    "numeric_reference": "AD8评分≥2提示可能存在认知障碍，建议进一步评估"
+  },
+  "6c80b48e73cda06fc43efa5699b3b3db7f4742b75820bde151411e4e70d2bc8e": {
+    "calculation_result": "3",
+    "risk_level": "高风险",
+    "numeric_reference": "AD8总分≥2提示可能存在认知障碍"
+  },
+  "497ffc46d1c924634301ce3980a28ef10411103c86bb373c4e3ef2df9b2ff979": {
+    "calculation_result": "3",
+    "risk_level": "高风险",
+    "numeric_reference": "AD8总分≥2提示可能存在认知障碍，建议进一步评估"
+  },
+  "9346c58b24a5b22287c2e70d34a58b92bc207d082428ca6757d740cfb84f3b56": {
+    "calculation_result": "3",
+    "risk_level": "高风险",
+    "numeric_reference": "AD8总分≥2提示可能存在认知障碍，建议进一步评估"
+  },
+  "bad60c9e63e4fbfc6fce0dbfd8913931ed74aba2c88c1f5ba0e3550c7ff85d62": {
+    "calculation_result": "3",
+    "risk_level": "高风险",
+    "numeric_reference": "AD8总分范围0-8，≥2分提示可能存在认知障碍"
+  },
+  "b04d40fc4e1426ce9c5f9607bd7a56684d06c11438739dd8f4a38e3af2fc34c7": {
+    "calculation_result": "3",
+    "risk_level": "高风险",
+    "numeric_reference": "AD8评分≥2提示可能存在认知障碍，建议进一步评估"
+  },
+  "4be43a806fedb18e7b31a8544c5388871d8e21b5ac5756658fba5caef2f33389": {
+    "calculation_result": "12.4",
+    "risk_level": "高危",
+    "numeric_reference": "ASCVD 10年风险：<5%低危，5%-7.4%中危，7.5%-19.9%高危，≥20%极高危"
+  },
+  "844740fe995cfd7dff365b96196c7908a1b95123199d2bb9ad11ceb4e7c2e3ee": {
+    "calculation_result": "12.4",
+    "risk_level": "中危",
+    "numeric_reference": "低危<5%，中危5%-7.5%，高危≥7.5%"
+  },
+  "1b278e8538ca0e29c91a38f31bf380d38828a52fddadd29cb387a139866c7670": {
+    "calculation_result": "12.4",
+    "risk_level": "中危",
+    "numeric_reference": "低危<5%，中危5%-7.4%，高危≥7.5%"
+  },
+  "e619e7e1805bdece9d793a85590928d77bc956e0ebe9f87e2d0ef7fac564933e": {
+    "calculation_result": "12.4%",
+    "risk_level": "中危",
+    "numeric_reference": "低危<5%，中危5%-7.5%，高危>7.5%"
+  },
+  "979a9f36ddb26f44360ec42ff55c5c46bf3702ba2c913884378c6d073c2acc30": {
+    "calculation_result": "12.4",
+    "risk_level": "高危",
+    "numeric_reference": "ASCVD 10年风险：高危（≥10%）"
+  },
+  "bb7a353325169b7974dd4ff86e65a9adb0c0bc40b823c5a7a103d6c84065a2d5": {
+    "calculation_result": "12.4%",
+    "risk_level": "高危",
+    "numeric_reference": "ASCVD 10年风险：<5%低危，5%-7.4%中危，7.5%-19.9%高危，≥20%极高危"
+  },
+  "1a296e949fb01b996baa487098e2ebf714d7f7d96d579675bf9b08a755adbcaa": {
+    "calculation_result": "65",
+    "risk_level": "中度依赖",
+    "numeric_reference": "100分：完全自理；60-99分：轻度依赖；40-59分：中度依赖；20-39分：重度依赖；<20分：完全依赖"
+  },
+  "4d937d62399e9a87a6bff39f4af6779e06ddbb64b1eb804d216d2b52da81984a": {
+    "calculation_result": "65",
+    "risk_level": "中度依赖",
+    "numeric_reference": "100分：完全自理；61-99分：轻度依赖；41-60分：中度依赖；≤40分：重度依赖"
+  },
+  "ab2b573b62d363f13d4d0012ab2903d53fdf15b4d82e320f5f365efac080deee": {
+    "calculation_result": "65",
+    "risk_level": "中度依赖",
+    "numeric_reference": "100分：完全独立；61-99分：轻度依赖；41-60分：中度依赖；≤40分：重度依赖"
+  },
+  "20ae4e91c92cc9a13e159784446d2bdca696219671fb7adfdd9ce3afec69ed9c": {
+    "calculation_result": "65",
+    "risk_level": "中度依赖",
+    "numeric_reference": "100分：完全自理；61-99分：轻度依赖；41-60分：中度依赖；≤40分：重度依赖"
+  },
+  "31a068b3346f843aa6fc6a58be0678ae22e26bcea18c11aebfae988ff3d6df4d": {
+    "calculation_result": "65",
+    "risk_level": "中度依赖",
+    "numeric_reference": "100分：完全自理；61-99分：轻度依赖；41-60分：中度依赖；≤40分：重度依赖"
+  },
+  "867142750ceefc2f38448f2d7f31675d4da34b1f644a9d73115eac3df7ad40d3": {
+    "calculation_result": "65",
+    "risk_level": "中度依赖",
+    "numeric_reference": "100分：完全独立；61-99分：轻度依赖；41-60分：中度依赖；≤40分：重度依赖"
+  },
+  "4545b2079947ae18a592596bc60404ebb0e04f8cfc0dc36ba27e3505b30357e9": {
+    "calculation_result": "收缩压128 mmHg，舒张压84 mmHg",
+    "risk_level": "正常血压",
+    "numeric_reference": "正常血压：收缩压<120且舒张压<80；正常高值：收缩压120-139或舒张压80-89；高血压：收缩压≥140或舒张压≥90"
+  },
+  "cda6050c306a8451ad7381c217c0896c63ab40db5429a56939925295b3bf63f2": {
+    "calculation_result": "128/84 mmHg",
+    "risk_level": "正常高值",
+    "numeric_reference": "收缩压<120且舒张压<80为正常；收缩压120-139或舒张压80-89为正常高值；收缩压≥140或舒张压≥90为高血压"
+  },
+  "b50aec9c2ee410a18a902e21ad8a88efe6a552152d76c70b63c656685ce14477": {
+    "calculation_result": "128/84 mmHg",
+    "risk_level": "正常高值",
+    "numeric_reference": "收缩压<120且舒张压<80为正常；收缩压120-139或舒张压80-89为正常高值；收缩压≥140或舒张压≥90为高血压"
+  },
+  "59fc32924222a4659ec19c889ad64c4e0a9b48a4fa231507950bc3dbdc364294": {
+    "calculation_result": "收缩压128 mmHg，舒张压84 mmHg",
+    "risk_level": "正常高值",
+    "numeric_reference": "收缩压120-139 mmHg或舒张压80-89 mmHg为正常高值"
+  },
+  "399053a5ec7e7ad2840d171acfa6f31a2a6daab7eac46aa0c69d48e6588f074f": {
+    "calculation_result": "收缩压128 mmHg，舒张压84 mmHg",
+    "risk_level": "正常血压",
+    "numeric_reference": "正常血压：收缩压<120且舒张压<80；正常高值：收缩压120-139和/或舒张压80-89；高血压：收缩压≥140和/或舒张压≥90"
+  },
+  "4a592cef4a12866389b160d5188d56da0543fb14b9fe929f0220fdc680b24fd9": {
+    "calculation_result": "128/84 mmHg",
+    "risk_level": "正常血压",
+    "numeric_reference": "收缩压<120且舒张压<80为正常；120-129/<80为升高；130-139或80-89为1级高血压；≥140或≥90为2级高血压"
+  },
+  "a9a5c348b313a2465639595451d6ac688034dd9ce8306382e4ccc62ee8f1d79d": {
+    "calculation_result": "22.49",
+    "risk_level": "正常",
+    "numeric_reference": "BMI < 18.5: 偏瘦; 18.5-24.9: 正常; 25-29.9: 超重; ≥30: 肥胖"
+  },
+  "9ea9de85a9258cf84d6eb6e7a2dd717921766e72d8610f74b85cda73e9c8882d": {
+    "calculation_result": "22.49",
+    "risk_level": "正常",
+    "numeric_reference": "BMI < 18.5: 偏瘦; 18.5-24.9: 正常; 25-29.9: 超重; ≥30: 肥胖"
+  },
+  "ce2b5ce4f7c831206deb7c196522bf595243e3e39b27525edcd673c55f99d620": {
+    "calculation_result": "22.49",
+    "risk_level": "正常",
+    "numeric_reference": "BMI < 18.5: 偏瘦; 18.5-24.9: 正常; 25-29.9: 超重; ≥30: 肥胖"
+  },
+  "ab97e76fdaa7c8979b309577e52929315f12f4bc48468e99d788cb155148154b": {
+    "calculation_result": "22.49",
+    "risk_level": "正常",
+    "numeric_reference": "BMI < 18.5: 偏瘦; 18.5-24.9: 正常; 25-29.9: 超重; ≥30: 肥胖"
+  },
+  "b4e8d7b76d15feff8b7dc29ff5f25c6f9b90fe123bff3ae997c03c1f6e20f268": {
+    "calculation_result": "22.49",
+    "risk_level": "正常",
+    "numeric_reference": "BMI < 18.5: 偏瘦; 18.5-24.9: 正常; 25-29.9: 超重; ≥30: 肥胖"
+  },
+  "fc165aa904912efa34c8c771a5bac599f920597531857fd218afe0e2139970a8": {
+    "calculation_result": "22.49",
+    "risk_level": "正常",
+    "numeric_reference": "BMI < 18.5: 偏瘦; 18.5-24.9: 正常; 25-29.9: 超重; ≥30: 肥胖"
+  },
+  "8ec3009c722c7c2f1b79cf893bb7dc8da0632fea5beabb10ab174816db6e2dfe": {
+    "calculation_result": "1",
+    "risk_level": "低风险",
+    "numeric_reference": "体温37.3-38.0℃为低热，计1分"
+  },
+  "43d303ba93f4acd3b94fca707a00079984595af77f3022e05acdb0bff6f9c639": {
+    "calculation_result": "37.8°C",
+    "risk_level": "低热",
+    "numeric_reference": "正常: 36.0-37.2°C; 低热: 37.3-38.0°C; 中等度热: 38.1-39.0°C; 高热: 39.1-41.0°C; 超高热: >41.0°C"
+  },
+  "970a640b5b8fdc002b8f9e506fa66cec5531db78e90fa067047c2549d00469f7": {
+    "calculation_result": "37.8°C",
+    "risk_level": "低热",
+    "numeric_reference": "正常: 36.0-37.2°C; 低热: 37.3-38.0°C; 中等度热: 38.1-39.0°C; 高热: 39.1-41.0°C; 超高热: >41.0°C"
+  },
+  "b415a4e5892e3d56def13074f86d2018ea75c25a66bc5e140829edee5708d6df": {
+    "calculation_result": "37.8",
+    "risk_level": "低热",
+    "numeric_reference": "正常体温: 36.0-37.2°C; 低热: 37.3-38.0°C; 中等度热: 38.1-39.0°C; 高热: 39.1-41.0°C; 超高热: >41.0°C"
+  },
+  "cdb5c8ba1429bc4e11cc15c41c9c4137eedd74249060e7d1baa28aa9846ba7ec": {
+    "calculation_result": "1",
+    "risk_level": "低风险",
+    "numeric_reference": "体温37.3-38.0℃为低热，计1分"
+  },
+  "b14ed3967e090671a388f78f2a5a28ffcf2cb8801ef3761be7a8b22219d98f83": {
+    "calculation_result": "37.8",
+    "risk_level": "低热",
+    "numeric_reference": "正常体温: 36.0-37.2°C; 低热: 37.3-38.0°C; 中等热: 38.1-39.0°C; 高热: 39.1-41.0°C"
+  },
+  "635d998cfc3d4d94e2675e5dfaedd7c3945921ee917b5567df99a11c9d7be2ad": {
+    "calculation_result": "12",
+    "risk_level": "中度风险",
+    "numeric_reference": "15-18: 轻度风险; 13-14: 中度风险; 10-12: 高度风险; ≤9: 极度风险"
+  },
+  "b213bb6eaee98d82f55f310ae82b9614b798a333caf81568abf3bea4b89e5903": {
+    "calculation_result": "12",
+    "risk_level": "中度风险",
+    "numeric_reference": "15-18: 轻度风险; 13-14: 中度风险; ≤12: 高度风险"
+  },
+  "4036c8dc0f7904ca9a72b9f6fde46548a740f7bede44ca27b33413a9d92b8cb5": {
+    "calculation_result": "12",
+    "risk_level": "中度风险",
+    "numeric_reference": "15-18: 轻度风险; 13-14: 中度风险; 10-12: 高度风险; ≤9: 极度风险"
+  },
+  "7ecf58f8de556accc6dba382f647390206510bb7d5c92a8890d0636a2593c0cf": {
+    "calculation_result": "12",
+    "risk_level": "中度风险",
+    "numeric_reference": "15-18 轻度风险；13-14 中度风险；≤12 高度风险"
+  },
+  "31a0d52af0d21e3608e6ab7fc773b3ef66578b1909b159297e971834e6f56b3c": {
+    "calculation_result": "12",
+    "risk_level": "中度风险",
+    "numeric_reference": "15-18: 轻度风险; 13-14: 中度风险; ≤12: 高度风险"
+  },
+  "feead55c3fcef3a879f7276b8157a362fccd4c720740e0cc251387c4792e5953": {
+    "calculation_result": "12",
+    "risk_level": "中度风险",
+    "numeric_reference": "15-18: 轻度风险; 13-14: 中度风险; ≤12: 高度风险"
+  },
+  "648844ba8796fe1c1d4869133180b2dbd55ad765e4f79ae17659c820e15faaf9": {
+    "calculation_result": "6",
+    "risk_level": "高风险",
+    "numeric_reference": "0-1:低风险; 2:中风险; 3-4:高风险; ≥5:极高风险"
+  },
+  "5e9d88af29e688b48edaf025fbe1092f6ea85ad41cab4439e9a1944db954b106": {
+    "calculation_result": "6",
+    "risk_level": "高风险",
+    "numeric_reference": "Caprini评分：0-1分低危，2分中危，3-4分高危，≥5分极高危"
+  },
+  "f1484fdb509caa5c7d8f0f0b66220ebf2881ad43869a67c1a13822c957aaba47": {
+    "calculation_result": "6",
+    "risk_level": "高风险",
+    "numeric_reference": "0-1:低风险; 2:中风险; 3-4:高风险; >=5:极高风险"
+  },
+  "c659ce4a4f850019f856a581631ad8b981428454943f13bd6d27ae329675d1a3": {
+    "calculation_result": "6",
+    "risk_level": "高风险",
+    "numeric_reference": "0-1:低风险; 2:中风险; 3-4:高风险; >=5:极高风险"
+  },
+  "f5c611a04e49b51d5582ebfecb371caa798f0c3b125fb1faa4ec3c8f7603e55c": {
+    "calculation_result": "6",
+    "risk_level": "高风险",
+    "numeric_reference": "Caprini评分：0-1分低危，2分中危，3-4分高危，≥5分极高危"
+  },
+  "bae871001277f2520c8494db42b56220640c031b002ebdb69ae32f877d4be9c9": {
+    "calculation_result": "6",
+    "risk_level": "高风险",
+    "numeric_reference": "Caprini评分：0-1分低危，2分中危，3-4分高危，≥5分极高危"
+  },
+  "b6418c285e0b8ce25195649065d8acb8525e9a361d8df96337a8f7190a2ce1c9": {
+    "calculation_result": "18",
+    "risk_level": "高",
+    "numeric_reference": "CAT评分：0-10低风险，11-20中风险，21-40高风险"
+  },
+  "e7b581d290bddb0b15186d51660df302cf5f051888a27feb81ccbbe0daa4305c": {
+    "calculation_result": "18",
+    "risk_level": "高",
+    "numeric_reference": "0-7:低风险; 8-15:中风险; 16-20:高风险"
+  },
+  "83a04394c7d7580a4b04633b88b6648a2723c625a8cbddde2d9102a60b9dd1a6": {
+    "calculation_result": "18",
+    "risk_level": "高",
+    "numeric_reference": "0-6:低风险; 7-12:中风险; 13-18:高风险"
+  },
+  "869174ec20602c9858eb9ed7e86c14b72331a00d2e47aef1539f029135ebbe1b": {
+    "calculation_result": "18",
+    "risk_level": "高风险",
+    "numeric_reference": "0-6:低风险; 7-12:中风险; 13-18:高风险"
+  },
+  "422b82bb3febea24747c88efbf9f6507a4b22125ad75822e6b5bc02c6f0853e2": {
+    "calculation_result": "18",
+    "risk_level": "中风险",
+    "numeric_reference": "0-6:低风险; 7-12:中风险; 13-18:高风险"
+  },
+  "bf9cb79918db16b5862241f8d9093086866f4c707d1a8d6c00cc9cc5cc1940a5": {
+    "calculation_result": "18",
+    "risk_level": "高",
+    "numeric_reference": "0-6:低; 7-12:中; 13-18:高"
+  },
+  "1438761556e64f34d3917e6b34ed721ed2b0139b1ba6d38591f5598dc4d9d2e2": {
+    "calculation_result": "2",
+    "risk_level": "中风险",
+    "numeric_reference": "CDRS评分范围0-10，≥2分提示中风险"
+  },
+  "c405a1389e7ceafd3eb9c1cc46180cd7cb9dee0a22dc2f0405fdd1acf87db5fd": {
+    "calculation_result": "4",
+    "risk_level": "中风险",
+    "numeric_reference": "CDRS评分范围0-10，≥3分为中风险，≥5分为高风险"
+  },
+  "9dc7a6af9353c2b74bf91aeff8db540b566cdbbf13a731f833d0cf799ddceb74": {
+    "calculation_result": "4",
+    "risk_level": "中风险",
+    "numeric_reference": "CDRS评分：0-2低风险，3-5中风险，6-8高风险"
+  },
+  "a272d0c04b408e64edcdcfe3853dadc373c11fd5904986850b3f4c64af9b0246": {
+    "calculation_result": "4",
+    "risk_level": "中风险",
+    "numeric_reference": "CDRS评分：0-2低风险，3-4中风险，5-6高风险"
+  },
+  "3c39326a4d4fac7e1b10067e8b2b4113574f31879afebdfd1b2d784ada066861": {
+    "calculation_result": "5",
+    "risk_level": "中风险",
+    "numeric_reference": "CDRS评分：0-2低风险，3-5中风险，6-8高风险"
+  },
+  "a4b6414da2b0325cbed24fb8bd070b0955d2c6c56f43b7b07aecdff7cce399fb": {
+    "calculation_result": "3",
+    "risk_level": "中风险",
+    "numeric_reference": "0-2低风险，3-4中风险，5-6高风险"
+  },
+  "e1277d441389b687066811c61fff6bc556b01da875958e32961070cc5673b156": {
+    "calculation_result": "4",
+    "risk_level": "高危",
+    "numeric_reference": "CHA2DS2-VASc评分：0-1分低危，2-3分中危，≥4分高危"
+  },
+  "b0737652bae27c7b1247679a66498fa48869b59ef6dcf60d005c1f25d9d4bf75": {
+    "calculation_result": "4",
+    "risk_level": "高危",
+    "numeric_reference": "CHA2DS2-VASc评分：0-1分低危，2-3分中危，≥4分高危"
+  },
+  "82abeccf802913a9341060cb467a27a1c2c39e80ccdb1cda057745dc47f91de5": {
+    "calculation_result": "4",
+    "risk_level": "高危",
+    "numeric_reference": "CHA2DS2-VASc评分：0-1分低危，2-3分中危，≥4分高危"
+  },
+  "15ef0d4ba733ec8ce5758bfeb75b85a00f4f4e980e0b3781bbe5df746025fb76": {
+    "calculation_result": "4",
+    "risk_level": "高危",
+    "numeric_reference": "CHA2DS2-VASc评分：0-1分低危，2-3分中危，≥4分高危"
+  },
+  "a90853032c789492766aefe59acf8380a0232fe9598233489ea4c7be34644760": {
+    "calculation_result": "4",
+    "risk_level": "高危",
+    "numeric_reference": "CHA2DS2-VASc评分：0-1分低危，2-3分中危，≥4分高危"
+  },
+  "1a206e00b9005df93f348bdb1c81d1a05cdaa0b91f7501d8bd9d6c2e32a47b98": {
+    "calculation_result": "4",
+    "risk_level": "高危",
+    "numeric_reference": "CHA2DS2-VASc评分：0-1分为低危，2-3分为中危，≥4分为高危"
+  },
+  "a23d8a8c0930bb0b4c246c6c02092d3ec23facbc6247f3c2c73b7ed22514ab06": {
+    "calculation_result": "3",
+    "risk_level": "Moderate",
+    "numeric_reference": "CHADS2 score: 0-1 low, 2-3 moderate, 4-6 high"
+  },
+  "6b3984a37df969f3f7064810b554173523272725655774633bd4f169be9964d9": {
+    "calculation_result": "3",
+    "risk_level": "Moderate",
+    "numeric_reference": "CHADS2 score: 0-1 low, 2-3 moderate, 4-6 high"
+  },
+  "e4d8c8c45afcbb6dbd5d26dfca217b77bf373b0f8e36ae1378dffef71e2a26b0": {
+    "calculation_result": "3",
+    "risk_level": "Moderate",
+    "numeric_reference": "CHADS2 score: 0-1 low, 2-3 moderate, 4-6 high"
+  },
+  "a692a6958fc6b24493d7e11ec7ebfe5d565c4e25647fdfd54d13c1c3bdf5ac98": {
+    "calculation_result": "3",
+    "risk_level": "中风险",
+    "numeric_reference": "CHADS2评分：0-1低风险，2-3中风险，≥4高风险"
+  },
+  "2ea84ae0a972506afaed174d01b596b7c1b1b903b50a7b2a5b4d2e3fd5fa342b": {
+    "calculation_result": "3",
+    "risk_level": "中风险",
+    "numeric_reference": "CHADS2评分：0-1低风险，2-3中风险，4-6高风险"
+  },
+  "fa649e9c6cd9ce73de1dccbb22d3395919c029efd2cc1fcff6ee602a3b00908d": {
+    "calculation_result": "3",
+    "risk_level": "中风险",
+    "numeric_reference": "CHADS2评分：0-1低风险，2-3中风险，≥4高风险"
+  },
+  "f0e4467a476337e704945ae91cdc4e7f6ce63d4b6e8575f58a7225bbee3b574a": {
+    "calculation_result": "5",
+    "risk_level": "高",
+    "numeric_reference": "0-1:低; 2-3:中; >=4:高"
+  },
+  "aa299c5dbdd944a94fc21078f1498788bee936da10a1e2343d6b2cfe3edbab1e": {
+    "calculation_result": "5",
+    "risk_level": "高",
+    "numeric_reference": "0-1:低; 2-3:中; ≥4:高"
+  },
+  "52e03d0c764f50d01accff1d237682215c1bd9fad4af0bab85a5ecf61532b480": {
+    "calculation_result": "5",
+    "risk_level": "高",
+    "numeric_reference": "Charlson合并症指数：0-1分低风险，2-3分中风险，≥4分高风险"
+  },
+  "4a546cff2a2547b7367c36a996a56715b69e23c238b66c4c6248af851d44057e": {
+    "calculation_result": "5",
+    "risk_level": "高",
+    "numeric_reference": "Charlson合并症指数：0-1分低风险，2-3分中风险，≥4分高风险"
+  },
+  "aaf7cfcc4d722081afb44390f95e11f373ede1182924be61be33663be62a6777": {
+    "calculation_result": "5",
+    "risk_level": "高",
+    "numeric_reference": "Charlson合并症指数评分：0-1低风险，2-3中风险，≥4高风险"
+  },
+  "c18f66672f5b5aa23416f25e509ba3bd19ecb34db29dbbe72b82879bce36aee2": {
+    "calculation_result": "5",
+    "risk_level": "高",
+    "numeric_reference": "0-1:低, 2-3:中, ≥4:高"
+  },
+  "a8caddd3f293264c27a1194161c3408f423879d98350a5c9492aa10b4595f0cd": {
+    "calculation_result": "高风险",
+    "risk_level": "高风险",
+    "numeric_reference": "年龄≥65岁且步态不稳为高风险"
+  },
+  "a31b0438852e868000686efb288d860bb2e7d05d97b2928bb696cabf73929cf3": {
+    "calculation_result": "高风险",
+    "risk_level": "高风险",
+    "numeric_reference": "年龄≥65岁且步态不稳为跌倒高风险"
+  },
+  "0c033ee68d35da4d8c5510fe195c0ed83d191e658eb4f80f980ef4bd0b2e1e02": {
+    "calculation_result": "高风险",
+    "risk_level": "高风险",
+    "numeric_reference": "年龄≥65岁且步态不稳为高风险因素"
+  },
+  "2042b5abcacd3255b85e1123cedb6d91694a3c93cbabc6d7aabab93e96131ecb": {
+    "calculation_result": "高风险",
+    "risk_level": "高",
+    "numeric_reference": "年龄≥65岁且步态不稳为跌倒高风险"
+  },
+  "9cd2a6478e09520aa5e1a6400e84228108e235a887d284439f59f3f03718e613": {
+    "calculation_result": "3",
+    "risk_level": "高风险",
+    "numeric_reference": "年龄≥65岁(1分)+步态不稳(2分)=3分，≥3分为高风险"
+  },
+  "d900d05270b617e72a17967e085f1563f43f0b486b62e514dae3a40dc612ef0e": {
+    "calculation_result": "高风险",
+    "risk_level": "高",
+    "numeric_reference": "年龄≥65岁且步态不稳为高风险"
+  },
+  "b869d7ffe178cb11aaac0afbea268dcf765181cfd0b7627d9c7164cec939a0a3": {
+    "calculation_result": "5.4",
+    "risk_level": "正常",
+    "numeric_reference": "正常：<6.1 mmol/L；空腹血糖受损：6.1-7.0 mmol/L；糖尿病：≥7.0 mmol/L"
+  },
+  "285ec6ced0618f53162fd2cf1389a98db7ee3265bc4541ef704d814a4e0fc283": {
+    "calculation_result": "5.4 mmol/L",
+    "risk_level": "正常",
+    "numeric_reference": "空腹血糖正常范围: 3.9-6.1 mmol/L"
+  },
+  "b6d1c97e1d080875c4d836115fe3b935964e3b4b5666966e4625fa9c60fb9a17": {
+    "calculation_result": "5.4",
+    "risk_level": "正常",
+    "numeric_reference": "空腹血糖正常范围: 3.9-6.1 mmol/L"
+  },
+  "319a5c39b5e4826eb0b28742a7aba1816181e3cac12647176a417cdd6cb64bee": {
+    "calculation_result": "5.4 mmol/L",
+    "risk_level": "正常",
+    "numeric_reference": "正常空腹血糖: 3.9-6.1 mmol/L"
+  },
+  "e1e086464cebaccf2cce52bea00aefe3a62ed8d27bc8f55cd87735a636727251": {
+    "calculation_result": "5.4",
+    "risk_level": "正常",
+    "numeric_reference": "正常: <6.1 mmol/L; 空腹血糖受损: 6.1-7.0 mmol/L; 糖尿病: ≥7.0 mmol/L"
+  },
+  "f86f1f3e41e585136468d9b39e1d463f2ffcc5a1c032e1fa9e8ac6b255f176b7": {
+    "calculation_result": "5.4",
+    "risk_level": "正常",
+    "numeric_reference": "空腹血糖正常范围: 3.9-6.1 mmol/L"
+  },
+  "17ba539b0f7b7982f5110ebc6b906e7a45a72fd2421e2ccac148002c25d5b067": {
+    "calculation_result": "16",
+    "risk_level": "高风险",
+    "numeric_reference": "0-6:低风险; 7-11:轻度风险; 12-14:中度风险; 15-20:高风险; >20:极高风险"
+  },
+  "8084a3db4002fb0bc5629fb4461d6cb026dc9ad8986632d2328c4b108c522131": {
+    "calculation_result": "16",
+    "risk_level": "高风险",
+    "numeric_reference": "FINDRISC评分：0-6低风险，7-11中度风险，12-14高风险，15-20极高风险"
+  },
+  "6fd97a25301c1bb327572b50a50fdadfb35310b2549341d188e85fdebdbea004": {
+    "calculation_result": "16",
+    "risk_level": "高风险",
+    "numeric_reference": "0-14: 低风险; 15-20: 高风险; >20: 极高风险"
+  },
+  "18f9b07473157d3bc67c5d1127f30a6c4b15fc8c6f065105c85c636cca4351a5": {
+    "calculation_result": "17",
+    "risk_level": "高风险",
+    "numeric_reference": "0-14: 低风险; 15-20: 高风险; >20: 极高风险"
+  },
+  "d82747a27c42c7baffc32a39da20d0127c31bd4f65a12cea093a423a17adb647": {
+    "calculation_result": "17",
+    "risk_level": "高风险",
+    "numeric_reference": "0-14: 低风险; 15-20: 中风险; >20: 高风险"
+  },
+  "44aae8dd409962322062a77649ce763d30bd946be9fd728e6c32dd0d211a592b": {
+    "calculation_result": "17",
+    "risk_level": "高风险",
+    "numeric_reference": "0-14: 低风险; 15-20: 中风险; >20: 高风险"
+  },
+  "db2cc54a65485bd165d67acd86bd34e44691c1fef5ee4e075eabe36d830bc000": {
+    "calculation_result": "3",
+    "risk_level": "Frail",
+    "numeric_reference": "0-1: Robust, 2-3: Pre-frail, 4-5: Frail"
+  },
+  "2c123376b9dca6f623a5864e4692411d35bb4c8110560478ccb4c8b2a1ad7d67": {
+    "calculation_result": "3",
+    "risk_level": "Frail",
+    "numeric_reference": "0-1: Robust, 2-3: Pre-frail, 4-5: Frail"
+  },
+  "22b9d79f2b06b471fa014e691a151277fb36c35a1b2f6b98cb13faf65508eb18": {
+    "calculation_result": "3",
+    "risk_level": "Frail",
+    "numeric_reference": "0-1: Robust, 2-3: Pre-frail, 4-5: Frail"
+  },
+  "64403439a670105d62d1e88614ae9b1e54a4522b3c758cb5e251f55fe5cdec9c": {
+    "calculation_result": "3",
+    "risk_level": "Frail",
+    "numeric_reference": "0-1: Robust; 2-3: Pre-frail; 4-5: Frail"
+  },
+  "6694c0ed70876bf537f2527d50f6dcc65caf67d22f1f7c1b4c519e5d60c351ab": {
+    "calculation_result": "3",
+    "risk_level": "frail",
+    "numeric_reference": "0-2: robust, 3-4: prefrail, 5-8: frail"
+  },
+  "a7ba1caeebda691f0c43a925af1771253aa35ad23da9a5315089b0761ad97df3": {
+    "calculation_result": "3",
+    "risk_level": "中等风险",
+    "numeric_reference": "0-2: 低风险; 3-4: 中等风险; 5-6: 高风险"
+  },
+  "24a132cd316948aef69fc0cfc746cf0595bc74e8aaa40526985ca7eca65f872c": {
+    "calculation_result": "10",
+    "risk_level": "中度焦虑",
+    "numeric_reference": "0-4: 无焦虑; 5-9: 轻度焦虑; 10-14: 中度焦虑; 15-21: 重度焦虑"
+  },
+  "3fd5ad7021d65d75271deb6df48981bfac6fe2731f292abd5125d6423b0e4651": {
+    "calculation_result": "10",
+    "risk_level": "中度焦虑",
+    "numeric_reference": "0-4: 无焦虑; 5-9: 轻度焦虑; 10-14: 中度焦虑; 15-21: 重度焦虑"
+  },
+  "e4f1f33e582df735396ff116e13c3bace89aae1c44dd92dbeac3d9117d5b8aac": {
+    "calculation_result": "10",
+    "risk_level": "中度焦虑",
+    "numeric_reference": "0-4: 无焦虑; 5-9: 轻度焦虑; 10-14: 中度焦虑; 15-21: 重度焦虑"
+  },
+  "07eb7da77cc3d8b024e2bcca70bfe1d9c37e297735fc1ee9c4bee63734ed0d18": {
+    "calculation_result": "10",
+    "risk_level": "中度焦虑",
+    "numeric_reference": "0-4: 无焦虑; 5-9: 轻度焦虑; 10-14: 中度焦虑; 15-21: 重度焦虑"
+  },
+  "7cdbbc1d85f819af3c8d10af31f7dbf94ed952178aa1aa68a9a17e5d13cfbd7c": {
+    "calculation_result": "10",
+    "risk_level": "中度焦虑",
+    "numeric_reference": "0-4: 无焦虑; 5-9: 轻度焦虑; 10-14: 中度焦虑; 15-21: 重度焦虑"
+  },
+  "0d0203ebe16af3b46fc03400090b9691da146cdde95347b03bf3901112438604": {
+    "calculation_result": "10",
+    "risk_level": "中度焦虑",
+    "numeric_reference": "0-4: 无焦虑; 5-9: 轻度焦虑; 10-14: 中度焦虑; 15-21: 重度焦虑"
+  },
+  "e245d0f1c0ae7e02ea154fe271a7f86fd5b989b104638d3927862bddfa01d8a5": {
+    "calculation_result": "10",
+    "risk_level": "中度抑郁",
+    "numeric_reference": "0-4:正常; 5-8:轻度; 9-11:中度; 12-15:重度"
+  },
+  "50b0d7c175beccbf272ec1f1ca590d44aa7d2f90b52cd45e71151f5807eaefbb": {
+    "calculation_result": "10",
+    "risk_level": "中度抑郁",
+    "numeric_reference": "0-4: 正常; 5-9: 轻度; 10-14: 中度; 15-19: 中重度; 20-30: 重度"
+  },
+  "7f77994cad1312776c573ab271a53ffb66f800ca859bf06b3e60980a6599ccd7": {
+    "calculation_result": "10",
+    "risk_level": "高",
+    "numeric_reference": "0-4: 低风险; 5-9: 中风险; 10-15: 高风险"
+  },
+  "5ffa76bc01174849c57fd999eedf537d7e934de85bd39d1fa5111aa901bae935": {
+    "calculation_result": "10",
+    "risk_level": "高",
+    "numeric_reference": "0-4: 低风险; 5-9: 中风险; 10-15: 高风险"
+  },
+  "f3a0fb3af7276de064b55a522677c94e9568673986ce5bb7d806b8b4f2f5a6b6": {
+    "calculation_result": "10",
+    "risk_level": "高",
+    "numeric_reference": "0-4:低风险; 5-9:中风险; 10-15:高风险"
+  },
+  "212d8749dc5cc2f97116a0dbd7dbb4139bdfe0ee1211f38b1d172e82261ed3bd": {
+    "calculation_result": "10",
+    "risk_level": "高",
+    "numeric_reference": "0-4:低风险; 5-9:中风险; 10-15:高风险"
+  },
+  "f14a25c5041f2d51b7f70fbece630040bd63778bf68027d55b24a13a39dd8a57": {
+    "calculation_result": "7",
+    "risk_level": "重度",
+    "numeric_reference": "GCS评分：3-8分为重度，9-12分为中度，13-15分为轻度"
+  },
+  "9d6072a9b4761a10e974f1e548708e5cb35ce033349727670c1b7237ed4aac5f": {
+    "calculation_result": "7",
+    "risk_level": "重度意识障碍",
+    "numeric_reference": "GCS评分范围3-15，重度：≤8，中度：9-12，轻度：13-15"
+  },
+  "dbca8bb8e796f199cd3b80d6e3a876e8d47c06e4e89777a5d274c86cf67ce5c5": {
+    "calculation_result": "7",
+    "risk_level": "重度",
+    "numeric_reference": "GCS评分：3-8分为重度，9-12分为中度，13-15分为轻度"
+  },
+  "9fa963d8ebf3dd6628eddedf5784de50e18dc307375b48ea2b6799fb416478ef": {
+    "calculation_result": "7",
+    "risk_level": "重度意识障碍",
+    "numeric_reference": "GCS评分：3-8分为重度，9-12分为中度，13-15分为轻度"
+  },
+  "8f04bf17310bbdf570f7f09c63ba661f29dc03df8a17cbceb843053f90104310": {
+    "calculation_result": "7",
+    "risk_level": "重度昏迷",
+    "numeric_reference": "GCS评分范围3-15，8分及以下为重度昏迷"
+  },
+  "2dd354c7e7004fe47dff1a05daf3650233e1aa0abbe63671872b8c285e715892": {
+    "calculation_result": "7",
+    "risk_level": "重度损伤",
+    "numeric_reference": "GCS 3-8: 重度; 9-12: 中度; 13-15: 轻度"
+  },
+  "f334ed9777869a221b1c96a9387bd35af3a80b97ebc51b5c940fc3edd2c553c4": {
+    "calculation_result": "150",
+    "risk_level": "高危",
+    "numeric_reference": "GRACE评分：≤108低危，109-140中危，>140高危"
+  },
+  "193d6efd93a33e8e49199d3a6dda5886a1f408f7609fe562e2b0702e7219516e": {
+    "calculation_result": "150",
+    "risk_level": "高",
+    "numeric_reference": "GRACE评分：≤108低危，109-140中危，>140高危"
+  },
+  "b666b8e4bd179236adccc9340542ecbd49f61a0ae72590a18edd0a647d7bd80c": {
+    "calculation_result": "150",
+    "risk_level": "高危",
+    "numeric_reference": "GRACE评分：≤108低危，109-140中危，>140高危"
+  },
+  "2d22b0802102d93fdf428ae0c770356827c69620ceca431e70c307bce2bd3d76": {
+    "calculation_result": "150",
+    "risk_level": "高危",
+    "numeric_reference": "GRACE评分：≤108低危，109-140中危，>140高危"
+  },
+  "98d70c75a9bd4c04c419b838b3a01525b1b444f320cad80edfb3c0c0864bcd11": {
+    "calculation_result": "150",
+    "risk_level": "高风险",
+    "numeric_reference": "GRACE评分：≤108低危，109-140中危，>140高危"
+  },
+  "3fbd6639b2a551d2337c400b3e69315fa3a559120c7f9c8d0bdae67b5e76b5fe": {
+    "calculation_result": "150",
+    "risk_level": "高危",
+    "numeric_reference": "GRACE评分：≤108低危，109-140中危，>140高危"
+  },
+  "09d27b60db72f0233a14e734a8b7b0cef936ca8bd9a87108d28e09482c731620": {
+    "calculation_result": "8",
+    "risk_level": "high",
+    "numeric_reference": "H2FPEF score: 0-1 low, 2-5 intermediate, 6-9 high"
+  },
+  "4c83aa29f973e343591e52464d6f1badc045ffd2d1871650ec766b2b81ff99d5": {
+    "calculation_result": "8",
+    "risk_level": "high",
+    "numeric_reference": "H2FPEF score: 0-3 low, 4-6 intermediate, 7-9 high"
+  },
+  "ad76a755423a69678a05512c13eefa83b581ea50245d0b57556a5b54661c5224": {
+    "calculation_result": "8",
+    "risk_level": "high",
+    "numeric_reference": "H2FPEF score: 0-1 low, 2-5 intermediate, 6-9 high"
+  },
+  "5f5c57e4b2588ae011d605ee2959f99c07db62c4b92eabcec7864cfdd0ae68da": {
+    "calculation_result": "0.56",
+    "risk_level": "High",
+    "numeric_reference": "H2FPEF score: 0-1 low, 2-5 intermediate, 6-9 high"
+  },
+  "ab7111f9e455d85b13e89e99c0513115d1accd7bbbe9913a8cff7e3a48c02663": {
+    "calculation_result": "6",
+    "risk_level": "High",
+    "numeric_reference": "H2FPEF score: 0-1 low, 2-5 intermediate, 6-9 high"
+  },
+  "9e56b92df660812ace018e91b650370d4d84a3efb704fbf642615b24536bfeeb": {
+    "calculation_result": "5",
+    "risk_level": "High",
+    "numeric_reference": "H2FPEF score: 0-1 low, 2-4 intermediate, 5-9 high"
+  },
+  "76504fa030f237f1cc7188538b349dfebf4fb5036253e11ca0e932f725ed9b65": {
+    "calculation_result": "3",
+    "risk_level": "高",
+    "numeric_reference": "0-2低风险，3-4中风险，≥5高风险"
+  },
+  "cb2c1eb7ac09d5b705a3625c8521bdd0bc20b06e797f184142f1070cbe4ebfb7": {
+    "calculation_result": "3",
+    "risk_level": "high",
+    "numeric_reference": "0-2: low, 3: moderate, >=4: high"
+  },
+  "bf83cd9a6f431bb7080ba6c69fa62316d4270d395ff9833cafcfb6f5e90b96e6": {
+    "calculation_result": "4",
+    "risk_level": "high",
+    "numeric_reference": "0-2: low, 3: moderate, >=4: high"
+  },
+  "6a4bfb01b31f97103effb5fb746f9eb3d7aca705ecd27a2c4449b30df6f3c947": {
+    "calculation_result": "3",
+    "risk_level": "high",
+    "numeric_reference": "0-2 low risk, 3-4 moderate risk, >=5 high risk"
+  },
+  "f762a20501fed3b6e61e727c0a1d0ad5dec77207ce22f1517c0249ff641d676a": {
+    "calculation_result": "3",
+    "risk_level": "high",
+    "numeric_reference": "0-2: low, 3: moderate, >=4: high"
+  },
+  "8bcc10f7e78d46e200307a17483c65e792d78738063e0b736a9020e65c0418a9": {
+    "calculation_result": "4",
+    "risk_level": "高",
+    "numeric_reference": "≥3分为高出血风险"
+  },
+  "14b1efff24b587796ce14c0b88e9e9bfcd3f69128f8858851a395f2c8255ebfd": {
+    "calculation_result": "7",
+    "risk_level": "高危",
+    "numeric_reference": "0-3:低危, 4-6:中危, 7-14:高危"
+  },
+  "dec51c68094e324fa9d0059f3edd75f46ceecd160b0f890cc0af54236da877ae": {
+    "calculation_result": "7",
+    "risk_level": "高",
+    "numeric_reference": "0-3: 低危; 4-6: 中危; >=7: 高危"
+  },
+  "db085c39feb1595b161fd3fbf863d48e526df307378bedbb11c3162beb8cd8d3": {
+    "calculation_result": "7",
+    "risk_level": "高",
+    "numeric_reference": "0-3:低危, 4-6:中危, 7-14:高危"
+  },
+  "c0e77c05d254df21a39e514f324d7194a4045bb7c3fe94ffd603703156b23379": {
+    "calculation_result": "7",
+    "risk_level": "高风险",
+    "numeric_reference": "0-3: 低风险, 4-6: 中风险, 7-10: 高风险"
+  },
+  "7d2d66f27be5a681d75aa2610e8f90ff65816a3fafa733dffd0f5f547b1f4cef": {
+    "calculation_result": "7",
+    "risk_level": "高风险",
+    "numeric_reference": "0-3:低风险; 4-6:中风险; >=7:高风险"
+  },
+  "77fdd1675cf13de1cffb62a4cd4b73d20419066dd8fa32f18a9d5e9aa068fdb2": {
+    "calculation_result": "7",
+    "risk_level": "高",
+    "numeric_reference": "0-3:低危; 4-6:中危; >=7:高危"
+  },
+  "9e2919a77b9410bf1a3a4609349d692db26c079e7bbca3fa86daeb62bcfa4cfe": {
+    "calculation_result": "60",
+    "risk_level": "中度依赖",
+    "numeric_reference": "100:正常; 80-90:独立; 60-70:中度依赖; 40-50:重度依赖; <40:极重度依赖"
+  },
+  "236d93f709173de293307c4a0fbf825914c60ccb71ad069be997c420e4f20acc": {
+    "calculation_result": "60",
+    "risk_level": "中等",
+    "numeric_reference": "Karnofsky评分: 100=正常, 90=能正常活动, 80=正常活动有症状, 70=能自理但不能正常活动, 60=需要偶尔帮助, 50=需要较多帮助, 40=残疾, 30=严重残疾, 20=病重, 10=濒死, 0=死亡"
+  },
+  "0eec0c20f78e2018c2e1468a44e2bea3d09a368febaf3378f7508d36eb828e8c": {
+    "calculation_result": "60",
+    "risk_level": "中等",
+    "numeric_reference": "Karnofsky评分: 100=正常, 90=能正常活动, 80=正常活动有症状, 70=能自理但不能正常活动, 60=需要偶尔帮助, 50=需要较多帮助, 40=残疾, 30=严重残疾, 20=病重, 10=濒死, 0=死亡"
+  },
+  "80c91603db673bafe4a138ef9d25992cfc64a6e32f36d8e841e53d3099215526": {
+    "calculation_result": "60",
+    "risk_level": "中等",
+    "numeric_reference": "Karnofsky评分：100-正常，90-能正常活动，80-正常活动有症状，70-能自理但不能正常活动，60-需要偶尔帮助，50-需要较多帮助，40-残疾，30-严重残疾，20-病重，10-濒死，0-死亡"
+  },
+  "aa0db3704bf9e3dd59fd6e3fc8c5cb9c844355845299a5c3405c572965819528": {
+    "calculation_result": "60",
+    "risk_level": "中等",
+    "numeric_reference": "Karnofsky评分：100-正常，90-能正常活动，80-正常活动有症状，70-能自理但不能正常活动，60-需要偶尔帮助，50-需要较多帮助，40-残疾，30-严重残疾，20-病重，10-濒死，0-死亡"
+  },
+  "8486a4c37e136e46d69e63e22590026493e1daa0cd39f1e5eace3aa42be6e8f3": {
+    "calculation_result": "60",
+    "risk_level": "中等风险",
+    "numeric_reference": "Karnofsky评分范围0-100，60分表示需要偶尔帮助，但能自理大部分个人需求"
+  },
+  "b4ecc1a9eeb4fc89657799b945f4d61bb18e9ec3adca5641f50334f9b34f9d56": {
+    "calculation_result": "4",
+    "risk_level": "重度功能障碍",
+    "numeric_reference": "Lawton IADL评分范围0-8，分数越低功能越差；≤4提示重度功能障碍"
+  },
+  "9cf4eb57d038d8a8f4e06da91d72e495277a72660b769fe54c83e878748d465a": {
+    "calculation_result": "4",
+    "risk_level": "重度依赖",
+    "numeric_reference": "0-8分，分数越低依赖越重；≤4分为重度依赖"
+  },
+  "c669a49a7aa4549a486976ef05c73d77f53bc83ac59e7138e4ccaac553e714b6": {
+    "calculation_result": "4",
+    "risk_level": "中度依赖",
+    "numeric_reference": "Lawton IADL总分范围0-8，分数越低依赖程度越高：0-2重度依赖，3-4中度依赖，5-6轻度依赖，7-8独立"
+  },
+  "647bd6eafc3878aa64af9a91ed19d26aab84437c8ce6f538399b60f07fc38963": {
+    "calculation_result": "4",
+    "risk_level": "中度依赖",
+    "numeric_reference": "Lawton IADL总分范围0-8，分数越低依赖程度越高；通常≤4提示中度依赖"
+  },
+  "2499a2a84624c64db633a7c289ba99e4a701ce7d095f10afe21234edd4ec3a11": {
+    "calculation_result": "4",
+    "risk_level": "中度依赖",
+    "numeric_reference": "Lawton IADL评分：8分为完全独立，6-7分轻度依赖，4-5分中度依赖，0-3分重度依赖"
+  },
+  "8341785b003aec86a6cc5532eadc0840312e8e017d311a3e8bf4ea1570a4f2ae": {
+    "calculation_result": "4",
+    "risk_level": "重度功能障碍",
+    "numeric_reference": "Lawton IADL总分范围0-8，分数越低功能越差：8分完全独立，6-7分轻度依赖，4-5分中度依赖，0-3分重度依赖"
+  },
+  "dd93d9d6ad5f8e39215f41c97f81b32dd6becf5097c0b74ba4ef15206052cbd8": {
+    "calculation_result": "4",
+    "risk_level": "高风险",
+    "numeric_reference": "代谢综合征诊断标准：满足以下5项中至少3项：腰围≥90cm（男），甘油三酯≥1.7mmol/L，HDL-C<1.0mmol/L（男），血压≥130/85mmHg，空腹血糖≥5.6mmol/L。当前满足4项。"
+  },
+  "0b4c1725c4381a0d7d0743e451525c05fb3fbc8e594dd453e2958366c56f7368": {
+    "calculation_result": "符合代谢综合征诊断（满足3项：腰围≥90cm，甘油三酯≥1.7mmol/L，HDL<1.0mmol/L，血压≥130/85mmHg，空腹血糖≥5.6mmol/L）",
+    "risk_level": "高风险",
+    "numeric_reference": "代谢综合征诊断标准：满足以下5项中至少3项：腰围男≥90cm，甘油三酯≥1.7mmol/L，HDL男<1.0mmol/L，血压≥130/85mmHg，空腹血糖≥5.6mmol/L"
+  },
+  "d5674f3e8c24c3dbe3ceb3f78e76441fa0dcf1d9a55f2d7a71b382488bb20535": {
+    "calculation_result": "符合代谢综合征诊断标准（满足3项或以上）",
+    "risk_level": "高风险",
+    "numeric_reference": "代谢综合征诊断标准：腰围≥90cm（男），甘油三酯≥1.7mmol/L，HDL-C<1.0mmol/L（男），血压≥130/85mmHg，空腹血糖≥5.6mmol/L；满足3项及以上"
+  },
+  "362aac74ffdccc8517613aff91e65a0f5bef6fd02279f535e30ac115a34dd035": {
+    "calculation_result": "满足3项标准：腰围>90cm，甘油三酯≥1.7mmol/L，HDL<1.0mmol/L，血压≥130/85mmHg，空腹血糖≥5.6mmol/L",
+    "risk_level": "高风险",
+    "numeric_reference": "代谢综合征诊断标准：满足以下5项中至少3项：腰围男>90cm，甘油三酯≥1.7mmol/L，HDL男<1.0mmol/L，血压≥130/85mmHg，空腹血糖≥5.6mmol/L"
+  },
+  "7e9842db237a3ed4ac8fcbc3a52b8d9012d5b6744aa89a4c0e53f3f72cd555f7": {
+    "calculation_result": "4",
+    "risk_level": "高风险",
+    "numeric_reference": "代谢综合征诊断标准：满足以下5项中至少3项：1. 腰围≥90cm（男）；2. 甘油三酯≥1.7mmol/L；3. HDL-C<1.0mmol/L（男）；4. 血压≥130/85mmHg；5. 空腹血糖≥6.1mmol/L。当前满足4项。"
+  },
+  "b22e966757197dceec089de0a4107691ae7044be6191d15d6f967f6696576c1f": {
+    "calculation_result": "3",
+    "risk_level": "高风险",
+    "numeric_reference": "代谢综合征诊断标准：满足以下5项中至少3项：腰围≥90cm（男），甘油三酯≥1.7mmol/L，HDL-C<1.0mmol/L（男），血压≥130/85mmHg，空腹血糖≥5.6mmol/L。当前满足腰围、甘油三酯、HDL-C、血压、血糖共5项。"
+  },
+  "01e5be151434cd13d931d1b44960b931b65d7497153973c8c0e436ab91e042c9": {
+    "calculation_result": "6",
+    "risk_level": "高",
+    "numeric_reference": "0-4:低风险; 5-6:中风险; ≥7:高风险"
+  },
+  "85b5320e52a4a08632fab6f1c57d1f99cc2e8f324d4b91a770ca0117db0ba152": {
+    "calculation_result": "6",
+    "risk_level": "高",
+    "numeric_reference": "MEWS评分≥5分提示病情危重，需紧急处理"
+  },
+  "d7687d466e7ee70fc9b5b543b45bd053ef76e48d956a67d7233a0e5a5df61510": {
+    "calculation_result": "6",
+    "risk_level": "高",
+    "numeric_reference": "MEWS评分≥5分提示高风险"
+  },
+  "7a205d0b9c17a9c4f770149bed1ec7374d210713f43f9d7cf31abad56f53c20c": {
+    "calculation_result": "6",
+    "risk_level": "高",
+    "numeric_reference": "MEWS评分≥5分提示高风险"
+  },
+  "1f18da9bdb695db116bc851f3c1e962ed7e308cf2829a1611179e4cca9084bef": {
+    "calculation_result": "6",
+    "risk_level": "高",
+    "numeric_reference": "MEWS评分≥5分提示高风险"
+  },
+  "98083f4df83aa428092feb0a515167ebfa6d6bd9981ffed000e82decf1163238": {
+    "calculation_result": "6",
+    "risk_level": "高",
+    "numeric_reference": "MEWS评分≥5分提示高风险"
+  },
+  "b698217f5ece76c8a2eca2fddbcb55484c34d3aaded217692a9adcd0633b90e9": {
+    "calculation_result": "1",
+    "risk_level": "中风险",
+    "numeric_reference": "Mini-Cog: 0-2分提示认知障碍风险，3-5分正常"
+  },
+  "ca4593c14561beb1324dcc1d9f564dadf19feffb4ba452fc6fed8c5f477b948b": {
+    "calculation_result": "1",
+    "risk_level": "中风险",
+    "numeric_reference": "Mini-Cog总分0-5分，≤2分提示认知障碍风险"
+  },
+  "126d0713594c8262f40c6a75d10c7689cf714258cd376f3269694ba10a3e06cb": {
+    "calculation_result": "1",
+    "risk_level": "高风险",
+    "numeric_reference": "Mini-Cog: 0-2分提示痴呆高风险，3-5分提示低风险"
+  },
+  "588b3e785c53be73ffc60e1d4dd421a33197092b78e5d21e30126e7fb4cf8a64": {
+    "calculation_result": "1",
+    "risk_level": "中风险",
+    "numeric_reference": "Mini-Cog总分0-5分，≤2分提示认知障碍风险"
+  },
+  "b1aaf9bb59d8165fee6339774933185468044173a2c5558b41c55727e36f401c": {
+    "calculation_result": "1",
+    "risk_level": "中风险",
+    "numeric_reference": "Mini-Cog: 0-2分提示认知障碍风险，3-5分正常"
+  },
+  "c954cd5d508410f06957c07b2e317d177fece9a94086cfac628b1b1910a2a716": {
+    "calculation_result": "1",
+    "risk_level": "中风险",
+    "numeric_reference": "Mini-Cog总分0-5分，≤2分提示认知障碍风险"
+  },
+  "4696325ffb8a1de021b06bb6bf4c8a0b9b428de5c47cbcb8cb069f3e76f3e666": {
+    "calculation_result": "2",
+    "risk_level": "中度呼吸困难",
+    "numeric_reference": "0-4级，0级：无明显呼吸困难；1级：费力时气短；2级：平地行走比同龄人慢或需停下；3级：步行100米或数分钟后需停下；4级：不能离开家或穿衣时气短"
+  },
+  "7f6f04fa8fd99f816b1a9328a6b87111caae757bca6b643a3a459af8b9321f8a": {
+    "calculation_result": "2",
+    "risk_level": "中度呼吸困难",
+    "numeric_reference": "0级: 无明显呼吸困难; 1级: 快走时气短; 2级: 平地行走比同龄人慢或需停下; 3级: 行走100米或数分钟后需停下; 4级: 不能离开家或穿衣时气短"
+  },
+  "db16628c1bac1de3f74f8b668c2cc089a942b81550b079d304d163b9d571563d": {
+    "calculation_result": "2",
+    "risk_level": "中度风险",
+    "numeric_reference": "1-2: 轻度风险; 3-4: 中度风险; 5-6: 重度风险"
+  },
+  "7375091e04e1ee6b69cd6a90165019a00ba74ed62a891d75bf85ee299ccb560b": {
+    "calculation_result": "2",
+    "risk_level": "中风险",
+    "numeric_reference": "MMRC分级：0级-无呼吸困难，1级-轻度，2级-中度，3级-重度，4级-极重度"
+  },
+  "e81b8de3a9b9630816e6a499ed8fb856e66f3c5a8454ea39c3685e98a1223699": {
+    "calculation_result": "2",
+    "risk_level": "中度呼吸困难",
+    "numeric_reference": "0级: 无明显呼吸困难; 1级: 快走时气短; 2级: 平地行走比同龄人慢或需停下; 3级: 步行100米或数分钟后需停下; 4级: 不能离开家或穿衣时气短"
+  },
+  "9b7ffc08a7f404c8d5050bb4c9810536d5fc44d5346fc3b6346e29a298ead7b2": {
+    "calculation_result": "2",
+    "risk_level": "中度呼吸困难",
+    "numeric_reference": "0级: 无明显呼吸困难; 1级: 轻度呼吸困难; 2级: 中度呼吸困难; 3级: 重度呼吸困难; 4级: 极重度呼吸困难"
+  },
+  "61ee33040cab194375f65a8503e17c320ab1a7435e2a3f495c195ce3acbc2722": {
+    "calculation_result": "9",
+    "risk_level": "营养不良风险",
+    "numeric_reference": "MNA-SF总分范围0-14，12-14正常营养状况，8-11有营养不良风险，0-7营养不良"
+  },
+  "91876a1a3f6a4a2d4e70eb1c13698149783f91e768e48933f6517c219dfa958e": {
+    "calculation_result": "9",
+    "risk_level": "营养不良风险",
+    "numeric_reference": "MNA-SF总分14分，12-14分正常，8-11分有营养不良风险，0-7分营养不良"
+  },
+  "9bc9d5d7e0dd758352ac85591699839d6db605a19acb9572aed78fa5dcf2cfc3": {
+    "calculation_result": "9",
+    "risk_level": "营养不良风险",
+    "numeric_reference": "MNA-SF总分范围0-14，12-14为正常营养状态，8-11为营养不良风险，0-7为营养不良"
+  },
+  "b0ad590e4fc814c2205178dd6b7f5fdeb7218ee4d589650b1b8b5b635aa7472e": {
+    "calculation_result": "9",
+    "risk_level": "营养不良风险",
+    "numeric_reference": "MNA-SF总分14分，12-14分正常，8-11分有营养不良风险，0-7分营养不良"
+  },
+  "d6502ac5c3a18f682e321c0ba0d3f6b0b3c96940e1e7446201a518f6e9448441": {
+    "calculation_result": "9",
+    "risk_level": "营养不良风险",
+    "numeric_reference": "MNA-SF总分14分，12-14分正常，8-11分有营养不良风险，0-7分营养不良"
+  },
+  "469038b99a129941195256779c3a2365ec90867d9b45b15ce97d476f03e4f304": {
+    "calculation_result": "9",
+    "risk_level": "营养不良风险",
+    "numeric_reference": "MNA-SF评分：12-14分正常，8-11分有营养不良风险，0-7分营养不良"
+  },
+  "a5d9c6ae0278055270e79107140b36d1355f6b88f0b4821813f3ef96265d0d20": {
+    "calculation_result": "55",
+    "risk_level": "高风险",
+    "numeric_reference": "Morse评分：<25低风险，25-45中风险，>45高风险"
+  },
+  "c10687946862caefddc519d993d097a0eea8ba41b1a73658fe6054b1a5e8e9c3": {
+    "calculation_result": "55",
+    "risk_level": "高",
+    "numeric_reference": "Morse评分：0-24低风险，25-44中风险，≥45高风险"
+  },
+  "0d7cf339e8a2526186331d3851ea935beac5da9a10e67f1ab281dc1b0034000b": {
+    "calculation_result": "55",
+    "risk_level": "高",
+    "numeric_reference": "Morse评分：0-24低风险，25-44中风险，≥45高风险"
+  },
+  "5ace9fa1b6c2049de55d7f65d8b07450d183bdf9e3dcc3e55d96bcf1cbc1fb25": {
+    "calculation_result": "55",
+    "risk_level": "中风险",
+    "numeric_reference": "Morse评分：<25低风险，25-45中风险，>45高风险"
+  },
+  "e285115b1cb8464c5e6330f9d5a561434e615cfc0e8d99da9568c1905b1dec28": {
+    "calculation_result": "55",
+    "risk_level": "中危",
+    "numeric_reference": "Morse评分：<25低危，25-45中危，>45高危"
+  },
+  "b890c73b6b3e06e6c4d517634613dbf6fcd321c63be970b30e3b8721df9b2f7c": {
+    "calculation_result": "55",
+    "risk_level": "高",
+    "numeric_reference": "Morse评分：<25低风险，25-45中等风险，>45高风险"
+  },
+  "7bb1848b5c59bcb74e312af1fe3af2da06a0da7cb1b1bab812cd3b0daff12b31": {
+    "calculation_result": "2",
+    "risk_level": "低风险",
+    "numeric_reference": "MUST评分：0分=低风险，1分=中等风险，≥2分=高风险"
+  },
+  "093253c8cd8eb86d6cee647dd21e3bacc018b5396c6e21d9241dfa47818e1d38": {
+    "calculation_result": "2",
+    "risk_level": "低风险",
+    "numeric_reference": "0-2: 低风险; 3-4: 中风险; 5-6: 高风险"
+  },
+  "9ba9c89ab68352e8588eee4614b3958236c1a1937483f5fc4c784e59336e106a": {
+    "calculation_result": "2",
+    "risk_level": "低风险",
+    "numeric_reference": "0-2: 低风险; 3-4: 中风险; ≥5: 高风险"
+  },
+  "fb2572323172c894563ba7ec16ac87131087b2f95b498d723e910e6059af8c99": {
+    "calculation_result": "2",
+    "risk_level": "低风险",
+    "numeric_reference": "0-3: 低风险; 4-6: 中风险; 7-10: 高风险"
+  },
+  "151a54bd6480eadc6e9d3af24c61026263e50ed6b254da9a45c14c5299a6e847": {
+    "calculation_result": "2",
+    "risk_level": "低风险",
+    "numeric_reference": "0-3分：低风险；4-6分：中风险；7-10分：高风险"
+  },
+  "519e4bb725c47b8422c3fcb9e5d577fd5b62aaf730ed45f859ab0c4b68609e11": {
+    "calculation_result": "2",
+    "risk_level": "低风险",
+    "numeric_reference": "0-2分：低风险；3-4分：中风险；≥5分：高风险"
+  },
+  "2c8ee7dafd619898c5a5a9145b71d1796128dd1c41653558d6732a77ee6e5d17": {
+    "calculation_result": "-0.123",
+    "risk_level": "Low risk",
+    "numeric_reference": "F2-F4 fibrosis: >0.676; F3-F4 fibrosis: >0.12; Low risk: < -1.455"
+  },
+  "b6ead2fdac01b0565612b665fae1e51431620547ef54fbd129f0d39ce48541d4": {
+    "calculation_result": "0.676",
+    "risk_level": "Intermediate risk",
+    "numeric_reference": "FIB-4 < 1.30 low risk; 1.30-2.67 intermediate; > 2.67 high risk"
+  },
+  "348a1a84539508aabc23f091686be97fc46541ee37a02b6a9d2458b7e8dcba6e": {
+    "calculation_result": "FIB-4 = 1.62",
+    "risk_level": "Intermediate risk",
+    "numeric_reference": "FIB-4 < 1.30: low risk; 1.30-2.67: intermediate risk; > 2.67: high risk"
+  },
+  "b66ee304cff8bbe338c8d0c2efac2d2e5e1783b23d1600f34c3970a875438b00": {
+    "calculation_result": "-0.576",
+    "risk_level": "Low risk",
+    "numeric_reference": "FIB-4 < 1.30: low risk; 1.30-2.67: intermediate; > 2.67: high risk"
+  },
+  "aad71db2df1b3d97af4dfd8716079f927a2f9ff892859f947f063efcc4fda3fb": {
+    "calculation_result": "-0.089",
+    "risk_level": "Low risk",
+    "numeric_reference": "FIB-4 < 1.30: low risk; 1.30-2.67: intermediate; > 2.67: high risk"
+  },
+  "b0a1cb14eeb589b03a676e59f56279c1100121a6411ed6494470c8f25be4e3c8": {
+    "calculation_result": "-0.576",
+    "risk_level": "Low risk",
+    "numeric_reference": "FIB-4 < 1.30: low risk; 1.30-2.67: intermediate; > 2.67: high risk"
+  },
+  "a3c84fffa892f240c675f270cdbc695017e34f3879cc39bbef5dd796ca4d4253": {
+    "calculation_result": "7",
+    "risk_level": "High",
+    "numeric_reference": "0-4: Low, 5-6: Medium, >=7: High"
+  },
+  "bd720499a4b11c8eccaaeff7dfa6e0f5a3e688bc6c58db1b5cb2d2a54c0bfa2b": {
+    "calculation_result": "6",
+    "risk_level": "High",
+    "numeric_reference": "NEWS2: 0-4 Low, 5-6 Medium, >=7 High"
+  },
+  "45c0302b2344261ff662287d31f96d47b2f1431e2c2449891ecaeb284dbbc337": {
+    "calculation_result": "7",
+    "risk_level": "High",
+    "numeric_reference": "0-4: Low, 5-6: Medium, >=7: High"
+  },
+  "aeb509fa2c0257cd4765c4d8a389c8b0d9ae9acab0330ca4846be33d0b83b492": {
+    "calculation_result": "7",
+    "risk_level": "High",
+    "numeric_reference": "NEWS2: 0-4 Low, 5-6 Medium, >=7 High"
+  },
+  "15feaa08bff46281433054751795f3155a559b08236b9ba08818ce22c5cce975": {
+    "calculation_result": "8",
+    "risk_level": "High",
+    "numeric_reference": "NEWS2: 0-4 Low, 5-6 Medium, >=7 High"
+  },
+  "419162cbebb55ded563d64d2ab0c28c5f7d58888f6056f7a48b3dc94ecff84ac": {
+    "calculation_result": "7",
+    "risk_level": "High",
+    "numeric_reference": "NEWS2: 0-4 Low, 5-6 Medium, >=7 High"
+  },
+  "6de9d415751a3e479a76641aa0b6195495312ba7f09511d075c978c5d8202ad6": {
+    "calculation_result": "18",
+    "risk_level": "重度卒中",
+    "numeric_reference": "0-4:轻度; 5-15:中度; 16-20:中重度; 21-42:重度"
+  },
+  "1207f0140a1e8622944dad2a14e8de7a42238a18294d3c17a71c8f141d20e7c4": {
+    "calculation_result": "18",
+    "risk_level": "重度卒中",
+    "numeric_reference": "0-4:轻度; 5-15:中度; ≥16:重度"
+  },
+  "3a8009371993dbc9839623ba0c35dd547d7febd9c6934b8bdcc69f74e52ec4f8": {
+    "calculation_result": "18",
+    "risk_level": "重度卒中",
+    "numeric_reference": "0-4: 轻度; 5-15: 中度; 16-20: 中重度; 21-42: 重度"
+  },
+  "9ab3b2d94265546d05df4717f7f871f2653f18051c33cc5a379ef9da74c48a8a": {
+    "calculation_result": "18",
+    "risk_level": "重度卒中",
+    "numeric_reference": "0-4: 轻度; 5-15: 中度; 16-20: 中重度; 21-42: 重度"
+  },
+  "39bcd61b64028ac1c20f972e2e10864e339a7e1b8fd3ac353102eb0d439a6d71": {
+    "calculation_result": "18",
+    "risk_level": "重度卒中",
+    "numeric_reference": "0-4:轻度; 5-15:中度; 16-42:重度"
+  },
+  "432f066d6aa525196a792b62d290f2df0e12f0df4d0c035647a8a353c61ce55d": {
+    "calculation_result": "18",
+    "risk_level": "重度卒中",
+    "numeric_reference": "0-4:轻度; 5-15:中度; ≥16:重度"
+  },
+  "56ea2a9387933c6eb996bfceb2fc6311958bc156296acf6f4eead786c4c76354": {
+    "calculation_result": "12",
+    "risk_level": "高风险",
+    "numeric_reference": "Norton评分≤14分为高风险，15-19分为中风险，≥20分为低风险"
+  },
+  "b4bf4c629dad08cd55017b5fd332bab6dad33fc65e851cdc46fa647a606340be": {
+    "calculation_result": "12",
+    "risk_level": "高",
+    "numeric_reference": "Norton评分≤14分为高风险，15-18分为中风险，≥19分为低风险"
+  },
+  "3486d9a349134d55743cdf44118a90322b8c5e4da3d0e570406427ebe943691a": {
+    "calculation_result": "12",
+    "risk_level": "高危",
+    "numeric_reference": "Norton评分≤14分为高危"
+  },
+  "3574778410ecbcdc5401c5bba12e8a62089141333d2916eccb91921d1fb8315e": {
+    "calculation_result": "12",
+    "risk_level": "中风险",
+    "numeric_reference": "Norton评分：≤14分为高风险，15-18分为中风险，≥19分为低风险"
+  },
+  "699ebf2d3615e1cd294565eb694634dcdff5bf61968ae6fd1e076bb4cef18bc9": {
+    "calculation_result": "12",
+    "risk_level": "高危",
+    "numeric_reference": "Norton评分≤14分为高危"
+  },
+  "4c51ab4e1d5ab3ed796dd124610acc516e5226ce659ea4044e9c8fbd7731dfd5": {
+    "calculation_result": "12",
+    "risk_level": "低风险",
+    "numeric_reference": "Norton评分≤14分为高风险，15-20分为中风险，>20分为低风险"
+  },
+  "4f96cd25d58bc2945f805ba8d2aebc720af44efe08edcb896fa992fe3b503371": {
+    "calculation_result": "7",
+    "risk_level": "中度疼痛",
+    "numeric_reference": "0-3:轻度疼痛, 4-6:中度疼痛, 7-10:重度疼痛"
+  },
+  "c7a887b0db43bf6fc0e55e157987215254eb38b93180c29ccc8c4794e17ce46a": {
+    "calculation_result": "7",
+    "risk_level": "中度疼痛",
+    "numeric_reference": "0-3:轻度疼痛, 4-6:中度疼痛, 7-10:重度疼痛"
+  },
+  "1be93510c4680b342525586aa6330d98098db58a3317c81716db5f0f2df7322c": {
+    "calculation_result": "7",
+    "risk_level": "中度疼痛",
+    "numeric_reference": "0-3: 轻度疼痛, 4-6: 中度疼痛, 7-10: 重度疼痛"
+  },
+  "a2547dc12684f4e7ada522523f7a06d7c902f95c93ce17571ecaf0053c6f9369": {
+    "calculation_result": "7",
+    "risk_level": "中度疼痛",
+    "numeric_reference": "0-3:轻度疼痛, 4-6:中度疼痛, 7-10:重度疼痛"
+  },
+  "072dcb301b6679df9daedc31edb940c68c9ba1f45fc0093692259be9f5114f7e": {
+    "calculation_result": "7",
+    "risk_level": "中度疼痛",
+    "numeric_reference": "NRS 0-10: 0无痛, 1-3轻度, 4-6中度, 7-10重度"
+  },
+  "3d6fb3b5061f16767e0179b85e544e9852a35af56b09a0458dd291d8ab2756a0": {
+    "calculation_result": "7",
+    "risk_level": "重度疼痛",
+    "numeric_reference": "0-3:轻度疼痛, 4-6:中度疼痛, 7-10:重度疼痛"
+  },
+  "d868ada716ef8f4c172f572d648041896d25f4283741c3eb31a701a77a7aaad5": {
+    "calculation_result": "12",
+    "risk_level": "中度抑郁",
+    "numeric_reference": "0-4: 无抑郁; 5-9: 轻度抑郁; 10-14: 中度抑郁; 15-19: 中重度抑郁; 20-27: 重度抑郁"
+  },
+  "84522638fe710fe50a817a73d2018331ba60eff3c033942df9094659cdc44077": {
+    "calculation_result": "12",
+    "risk_level": "中度抑郁",
+    "numeric_reference": "0-4: 无抑郁; 5-9: 轻度; 10-14: 中度; 15-19: 中重度; 20-27: 重度"
+  },
+  "9f125636a2c7cd69040edd488792b66617843bee8f653ca7054aee31fb73a5f4": {
+    "calculation_result": "12",
+    "risk_level": "中度抑郁",
+    "numeric_reference": "0-4: 无抑郁; 5-9: 轻度; 10-14: 中度; 15-19: 中重度; 20-27: 重度"
+  },
+  "7897f9ff788548ab782e57d373531e8d0465dc80358234724f30901c901b49f3": {
+    "calculation_result": "12",
+    "risk_level": "中度抑郁",
+    "numeric_reference": "0-4: 无抑郁; 5-9: 轻度; 10-14: 中度; 15-19: 中重度; 20-27: 重度"
+  },
+  "a5f54bf3d10c784e17841a7c832b7eb641426b44df80ff5e10dea9943677032c": {
+    "calculation_result": "12",
+    "risk_level": "中度抑郁",
+    "numeric_reference": "0-4: 无抑郁; 5-9: 轻度; 10-14: 中度; 15-19: 中重度; 20-27: 重度"
+  },
+  "8e8b4839add99ea6107913a014534ced5fad513a064a97f0b43de463562baa0b": {
+    "calculation_result": "12",
+    "risk_level": "中度抑郁",
+    "numeric_reference": "0-4: 无抑郁; 5-9: 轻度; 10-14: 中度; 15-19: 中重度; 20-27: 重度"
+  },
+  "87f4f5e72713afb231778c09f33632b6148e27edc6324d39c831305760a49f94": {
+    "calculation_result": "11.2",
+    "risk_level": "中等风险",
+    "numeric_reference": "QRISK3 10年风险：<10%低风险，10-20%中等风险，≥20%高风险"
+  },
+  "739e1d8b585b978e985a3f0a30666c01b34d305efa72e546ad3dbfd9cf420fb6": {
+    "calculation_result": "11.2",
+    "risk_level": "中等风险",
+    "numeric_reference": "QRISK3 10年心血管风险：<10%低风险，10-20%中等风险，≥20%高风险"
+  },
+  "39a33c83b6a9919d7c5a39f4213e47ca2b411ec8b414f5e349736158f67fc2d7": {
+    "calculation_result": "11.2",
+    "risk_level": "中等风险",
+    "numeric_reference": "QRISK3 10年心血管风险：<10%低风险，10-20%中等风险，>20%高风险"
+  },
+  "7ce59d778c9f70e7a45c8e3a0fb4df670a1db83cc00c40478cdabc4a1c30f523": {
+    "calculation_result": "11.2%",
+    "risk_level": "中等风险",
+    "numeric_reference": "QRISK3 10年风险：<10%低风险，10-20%中等风险，≥20%高风险"
+  },
+  "438addef64f7bb563fe0432d15c707cd457347df78388ff0b4c6133561c28d21": {
+    "calculation_result": "11.2",
+    "risk_level": "中等风险",
+    "numeric_reference": "QRISK3 10年风险：<10%低风险，10-20%中等风险，≥20%高风险"
+  },
+  "2526575df6774faabc756edb06338fa64fe40751752e020ad11a23f9b783cf1c": {
+    "calculation_result": "11.2%",
+    "risk_level": "中等风险",
+    "numeric_reference": "QRISK3: <10%低风险, 10-20%中等风险, ≥20%高风险"
+  },
+  "25d3b006b0adc333c57c3c8268eeb0e88ec7b706b460f87b852ff746c7e7b45f": {
+    "calculation_result": "2",
+    "risk_level": "中风险",
+    "numeric_reference": "qSOFA评分范围0-3，≥2提示败血症风险增加"
+  },
+  "cb4b8f571c4c19d14e5df02ec639014dbb63f1bd4cf676782c6dde3d0d0f3b8f": {
+    "calculation_result": "2",
+    "risk_level": "高风险",
+    "numeric_reference": "qSOFA评分≥2提示高风险，每项1分：意识改变1分，呼吸≥22次/分1分，收缩压≤100 mmHg1分"
+  },
+  "8522a59b21953d1fc951cfc66204549299413ca1203c79a649b5b0bd8a2b982b": {
+    "calculation_result": "2",
+    "risk_level": "高",
+    "numeric_reference": "qSOFA评分≥2提示败血症风险高"
+  },
+  "0b0e6ab37f1d3312bbd2420f4cb97ad10d48bb003e64631002b87a549e86678d": {
+    "calculation_result": "2",
+    "risk_level": "中风险",
+    "numeric_reference": "qSOFA评分≥2提示败血症风险增加，0-1分为低风险"
+  },
+  "d8096ad92747bee1dbc1e667c73ba99db89ee273c9e33880e590f51a56dd73ef": {
+    "calculation_result": "2",
+    "risk_level": "中风险",
+    "numeric_reference": "qSOFA评分：0-1分低风险，2分中风险，3分高风险"
+  },
+  "02a8df87d83c934cb6a66c279a5dc4e66416e1c811a068fd3c9efca137578d8e": {
+    "calculation_result": "2",
+    "risk_level": "中风险",
+    "numeric_reference": "qSOFA评分：0-2分，≥2分提示脓毒症风险增加"
+  },
+  "c9c65d6a65b911b4072d4f1f9999f124ce5d8e40af7fb03cc2e48beae91fecdd": {
+    "calculation_result": "72",
+    "risk_level": "正常",
+    "numeric_reference": "60-100 bpm"
+  },
+  "43fc29be52327a777a9243fc49cfad668be1c69d815d552b9747768319ac8088": {
+    "calculation_result": "72",
+    "risk_level": "正常",
+    "numeric_reference": "60-100 bpm"
+  },
+  "d1c6a106f4640ea0925f6459d0c35ded299c102dcfd983f2e106901973de6372": {
+    "calculation_result": "72",
+    "risk_level": "正常",
+    "numeric_reference": "60-100 bpm"
+  },
+  "80ae6a8184687c98e762649f5f52203e20f7c21acc2beb2f12070ab7077b344c": {
+    "calculation_result": "72",
+    "risk_level": "正常",
+    "numeric_reference": "60-100 bpm"
+  },
+  "a2b49bc3ed64618cbf4b368817edac597597557ab5cd1281e51404e324094be5": {
+    "calculation_result": "72",
+    "risk_level": "正常",
+    "numeric_reference": "60-100 bpm"
+  },
+  "58f39e559f0eb148c9c3629d7c56633efe334db8a2089edd333d6e8da04cb434": {
+    "calculation_result": "72",
+    "risk_level": "正常",
+    "numeric_reference": "60-100 bpm"
+  },
+  "859fa26babf5271e15241c2398d09338935029891116eead8a4ee95bb99e5495": {
+    "calculation_result": "6",
+    "risk_level": "高",
+    "numeric_reference": "Rockwood临床衰弱量表：1-9级，1=非常健康，9=终末期；6级为中度衰弱"
+  },
+  "bca60352a6d4ba098727b8ee8dbd5e264beb0fac881e01e0ebfcdde1eae1827d": {
+    "calculation_result": "6",
+    "risk_level": "中度衰弱",
+    "numeric_reference": "Rockwood临床衰弱量表：1-4为无/轻度衰弱，5-6为中度衰弱，7-9为重度衰弱"
+  },
+  "7e3cf1e7b730a72f656e316213e6df47193d14c2e0470c9dd628a4c3e86dd032": {
+    "calculation_result": "6",
+    "risk_level": "中度虚弱",
+    "numeric_reference": "Rockwood临床衰弱量表：1-3级为健康/轻度衰弱，4-5级为轻度至中度衰弱，6-7级为中度至重度衰弱，8-9级为严重衰弱"
+  },
+  "4456c0621c97e22f5077df398fdb7394eea676244cda3f6d69a2418586d6ff42": {
+    "calculation_result": "6",
+    "risk_level": "中度脆弱",
+    "numeric_reference": "Rockwood临床衰弱量表：1-9分，1=非常健康，9=终末期；6分=中度脆弱"
+  },
+  "ea9afe78e866e4b921a165f1263240282ec7dd9d031c85aa857a6a51fb46e7b3": {
+    "calculation_result": "6",
+    "risk_level": "中度虚弱",
+    "numeric_reference": "Rockwood临床衰弱量表：1-3级为健康/轻度衰弱，4-5级为中度衰弱，6-7级为重度衰弱"
+  },
+  "60a1005c2ea7de3a42761193c0a29480a06aa3ac9ef7911fcb9ed35633384969": {
+    "calculation_result": "6",
+    "risk_level": "中度虚弱",
+    "numeric_reference": "1-3: 健康/轻度虚弱; 4-5: 轻度至中度虚弱; 6-7: 中度至重度虚弱; 8-9: 严重虚弱"
+  },
+  "dc168373f38ab3e3707ca7a937f0f3afa7b68b40c0a252b6a15e463afc71eb8d": {
+    "calculation_result": "5",
+    "risk_level": "高风险",
+    "numeric_reference": "SARC-F评分≥4分提示存在肌少症风险"
+  },
+  "914c453b4a777cbf08f5e394d47dc1972f63684c0911e3c5d2c85fb11fe3d234": {
+    "calculation_result": "5",
+    "risk_level": "高",
+    "numeric_reference": "0-2: 低风险; 3-4: 中风险; 5-10: 高风险"
+  },
+  "7437b904991d5dcab2e43162fee78a3c286f834736258829a5a6d82b4a3eb39d": {
+    "calculation_result": "5",
+    "risk_level": "低风险",
+    "numeric_reference": "0-3: 低风险; 4-8: 中风险; 9-12: 高风险"
+  },
+  "3bcfdafe45c582c8dbfbe1b7234026d0f500a5db26afa5fff18c6b76308541f5": {
+    "calculation_result": "5",
+    "risk_level": "低风险",
+    "numeric_reference": "SARC-F总分≥4提示肌少症风险"
+  },
+  "8e4a5df74b69bedd0e7482328a14348157875b8edfc97bc650db7d6ad350fd87": {
+    "calculation_result": "5",
+    "risk_level": "低风险",
+    "numeric_reference": "0-3: 低风险; 4-5: 中风险; 6-7: 高风险"
+  },
+  "b9e6fdfb919d6fe414076536d7fcd2729acceae1c960fc7c2c2a2c6805bf1f5d": {
+    "calculation_result": "5",
+    "risk_level": "低风险",
+    "numeric_reference": "0-3: 低风险; 4-7: 中风险; 8-10: 高风险"
+  },
+  "c4c366fd2597ce59fec7b786df66c26e9cdb800c20b56ce51753fe2025a07500": {
+    "calculation_result": "5",
+    "risk_level": "中危",
+    "numeric_reference": "0-2分低危，3-4分中危，5-7分高危"
+  },
+  "9f0057d4636f217cbc1f7a09b38abe1f216c6f6b259cb30fa7b508c0b0d3a279": {
+    "calculation_result": "5",
+    "risk_level": "低风险",
+    "numeric_reference": "0-3: 低风险; 4-6: 中风险; 7-10: 高风险"
+  },
+  "410707411c5647e0b8b9a3a01b6473bc153c10fe7a3e85d6a4fc6eaffaa39518": {
+    "calculation_result": "5",
+    "risk_level": "低风险",
+    "numeric_reference": "0-3: 低风险; 4-6: 中风险; 7-10: 高风险"
+  },
+  "f0e3913e579dd587be0ac10448d81bfc5f3756ac3f5259b0e6fc36f7f6ccd9ef": {
+    "calculation_result": "5",
+    "risk_level": "低风险",
+    "numeric_reference": "0-3: 低风险; 4-6: 中风险; 7-10: 高风险"
+  },
+  "05d09213767ca3ddaea88c0d3672217e9ab37e000d7e0b61724bf56344590494": {
+    "calculation_result": "5",
+    "risk_level": "低风险",
+    "numeric_reference": "0-3: 低风险; 4-6: 中风险; 7-10: 高风险"
+  },
+  "de26aa3f7455a0e7c4693a1b2a8dd62f2a0584aa3615ed2fad20b858473f68eb": {
+    "calculation_result": "5",
+    "risk_level": "低风险",
+    "numeric_reference": "0-3: 低风险; 4-6: 中风险; 7-9: 高风险"
+  },
+  "b60b664697317596297a44720890fc09920ae0e8a2cd57cd6b18cc919e6df1c7": {
+    "calculation_result": "14.2",
+    "risk_level": "低风险",
+    "numeric_reference": "TUG评分：<10秒正常，10-20秒低风险，>20秒高风险"
+  },
+  "64fe1f96fecbe88fb609be8f9e95346406fc0492f163c69904fa1b8e825be22f": {
+    "calculation_result": "14.2",
+    "risk_level": "低风险",
+    "numeric_reference": "正常<10秒，10-20秒为低风险，>20秒为高风险"
+  },
+  "d3c9f7b14dc32e963dd61483fe3341c2f799e81d4ffdad98a8eedc1143390c8f": {
+    "calculation_result": "14.2",
+    "risk_level": "低风险",
+    "numeric_reference": "TUG正常值<10秒，10-20秒为轻度异常，>20秒为高风险"
+  },
+  "a010d20f80fef6224d7d8595f877db9e3ef6447ab484bfbda1632d6402bf02e4": {
+    "calculation_result": "14.2",
+    "risk_level": "正常",
+    "numeric_reference": "正常：<10秒；可疑：10-20秒；异常：>20秒"
+  },
+  "9406e7a417d575e5299131d1f50005deb2a91f36c1244c9546f29a2abdec992a": {
+    "calculation_result": "14.2",
+    "risk_level": "正常",
+    "numeric_reference": "TUG测试：<10秒正常，10-20秒中等风险，>20秒高风险"
+  },
+  "904110eb1a2c18cf47d2d3e47045dafff0d5e6402832c025c2b618069eaeb025": {
+    "calculation_result": "14.2",
+    "risk_level": "低风险",
+    "numeric_reference": "TUG评分：<10秒正常，10-20秒中等风险，>20秒高风险"
+  },
+  "86c8722204b551e8836079110ba9a523ea8c262ea4e8c217fc340fb2044941a4": {
+    "calculation_result": "92",
+    "risk_level": "中风险",
+    "numeric_reference": "男性腰围≥90cm为腹型肥胖，≥85cm为超重，<85cm正常"
+  },
+  "5eae05ad910e1034e76b041a2bff2f90ef881c79bc7e0c81c3c373d6d5c40598": {
+    "calculation_result": "92",
+    "risk_level": "中风险",
+    "numeric_reference": "男性腰围≥90cm为腹型肥胖，≥85cm为超重，<85cm正常"
+  },
+  "8a28cb190dc03dc202cf234479aa3b7faccd76872ad2efd7fb4a57fe3e09fb40": {
+    "calculation_result": "92",
+    "risk_level": "中风险",
+    "numeric_reference": "男性腰围≥90cm为腹型肥胖，≥85cm为超重，<85cm正常"
+  },
+  "0211c636b22946753a08f3e8bca98c1d9309b2054d6b5534e3b413a45a7bd52e": {
+    "calculation_result": "92",
+    "risk_level": "高",
+    "numeric_reference": "男性腰围≥90cm为高风险"
+  },
+  "6ef5f6cc5a075146da0f57bd4e9ce8ac04b00914496fe928b712028d023f7b75": {
+    "calculation_result": "92",
+    "risk_level": "中风险",
+    "numeric_reference": "男性腰围≥90cm为腹型肥胖，≥85cm为超重，<85cm正常"
+  },
+  "b5d33abff04adc7af2ea2bd43dda5b5add97e16c2c716e6bb905f15e139c52e8": {
+    "calculation_result": "92",
+    "risk_level": "中风险",
+    "numeric_reference": "男性腰围≥90cm为腹型肥胖，≥85cm为超重，≥90cm为高风险"
+  },
+  "99b59d0cbfd07a4705a4ce5989da278339c143f17a766103f41de5ea45e9f9ad": {
+    "calculation_result": "22",
+    "risk_level": "高风险",
+    "numeric_reference": "≥20分为高风险"
+  },
+  "d4726b8881cfc07e0389dab68eeea169026af055d5453455307226181eeb464d": {
+    "calculation_result": "22",
+    "risk_level": "高风险",
+    "numeric_reference": "Waterlow评分：≥20为高风险，15-19为中风险，10-14为低风险"
+  },
+  "a5e0b6aa803b4dc0980047a0473f326c5341a78ae478e2f8ff8c799dab7b8b12": {
+    "calculation_result": "22",
+    "risk_level": "高风险",
+    "numeric_reference": "≥20分：高风险；15-19分：中风险；10-14分：低风险；<10分：无风险"
+  },
+  "f50b1e63ed1f03722ed1f922e91a718cec1858c208c7158b948c3d7455def67f": {
+    "calculation_result": "22",
+    "risk_level": "高风险",
+    "numeric_reference": "≥20为高风险，15-19为中风险，10-14为低风险"
+  },
+  "e686da86db9bebca6a9a5e2006243edc6e2f905b0d689ca3315ca68fed35d6c0": {
+    "calculation_result": "22",
+    "risk_level": "高风险",
+    "numeric_reference": "≥20为高风险，15-19为中风险，10-14为低风险，<10为无风险"
+  },
+  "a618bba660bc9761c988faacd4980addec920884b2901e25be1caf7a8f05b390": {
+    "calculation_result": "22",
+    "risk_level": "高风险",
+    "numeric_reference": "≥20为高风险，15-19为中风险，10-14为低风险"
+  },
+  "69b19c6090028db88be622d2efb532b00d5633f184a398ee4439d61343c3dbc3": {
+    "calculation_result": "3",
+    "risk_level": "Moderate",
+    "numeric_reference": "0-1: Low; 2: Moderate; >=3: High"
+  },
+  "68476f71996ba2a29a6fcbb9dd5e81635b807f56bf24712e95a0f185610c6f4b": {
+    "calculation_result": "3",
+    "risk_level": "Moderate",
+    "numeric_reference": "Wells DVT score: 0-1 low, 2 moderate, >=3 high"
+  },
+  "837ac2ff966ced499c9ffb1cd486f78646d9a3ed8ab3c2d3cdc5ee51aafad304": {
+    "calculation_result": "3",
+    "risk_level": "Moderate",
+    "numeric_reference": "Wells criteria for DVT: score 0 = low, 1-2 = moderate, >=3 = high"
+  },
+  "00490c940eca22004834a2a92cc887cdd28d480427002bbdcf8a66efce1f1c32": {
+    "calculation_result": "3",
+    "risk_level": "Moderate",
+    "numeric_reference": "Wells DVT score: 0 = low, 1-2 = moderate, >=3 = high"
+  },
+  "8a82be5ac59923154564c4632250e56b4c6b74474b32236db0e512e0863b0f25": {
+    "calculation_result": "3",
+    "risk_level": "Moderate",
+    "numeric_reference": "Wells DVT criteria: Score 0 = Low, 1-2 = Moderate, >=3 = High"
+  },
+  "e335ebf84c8f9dfc92275544659f5475418cf0fb1319a0f226eeeb9d04405b1b": {
+    "calculation_result": "3",
+    "risk_level": "Moderate",
+    "numeric_reference": "0-1: Low; 2: Moderate; >=3: High"
+  },
+  "9c457df224a90a59b0d03f9cbbecd0212620bab9606533c5fea44ac233032a07": {
+    "calculation_result": "7.5",
+    "risk_level": "高概率",
+    "numeric_reference": "Wells PE评分：≤4分低概率，4.5-6分中概率，≥6分高概率"
+  },
+  "8628959bee0e2ea9e2411cd2dc871f8dd1231d665a498c4eb6f1d5ba43e187ed": {
+    "calculation_result": "7.5",
+    "risk_level": "High",
+    "numeric_reference": "Wells PE criteria: ≤4 low, 4.5-6 moderate, ≥6 high"
+  },
+  "b2bfd3231d8b96066ac4e3c3c00adcae98fd186e10b7f8f068300b71ccd0eb95": {
+    "calculation_result": "7.5",
+    "risk_level": "High",
+    "numeric_reference": "Wells PE criteria: ≤4 low, 4.5-6 moderate, ≥6 high"
+  },
+  "5c0b9e7e80382123a771ecb31e7c56c588070949cb5d67429be612aa4a3a2e65": {
+    "calculation_result": "7.5",
+    "risk_level": "High",
+    "numeric_reference": "Wells PE: ≤4 Low, 4.5-6 Moderate, ≥6 High"
+  },
+  "3d204ce5891164c7a83faadfc6713155a6d72afe1544c2b7b49898e1dd8b2f0d": {
+    "calculation_result": "7.5",
+    "risk_level": "高风险",
+    "numeric_reference": "Wells PE评分：≤4分低风险，4.5-6分中风险，≥6分高风险"
+  },
+  "98f2d421d678eea471c82b9340cc8e1842434367e58c048496ff7b4a5bd5405d": {
+    "calculation_result": "7.5",
+    "risk_level": "高风险",
+    "numeric_reference": "Wells PE评分：≤4分为低风险，>4分为高风险"
+  }
+}

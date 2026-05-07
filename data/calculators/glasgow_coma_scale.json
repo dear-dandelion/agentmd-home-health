@@ -1,0 +1,133 @@
+{
+  "name": "glasgow_coma_scale",
+  "display_name": "Glasgow 昏迷评分",
+  "description": "用于意识状态评估。",
+  "source_module": "app.calculators.extended",
+  "function_name": "calculate_glasgow_coma_scale",
+  "intent_keywords": [
+    "gcs",
+    "glasgow",
+    "昏迷评分",
+    "意识状态"
+  ],
+  "required_params": [
+    "gcs_score"
+  ],
+  "optional_params": [
+    "eye_score",
+    "verbal_score",
+    "motor_score"
+  ],
+  "parameters": [
+    {
+      "name": "gcs_score",
+      "label": "总分",
+      "type": "float",
+      "required": true,
+      "min": 3,
+      "max": 15,
+      "description": "GCS 总分"
+    }
+  ],
+  "reference": "Glasgow Coma Scale 常用分层标准。",
+  "applicable_scenario": "意识状态评估",
+  "supports_chinese": true,
+  "clinical_specificity": 0.96,
+  "priority": {
+    "home_suitability": 0.9,
+    "clinical_importance": 0.9,
+    "implementation_simplicity": 0.85,
+    "chinese_support": 1.0
+  },
+  "documentation": {
+    "parameter_notes": "Glasgow 昏迷评分 支持输入总分，部分量表也支持按条目分值求和。",
+    "usage_examples": [
+      {
+        "input": {
+          "gcs_score": 7
+        },
+        "description": "Glasgow 昏迷评分 示例"
+      }
+    ],
+    "reference_literature": [
+      "Glasgow 昏迷评分 常用公开评分分层标准"
+    ],
+    "update_record": [
+      "2026-04-28：接入第一批扩展计算器运行时实现。"
+    ]
+  },
+  "validation": {
+    "unit_cases": [
+      {
+        "name": "gcs_score_case_1",
+        "input": {
+          "gcs_score": 15
+        },
+        "expected": {
+          "risk_level": "轻度或无明显意识障碍",
+          "score": 15
+        }
+      },
+      {
+        "name": "gcs_score_case_2",
+        "input": {
+          "gcs_score": 12
+        },
+        "expected": {
+          "risk_level": "中度意识障碍",
+          "score": 12
+        }
+      },
+      {
+        "name": "gcs_score_case_3",
+        "input": {
+          "gcs_score": 8
+        },
+        "expected": {
+          "risk_level": "重度意识障碍",
+          "score": 8
+        }
+      },
+      {
+        "name": "gcs_score_case_4",
+        "input": {
+          "gcs_score": 7
+        },
+        "expected": {
+          "risk_level": "重度意识障碍",
+          "score": 7
+        }
+      }
+    ],
+    "boundary_checks": [
+      {
+        "name": "gcs_score_boundary_1",
+        "input": {
+          "gcs_score": 8
+        },
+        "expected_risk_level": "重度意识障碍"
+      },
+      {
+        "name": "gcs_score_boundary_2",
+        "input": {
+          "gcs_score": 9
+        },
+        "expected_risk_level": "中度意识障碍"
+      },
+      {
+        "name": "gcs_score_boundary_3",
+        "input": {
+          "gcs_score": 12
+        },
+        "expected_risk_level": "中度意识障碍"
+      },
+      {
+        "name": "gcs_score_boundary_4",
+        "input": {
+          "gcs_score": 13
+        },
+        "expected_risk_level": "轻度或无明显意识障碍"
+      }
+    ]
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "name": "chads2",
+  "display_name": "CHADS2 卒中风险评分",
+  "description": "用于房颤相关卒中风险评估。",
+  "source_module": "app.calculators.extended",
+  "function_name": "calculate_chads2",
+  "intent_keywords": [
+    "chads2",
+    "房颤卒中",
+    "卒中评分"
+  ],
+  "required_params": [
+    "age",
+    "congestive_heart_failure",
+    "hypertension",
+    "diabetes",
+    "prior_stroke_tia"
+  ],
+  "optional_params": [],
+  "parameters": [
+    {
+      "name": "age",
+      "label": "年龄",
+      "type": "float",
+      "required": true,
+      "description": "受评估者年龄",
+      "min": 0,
+      "max": 120
+    },
+    {
+      "name": "congestive_heart_failure",
+      "label": "充血性心衰",
+      "type": "bool",
+      "required": true,
+      "description": "是否存在充血性心力衰竭"
+    },
+    {
+      "name": "hypertension",
+      "label": "高血压",
+      "type": "bool",
+      "required": true,
+      "description": "是否存在高血压"
+    },
+    {
+      "name": "diabetes",
+      "label": "糖尿病",
+      "type": "bool",
+      "required": true,
+      "description": "是否存在糖尿病"
+    },
+    {
+      "name": "prior_stroke_tia",
+      "label": "既往卒中/TIA",
+      "type": "bool",
+      "required": true,
+      "description": "是否存在既往卒中或 TIA"
+    }
+  ],
+  "reference": "CHADS2 常用评分标准。",
+  "applicable_scenario": "房颤卒中风险评估",
+  "supports_chinese": true,
+  "clinical_specificity": 0.97,
+  "priority": {
+    "home_suitability": 0.9,
+    "clinical_importance": 0.9,
+    "implementation_simplicity": 0.85,
+    "chinese_support": 1.0
+  },
+  "documentation": {
+    "parameter_notes": "CHADS2 卒中风险评分 支持输入总分，部分量表也支持按条目分值求和。",
+    "usage_examples": [
+      {
+        "input": {
+          "age": 78,
+          "congestive_heart_failure": false,
+          "hypertension": true,
+          "diabetes": true,
+          "prior_stroke_tia": false
+        },
+        "description": "CHADS2 卒中风险评分 示例"
+      }
+    ],
+    "reference_literature": [
+      "CHADS2 卒中风险评分 常用公开评分分层标准"
+    ],
+    "update_record": [
+      "2026-04-28：接入第一批扩展计算器运行时实现。"
+    ]
+  },
+  "validation": {
+    "unit_cases": [
+      {
+        "name": "zero_score",
+        "input": {
+          "age": 50,
+          "congestive_heart_failure": false,
+          "hypertension": false,
+          "diabetes": false,
+          "prior_stroke_tia": false
+        },
+        "expected": {
+          "risk_level": "低风险",
+          "score": 0
+        }
+      },
+      {
+        "name": "age_only",
+        "input": {
+          "age": 76,
+          "congestive_heart_failure": false,
+          "hypertension": false,
+          "diabetes": false,
+          "prior_stroke_tia": false
+        },
+        "expected": {
+          "risk_level": "中风险",
+          "score": 1
+        }
+      },
+      {
+        "name": "three_points",
+        "input": {
+          "age": 76,
+          "congestive_heart_failure": false,
+          "hypertension": true,
+          "diabetes": true,
+          "prior_stroke_tia": false
+        },
+        "expected": {
+          "risk_level": "高风险",
+          "score": 3
+        }
+      },
+      {
+        "name": "max_case",
+        "input": {
+          "age": 76,
+          "congestive_heart_failure": true,
+          "hypertension": true,
+          "diabetes": true,
+          "prior_stroke_tia": true
+        },
+        "expected": {
+          "risk_level": "高风险",
+          "score": 6
+        }
+      }
+    ],
+    "boundary_checks": [
+      {
+        "name": "age_74",
+        "input": {
+          "age": 74,
+          "congestive_heart_failure": false,
+          "hypertension": false,
+          "diabetes": false,
+          "prior_stroke_tia": false
+        },
+        "expected_risk_level": "低风险"
+      },
+      {
+        "name": "age_75",
+        "input": {
+          "age": 75,
+          "congestive_heart_failure": false,
+          "hypertension": false,
+          "diabetes": false,
+          "prior_stroke_tia": false
+        },
+        "expected_risk_level": "中风险"
+      },
+      {
+        "name": "high_risk_case",
+        "input": {
+          "age": 76,
+          "congestive_heart_failure": false,
+          "hypertension": true,
+          "diabetes": true,
+          "prior_stroke_tia": false
+        },
+        "expected_risk_level": "高风险"
+      }
+    ]
+  }
+}

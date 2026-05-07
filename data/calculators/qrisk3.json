@@ -1,0 +1,128 @@
+{
+  "name": "qrisk3",
+  "display_name": "QRISK3 心血管风险评分",
+  "description": "用于解释已获得的 QRISK3 风险百分比。",
+  "source_module": "app.calculators.extended",
+  "function_name": "calculate_qrisk3",
+  "intent_keywords": [
+    "qrisk3",
+    "qrisk",
+    "心血管风险百分比"
+  ],
+  "required_params": [
+    "risk_percent"
+  ],
+  "optional_params": [],
+  "parameters": [
+    {
+      "name": "risk_percent",
+      "label": "风险百分比",
+      "type": "float",
+      "required": true,
+      "min": 0,
+      "max": 100,
+      "description": "QRISK3 风险百分比"
+    }
+  ],
+  "reference": "QRISK3 常用风险阈值。",
+  "applicable_scenario": "心血管风险分层",
+  "supports_chinese": true,
+  "clinical_specificity": 0.9,
+  "priority": {
+    "home_suitability": 0.9,
+    "clinical_importance": 0.9,
+    "implementation_simplicity": 0.85,
+    "chinese_support": 1.0
+  },
+  "documentation": {
+    "parameter_notes": "QRISK3 心血管风险评分 支持输入总分，部分量表也支持按条目分值求和。",
+    "usage_examples": [
+      {
+        "input": {
+          "risk_percent": 11.2
+        },
+        "description": "QRISK3 心血管风险评分 示例"
+      }
+    ],
+    "reference_literature": [
+      "QRISK3 心血管风险评分 常用公开评分分层标准"
+    ],
+    "update_record": [
+      "2026-04-28：接入第一批扩展计算器运行时实现。"
+    ]
+  },
+  "validation": {
+    "unit_cases": [
+      {
+        "name": "risk_percent_case_1",
+        "input": {
+          "risk_percent": 5.0
+        },
+        "expected": {
+          "risk_level": "低风险",
+          "score": 5.0
+        }
+      },
+      {
+        "name": "risk_percent_case_2",
+        "input": {
+          "risk_percent": 10.0
+        },
+        "expected": {
+          "risk_level": "高风险",
+          "score": 10.0
+        }
+      },
+      {
+        "name": "risk_percent_case_3",
+        "input": {
+          "risk_percent": 11.2
+        },
+        "expected": {
+          "risk_level": "高风险",
+          "score": 11.2
+        }
+      },
+      {
+        "name": "risk_percent_case_4",
+        "input": {
+          "risk_percent": 20.0
+        },
+        "expected": {
+          "risk_level": "很高风险",
+          "score": 20.0
+        }
+      }
+    ],
+    "boundary_checks": [
+      {
+        "name": "risk_percent_boundary_1",
+        "input": {
+          "risk_percent": 9.9
+        },
+        "expected_risk_level": "低风险"
+      },
+      {
+        "name": "risk_percent_boundary_2",
+        "input": {
+          "risk_percent": 10.0
+        },
+        "expected_risk_level": "高风险"
+      },
+      {
+        "name": "risk_percent_boundary_3",
+        "input": {
+          "risk_percent": 19.9
+        },
+        "expected_risk_level": "高风险"
+      },
+      {
+        "name": "risk_percent_boundary_4",
+        "input": {
+          "risk_percent": 20.0
+        },
+        "expected_risk_level": "很高风险"
+      }
+    ]
+  }
+}

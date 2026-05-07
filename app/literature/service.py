@@ -9,6 +9,8 @@ from xml.etree import ElementTree
 
 import requests
 
+from app.calculators.library import CalculatorLibraryCatalog
+
 
 @dataclass(frozen=True)
 class LiteratureDocument:
@@ -30,99 +32,82 @@ class CalculatorCategory:
     keywords: tuple[str, ...]
 
 
-CATEGORY_DEFINITIONS: tuple[CalculatorCategory, ...] = (
-    CalculatorCategory(
-        name="心血管",
-        target_count=13,
-        representative_calculators=("CHA2DS2-VASc", "HAS-BLED", "ASCVD", "TIMI", "GRACE"),
-        keywords=(
-            "cha2ds2-vasc",
-            "has-bled",
-            "ascvd",
-            "timi",
-            "grace",
-            "atrial fibrillation",
-            "房颤",
-            "stroke",
-            "卒中",
-            "bleeding",
-            "出血",
-            "acute coronary",
-            "冠脉",
-            "cardiovascular",
-            "心血管",
-        ),
+CATEGORY_KEYWORDS: dict[str, tuple[str, ...]] = {
+    "心血管": (
+        "cha2ds2-vasc",
+        "has-bled",
+        "ascvd",
+        "timi",
+        "grace",
+        "atrial fibrillation",
+        "房颤",
+        "stroke",
+        "卒中",
+        "bleeding",
+        "出血",
+        "acute coronary",
+        "冠脉",
+        "cardiovascular",
+        "心血管",
     ),
-    CalculatorCategory(
-        name="代谢",
-        target_count=7,
-        representative_calculators=("FINDRISC", "CDRS", "代谢综合征评分"),
-        keywords=(
-            "findrisc",
-            "cdrs",
-            "metabolic syndrome",
-            "代谢综合征",
-            "diabetes risk",
-            "糖尿病风险",
-            "obesity",
-            "肥胖",
-            "glucose",
-            "血糖",
-        ),
+    "代谢": (
+        "findrisc",
+        "cdrs",
+        "metabolic syndrome",
+        "代谢综合征",
+        "diabetes risk",
+        "糖尿病风险",
+        "obesity",
+        "肥胖",
+        "glucose",
+        "血糖",
     ),
-    CalculatorCategory(
-        name="老年",
-        target_count=10,
-        representative_calculators=("Morse 跌倒", "Braden 压疮", "MNA", "GDS-15"),
-        keywords=(
-            "morse",
-            "braden",
-            "mna",
-            "gds-15",
-            "fall risk",
-            "跌倒",
-            "pressure ulcer",
-            "压疮",
-            "geriatric",
-            "老年",
-            "nutrition assessment",
-            "营养评估",
-        ),
+    "老年": (
+        "morse",
+        "braden",
+        "mna",
+        "gds-15",
+        "fall risk",
+        "跌倒",
+        "pressure ulcer",
+        "压疮",
+        "geriatric",
+        "老年",
+        "nutrition assessment",
+        "营养评估",
     ),
-    CalculatorCategory(
-        name="精神",
-        target_count=2,
-        representative_calculators=("PHQ-9", "GAD-7"),
-        keywords=("phq-9", "gad-7", "depression", "抑郁", "anxiety", "焦虑", "mental health", "精神"),
+    "精神": ("phq-9", "gad-7", "depression", "抑郁", "anxiety", "焦虑", "mental health", "精神"),
+    "呼吸": ("mmrc", "cat", "copd", "chronic obstructive", "呼吸", "肺功能", "dyspnea", "呼吸困难"),
+    "神经": ("nihss", "glasgow", "gcs", "stroke scale", "神经", "意识", "卒中评分"),
+    "综合": (
+        "news",
+        "news2",
+        "qsofa",
+        "barthel",
+        "activities of daily living",
+        "日常生活能力",
+        "综合评估",
+        "early warning",
+        "预警评分",
     ),
-    CalculatorCategory(
-        name="呼吸",
-        target_count=2,
-        representative_calculators=("MMRC", "CAT"),
-        keywords=("mmrc", "cat", "copd", "chronic obstructive", "呼吸", "肺功能", "dyspnea", "呼吸困难"),
-    ),
-    CalculatorCategory(
-        name="神经",
-        target_count=2,
-        representative_calculators=("NIHSS", "Glasgow"),
-        keywords=("nihss", "glasgow", "gcs", "stroke scale", "神经", "意识", "卒中评分"),
-    ),
-    CalculatorCategory(
-        name="综合",
-        target_count=14,
-        representative_calculators=("NEWS", "qSOFA", "Barthel 指数"),
-        keywords=(
-            "news",
-            "qsofa",
-            "barthel",
-            "activities of daily living",
-            "日常生活能力",
-            "综合评估",
-            "early warning",
-            "预警评分",
-        ),
-    ),
-)
+}
+
+
+def _build_category_definitions() -> tuple[CalculatorCategory, ...]:
+    catalog = CalculatorLibraryCatalog()
+    summary = catalog.summary()
+    return tuple(
+        CalculatorCategory(
+            name=row["category"],
+            target_count=int(row["target_count"]),
+            representative_calculators=tuple(row["representative_calculators"]),
+            keywords=CATEGORY_KEYWORDS.get(row["category"], ()),
+        )
+        for row in summary["categories"]
+    )
+
+
+CATEGORY_DEFINITIONS: tuple[CalculatorCategory, ...] = _build_category_definitions()
 
 
 class MedicalCalculatorClassifier:
@@ -312,7 +297,7 @@ class SinoMedProvider:
         if not self.api_url_template:
             raise RuntimeError(
                 "SinoMed 查询需要配置 SINOMED_API_URL_TEMPLATE。"
-                "官方站点说明提供基于 REST 的 API 接口服务，但公开页面未提供通用匿名调用文档。"
+                "项目当前按可配置 REST 接口接入，未内置公开匿名查询地址。"
             )
 
         url = self.api_url_template.format(query=quote(query), page=1, page_size=max_results)

@@ -1,0 +1,129 @@
+{
+  "name": "charlson_cci",
+  "display_name": "Charlson 合并症指数",
+  "description": "用于基础病负担评估。",
+  "source_module": "app.calculators.extended",
+  "function_name": "calculate_charlson_cci",
+  "intent_keywords": [
+    "charlson",
+    "cci",
+    "合并症指数",
+    "基础病负担"
+  ],
+  "required_params": [
+    "total_score"
+  ],
+  "optional_params": [],
+  "parameters": [
+    {
+      "name": "total_score",
+      "label": "总分",
+      "type": "float",
+      "required": true,
+      "min": 0,
+      "max": 50,
+      "description": "Charlson 总分"
+    }
+  ],
+  "reference": "Charlson Comorbidity Index 常用分层。",
+  "applicable_scenario": "基础病负担评估",
+  "supports_chinese": true,
+  "clinical_specificity": 0.94,
+  "priority": {
+    "home_suitability": 0.9,
+    "clinical_importance": 0.9,
+    "implementation_simplicity": 0.85,
+    "chinese_support": 1.0
+  },
+  "documentation": {
+    "parameter_notes": "Charlson 合并症指数 支持输入总分，部分量表也支持按条目分值求和。",
+    "usage_examples": [
+      {
+        "input": {
+          "total_score": 5
+        },
+        "description": "Charlson 合并症指数 示例"
+      }
+    ],
+    "reference_literature": [
+      "Charlson 合并症指数 常用公开评分分层标准"
+    ],
+    "update_record": [
+      "2026-04-28：接入第一批扩展计算器运行时实现。"
+    ]
+  },
+  "validation": {
+    "unit_cases": [
+      {
+        "name": "total_score_case_1",
+        "input": {
+          "total_score": 1
+        },
+        "expected": {
+          "risk_level": "低合并症负担",
+          "score": 1
+        }
+      },
+      {
+        "name": "total_score_case_2",
+        "input": {
+          "total_score": 3
+        },
+        "expected": {
+          "risk_level": "中等合并症负担",
+          "score": 3
+        }
+      },
+      {
+        "name": "total_score_case_3",
+        "input": {
+          "total_score": 5
+        },
+        "expected": {
+          "risk_level": "高合并症负担",
+          "score": 5
+        }
+      },
+      {
+        "name": "total_score_case_4",
+        "input": {
+          "total_score": 8
+        },
+        "expected": {
+          "risk_level": "高合并症负担",
+          "score": 8
+        }
+      }
+    ],
+    "boundary_checks": [
+      {
+        "name": "total_score_boundary_1",
+        "input": {
+          "total_score": 2
+        },
+        "expected_risk_level": "低合并症负担"
+      },
+      {
+        "name": "total_score_boundary_2",
+        "input": {
+          "total_score": 3
+        },
+        "expected_risk_level": "中等合并症负担"
+      },
+      {
+        "name": "total_score_boundary_3",
+        "input": {
+          "total_score": 4
+        },
+        "expected_risk_level": "中等合并症负担"
+      },
+      {
+        "name": "total_score_boundary_4",
+        "input": {
+          "total_score": 5
+        },
+        "expected_risk_level": "高合并症负担"
+      }
+    ]
+  }
+}

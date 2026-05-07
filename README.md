@@ -7,7 +7,36 @@
 - 多轮对话状态机
 - 意图识别、参数提取与工具选择
 - 医疗计算器注册、优先级管理与质量验证
+- 扩展医疗计算器库与批量质量校验
+- 文献分类统计与实验脚本
 - 独立 Web 前端（HTML/CSS/JS）+ Python 后端
+
+## 项目结构
+
+当前版本已经移除旧的 `Gradio` 界面，统一使用 `app/web` 作为 Web 入口。主要目录如下：
+
+```text
+agentmd-home-health/
+├─ app/
+│  ├─ main.py                   # 启动入口
+│  ├─ api/                      # 应用服务装配
+│  ├─ calculators/              # 基础/扩展计算器、注册、校验、仓库访问
+│  ├─ config/                   # 运行时配置与系统配置
+│  ├─ core/                     # 对话状态机、意图识别、参数提取、响应格式化
+│  ├─ data/                     # SQLite 数据访问与数据模型
+│  ├─ experiments/              # 实验逻辑
+│  ├─ literature/               # 医疗计算器文献统计服务
+│  └─ web/                      # HTTP 服务与静态前端
+├─ data/
+│  ├─ calculators/              # 计算器 JSON 定义
+│  ├─ calculator_library.json   # 计算器清单
+│  └─ intent_keywords.json      # 意图识别关键词
+├─ experiments/                 # 实验输入与结果样本
+├─ scripts/                     # 数据导出、实验执行脚本
+├─ tests/                       # 单元测试与批量校验测试
+├─ requirements.txt             # Python 依赖
+└─ README.md
+```
 
 ## 运行
 
@@ -38,6 +67,12 @@ DEEPSEEK_MODEL=deepseek-chat
 仓库中提供了 `.env.example` 作为模板。
 
 如果未配置 DeepSeek API，系统仍可运行，但会回退到本地规则完成意图识别、参数提取和质量验证的兜底逻辑。
+
+## 测试
+
+```bash
+pytest
+```
 
 ## 文献分类统计接口
 

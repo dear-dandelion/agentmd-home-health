@@ -1,0 +1,209 @@
+{
+  "name": "cdrs",
+  "display_name": "CDRS 糖尿病风险评分",
+  "description": "用于中国成人糖尿病风险筛查。",
+  "source_module": "app.calculators.extended",
+  "function_name": "calculate_cdrs",
+  "intent_keywords": [
+    "cdrs",
+    "中国糖尿病风险评分",
+    "糖尿病高危"
+  ],
+  "required_params": [
+    "age",
+    "bmi",
+    "waist_cm",
+    "systolic_bp",
+    "gender",
+    "family_history_diabetes"
+  ],
+  "optional_params": [],
+  "parameters": [
+    {
+      "name": "age",
+      "label": "年龄",
+      "type": "float",
+      "required": true,
+      "description": "受评估者年龄",
+      "min": 20,
+      "max": 74
+    },
+    {
+      "name": "bmi",
+      "label": "BMI",
+      "type": "float",
+      "required": true,
+      "description": "体重指数",
+      "min": 10,
+      "max": 80
+    },
+    {
+      "name": "waist_cm",
+      "label": "腰围",
+      "type": "float",
+      "required": true,
+      "description": "腰围",
+      "min": 30,
+      "max": 200,
+      "unit": "cm"
+    },
+    {
+      "name": "systolic_bp",
+      "label": "收缩压",
+      "type": "float",
+      "required": true,
+      "description": "收缩压",
+      "min": 50,
+      "max": 300,
+      "unit": "mmHg"
+    },
+    {
+      "name": "gender",
+      "label": "性别",
+      "type": "str",
+      "required": true,
+      "description": "男或女"
+    },
+    {
+      "name": "family_history_diabetes",
+      "label": "糖尿病家族史",
+      "type": "bool",
+      "required": true,
+      "description": "是否存在糖尿病家族史"
+    }
+  ],
+  "reference": "中国糖尿病风险评分表。",
+  "applicable_scenario": "糖尿病风险筛查",
+  "supports_chinese": true,
+  "clinical_specificity": 0.95,
+  "priority": {
+    "home_suitability": 0.9,
+    "clinical_importance": 0.9,
+    "implementation_simplicity": 0.85,
+    "chinese_support": 1.0
+  },
+  "documentation": {
+    "parameter_notes": "CDRS 糖尿病风险评分 支持输入总分，部分量表也支持按条目分值求和。",
+    "usage_examples": [
+      {
+        "input": {
+          "age": 58,
+          "bmi": 28,
+          "waist_cm": 92,
+          "systolic_bp": 142,
+          "gender": "男",
+          "family_history_diabetes": true
+        },
+        "description": "CDRS 糖尿病风险评分 示例"
+      }
+    ],
+    "reference_literature": [
+      "CDRS 糖尿病风险评分 常用公开评分分层标准"
+    ],
+    "update_record": [
+      "2026-04-28：接入第一批扩展计算器运行时实现。"
+    ]
+  },
+  "validation": {
+    "unit_cases": [
+      {
+        "name": "low_case",
+        "input": {
+          "age": 25,
+          "bmi": 21,
+          "waist_cm": 74,
+          "systolic_bp": 108,
+          "gender": "male",
+          "family_history_diabetes": false
+        },
+        "expected": {
+          "risk_level": "低风险",
+          "score": 6
+        }
+      },
+      {
+        "name": "middle_case",
+        "input": {
+          "age": 25,
+          "bmi": 21,
+          "waist_cm": 78,
+          "systolic_bp": 138,
+          "gender": "male",
+          "family_history_diabetes": true
+        },
+        "expected": {
+          "risk_level": "中风险",
+          "score": 21
+        }
+      },
+      {
+        "name": "high_boundary_case",
+        "input": {
+          "age": 25,
+          "bmi": 21,
+          "waist_cm": 86,
+          "systolic_bp": 138,
+          "gender": "male",
+          "family_history_diabetes": true
+        },
+        "expected": {
+          "risk_level": "高风险",
+          "score": 25
+        }
+      },
+      {
+        "name": "high_case",
+        "input": {
+          "age": 58,
+          "bmi": 28,
+          "waist_cm": 92,
+          "systolic_bp": 142,
+          "gender": "male",
+          "family_history_diabetes": true
+        },
+        "expected": {
+          "risk_level": "高风险",
+          "score": 41
+        }
+      }
+    ],
+    "boundary_checks": [
+      {
+        "name": "score_19_low",
+        "input": {
+          "age": 25,
+          "bmi": 21,
+          "waist_cm": 74,
+          "systolic_bp": 138,
+          "gender": "male",
+          "family_history_diabetes": true
+        },
+        "expected_risk_level": "低风险"
+      },
+      {
+        "name": "score_21_middle",
+        "input": {
+          "age": 25,
+          "bmi": 21,
+          "waist_cm": 78,
+          "systolic_bp": 138,
+          "gender": "male",
+          "family_history_diabetes": true
+        },
+        "expected_risk_level": "中风险"
+      },
+      {
+        "name": "score_25_high",
+        "input": {
+          "age": 25,
+          "bmi": 21,
+          "waist_cm": 86,
+          "systolic_bp": 138,
+          "gender": "male",
+          "family_history_diabetes": true
+        },
+        "expected_risk_level": "高风险"
+      }
+    ]
+  }
+}

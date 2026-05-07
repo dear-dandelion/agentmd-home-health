@@ -1,0 +1,157 @@
+{
+  "name": "barthel_index",
+  "display_name": "Barthel 指数",
+  "description": "根据 Barthel 总分评估日常生活活动能力。",
+  "source_module": "app.calculators.extended",
+  "function_name": "calculate_barthel_index",
+  "intent_keywords": [
+    "barthel",
+    "barthel指数",
+    "日常生活能力",
+    "adl"
+  ],
+  "required_params": [
+    "total_score"
+  ],
+  "optional_params": [],
+  "parameters": [
+    {
+      "name": "total_score",
+      "label": "总分",
+      "type": "float",
+      "required": true,
+      "min": 0,
+      "max": 100,
+      "description": "Barthel 总分"
+    }
+  ],
+  "reference": "Barthel 指数常用分层标准。",
+  "applicable_scenario": "居家功能状态评估",
+  "supports_chinese": true,
+  "clinical_specificity": 0.95,
+  "priority": {
+    "home_suitability": 0.9,
+    "clinical_importance": 0.9,
+    "implementation_simplicity": 0.85,
+    "chinese_support": 1.0
+  },
+  "documentation": {
+    "parameter_notes": "Barthel 指数 支持输入总分，部分量表也支持按条目分值求和。",
+    "usage_examples": [
+      {
+        "input": {
+          "total_score": 65
+        },
+        "description": "Barthel 指数 示例"
+      }
+    ],
+    "reference_literature": [
+      "Barthel 指数 常用公开评分分层标准"
+    ],
+    "update_record": [
+      "2026-04-28：接入第一批扩展计算器运行时实现。"
+    ]
+  },
+  "validation": {
+    "unit_cases": [
+      {
+        "name": "total_score_case_1",
+        "input": {
+          "total_score": 10
+        },
+        "expected": {
+          "risk_level": "完全依赖",
+          "score": 10
+        }
+      },
+      {
+        "name": "total_score_case_2",
+        "input": {
+          "total_score": 30
+        },
+        "expected": {
+          "risk_level": "重度依赖",
+          "score": 30
+        }
+      },
+      {
+        "name": "total_score_case_3",
+        "input": {
+          "total_score": 70
+        },
+        "expected": {
+          "risk_level": "中度依赖",
+          "score": 70
+        }
+      },
+      {
+        "name": "total_score_case_4",
+        "input": {
+          "total_score": 100
+        },
+        "expected": {
+          "risk_level": "独立",
+          "score": 100
+        }
+      }
+    ],
+    "boundary_checks": [
+      {
+        "name": "total_score_boundary_1",
+        "input": {
+          "total_score": 20
+        },
+        "expected_risk_level": "完全依赖"
+      },
+      {
+        "name": "total_score_boundary_2",
+        "input": {
+          "total_score": 21
+        },
+        "expected_risk_level": "重度依赖"
+      },
+      {
+        "name": "total_score_boundary_3",
+        "input": {
+          "total_score": 60
+        },
+        "expected_risk_level": "重度依赖"
+      },
+      {
+        "name": "total_score_boundary_4",
+        "input": {
+          "total_score": 61
+        },
+        "expected_risk_level": "中度依赖"
+      },
+      {
+        "name": "total_score_boundary_5",
+        "input": {
+          "total_score": 90
+        },
+        "expected_risk_level": "中度依赖"
+      },
+      {
+        "name": "total_score_boundary_6",
+        "input": {
+          "total_score": 91
+        },
+        "expected_risk_level": "轻度依赖"
+      },
+      {
+        "name": "total_score_boundary_7",
+        "input": {
+          "total_score": 99
+        },
+        "expected_risk_level": "轻度依赖"
+      },
+      {
+        "name": "total_score_boundary_8",
+        "input": {
+          "total_score": 100
+        },
+        "expected_risk_level": "独立"
+      }
+    ]
+  }
+}

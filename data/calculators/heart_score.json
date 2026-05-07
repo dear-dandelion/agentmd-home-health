@@ -1,0 +1,184 @@
+{
+  "name": "heart_score",
+  "display_name": "HEART 胸痛风险评分",
+  "description": "用于胸痛短期主要心血管不良事件风险分层。",
+  "source_module": "app.calculators.extended",
+  "function_name": "calculate_heart_score",
+  "intent_keywords": [
+    "heart score",
+    "heart_score",
+    "胸痛评分",
+    "heart评分"
+  ],
+  "required_params": [
+    "history_score",
+    "ecg_score",
+    "troponin_score",
+    "age",
+    "risk_factor_count"
+  ],
+  "optional_params": [
+    "known_atherosclerotic_disease",
+    "total_score"
+  ],
+  "parameters": [
+    {
+      "name": "history_score",
+      "label": "病史评分",
+      "type": "float",
+      "required": true,
+      "min": 0,
+      "max": 2,
+      "description": "病史项评分"
+    },
+    {
+      "name": "ecg_score",
+      "label": "心电图评分",
+      "type": "float",
+      "required": true,
+      "min": 0,
+      "max": 2,
+      "description": "心电图项评分"
+    },
+    {
+      "name": "troponin_score",
+      "label": "肌钙蛋白评分",
+      "type": "float",
+      "required": true,
+      "min": 0,
+      "max": 2,
+      "description": "肌钙蛋白项评分"
+    },
+    {
+      "name": "age",
+      "label": "年龄",
+      "type": "float",
+      "required": true,
+      "min": 0,
+      "max": 120,
+      "description": "年龄"
+    },
+    {
+      "name": "risk_factor_count",
+      "label": "危险因素数量",
+      "type": "float",
+      "required": true,
+      "min": 0,
+      "max": 10,
+      "description": "危险因素数量"
+    }
+  ],
+  "reference": "HEART 常用评分标准。",
+  "applicable_scenario": "胸痛风险分层",
+  "supports_chinese": true,
+  "clinical_specificity": 0.97,
+  "priority": {
+    "home_suitability": 0.9,
+    "clinical_importance": 0.9,
+    "implementation_simplicity": 0.85,
+    "chinese_support": 1.0
+  },
+  "documentation": {
+    "parameter_notes": "HEART 胸痛风险评分 支持输入总分，部分量表也支持按条目分值求和。",
+    "usage_examples": [
+      {
+        "input": {
+          "history_score": 2,
+          "ecg_score": 1,
+          "troponin_score": 1,
+          "age": 66,
+          "risk_factor_count": 3
+        },
+        "description": "HEART 胸痛风险评分 示例"
+      }
+    ],
+    "reference_literature": [
+      "HEART 胸痛风险评分 常用公开评分分层标准"
+    ],
+    "update_record": [
+      "2026-04-28：接入第一批扩展计算器运行时实现。"
+    ]
+  },
+  "validation": {
+    "unit_cases": [
+      {
+        "name": "formula_low",
+        "input": {
+          "history_score": 0,
+          "ecg_score": 0,
+          "troponin_score": 0,
+          "age": 35,
+          "risk_factor_count": 0
+        },
+        "expected": {
+          "risk_level": "低风险",
+          "score": 0
+        }
+      },
+      {
+        "name": "middle_total_score",
+        "input": {
+          "total_score": 5
+        },
+        "expected": {
+          "risk_level": "中风险",
+          "score": 5
+        }
+      },
+      {
+        "name": "formula_high",
+        "input": {
+          "history_score": 2,
+          "ecg_score": 1,
+          "troponin_score": 1,
+          "age": 67,
+          "risk_factor_count": 3
+        },
+        "expected": {
+          "risk_level": "高风险",
+          "score": 8
+        }
+      },
+      {
+        "name": "very_high_total_score",
+        "input": {
+          "total_score": 7
+        },
+        "expected": {
+          "risk_level": "高风险",
+          "score": 7
+        }
+      }
+    ],
+    "boundary_checks": [
+      {
+        "name": "score_three",
+        "input": {
+          "total_score": 3
+        },
+        "expected_risk_level": "低风险"
+      },
+      {
+        "name": "score_four",
+        "input": {
+          "total_score": 4
+        },
+        "expected_risk_level": "中风险"
+      },
+      {
+        "name": "score_six",
+        "input": {
+          "total_score": 6
+        },
+        "expected_risk_level": "中风险"
+      },
+      {
+        "name": "score_seven",
+        "input": {
+          "total_score": 7
+        },
+        "expected_risk_level": "高风险"
+      }
+    ]
+  }
+}
